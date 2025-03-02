@@ -12,23 +12,23 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5.17</span><span class="period">.</span><span class="space"> </span><span class="title">Adjoint matrix formula.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.5.17</span><span class="period">.</span><span class="space"> </span><span class="title">Adjoint matrix formula.</span>
 </h4>
 <div class="para logical">
 <div class="para">Given an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation}
-A\,(\adj A)=(\adj A)\, A=(\det A)I\text{.}\tag{2.5.7}
+A\,(\adj A)=(\adj A)\, A=(\det A)I\text{.}\tag{1.5.7}
 \end{equation}
 </div>
 <div class="para">As a consequence, if <span class="process-math">\(\det A\ne 0\text{,}\)</span> then <span class="process-math">\(A\)</span> is invertible and</div>
 <div class="displaymath process-math">
 \begin{equation}
-A^{-1}=\frac{1}{\det A}\, \adj A\text{.}\tag{2.5.8}
+A^{-1}=\frac{1}{\det A}\, \adj A\text{.}\tag{1.5.8}
 \end{equation}
 </div>
 </div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
-<div class="para">First observe that the second statement regarding invertibility follows directly from <a href="s_det.html#eq_adj_form" class="xref" data-knowl="./knowl/xref/eq_adj_form.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.5.7">(2.5.7)</a>, since in this case setting <span class="process-math">\(B=\frac{1}{\det A}\, \adj A\)</span> we have</div>
+<div class="para">First observe that the second statement regarding invertibility follows directly from <a href="s_det.html#eq_adj_form" class="xref" data-knowl="./knowl/xref/eq_adj_form.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.5.7">(1.5.7)</a>, since in this case setting <span class="process-math">\(B=\frac{1}{\det A}\, \adj A\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_adj_form.html">
 \begin{equation*}
 AB=BA=\frac{1}{\det A}(A\adj A)=\frac{1}{\det A}((\det A)\, I)=I\text{.}
@@ -36,7 +36,7 @@ AB=BA=\frac{1}{\det A}(A\adj A)=\frac{1}{\det A}((\det A)\, I)=I\text{.}
 </div>
 </div>
 <div class="para logical">
-<div class="para">Thus it suffices to prove <a href="s_det.html#eq_adj_form" class="xref" data-knowl="./knowl/xref/eq_adj_form.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.5.7">(2.5.7)</a>. To do so, we must show that</div>
+<div class="para">Thus it suffices to prove <a href="s_det.html#eq_adj_form" class="xref" data-knowl="./knowl/xref/eq_adj_form.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.5.7">(1.5.7)</a>. To do so, we must show that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_adj_form.html">
 \begin{equation*}
 [A\, \adj A]_{ij}=[\adj A\, A]_{ij}=
@@ -52,7 +52,7 @@ AB=BA=\frac{1}{\det A}(A\adj A)=\frac{1}{\det A}((\det A)\, I)=I\text{.}
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_adjoint.html">
 \begin{align*}
 [A\, \adj A]_{ii} \amp =\sum_{k=1}^na_{ik}[\adj A]_{ki}  \\
-\amp =\sum_{k=1}^n a_{ik}((-1)^{i+k}M_{ik}) \amp (\knowl{./knowl/xref/d_adjoint.html}{\text{Definition 2.5.15}} )\\
+\amp =\sum_{k=1}^n a_{ik}((-1)^{i+k}M_{ik}) \amp (\knowl{./knowl/xref/d_adjoint.html}{\text{Definition 1.5.15}} )\\
 \amp =\sum_{k=1}^n(-1)^{i+k}a_{ik}M_{ik} \\
 \amp =\det A \text{.}
 \end{align*}
@@ -64,12 +64,12 @@ AB=BA=\frac{1}{\det A}(A\adj A)=\frac{1}{\det A}((\det A)\, I)=I\text{.}
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_adjoint.html ./knowl/xref/th_det_zero_repeated_row.html">
 \begin{align*}
 [A\, \adj A]_{ij} \amp =\sum_{k=1}^na_{ik}[\adj A]_{kj}  \\
-\amp =\sum_{k=1}^n a_{ik}((-1)^{k+j}M_{jk}) \amp (\knowl{./knowl/xref/d_adjoint.html}{\text{Definition 2.5.15}} )\\
+\amp =\sum_{k=1}^n a_{ik}((-1)^{k+j}M_{jk}) \amp (\knowl{./knowl/xref/d_adjoint.html}{\text{Definition 1.5.15}} )\\
 \amp =\sum_{k=1}^n(-1)^{k+j}a_{ik}M_{jk} \\
 \amp =\det C \text{,}
 \end{align*}
 </div>
-<div class="para">where <span class="process-math">\(C\)</span> is the matrix obtained by replacing the <span class="process-math">\(j\)</span>-th row of <span class="process-math">\(A\)</span> with a copy of its <span class="process-math">\(i\)</span>-th row. Since <span class="process-math">\(C\)</span> has two identical rows <a href="s_det.html#th_det_zero_repeated_row" class="xref" data-knowl="./knowl/xref/th_det_zero_repeated_row.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.14: Zero rows/columns, swapping rows/columns, identical rows/columns">Theorem 2.5.14</a> implies</div>
+<div class="para">where <span class="process-math">\(C\)</span> is the matrix obtained by replacing the <span class="process-math">\(j\)</span>-th row of <span class="process-math">\(A\)</span> with a copy of its <span class="process-math">\(i\)</span>-th row. Since <span class="process-math">\(C\)</span> has two identical rows <a href="s_det.html#th_det_zero_repeated_row" class="xref" data-knowl="./knowl/xref/th_det_zero_repeated_row.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.5.14: Zero rows/columns, swapping rows/columns, identical rows/columns">Theorem 1.5.14</a> implies</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_adjoint.html ./knowl/xref/th_det_zero_repeated_row.html">
 \begin{equation*}
 [A\, \adj A]_{ij}=\det C=0\text{,}

@@ -12,19 +12,19 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.7.2</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.7.2</span><span class="period">.</span>
 </h4>
 <div class="para">Suppose <span class="process-math">\(S\)</span> is a finite spanning set for the vector space <span class="process-math">\(V\)</span> and let <span class="process-math">\(\val{S}=n\text{.}\)</span> If <span class="process-math">\(S'\)</span> is a finite set with <span class="process-math">\(\val{S'}=r&gt;n\text{,}\)</span> then <span class="process-math">\(S'\)</span> is linearly dependent.</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
 <div class="para">Let <span class="process-math">\(S=\{\boldv_1, \boldv_2, \dots, \boldv_n\}\text{,}\)</span> and let <span class="process-math">\(S'=\{\boldw_1, \boldw_2, \dots, \boldw_r\}\text{.}\)</span> Since <span class="process-math">\(S\)</span> spans <span class="process-math">\(V\text{,}\)</span> each element of <span class="process-math">\(S'\)</span> is a linear combination of elements of <span class="process-math">\(S\text{:}\)</span> i.e., we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_basis_bound.html">
 \begin{equation}
-\boldw_j=a_{1j}\boldv_1+a_{2j}\boldv_2+\cdots a_{nj}\boldv_n=\sum_{i=1}^n\boldv_{ij}\tag{3.7.1}
+\boldw_j=a_{1j}\boldv_1+a_{2j}\boldv_2+\cdots a_{nj}\boldv_n=\sum_{i=1}^n\boldv_{ij}\tag{2.7.1}
 \end{equation}
 </div>
 <div class="para">for all <span class="process-math">\(1\leq j\leq r\text{.}\)</span> Now consider the following chain of equivalences:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_basis_bound.html">
 \begin{align*}
-c_1\boldw_1+c_2\boldw_2+\cdots c_r\boldw_r=\boldzero \amp \iff c_1(\sum_{i=1}^n\boldv_{i1})+c_2(\sum_{i=1}^n\boldv_{i2})+\cdots +c_r\sum_{i=1}^n\boldv_{in}=\boldzero\amp (\knowl{./knowl/xref/eq_basis_bound.html}{\text{(3.7.1)}}) \\
+c_1\boldw_1+c_2\boldw_2+\cdots c_r\boldw_r=\boldzero \amp \iff c_1(\sum_{i=1}^n\boldv_{i1})+c_2(\sum_{i=1}^n\boldv_{i2})+\cdots +c_r\sum_{i=1}^n\boldv_{in}=\boldzero\amp (\knowl{./knowl/xref/eq_basis_bound.html}{\text{(2.7.1)}}) \\
 \amp \iff \sum_{j=1}^rc_j\sum_{i=1}^na_{ij}\boldv_i=\boldzero\\
 \amp\iff \sum_{i=1}^n(\sum_{j=1}^ra_{ij}c_j)\boldv_i=\boldzero  \\
 \amp \iff (\sum_{j=1}^ra_{1j}c_j)\boldv_1+(\sum_{j=1}^ra_{2j}c_j)\boldv_2+\cdots (\sum_{j=1}^ra_{nj}c_j)\boldv_n=\boldzero \text{.}

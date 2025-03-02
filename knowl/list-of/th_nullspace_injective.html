@@ -12,20 +12,20 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Null space and injectivity.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Null space and injectivity.</span>
 </h4>
 <div class="para">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation.</div> <ol class="decimal" id="th_nullspace_injective-2-2">
 <li><div class="para logical">
 <div class="para">Given vectors <span class="process-math">\(\boldv, \boldv'\in V\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation}
-T(\boldv)=T(\boldv') \iff \boldv'=\boldv+\boldu \text{ for some } \boldu\in \NS T\text{.}\tag{3.4.2}
+T(\boldv)=T(\boldv') \iff \boldv'=\boldv+\boldu \text{ for some } \boldu\in \NS T\text{.}\tag{2.4.2}
 \end{equation}
 </div>
 <div class="para">Equivalently, given <span class="process-math">\(\boldw\in W\)</span> and <span class="process-math">\(\boldv\in V\)</span> satisfying <span class="process-math">\(T(\boldv)=\boldw\text{,}\)</span> the set <span class="process-math">\(X\)</span> of all <span class="process-math">\(\boldv'\)</span> satisfying <span class="process-math">\(T(\boldv')=\boldw\)</span> can be described as</div>
 <div class="displaymath process-math">
 \begin{equation}
-X=\{\boldv+\boldu\colon \boldu\in \NS T\}\text{.}\tag{3.4.3}
+X=\{\boldv+\boldu\colon \boldu\in \NS T\}\text{.}\tag{2.4.3}
 \end{equation}
 </div>
 </div></li>
@@ -48,11 +48,11 @@ T(\boldv)=T(\boldv') \amp \iff T(\boldv')-T(\boldv)=\boldzero\\
 \amp \iff \boldv'=\boldv+\boldu \text{ for some } \boldu\in\NS T \text{.}
 \end{align*}
 </div>
-<div class="para">Equation <a href="s_nullspace_image.html#eq_nullspace_inverseimage" class="xref" data-knowl="./knowl/xref/eq_nullspace_inverseimage.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.3">(3.4.3)</a> follows directly from <a href="s_nullspace_image.html#eq_nullspace_injective" class="xref" data-knowl="./knowl/xref/eq_nullspace_injective.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.2">(3.4.2)</a> by observing that if <span class="process-math">\(T(\boldv)=\boldw\text{,}\)</span> then <span class="process-math">\(T(\boldv')=\boldw\)</span> if and only if <span class="process-math">\(T(\boldv)=T(\boldv')\text{.}\)</span>
+<div class="para">Equation <a href="s_nullspace_image.html#eq_nullspace_inverseimage" class="xref" data-knowl="./knowl/xref/eq_nullspace_inverseimage.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4.3">(2.4.3)</a> follows directly from <a href="s_nullspace_image.html#eq_nullspace_injective" class="xref" data-knowl="./knowl/xref/eq_nullspace_injective.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4.2">(2.4.2)</a> by observing that if <span class="process-math">\(T(\boldv)=\boldw\text{,}\)</span> then <span class="process-math">\(T(\boldv')=\boldw\)</span> if and only if <span class="process-math">\(T(\boldv)=T(\boldv')\text{.}\)</span>
 </div>
 </div></li>
 <li>
-<div class="para">According to <a href="s_nullspace_image.html#eq_nullspace_injective" class="xref" data-knowl="./knowl/xref/eq_nullspace_injective.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.2">(3.4.2)</a> we have <span class="process-math">\(T(\boldv)=T(\boldv')\)</span> if and only if <span class="process-math">\(\boldv'=\boldv+\boldu\)</span> for some <span class="process-math">\(\boldu\in \NS T\text{.}\)</span>
+<div class="para">According to <a href="s_nullspace_image.html#eq_nullspace_injective" class="xref" data-knowl="./knowl/xref/eq_nullspace_injective.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4.2">(2.4.2)</a> we have <span class="process-math">\(T(\boldv)=T(\boldv')\)</span> if and only if <span class="process-math">\(\boldv'=\boldv+\boldu\)</span> for some <span class="process-math">\(\boldu\in \NS T\text{.}\)</span>
 </div>
 <div class="para">If <span class="process-math">\(\NS T=\{\boldzero_V\}\text{,}\)</span> then <span class="process-math">\(T(\boldv)=T(\boldv')\)</span> implies <span class="process-math">\(\boldv'=\boldv+\boldzero=\boldv\text{.}\)</span> Thus <span class="process-math">\(T\)</span> is injective in this case.</div>
 <div class="para">Conversely, if <span class="process-math">\(\NS T\ne \{\boldzero_V\}\)</span> we can find a nonzero <span class="process-math">\(\boldu\in \NS T\text{.}\)</span> It follows that for <em class="emphasis">any</em> <span class="process-math">\(\boldv\in V\)</span> we have <span class="process-math">\(T(\boldv)=T(\boldv+\boldu)\text{.}\)</span> Furthermore, since <span class="process-math">\(\boldu\ne\boldzero_V\text{,}\)</span> we have <span class="process-math">\(\boldv\ne \boldv+\boldu\text{.}\)</span> Thus <span class="process-math">\(T\)</span> is not injective in this case.</div>

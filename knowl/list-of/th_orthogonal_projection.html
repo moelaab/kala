@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Orthogonal projection theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Orthogonal projection theorem.</span>
 </h4>
 <div class="para">Let <span class="process-math">\((V,\langle \ , \rangle)\)</span> be an inner product space, and let <span class="process-math">\(W\subseteq V\)</span> be a finite-dimensional subspace.</div> <ol class="decimal" id="th_orthogonal_projection-2-2">
 <li>
@@ -20,10 +20,10 @@
 <div class="para">For all <span class="process-math">\(\boldv\in V\)</span> there are vectors <span class="process-math">\(\boldw\)</span> and <span class="process-math">\(\boldw^\perp\)</span> satisfying</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_ortho_decomp.html">
 \begin{equation}
-\boldv=\boldw+\boldw^\perp, \boldw\in W, \boldw^\perp\in W^\perp\text{.}\tag{4.3.1}
+\boldv=\boldw+\boldw^\perp, \boldw\in W, \boldw^\perp\in W^\perp\text{.}\tag{3.3.1}
 \end{equation}
 </div>
-<div class="para">Furthermore, the pair <span class="process-math">\(\boldw, \boldw^\perp\)</span> is unique in the following sense: if we have <span class="process-math">\(\boldv=\boldu+\boldu^\perp\)</span> for some <span class="process-math">\(\boldu\in W\)</span> and <span class="process-math">\(\boldu^\perp\in W^\perp\text{,}\)</span> then <span class="process-math">\(\boldu=\boldw\)</span> and <span class="process-math">\(\boldu^\perp=\boldw^\perp\text{.}\)</span> Accordingly, the vector equation <a href="s_orthogonal_projection.html#eq_ortho_decomp" class="xref" data-knowl="./knowl/xref/eq_ortho_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.3.1">(4.3.1)</a> is called the <dfn class="terminology">orthogonal decomposition</dfn> of <span class="process-math">\(\boldv\)</span> with respect to <span class="process-math">\(W\text{;}\)</span> and the vector <span class="process-math">\(\boldw\)</span> is called the <dfn class="terminology">orthogonal projection</dfn> of <span class="process-math">\(\boldv\)</span> onto <span class="process-math">\(W\text{,}\)</span> denoted <span class="process-math">\(\boldw=\proj{\boldv}{W}\text{.}\)</span>
+<div class="para">Furthermore, the pair <span class="process-math">\(\boldw, \boldw^\perp\)</span> is unique in the following sense: if we have <span class="process-math">\(\boldv=\boldu+\boldu^\perp\)</span> for some <span class="process-math">\(\boldu\in W\)</span> and <span class="process-math">\(\boldu^\perp\in W^\perp\text{,}\)</span> then <span class="process-math">\(\boldu=\boldw\)</span> and <span class="process-math">\(\boldu^\perp=\boldw^\perp\text{.}\)</span> Accordingly, the vector equation <a href="s_orthogonal_projection.html#eq_ortho_decomp" class="xref" data-knowl="./knowl/xref/eq_ortho_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.1">(3.3.1)</a> is called the <dfn class="terminology">orthogonal decomposition</dfn> of <span class="process-math">\(\boldv\)</span> with respect to <span class="process-math">\(W\text{;}\)</span> and the vector <span class="process-math">\(\boldw\)</span> is called the <dfn class="terminology">orthogonal projection</dfn> of <span class="process-math">\(\boldv\)</span> onto <span class="process-math">\(W\text{,}\)</span> denoted <span class="process-math">\(\boldw=\proj{\boldv}{W}\text{.}\)</span>
 </div>
 </div>
 </li>
@@ -32,7 +32,7 @@
 <div class="para">Choose any orthogonal basis <span class="process-math">\(B=\{\boldw_1, \boldw_2, \dots, \boldw_r\}\)</span> of <span class="process-math">\(W\text{.}\)</span> We have</div>
 <div class="displaymath process-math">
 \begin{equation}
-\proj{\boldv}{W}=\sum_{i=1}^r\frac{\angvec{\boldv,\boldw_i}}{\angvec{\boldw_i, \boldw_i}}\boldw_i\text{.}\tag{4.3.2}
+\proj{\boldv}{W}=\sum_{i=1}^r\frac{\angvec{\boldv,\boldw_i}}{\angvec{\boldw_i, \boldw_i}}\boldw_i\text{.}\tag{3.3.2}
 \end{equation}
 </div>
 </div>
@@ -48,7 +48,7 @@ d(\boldv, \proj{\boldv}{W})\leq d(\boldv, \boldw')\text{,}
 <div class="para">or equivalently,</div>
 <div class="displaymath process-math">
 \begin{equation}
-\norm{\boldv-\proj{\boldv}{W}}\leq\norm{\boldv-\boldw'}\text{.}\tag{4.3.3}
+\norm{\boldv-\proj{\boldv}{W}}\leq\norm{\boldv-\boldw'}\text{.}\tag{3.3.3}
 \end{equation}
 </div>
 <div class="para">Accordingly, we define the <dfn class="terminology">distance</dfn> <span class="process-math">\(d(\boldv, W)\)</span> between <span class="process-math">\(\boldv\)</span> and <span class="process-math">\(W\)</span> to be</div>
@@ -63,10 +63,10 @@ d(\boldv, W)=d(\boldv, \proj{\boldv}{W})=\norm{\boldv-\proj{\boldv}{W}}\text{.}
 <div class="para">Let <span class="process-math">\(B=\{\boldw_1, \boldw_2, \dots, \boldw_r\}\text{.}\)</span> We first show that the vectors</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_ortho_decomp.html ./knowl/xref/eq_ortho_proj_formula_proof.html">
 \begin{equation}
-\boldw=\sum_{i=1}^r\frac{\angvec{\boldv,\boldw_i}}{\angvec{\boldw_i, \boldw_i}}\boldw_i\tag{4.3.4}
+\boldw=\sum_{i=1}^r\frac{\angvec{\boldv,\boldw_i}}{\angvec{\boldw_i, \boldw_i}}\boldw_i\tag{3.3.4}
 \end{equation}
 </div>
-<div class="para">and <span class="process-math">\(\boldw^\perp=\boldv-\boldw\)</span> satisfy the conditions in <a href="s_orthogonal_projection.html#eq_ortho_decomp" class="xref" data-knowl="./knowl/xref/eq_ortho_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.3.1">(4.3.1)</a>. It is clear that the <span class="process-math">\(\boldw\)</span> defined in <a href="s_orthogonal_projection.html#eq_ortho_proj_formula_proof" class="xref" data-knowl="./knowl/xref/eq_ortho_proj_formula_proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.3.4">(4.3.4)</a> is an element of <span class="process-math">\(W\text{,}\)</span> since it is a linear combination of the <span class="process-math">\(\boldw_i\text{.}\)</span> Furthermore, we see easily that our choice <span class="process-math">\(\boldw^\perp=\boldv-\boldw\)</span> satisfies</div>
+<div class="para">and <span class="process-math">\(\boldw^\perp=\boldv-\boldw\)</span> satisfy the conditions in <a href="s_orthogonal_projection.html#eq_ortho_decomp" class="xref" data-knowl="./knowl/xref/eq_ortho_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.1">(3.3.1)</a>. It is clear that the <span class="process-math">\(\boldw\)</span> defined in <a href="s_orthogonal_projection.html#eq_ortho_proj_formula_proof" class="xref" data-knowl="./knowl/xref/eq_ortho_proj_formula_proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.4">(3.3.4)</a> is an element of <span class="process-math">\(W\text{,}\)</span> since it is a linear combination of the <span class="process-math">\(\boldw_i\text{.}\)</span> Furthermore, we see easily that our choice <span class="process-math">\(\boldw^\perp=\boldv-\boldw\)</span> satisfies</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_ortho_decomp.html ./knowl/xref/eq_ortho_proj_formula_proof.html">
 \begin{equation*}
 \boldw+\boldw^\perp=\boldw+(\boldv-\boldw)=\boldv\text{.}
@@ -88,7 +88,7 @@ d(\boldv, W)=d(\boldv, \proj{\boldv}{W})=\norm{\boldv-\proj{\boldv}{W}}\text{.}
 <div class="para">as desired.</div>
 </div>
 <div class="para logical">
-<div class="para">Having shown that a decomposition of <span class="process-math">\(\boldv\)</span> of the form <a href="s_orthogonal_projection.html#eq_ortho_decomp" class="xref" data-knowl="./knowl/xref/eq_ortho_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.3.1">(4.3.1)</a> exists, we now show it is unique in the sense specified. Suppose we have</div>
+<div class="para">Having shown that a decomposition of <span class="process-math">\(\boldv\)</span> of the form <a href="s_orthogonal_projection.html#eq_ortho_decomp" class="xref" data-knowl="./knowl/xref/eq_ortho_decomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.1">(3.3.1)</a> exists, we now show it is unique in the sense specified. Suppose we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_ortho_decomp.html ./knowl/xref/th_orthogonal_complement.html">
 \begin{equation*}
 \boldv=\boldw+\boldw^\perp=\boldu+\boldu^\perp\text{,}
@@ -100,14 +100,14 @@ d(\boldv, W)=d(\boldv, \proj{\boldv}{W})=\norm{\boldv-\proj{\boldv}{W}}\text{.}
 \boldw-\boldu=\boldu^\perp-\boldw^\perp\text{.}
 \end{equation*}
 </div>
-<div class="para">We now claim that <span class="process-math">\(\boldw-\boldu=\boldu^\perp-\boldw^\perp=\boldzero\text{,}\)</span> in which case <span class="process-math">\(\boldw=\boldu\)</span> and <span class="process-math">\(\boldw^\perp=\boldu^\perp\text{,}\)</span> as desired. To see why the claim is true, consider the vector <span class="process-math">\(\boldv'=\boldw-\boldu=\boldu^\perp-\boldw^\perp\text{.}\)</span> Since <span class="process-math">\(\boldv'=\boldw-\boldu\text{,}\)</span> and <span class="process-math">\(\boldw, \boldu\in W\text{,}\)</span> we have <span class="process-math">\(\boldv'\in W\text{.}\)</span> On the other hand, since <span class="process-math">\(\boldv'=\boldu^\perp-\boldw^\perp\text{,}\)</span> and <span class="process-math">\(\boldu^\perp, \boldw^\perp\in W^\perp\text{,}\)</span> we have <span class="process-math">\(\boldv'\in W^\perp\text{.}\)</span> Thus <span class="process-math">\(\boldv'\in W\cap W^\perp\text{.}\)</span> Since <span class="process-math">\(W\cap W^\perp=\{\boldzero\}\)</span> (<a href="s_orthogonal_projection.html#th_orthogonal_complement" class="xref" data-knowl="./knowl/xref/th_orthogonal_complement.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.3.5: Orthogonal complement">Theorem 4.3.5</a>), we conclude <span class="process-math">\(\boldv'=\boldw-\boldu=\boldu^\perp-\boldw^\perp=\boldzero\text{,}\)</span> as claimed.</div>
+<div class="para">We now claim that <span class="process-math">\(\boldw-\boldu=\boldu^\perp-\boldw^\perp=\boldzero\text{,}\)</span> in which case <span class="process-math">\(\boldw=\boldu\)</span> and <span class="process-math">\(\boldw^\perp=\boldu^\perp\text{,}\)</span> as desired. To see why the claim is true, consider the vector <span class="process-math">\(\boldv'=\boldw-\boldu=\boldu^\perp-\boldw^\perp\text{.}\)</span> Since <span class="process-math">\(\boldv'=\boldw-\boldu\text{,}\)</span> and <span class="process-math">\(\boldw, \boldu\in W\text{,}\)</span> we have <span class="process-math">\(\boldv'\in W\text{.}\)</span> On the other hand, since <span class="process-math">\(\boldv'=\boldu^\perp-\boldw^\perp\text{,}\)</span> and <span class="process-math">\(\boldu^\perp, \boldw^\perp\in W^\perp\text{,}\)</span> we have <span class="process-math">\(\boldv'\in W^\perp\text{.}\)</span> Thus <span class="process-math">\(\boldv'\in W\cap W^\perp\text{.}\)</span> Since <span class="process-math">\(W\cap W^\perp=\{\boldzero\}\)</span> (<a href="s_orthogonal_projection.html#th_orthogonal_complement" class="xref" data-knowl="./knowl/xref/th_orthogonal_complement.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.5: Orthogonal complement">Theorem 3.3.5</a>), we conclude <span class="process-math">\(\boldv'=\boldw-\boldu=\boldu^\perp-\boldw^\perp=\boldzero\text{,}\)</span> as claimed.</div>
 </div>
 <div class="para logical">
-<div class="para">At this point we have proved both (1) and (2), and it remains only to show that <a href="s_orthogonal_projection.html#eq_ortho_proj_distance" class="xref" data-knowl="./knowl/xref/eq_ortho_proj_distance.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.3.3">(4.3.3)</a> holds for all <span class="process-math">\(\boldw'\in W\text{.}\)</span> To this end we compute:</div>
+<div class="para">At this point we have proved both (1) and (2), and it remains only to show that <a href="s_orthogonal_projection.html#eq_ortho_proj_distance" class="xref" data-knowl="./knowl/xref/eq_ortho_proj_distance.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.3">(3.3.3)</a> holds for all <span class="process-math">\(\boldw'\in W\text{.}\)</span> To this end we compute:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_ortho_proj_distance.html ./knowl/xref/ex_ortho_pythag.html">
 \begin{align*}
 \norm{\boldv-\boldw'}^2\amp = \norm{\boldw^\perp+(\boldw-\boldw')}^2\\
-\amp =\norm{\boldw^\perp}^2+\norm{\boldw-\boldw'}^2 \amp (\knowl{./knowl/xref/ex_ortho_pythag.html}{\text{Exercise 4.2.3.13}})\\
+\amp =\norm{\boldw^\perp}^2+\norm{\boldw-\boldw'}^2 \amp (\knowl{./knowl/xref/ex_ortho_pythag.html}{\text{Exercise 3.2.3.13}})\\
 \amp \geq \norm{\boldw^\perp}^2\\
 \amp =\norm{\boldv-\boldw}^2\text{.}
 \end{align*}

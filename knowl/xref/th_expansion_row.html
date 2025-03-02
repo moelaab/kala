@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Expansion along rows.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Expansion along rows.</span>
 </h4>
 <div class="para logical">
 <div class="para">Let <span class="process-math">\(A=[a_{ij}]_{n\times n}\text{.}\)</span> For any <span class="process-math">\(1\leq i\leq n\)</span> we have</div>
@@ -38,19 +38,19 @@ A=\begin{bmatrix}a\amp b\\ c\amp d\end{bmatrix}
 <div class="para">Assume the claim is true of any <span class="process-math">\((n-1)\times (n-1)\)</span> matrix.  Given <span class="process-math">\(A=[a_{ij}]_{n\times n}\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_det_def.html ./knowl/xref/eq_det_submatrix.html ./knowl/xref/eq_entry_formula_1.html ./knowl/xref/eq_iterated_submatrix.html">
 \begin{equation}
-\det A=\sum_{j=1}^n (-1)^{1+j}a_{1 j}\det  A_{1j}\text{.}\tag{2.5.1}
+\det A=\sum_{j=1}^n (-1)^{1+j}a_{1 j}\det  A_{1j}\text{.}\tag{1.5.1}
 \end{equation}
 </div>
 <div class="para">Expanding along the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\)</span> for any <span class="process-math">\(2\leq i\leq n\text{,}\)</span> on the other hand, we get</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_det_def.html ./knowl/xref/eq_det_submatrix.html ./knowl/xref/eq_entry_formula_1.html ./knowl/xref/eq_iterated_submatrix.html">
 \begin{equation}
-\sum_{k=1}^n (-1)^{i+k}a_{ik}\det A_{i  k}\text{.}\tag{2.5.2}
+\sum_{k=1}^n (-1)^{i+k}a_{ik}\det A_{i  k}\text{.}\tag{1.5.2}
 \end{equation}
 </div>
 <div class="para">To show these two expressions are equal we use the induction hypothesis to compute each <span class="process-math">\(\det  A_{1  j}\)</span> by expanding along its <span class="process-math">\((i-1)\)</span>-th row:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_det_def.html ./knowl/xref/eq_det_submatrix.html ./knowl/xref/eq_entry_formula_1.html ./knowl/xref/eq_iterated_submatrix.html">
 \begin{equation}
-\det  A_{1j}=\sum_{k=1}^{n-1}(-1)^{i-1+k}[ A_{1j}]_{(i-1) k}\det {( A_{1j})}_{(i-1) k}\text{.}\tag{2.5.3}
+\det  A_{1j}=\sum_{k=1}^{n-1}(-1)^{i-1+k}[ A_{1j}]_{(i-1) k}\det {( A_{1j})}_{(i-1) k}\text{.}\tag{1.5.3}
 \end{equation}
 </div>
 <div class="para">The matrix <span class="process-math">\((A_{1j})_{(i-1) k}\)</span> is the result of first deleting row 1 and column <span class="process-math">\(j\)</span> from <span class="process-math">\(A\text{,}\)</span> and then deleting row <span class="process-math">\((i-1)\)</span> and column <span class="process-math">\(k\)</span> of the resulting matrix.  To deal with such iterated submatrices, we make some simple observations relating the rows and columns of <span class="process-math">\(A_{1 j}\)</span> and <span class="process-math">\(A_{i  k}\)</span> with those of <span class="process-math">\(A\text{.}\)</span>
@@ -69,25 +69,25 @@ A=\begin{bmatrix}a\amp b\\ c\amp d\end{bmatrix}
 [ A_{1j}]_{(i-1)  k} \amp =\begin{cases}
 a_{i  k} \amp \text{if } k\lt j\\
 a_{i  (k+1)}  \amp \text{if } k\geq j
-\end{cases} \tag{2.5.4}\\
+\end{cases} \tag{1.5.4}\\
 [ A_{i  k}]_{1  j} \amp =\begin{cases}
 a_{1  j}  \amp \text{if } j\lt k\\
 a_{1  (j+1)} \amp \text{if } k\leq j
-\end{cases} \tag{2.5.5}\\
+\end{cases} \tag{1.5.5}\\
 {( A_{1j})}_{i-1  k}\amp=\begin{cases}
 {( A_{i  k})}_{1  (j-1)} \amp\text{if } k\lt j \\
 {( A_{i  (k+1)})}_{1  j} \amp \text{if } k\geq j
-\end{cases}\text{.}\tag{2.5.6}
+\end{cases}\text{.}\tag{1.5.6}
 \end{align}
 </div>
-<div class="para">We now begin to unpack <a href="s_det.html#eq_det_def" class="xref" data-knowl="./knowl/xref/eq_det_def.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.5.1">(2.5.1)</a>:</div>
+<div class="para">We now begin to unpack <a href="s_det.html#eq_det_def" class="xref" data-knowl="./knowl/xref/eq_det_def.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.5.1">(1.5.1)</a>:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_det_def.html ./knowl/xref/eq_det_submatrix.html ./knowl/xref/eq_entry_formula_1.html ./knowl/xref/eq_iterated_submatrix.html">
 \begin{align*}
 \det A \amp= \sum_{j=1}^n (-1)^{1+j}a_{1 j}\det  A_{1j}\\
-\amp = \sum_{j=1}^n (-1)^{1+j}a_{1 j}\sum_{k=1}^{n-1}(-1)^{i-1+k}[ A_{1j}]_{(i-1)k}\det {( A_{1j})}_{(i-1)k} \amp \knowl{./knowl/xref/eq_det_submatrix.html}{\text{(2.5.3)}}\\
+\amp = \sum_{j=1}^n (-1)^{1+j}a_{1 j}\sum_{k=1}^{n-1}(-1)^{i-1+k}[ A_{1j}]_{(i-1)k}\det {( A_{1j})}_{(i-1)k} \amp \knowl{./knowl/xref/eq_det_submatrix.html}{\text{(1.5.3)}}\\
 \amp
 = \underset{k\lt j \text{ terms}}{\underbrace{\sum_{j=2}^n \sum_{k=1}^{j-1}(-1)^{i+j+k}a_{1 j}a_{i  k}\det (A_{i  k})_{1  (j-1)}}}+\underset{k\geq j \text{ terms}}{\underbrace{\sum_{j=1}^{n-1} \sum_{k=j}^{n-1}(-1)^{i+j+k}a_{1 j}a_{i  (k+1)}\det (A_{i  (k+1)})_{1  j}}}
-\amp \knowl{./knowl/xref/eq_entry_formula_1.html}{\text{(2.5.4)}}, \knowl{./knowl/xref/eq_iterated_submatrix.html}{\text{(2.5.6)}}\\
+\amp \knowl{./knowl/xref/eq_entry_formula_1.html}{\text{(1.5.4)}}, \knowl{./knowl/xref/eq_iterated_submatrix.html}{\text{(1.5.6)}}\\
 \amp = \underset{j\geq k \text{ terms}}{\underbrace{\sum_{j=1}^{n-1} \sum_{k=1}^{j}(-1)^{i+j+k+1}a_{i  k}[A_{ik}]_{1j}\det (A_{i  k})_{1  j}}}+\underset{j\lt k \text{ terms}}{\underbrace{\sum_{j=1}^{n-1} \sum_{k=j+1}^{n}(-1)^{i+j+k-1}a_{ik}[A_{ik}]_{1 j}\det (A_{ik})_{1  j}}}
 \amp (\text{re-labeled } j=j-1, k=k+1)\\
 \amp = \underset{j\geq k \text{ terms}}{\underbrace{\sum_{j=1}^{n-1} \sum_{k=1}^{j}(-1)^{i+j+k+1}a_{i  k}[A_{ik}]_{1j}\det (A_{i  k})_{1  j}}}+\underset{j\lt k \text{ terms}}{\underbrace{\sum_{j=1}^{n-1} \sum_{k=j+1}^{n}(-1)^{i+j+k+1}a_{ik}[A_{ik}]_{1 j}\det (A_{ik})_{1  j}}}

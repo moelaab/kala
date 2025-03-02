@@ -12,21 +12,21 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.15</span><span class="period">.</span><span class="space"> </span><span class="title">Orthogonal matrices.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.15</span><span class="period">.</span><span class="space"> </span><span class="title">Orthogonal matrices.</span>
 </h4>
 <div class="para">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix. The following statements are equivalent.</div> <ol class="decimal" id="th_orthogonal_matrices-2-2">
 <li><div class="para">The matrix <span class="process-math">\(A\)</span> is orthogonal.</div></li>
 <li><div class="para">The columns of <span class="process-math">\(A\)</span> form an orthonormal basis of <span class="process-math">\(\R^n\)</span> with respect to the dot product.</div></li>
 <li><div class="para">The rows of <span class="process-math">\(A\)</span> form an orthonormal basis of <span class="process-math">\(\R^n\)</span> with respect to the dot product.</div></li>
 </ol></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
-<div class="para">Let <span class="process-math">\(\boldr_i\)</span> and <span class="process-math">\(\boldc_i\)</span> be the <span class="process-math">\(i\)</span>-th row and column of <span class="process-math">\(A\text{,}\)</span> respectively, for each <span class="process-math">\(1\leq i\leq n\text{.}\)</span> From <a href="s_innerproducts.html#th_dotproduct_method" class="xref" data-knowl="./knowl/xref/th_dotproduct_method.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.1.9: Dot product and matrix multiplication">Theorem 4.1.9</a> we see that</div>
+<div class="para">Let <span class="process-math">\(\boldr_i\)</span> and <span class="process-math">\(\boldc_i\)</span> be the <span class="process-math">\(i\)</span>-th row and column of <span class="process-math">\(A\text{,}\)</span> respectively, for each <span class="process-math">\(1\leq i\leq n\text{.}\)</span> From <a href="s_innerproducts.html#th_dotproduct_method" class="xref" data-knowl="./knowl/xref/th_dotproduct_method.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.1.9: Dot product and matrix multiplication">Theorem 3.1.9</a> we see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_dotproduct_method.html ">
 \begin{align}
-A^TA \amp=[\boldc_i\cdot \boldc_j]_{1\leq i,j\leq n} \tag{5.3.3}\\
-AA^T \amp=[\boldr_i\cdot \boldr_j]_{1\leq i,j\leq n} \text{.}\tag{5.3.4}
+A^TA \amp=[\boldc_i\cdot \boldc_j]_{1\leq i,j\leq n} \tag{4.3.3}\\
+AA^T \amp=[\boldr_i\cdot \boldr_j]_{1\leq i,j\leq n} \text{.}\tag{4.3.4}
 \end{align}
 </div>
-<div class="para">We use here that rows of <span class="process-math">\(A^T\)</span> are the columns of <span class="process-math">\(A\text{,}\)</span> and the columns of <span class="process-math">\(A^T\)</span> are the rows of <span class="process-math">\(A\text{.}\)</span> From <a href="s_changeofbasis.html#th_orthogonal_matrices-3-1-7" class="xref" data-knowl="./knowl/xref/eq_orthogonal_matrixleft.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.3">(5.3.3)–(5.3.4)</a> it follows easily that</div>
+<div class="para">We use here that rows of <span class="process-math">\(A^T\)</span> are the columns of <span class="process-math">\(A\text{,}\)</span> and the columns of <span class="process-math">\(A^T\)</span> are the rows of <span class="process-math">\(A\text{.}\)</span> From <a href="s_changeofbasis.html#th_orthogonal_matrices-3-1-7" class="xref" data-knowl="./knowl/xref/eq_orthogonal_matrixleft.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.3.3">(4.3.3)–(4.3.4)</a> it follows easily that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_dotproduct_method.html ">
 \begin{align*}
 A^{-1}=A^T \amp \iff A^TA=I \\

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.6.13</span><span class="period">.</span><span class="space"> </span><span class="title">Bases and linear transformations.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.6.13</span><span class="period">.</span><span class="space"> </span><span class="title">Bases and linear transformations.</span>
 </h4>
 <div class="para">Let <span class="process-math">\(B\)</span> be a basis for the vector space <span class="process-math">\(V\text{.}\)</span>
 </div> <ol class="decimal" id="th_bases_transformations-2-2">
@@ -34,7 +34,7 @@ T(\boldu)=\boldw_\boldu
 <div class="para">for all <span class="process-math">\(\boldu\in B\text{.}\)</span> In more detail, given any <span class="process-math">\(\boldv\in V\text{,}\)</span> if   <span class="process-math">\(\boldv=c_1\boldu_1+c_2\boldu_2+\cdots +c_r\boldu_r\text{,}\)</span> where <span class="process-math">\(\boldu_i\in B\)</span>  and <span class="process-math">\(c_i\ne 0\)</span> for all <span class="process-math">\(1\leq i\leq r\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation}
-T(\boldv)=c_1T(\boldu_{1})+c_2T(\boldu_{2})+\cdots +c_rT(\boldu_{r})\text{.}\tag{3.6.2}
+T(\boldv)=c_1T(\boldu_{1})+c_2T(\boldu_{2})+\cdots +c_rT(\boldu_{r})\text{.}\tag{2.6.2}
 \end{equation}
 </div>
 </div></li>
@@ -59,7 +59,7 @@ T(\boldv) \amp = T(c_1\boldu_1+c_2\boldu_2+\cdots +c_r\boldu_r)\\
 \boldv=c_1\boldu_1+c_2\boldu_2+\cdots +c_r\boldu_r\text{,}
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(c_i\ne 0\)</span> for all <span class="process-math">\(1\leq i\leq r\text{,}\)</span> the formula in <a href="s_basis.html#eq_bases_transformations" class="xref" data-knowl="./knowl/xref/eq_bases_transformations.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.2">(3.6.2)</a> defines a function <span class="process-math">\(T\colon V\rightarrow W\)</span> in a well-defined manner. Note also that the formula still applies even if some of the coefficients are equal to 0: if <span class="process-math">\(c_i=0\text{,}\)</span> then <span class="process-math">\(c_iT(\boldv_i)=\boldzero\text{,}\)</span> and the right-hand side of <a href="s_basis.html#eq_bases_transformations" class="xref" data-knowl="./knowl/xref/eq_bases_transformations.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.2">(3.6.2)</a> is unchanged. We will use this fact below.</div>
+<div class="para">where <span class="process-math">\(c_i\ne 0\)</span> for all <span class="process-math">\(1\leq i\leq r\text{,}\)</span> the formula in <a href="s_basis.html#eq_bases_transformations" class="xref" data-knowl="./knowl/xref/eq_bases_transformations.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.6.2">(2.6.2)</a> defines a function <span class="process-math">\(T\colon V\rightarrow W\)</span> in a well-defined manner. Note also that the formula still applies even if some of the coefficients are equal to 0: if <span class="process-math">\(c_i=0\text{,}\)</span> then <span class="process-math">\(c_iT(\boldv_i)=\boldzero\text{,}\)</span> and the right-hand side of <a href="s_basis.html#eq_bases_transformations" class="xref" data-knowl="./knowl/xref/eq_bases_transformations.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.6.2">(2.6.2)</a> is unchanged. We will use this fact below.</div>
 </div>
 <div class="para logical">
 <div class="para">We now show that <span class="process-math">\(T\)</span> is linear. Given <span class="process-math">\(\boldv, \boldv'\in V\)</span> we can find a common collection of elements <span class="process-math">\(\boldu_1,\boldu_2,\dots, \boldu_r\in B\)</span> for which</div>
@@ -81,7 +81,7 @@ T(\boldv')\amp=d_1T(\boldu_1)+d_2T(\boldu_2)+\cdots +d_rT(\boldu_r) \text{.}
 \begin{align*}
 T(c\boldv+d\boldv')\amp=T(cc_1\boldu_1+cc_2\boldu_2+\cdots +cc_r\boldu_r+dd_1\boldu_1+dd_2\boldu_2+\cdots +dd_r\boldu_r) \\
 \amp= T\left((cc_1+dd_1)\boldu_1+(cc_2+dd_2)\boldu_2+\cdots +(cc_r+dd_r)\boldu_r\right) \\
-\amp =(cc_1+dd_1)T(\boldu_1)+(cc_2+dd_2)T(\boldu_2)+\cdots +(cc_r+dd_r)T(\boldu_r) \amp (\knowl{./knowl/xref/eq_bases_transformations.html}{\text{(3.6.2)}}) \\
+\amp =(cc_1+dd_1)T(\boldu_1)+(cc_2+dd_2)T(\boldu_2)+\cdots +(cc_r+dd_r)T(\boldu_r) \amp (\knowl{./knowl/xref/eq_bases_transformations.html}{\text{(2.6.2)}}) \\
 \amp= c(c_1T(\boldu_1)+c_2T(\boldu_2)+\cdots +c_rT(\boldu_r))+d(d_1T(\boldu_1)+d_2T(\boldu_2)+\cdots +d_rT(\boldu_r)\\
 \amp =cT(\boldv)+dT(\boldv')\text{.}
 \end{align*}

@@ -28,7 +28,7 @@ sagecell.makeSagecell({
 <span class="type">Sage example</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span><span class="space"> </span><span class="title">Solving matrix equations.</span>
 </h4>
 <div class="para logical">
-<div class="para">Let’s use Sage and  <a href="s_nullspace_image.html#cor_matrix_equations" class="xref" data-knowl="./knowl/xref/cor_matrix_equations.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 3.4.16: Solutions to matrix equations">Corollary 3.4.16</a> to find the set of solutions <span class="process-math">\(S\subseteq \R^5\)</span> to the matrix equation</div>
+<div class="para">Let’s use Sage and  <a href="s_nullspace_image.html#cor_matrix_equations" class="xref" data-knowl="./knowl/xref/cor_matrix_equations.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 2.4.16: Solutions to matrix equations">Corollary 2.4.16</a> to find the set of solutions <span class="process-math">\(S\subseteq \R^5\)</span> to the matrix equation</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor_matrix_equations.html ./knowl/xref/sage_solve_system.html ./knowl/xref/eq_sage_matrix_eqn.html">
 \begin{equation}
 \begin{amatrix}[rrrrr]
@@ -37,10 +37,10 @@ sagecell.makeSagecell({
 2\amp 4\amp -5\amp 6\amp -5
 \end{amatrix}
 \begin{amatrix}[c] x_1\\ x_2\\ x_3\\ x_4\\ x_5   \end{amatrix}=
-\begin{amatrix}[r] 12\\ 28\\ -1  \end{amatrix}\text{.}\tag{3.4.5}
+\begin{amatrix}[r] 12\\ 28\\ -1  \end{amatrix}\text{.}\tag{2.4.5}
 \end{equation}
 </div>
-<div class="para">This is the matrix equation form of the linear system we investigated in <a href="s_solving.html#sage_solve_system" class="xref" data-knowl="./knowl/xref/sage_solve_system.html" data-reveal-label="Reveal" data-close-label="Close" title="Sage example 2: Solving linear systems">Sage example 2</a>. The method <code class="code-inline tex2jax_ignore">solve_right</code> can be used to find a <em class="emphasis">particular solution</em> <span class="process-math">\(\boldx_p\)</span> to <a href="s_nullspace_image.html#eq_sage_matrix_eqn" class="xref" data-knowl="./knowl/xref/eq_sage_matrix_eqn.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.5">(3.4.5)</a>.</div>
+<div class="para">This is the matrix equation form of the linear system we investigated in <a href="s_solving.html#sage_solve_system" class="xref" data-knowl="./knowl/xref/sage_solve_system.html" data-reveal-label="Reveal" data-close-label="Close" title="Sage example 2: Solving linear systems">Sage example 2</a>. The method <code class="code-inline tex2jax_ignore">solve_right</code> can be used to find a <em class="emphasis">particular solution</em> <span class="process-math">\(\boldx_p\)</span> to <a href="s_nullspace_image.html#eq_sage_matrix_eqn" class="xref" data-knowl="./knowl/xref/eq_sage_matrix_eqn.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4.5">(2.4.5)</a>.</div>
 </div>
 <div id="sage_solve_matrix_eqn-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=Matrix([[0,0,-2,0,7],[2,4,-10,6,12],[2,4,-5,6,-5]])
 b=vector([12,28,-1])
@@ -56,7 +56,7 @@ show(A*xp) # Check xp is solution
 S=\{\boldx_p+\boldu\colon \boldu\in \NS A\}=\boldx_p+\NS A\text{.}
 \end{equation*}
 </div>
-<div class="para">We can illustrate this in Sage by taking random elements of <span class="process-math">\(\NS A\)</span> (computed using <code class="code-inline tex2jax_ignore">right_kernel</code>), adding them to <code class="code-inline tex2jax_ignore">xp</code>, and verifying that the result is a solution to <a href="s_nullspace_image.html#eq_sage_matrix_eqn" class="xref" data-knowl="./knowl/xref/eq_sage_matrix_eqn.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.5">(3.4.5)</a>. Each time you evaluate the cell below, a randomly generated element of <span class="process-math">\(S\)</span> will be outputted.</div>
+<div class="para">We can illustrate this in Sage by taking random elements of <span class="process-math">\(\NS A\)</span> (computed using <code class="code-inline tex2jax_ignore">right_kernel</code>), adding them to <code class="code-inline tex2jax_ignore">xp</code>, and verifying that the result is a solution to <a href="s_nullspace_image.html#eq_sage_matrix_eqn" class="xref" data-knowl="./knowl/xref/eq_sage_matrix_eqn.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4.5">(2.4.5)</a>. Each time you evaluate the cell below, a randomly generated element of <span class="process-math">\(S\)</span> will be outputted.</div>
 </div>
 <div id="sage_solve_matrix_eqn-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">NS=A.right_kernel()
 u=NS.random_element(1,-50,50)
