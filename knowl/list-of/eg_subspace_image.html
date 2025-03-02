@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Image computation.</span>
+</h4>
+<div class="para logical">
+<div class="para">Consider the matrix transformation <span class="process-math">\(T_A\colon \R^2\rightarrow\R^3\text{,}\)</span> where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix}1\amp 1\\ 2\amp 1\\ 3\amp 5 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Give a parametric description of <span class="process-math">\(\im T_A\)</span> and identify it as a familiar geoetric object.</div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<div class="para">By definition <span class="process-math">\(\im T_A\)</span> is the set</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_solveSystem.html ./knowl/xref/proc_solveSystem.html">
+\begin{equation*}
+\{\boldy\in\R^3\colon \boldy=T_A(\boldx) \text{ for some \(\boldx\in \R^3\) } \}=\left\{\boldy\colon \boldy=A\boldx \text{ for some \(\boldx\in\R^2\) } \right\}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus to compute <span class="process-math">\(\im T_A\)</span> we must determine which choice of <span class="process-math">\(\boldy=(a,b,c)\)</span> makes the system <span class="process-math">\(A\boldx=\boldy\)</span> consistent. We answer this using our old friend <a href="s_solving.html#proc_solveSystem" class="xref" data-knowl="./knowl/xref/proc_solveSystem.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_solveSystem.html ./knowl/xref/proc_solveSystem.html">
+\begin{align*}
+\begin{amatrix}[rr|r] 1\amp 1\amp a\\ 2\amp 1\amp b\\ 3\amp 5\amp c \end{amatrix} \amp \xrightarrow[r_3-3r_1]{r_2-2r_1} \begin{amatrix}[rr|r] 1\amp 1\amp a\\ 0\amp 1\amp 2a-b\\ 0\amp 0\amp -7a+2b+c \end{amatrix}\text{.}
+\end{align*}
+</div>
+<div class="para">Thus for the system to be consistent we need <span class="process-math">\(-7a+2b+c=0\text{,}\)</span> and we conclude</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_solveSystem.html ./knowl/xref/proc_solveSystem.html">
+\begin{equation*}
+\im T_A=\{(a,b,c)\colon 7a+2b+c=0\}\text{.}
+\end{equation*}
+</div>
+<div class="para">Geometrically we recognize this as the plane passing through <span class="process-math">\((0,0,0)\)</span> with normal vector <span class="process-math">\(\boldn=(-7,2,1)\text{.}\)</span> To describe it parametrically we can use <a href="s_solving.html#proc_solveSystem" class="xref" data-knowl="./knowl/xref/proc_solveSystem.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a> again on the equation <span class="process-math">\(7a+2b+c=0\text{.}\)</span> The unknowns <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> are free here, and we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_solveSystem.html ./knowl/xref/proc_solveSystem.html">
+\begin{equation*}
+\im T=\{(a,b,c)\colon 7a+2b+c=0\}=\left\{\left(\frac{1}{7}(-2r-s), r,s \right)\colon r,s\in\R\right\}\text{.}
+\end{equation*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_nullspace_image.html#eg_subspace_image">in-context</a></span>
+</body>
+</html>

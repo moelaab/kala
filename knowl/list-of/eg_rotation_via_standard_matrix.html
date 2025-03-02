@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.19</span><span class="period">.</span><span class="space"> </span><span class="title">Rotation matrices revisited.</span>
+</h4>
+<div class="para">Fix an angle <span class="process-math">\(\alpha\text{.}\)</span> Taking for granted that the rotation operation <span class="process-math">\(\rho_\alpha\colon\R^2\rightarrow\R^2\)</span> is a linear transformation, re-derive the matrix formula for <span class="process-math">\(\rho_\alpha\colon \R^2\rightarrow\R^2\text{:}\)</span> i.e., compute <span class="process-math">\(A\text{,}\)</span> the standard matrix of <span class="process-math">\(\rho_\alpha\text{.}\)</span>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<div class="para">Let <span class="process-math">\(B=\{\bolde_1, \bolde_2\}=\{(1,0), (0,1)\}\text{.}\)</span> According to <a href="s_basis.html#cor_matrix_transformations" class="xref" data-knowl="./knowl/xref/cor_matrix_transformations.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 3.6.16: Matrix transformations">Corollary 3.6.16</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor_matrix_transformations.html">
+\begin{align*}
+A \amp=\begin{bmatrix}
+\vert\amp \vert \\
+\rho_\alpha(1,0)\amp \rho_\alpha(0,1) \\
+\vert \amp \vert
+\end{bmatrix} \\
+\amp=\begin{amatrix}[rr]
+\cos\alpha \amp -\sin\alpha \\
+\sin\alpha \amp \cos\alpha
+\end{amatrix} \text{,}
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\((1,0)\)</span> gets rotated by <span class="process-math">\(\rho_\alpha\)</span> to <span class="process-math">\((\cos\alpha, \sin\alpha)\text{,}\)</span> and <span class="process-math">\((0,1)\)</span> gets rotated to <span class="process-math">\((-\sin\alpha, \cos\alpha)\text{.}\)</span>
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_basis.html#eg_rotation_via_standard_matrix">in-context</a></span>
+</body>
+</html>

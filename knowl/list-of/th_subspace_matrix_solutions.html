@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Solutions to <span class="process-math">\(A\boldx=\boldzero\)</span> form a subspace.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix. The set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+W=\{\boldx\in \R^n\colon A\boldx=\boldzero\}
+\end{equation*}
+</div>
+<div class="para">of solutions to the homogeneous matrix equation <span class="process-math">\(A\boldx=\boldzero\)</span> is a subspace of <span class="process-math">\(\R^n\text{.}\)</span>
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para">Following the two-step technique, we first show that <span class="process-math">\(\boldzero_n
+\in W\text{.}\)</span> This is clear, since <span class="process-math">\(A\boldzero_n=\boldzero_m\text{.}\)</span> (We introduce the subscripts to distinguish between the zero vectors of the domain <span class="process-math">\(\R^n\)</span> and <span class="process-math">\(\R^m\text{.}\)</span>)</div>
+<div class="para logical">
+<div class="para">Next, we show that for any <span class="process-math">\(\boldx_1, \boldx_2\in \R^n\)</span> and any <span class="process-math">\(c_1, c_2\in \R\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrix_alg_props.html">
+\begin{equation*}
+\boldx_1, \boldx_2\in W\implies c_1\boldw_1+c_2\boldw_2\in W\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(\boldx_1, \boldx_2\in W\text{,}\)</span> then we have <span class="process-math">\(A\boldx_1=A\boldx_2=\boldzero_m\text{,}\)</span> by definition of <span class="process-math">\(W\text{.}\)</span> It the follows that the vector <span class="process-math">\(c_1\boldx_1+c_2\boldx_2\)</span> satisfies</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrix_alg_props.html">
+\begin{align*}
+A(c_1\boldx_1+c_2\boldx_2)  \amp= c_1A\boldx_1+c_2A\boldx_2 \amp (\knowl{./knowl/xref/th_matrix_alg_props.html}{\text{2.2.1}}) \\
+\amp c_1A\boldzero_m+c_2\boldzero_m \amp  (\boldx_1, \boldx_2\in W) \\
+\amp = \boldzero_m\text{.}
+\end{align*}
+</div>
+<div class="para">Thus <span class="process-math">\(c_1\boldx_1+c_2\boldx_2\in W\text{,}\)</span> as desired.</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_subspace.html#th_subspace_matrix_solutions">in-context</a></span>
+</body>
+</html>

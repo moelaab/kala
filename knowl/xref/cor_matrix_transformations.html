@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="corollary theorem-like"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.6.16</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix transformations.</span>
+</h4>
+<div class="para logical">
+<div class="para">Given any linear transformation <span class="process-math">\(T\colon \R^n\rightarrow \R^m\)</span> there is a unique <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\)</span> such that <span class="process-math">\(T=T_A\text{.}\)</span> In fact we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix}\vert\amp \vert\amp  \amp \vert \\ T(\bolde_1)\amp  T(\bolde_2)\amp \cdots \amp T(\bolde_n)\\ \vert\amp \vert\amp  \amp \vert \end{bmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(B=\{\bolde_1, \bolde_2, \dots, \bolde_n\}\)</span> is the standard basis of <span class="process-math">\(\R^n\text{.}\)</span> As a result, in the special case where the domain and codomain are both spaces of tuples, all linear transformations are matrix transformations.</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Let <span class="process-math">\(B=\{\bolde_1, \bolde_2, \dots, \bolde_n\}\)</span> be the standard basis of <span class="process-math">\(\R^n\text{,}\)</span> and let <span class="process-math">\(A\)</span> be the <span class="process-math">\(m\times n\)</span> matrix defined as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrix_transform_i.html ./knowl/xref/th_bases_transformations.html ./knowl/xref/d_matrix_transform.html ./knowl/xref/th_column_method.html">
+\begin{equation*}
+A=\begin{bmatrix}\vert\amp \vert\amp  \amp \vert \\ T(\bolde_1)\amp  T(\bolde_2)\amp \cdots \amp T(\bolde_n)\\ \vert\amp \vert\amp  \amp \vert \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">In other words, the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(A\)</span> is <span class="process-math">\(T(\bolde_j)\text{,}\)</span> considered as an <span class="process-math">\(m\times 1\)</span> column vector. The corresponding matrix transformation <span class="process-math">\(T_A\colon \R^n\rightarrow \R^m\)</span> is linear by <a href="s_transformation.html#th_matrix_transform_i" class="xref" data-knowl="./knowl/xref/th_matrix_transform_i.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.9: Matrix transformations I">Theorem 3.2.9</a>. Since <span class="process-math">\(T\)</span> is linear by assumption, <a href="s_basis.html#th_bases_transformations" class="xref" data-knowl="./knowl/xref/th_bases_transformations.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.6.13: Bases and linear transformations">Theorem 3.6.13</a> applies: to show <span class="process-math">\(T=T_A\)</span> we need only show that <span class="process-math">\(T(\bolde_j)=T_A(\bolde_j)\)</span> for all <span class="process-math">\(1\leq j\leq n\text{.}\)</span> We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrix_transform_i.html ./knowl/xref/th_bases_transformations.html ./knowl/xref/d_matrix_transform.html ./knowl/xref/th_column_method.html">
+\begin{align*}
+T_A(\bolde_j) \amp =A\bolde_j  \amp (\knowl{./knowl/xref/d_matrix_transform.html}{\text{Definition 3.2.8}})\\
+\amp=(j\text{-th column of } A) \amp (\knowl{./knowl/xref/th_column_method.html}{\text{Theorem 2.1.24}}) \\
+\amp = T(\bolde_j) \amp (\text{def. of } A)\text{.}
+\end{align*}
+</div>
+<div class="para">Thus <span class="process-math">\(T=T_A\text{,}\)</span> as claimed.</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_basis.html#cor_matrix_transformations">in-context</a></span>
+</body>
+</html>

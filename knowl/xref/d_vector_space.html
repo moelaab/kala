@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Vector space.</span>
+</h4>
+<div class="para">A <dfn class="terminology">(real) vector space</dfn> is a set <span class="process-math">\(V\)</span> together with two operations, <dfn class="terminology">scalar multiplication</dfn> and <dfn class="terminology">vector addition</dfn>, described in detail below.</div> <dl class="description-list">
+<dt>Scalar multiplication</dt>
+<dd><div class="para logical">
+<div class="para">This operation takes as input any real number <span class="process-math">\(c\in R\)</span> and any element <span class="process-math">\(\boldv\in V\text{,}\)</span> and outputs another element of <span class="process-math">\(V\text{,}\)</span> denoted <span class="process-math">\(c\boldv\text{.}\)</span> We describe this operation using function notation as follows:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\R\times V\amp \rightarrow  V\\
+(c,\boldv)\amp \mapsto  c\boldv\text{.}
+\end{align*}
+</div>
+</div></dd>
+<dt>Vector addition</dt>
+<dd><div class="para logical">
+<div class="para">This operation takes as input any pair of elements <span class="process-math">\(\boldv, \boldw\in V\)</span> and returns another element of <span class="process-math">\(V\text{,}\)</span> denoted <span class="process-math">\(\boldv+\boldw\text{.}\)</span>  In function notation:</div>
+<div class="displaymath process-math">
+\begin{align*}
+V\times V\amp \rightarrow  V\\
+(\boldv,\boldw)\amp \mapsto   \boldv+\boldw\text{.}
+\end{align*}
+</div>
+</div></dd>
+</dl> <div class="para">Furthermore, these two operations must satisfy the following list of axioms.</div> <ol class="lower-roman ol-marker-1" id="d_vector_space-6-4">
+<li>
+<span class="heading"><span class="title">Vector addition is commutative.</span></span><div class="para logical">
+<div class="para">For all <span class="process-math">\(\boldv, \boldw\in V\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\boldv+\boldw=\boldw+\boldv\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Vector addition is associative.</span></span><div class="para logical">
+<div class="para">For all <span class="process-math">\(\boldu, \boldv, \boldw\in V\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\boldu+\boldv)+\boldw=\boldu+(\boldv+\boldw)\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Existence of additive identity.</span></span><div class="para logical">
+<div class="para">There is an element <span class="process-math">\(\boldzero\in V\)</span> such that for all <span class="process-math">\(\boldv\in V\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\boldzero+\boldv=\boldv+\boldzero=\boldv\text{.}
+\end{equation*}
+</div>
+<div class="para">The element <span class="process-math">\(\boldzero\)</span> is called the <dfn class="terminology">zero vector of <span class="process-math">\(V\)</span></dfn>.</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Existence of additive inverses.</span></span><div class="para logical">
+<div class="para">For all <span class="process-math">\(\boldv\in V\text{,}\)</span> there is another element <span class="process-math">\(-\boldv\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\boldv+\boldv=\boldv+(-\boldv)=\boldzero\text{.}
+\end{equation*}
+</div>
+<div class="para">Given <span class="process-math">\(\boldv\in V\text{,}\)</span> the element <span class="process-math">\(-\boldv\)</span> is called the <dfn class="terminology">vector inverse of <span class="process-math">\(\boldv\)</span></dfn>.</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Distribution over vector addition.</span></span><div class="para logical">
+<div class="para">For all <span class="process-math">\(c\in \R\)</span> and <span class="process-math">\(\boldv, \boldw\in V\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c(\boldv+\boldw)=c\boldv+c\boldw\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Distribution over scalar addition.</span></span><div class="para logical">
+<div class="para">For all <span class="process-math">\(c, d\in \R\)</span> and <span class="process-math">\(\boldv\in V\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(c+d)\boldv=c\boldv+d\boldv
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Scalar multiplication is associative.</span></span><div class="para logical">
+<div class="para">For all <span class="process-math">\(c,d\in \R\)</span> and all <span class="process-math">\(\boldv\in V\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c(d\boldv)=(cd)\boldv\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Scalar multiplicative identity.</span></span><div class="para logical">
+<div class="para">For all <span class="process-math">\(\boldv\in V\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1\boldv=\boldv\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+</ol> <div class="para">We call the elements of a vector space <dfn class="terminology">vectors</dfn>.</div></article><span class="incontext"><a class="internal" href="s_vectorspace.html#d_vector_space">in-context</a></span>
+</body>
+</html>

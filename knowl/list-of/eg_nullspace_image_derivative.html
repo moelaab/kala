@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">The derivative (calculus refresher).</span>
+</h4>
+<div class="para">Let <span class="process-math">\(T\colon C^1(\R)\rightarrow C(\R)\)</span> be the differential operator <span class="process-math">\(T(f)=f'\text{.}\)</span> (See <a href="s_subspace.html#rm_subspaces_derivatives" class="xref" data-knowl="./knowl/xref/rm_subspaces_derivatives.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 3.3.23: Differential operators">3.3.23</a>.)  Recall that for function spaces the zero vector <span class="process-math">\(\boldzero\)</span> is by definition the zero function on <span class="process-math">\(\R\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">The null space of <span class="process-math">\(T\)</span> is the set of all differentiable functions whose derivative is the zero function:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\NS T=\{f\in C^1(\R)\colon f'(x)=0 \text{ for all } x\in \R\}\text{.}
+\end{equation*}
+</div>
+<div class="para">From calculus we know that this is precisely the set of all <em class="emphasis">constant</em> functions. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\NS T=\{f\in C^1(\R)\colon f \text{ a constant function}\}\text{.}
+\end{equation*}
+</div>
+<div class="para">The image of <span class="process-math">\(T\)</span> is defined as</div>
+<div class="displaymath process-math">
+\begin{align*}
+\im T\amp =\{g\in C(\R)\colon g=T(f) \text{ for some } f\in C^1(\R)\}\\
+\amp= \{g\in C(\R)\colon g=f' \text{ for some } f\in C^1(\R)\}\text{.}
+\end{align*}
+</div>
+<div class="para">In other words, <span class="process-math">\(\im T\)</span> is the set of continuous functions that are the derivative of some other function: i.e., the set of continuous functions that have an antiderivative. The fundamental theorem of calculus implies that in fact every continuous function <span class="process-math">\(g\)</span> has an antiderivative! Indeed, we may take <span class="process-math">\(f(x)=\int_0^xg(t)\, dt\text{.}\)</span> We conclude that <span class="process-math">\(\im T=C(\R)\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a class="internal" href="s_nullspace_image.html#eg_nullspace_image_derivative">in-context</a></span>
+</body>
+</html>

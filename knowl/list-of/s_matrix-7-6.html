@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="project project-like"><h4 class="heading">
+<span class="type">Sage example</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix transposition.</span>
+</h4>
+<div class="para">Matrix transposition is implemented in Sage as the <code class="code-inline tex2jax_ignore">transpose()</code> method. In the cell below we (a) choose random integers <span class="process-math">\(1\leq m,n\leq 6\text{,}\)</span> (b) choose a random  <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\)</span> with integer entries, and (c) compute the transpose of <span class="process-math">\(A\text{.}\)</span>
+</div>
+<div id="s_matrix-7-6-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">    m=ZZ.random_element(1,7)
+n=ZZ.random_element(1,7)
+R=MatrixSpace(ZZ,m,n)
+A=R.random_element()
+B=A.transpose()
+show(A)
+show(B)
+</script></div>
+<div class="para">As usual, experiment with the Sage cell below.</div>
+<div id="s_matrix-7-6-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div></article><span class="incontext"><a class="internal" href="s_matrix.html#s_matrix-7-6">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Self-adjoint operators and symmetry.</span>
+</h4>
+<div class="para">Let <span class="process-math">\((V, \langle\, , \rangle)\)</span> be a finite-dimensional inner product space, let <span class="process-math">\(T\colon V\rightarrow V\)</span> be a linear transformation, and let <span class="process-math">\(B\)</span> be an orthonormal ordered basis of <span class="process-math">\(V\text{.}\)</span> The following statements are equivalent.</div> <ol class="decimal" id="th_self-adjoint_symmetric-2-2">
+<li><div class="para">
+<span class="process-math">\(T\)</span> is self-adjoint.</div></li>
+<li><div class="para">
+<span class="process-math">\(A=[T]_B\)</span> is symmetric.</div></li>
+</ol></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Let <span class="process-math">\(B=(\boldv_1, \boldv_2, \dots, \boldv_n)\text{.}\)</span> We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_orthogonal_basis_formula.html ./knowl/xref/d_innerproduct.html ./knowl/xref/eq_self-adjoint.html ./knowl/xref/ex_self-adjoint_symmetric.html">
+\begin{equation*}
+A=\begin{amatrix}[cccc]\vert \amp \vert \amp \amp\vert \\
+\left[T(\boldv_1)\right]_B\amp [T(\boldv_2)]_B\amp \cdots \amp [T(\boldv_n)]_B\\
+\vert \amp \vert \amp \amp\vert
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Furthermore, since <span class="process-math">\(B\)</span> is orthonormal, the <span class="process-math">\(i\)</span>-th entry of <span class="process-math">\([T(\boldv_j)]_B\)</span> is computed as <span class="process-math">\(\langle T(\boldv_j), \boldv_i\rangle\)</span> (<a href="s_orthogonality.html#th_orthogonal_basis_formula" class="xref" data-knowl="./knowl/xref/th_orthogonal_basis_formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.7: Calculating with orthogonal bases">4.2.7</a>). Thus <span class="process-math">\(A=[a_{ij}]\text{,}\)</span> where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_orthogonal_basis_formula.html ./knowl/xref/d_innerproduct.html ./knowl/xref/eq_self-adjoint.html ./knowl/xref/ex_self-adjoint_symmetric.html">
+\begin{equation*}
+a_{ij}=\langle T(\boldv_j), \boldv_i\rangle.
+\end{equation*}
+</div>
+<div class="para">It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_orthogonal_basis_formula.html ./knowl/xref/d_innerproduct.html ./knowl/xref/eq_self-adjoint.html ./knowl/xref/ex_self-adjoint_symmetric.html">
+\begin{align*}
+A \text{ symmetric} \amp\iff a_{ij}=a_{ji} \text{ for all } 1\leq i,j\leq n  \\
+\amp\iff \langle T(\boldv_j), \boldv_i\rangle=\langle T(\boldv_i), \boldv_j\rangle \text{ for all } 1\leq i,j\leq n \\
+\amp \iff \langle T(\boldv_j), \boldv_i\rangle=\langle \boldv_j, T(\boldv_i)\rangle \text{ for all } 1\leq i,j\leq n \amp (\knowl{./knowl/xref/d_innerproduct.html}{\text{4.1.1}}, ii)\text{.}
+\end{align*}
+</div>
+<div class="para">The last equality in this chain of equivalences states that <span class="process-math">\(T\)</span> satisfies property <a href="s_spectral_theorem.html#eq_self-adjoint" class="xref" data-knowl="./knowl/xref/eq_self-adjoint.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6.1">(5.6.1)</a> for all elements of <span class="process-math">\(B\text{.}\)</span> Not surprisingly, this is equivalent to <span class="process-math">\(T\)</span> satisfying the property for <em class="emphasis">all</em> elements in <span class="process-math">\(V\text{.}\)</span> (See <a href="s_spectral_theorem.html#ex_self-adjoint_symmetric" class="xref" data-knowl="./knowl/xref/ex_self-adjoint_symmetric.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 5.6.3.9">Exercise 5.6.3.9</a>.) We conclude that <span class="process-math">\(A\)</span> is symmetric if and only if <span class="process-math">\(T\)</span> is self-adjoint.</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_spectral_theorem.html#th_self-adjoint_symmetric">in-context</a></span>
+</body>
+</html>

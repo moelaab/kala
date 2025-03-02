@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Two representations of orthogonal projection.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(W\subseteq \R^3\)</span> be the plane passing through the origin with normal vector <span class="process-math">\(\boldn=(1,1,1)\)</span> (with respect to the dot product): i.e.,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixreps_matrixtransforms.html ./knowl/xref/eg_projection_plane.html ./knowl/xref/eq_matrixrep_formula.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixreps_Aalt.html">
+\begin{equation*}
+W=\{(x,y,z)\in \R^3\colon x+y+z\}\text{.}
+\end{equation*}
+</div>
+<div class="para">Consider the orthogonal projection transformation <span class="process-math">\(\operatorname{proj}_W\colon \R^3\rightarrow \R^3\text{.}\)</span> With respect to the standard basis <span class="process-math">\(B=(\bolde_1, \bolde_2, \bolde_3)\)</span> we know from <a href="s_matrixreps.html#th_matrixreps_matrixtransforms" class="xref" data-knowl="./knowl/xref/th_matrixreps_matrixtransforms.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.2.3: Standard matrix as a matrix representation">Theorem 5.2.3</a> that <span class="process-math">\([\operatorname{proj}_W]_B=[\operatorname{proj}_W]_B^B\)</span> is just the matrix <span class="process-math">\(A\)</span> such that <span class="process-math">\(\operatorname{proj}_W=T_A\text{.}\)</span> Using the general formaul for projection onto a plane derived in <a href="s_orthogonal_projection.html#eg_projection_plane" class="xref" data-knowl="./knowl/xref/eg_projection_plane.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.3.17: Projection onto planes in \R^3">Example 4.3.17</a>, we conclude:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixreps_matrixtransforms.html ./knowl/xref/eg_projection_plane.html ./knowl/xref/eq_matrixrep_formula.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixreps_Aalt.html">
+\begin{equation*}
+[T]_B=A=\frac{1}{3}\begin{amatrix}[rrr]
+2\amp -1\amp -1\\
+-1\amp 2\amp -1\\
+-1\amp -1\amp 2
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Now consider a nonstandard basis <span class="process-math">\(B'\)</span> of <span class="process-math">\(\R^3\)</span> constructed with an eye toward the geometry involved in the definition of this projection operator. Namely, we begin with an orthogonal basis of the plane <span class="process-math">\(W\)</span> and extend to an orthogonal basis of <span class="process-math">\(\R^3\text{.}\)</span> The vectors <span class="process-math">\((1,-1,0), (1,1,-22)\)</span> clearly form an orthogonal basis of <span class="process-math">\(W\text{.}\)</span> To complete the basis we simply add the normal vector <span class="process-math">\(\boldn\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixreps_matrixtransforms.html ./knowl/xref/eg_projection_plane.html ./knowl/xref/eq_matrixrep_formula.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixreps_Aalt.html">
+\begin{equation*}
+B'=\left( \underset{\boldv_1}{(1,-1,0)}, \underset{\boldv_2}{(1,1,-2)}, \underset{\boldv_3}{(1,1,1)} \right)\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(A'=[T]_B'\text{,}\)</span> and for all <span class="process-math">\(1\leq i\leq 3\)</span> let <span class="process-math">\(\boldc_i\)</span> be the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(A\text{.}\)</span> Using <a href="s_matrixreps.html#eq_matrixrep_formula" class="xref" data-knowl="./knowl/xref/eq_matrixrep_formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.1">(5.2.1)</a> we compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixreps_matrixtransforms.html ./knowl/xref/eg_projection_plane.html ./knowl/xref/eq_matrixrep_formula.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixreps_Aalt.html">
+\begin{align*}
+\boldc_1 = [\proj{\boldv_1}{W}]_{B'}\amp =[\boldv_1]_{B'} \amp (\boldv_1\in W)\\
+\amp =(1,0,0) \amp (\boldv_1=1\boldv_1+0\boldv_2+0\boldv_3)\\
+\boldc_2 = [\proj{\boldv_2}{W}]_{B'}\amp =[\boldv_2]_{B'} \amp (\boldv_2\in W)\\
+\amp =(0,1,0) \amp (\boldv_2=0\boldv_1+1\boldv_2+0\boldv_3)\\
+\boldc_3 = [\proj{\boldv_3}{W}]_{B'}\amp =[\boldzero]_{B'} \amp (\boldv_3\in W^\perp)\\
+\amp =(0,0,0) \amp (\boldzero=0\boldv_1+0\boldv_2+0\boldv_3)\text{.}
+\end{align*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixreps_matrixtransforms.html ./knowl/xref/eg_projection_plane.html ./knowl/xref/eq_matrixrep_formula.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixreps_Aalt.html">
+\begin{equation*}
+[T]_{B'}=A'=\begin{amatrix}[rrr]1\amp 0\amp 0\\ 0\amp 1\amp 0\\ 0\amp 0\amp 0  \end{amatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Wow, <span class="process-math">\(A'\)</span> is way simpler! How can the two very different matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(A'\)</span> represent the same linear transformation? A useful way of thinking about this is to consider <span class="process-math">\(A\)</span> and <span class="process-math">\(A'\)</span> as two matrix formulas for <span class="process-math">\(\operatorname{proj}_W\)</span> with respect to two different <em class="emphasis">coordinate systems</em>. This can be made precise by using the defining properties (<a href="s_matrixreps.html#eq_matrixrep_prop" class="xref" data-knowl="./knowl/xref/eq_matrixrep_prop.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.2">(5.2.2)</a>) of <span class="process-math">\(A=[T]_B\)</span> and <span class="process-math">\(A'=[T]_{B'}\text{.}\)</span> For <span class="process-math">\(A=[T]_B\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixreps_matrixtransforms.html ./knowl/xref/eg_projection_plane.html ./knowl/xref/eq_matrixrep_formula.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixreps_Aalt.html">
+\begin{equation}
+A[\boldx]_B=[\proj{\boldx}{W}]_B \implies A\boldx=\proj{\boldx}{W}\text{,}\tag{5.2.4}
+\end{equation}
+</div>
+<div class="para">where we have used the fact that for the <em class="emphasis">standard basis</em> <span class="process-math">\(B\)</span> we have <span class="process-math">\([\boldy]_B=\boldy\)</span> for any <span class="process-math">\(\boldy\in \R^3\text{.}\)</span> Thus we can compute <span class="process-math">\(\proj{\boldx}{W}\)</span> directly with <span class="process-math">\(A\)</span> as <span class="process-math">\(A\boldx\text{.}\)</span> For <span class="process-math">\(A'=[T]_{B'}\text{,}\)</span> on the other hand, property <a href="s_matrixreps.html#eq_matrixrep_prop" class="xref" data-knowl="./knowl/xref/eq_matrixrep_prop.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.2">(5.2.2)</a> reads as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixreps_matrixtransforms.html ./knowl/xref/eg_projection_plane.html ./knowl/xref/eq_matrixrep_formula.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixrep_prop.html ./knowl/xref/eq_matrixreps_Aalt.html">
+\begin{equation}
+A'[\boldx]_{B'}=[\proj{\boldx}{W}]_{B'}\text{.}\tag{5.2.5}
+\end{equation}
+</div>
+<div class="para">Formula <a href="s_matrixreps.html#eq_matrixreps_Aalt" class="xref" data-knowl="./knowl/xref/eq_matrixreps_Aalt.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.2.5">(5.2.5)</a> indicates that we cannot use <span class="process-math">\(A'\)</span> directly to compute <span class="process-math">\(\proj{\boldx}{W}\text{.}\)</span> Rather, we must first compute the <span class="process-math">\(B'\)</span>-coordinates of <span class="process-math">\(\boldx\)</span> and then multiply by <span class="process-math">\(A'\text{,}\)</span> at which point the <span class="process-math">\(B'\)</span>-coordinates of <span class="process-math">\(\proj{\boldx}{W}\)</span> are returned. In other words, <span class="process-math">\(A'\)</span> describes the operation of <span class="process-math">\(\operatorname{proj}_W\)</span> with respect <span class="process-math">\(B'\)</span>-coordinates of vectors in <span class="process-math">\(\R^3\text{.}\)</span> As such, <span class="process-math">\(A\)</span> may be more useful to us in terms of computing <span class="process-math">\(\operatorname{proj}_W\)</span> directly. However, <span class="process-math">\(A'\)</span> has the advantage of giving us a clear <em class="emphasis">conceptual</em> picture of projection. For example, we see directly that <span class="process-math">\(A'\)</span> has nullity one and rank 2, and thus the same is true of <span class="process-math">\(\operatorname{proj}_W\text{.}\)</span> Furthermore, understanding that the columns of <span class="process-math">\(A'\)</span> describe how <span class="process-math">\(\operatorname{proj}_W\)</span> acts on the basis <span class="process-math">\(B'\text{,}\)</span> we see easily that <span class="process-math">\(\operatorname{proj}_W\)</span> acts as the identity on the 2-dimensional space spanned by the first two basis elements, and sends the subspace spanned by the third basis element to <span class="process-math">\(\boldzero\text{.}\)</span> In other words, <span class="process-math">\(A'\)</span> neatly encodes the conceptual picture of <span class="process-math">\(\operatorname{proj}_W\)</span> as an operator that fixes the plane <span class="process-math">\(W=\Span\{(1,-1,0),(1,1,-2)\}\)</span> and sends everything in <span class="process-math">\(W^\perp=\Span\{(1,1,1)\}\)</span> to <span class="process-math">\(\boldzero\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a class="internal" href="s_matrixreps.html#eg_matrixreps_proj">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.6.13</span><span class="period">.</span><span class="space"> </span><span class="title">Bases and linear transformations.</span>
+</h4>
+<div class="para">Let <span class="process-math">\(B\)</span> be a basis for the vector space <span class="process-math">\(V\text{.}\)</span>
+</div> <ol class="decimal" id="th_bases_transformations-2-2">
+<li><div class="para">Let <span class="process-math">\(T\)</span> and <span class="process-math">\(T'\)</span> be linear transformations from <span class="process-math">\(V\)</span> to <span class="process-math">\(W\text{.}\)</span> If <span class="process-math">\(T(\boldu)=T'(\boldu)\)</span> for all <span class="process-math">\(\boldu\in B\text{,}\)</span> then <span class="process-math">\(T=T'\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">Let <span class="process-math">\(W\)</span> be a vector space. Any mapping</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\boldu\mapsto \boldw_\boldu
+\end{equation*}
+</div>
+<div class="para">assigning each element of <span class="process-math">\(\boldu\in B\)</span> to a chosen element <span class="process-math">\(\boldw_\boldu\in W\)</span> extends uniquely to a linear transformation <span class="process-math">\(T\colon V\rightarrow W\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T(\boldu)=\boldw_\boldu
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\boldu\in B\text{.}\)</span> In more detail, given any <span class="process-math">\(\boldv\in V\text{,}\)</span> if   <span class="process-math">\(\boldv=c_1\boldu_1+c_2\boldu_2+\cdots +c_r\boldu_r\text{,}\)</span> where <span class="process-math">\(\boldu_i\in B\)</span>  and <span class="process-math">\(c_i\ne 0\)</span> for all <span class="process-math">\(1\leq i\leq r\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation}
+T(\boldv)=c_1T(\boldu_{1})+c_2T(\boldu_{2})+\cdots +c_rT(\boldu_{r})\text{.}\tag{3.6.2}
+\end{equation}
+</div>
+</div></li>
+</ol></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="title">Proof of (i).</span></h5></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Assume <span class="process-math">\(T\)</span> and <span class="process-math">\(T'\)</span> are linear transformations from <span class="process-math">\(V\)</span> to <span class="process-math">\(W\)</span> satisfying <span class="process-math">\(T(\boldu)=T'(\boldu)\)</span> for all <span class="process-math">\(\boldu\in B\text{.}\)</span> Given any <span class="process-math">\(\boldv\in V\)</span> we can write <span class="process-math">\(\boldv=c_1\boldu_1+c_2\boldu_2+\cdots +c_r\boldu_r\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math">
+\begin{align*}
+T(\boldv) \amp = T(c_1\boldu_1+c_2\boldu_2+\cdots +c_r\boldu_r)\\
+\amp = c_1T(\boldu_1)+c_2T(\boldu_2)+\cdots +c_rT(\boldu_r) \amp (T \text{ is linear})\\
+\amp =c_1T'(\boldu_1)+c_2T'(\boldu_2)+\cdots +c_rT'(\boldu_r)\\
+\amp = T'(c_1\boldu_1+c_2\boldu_2+\cdots +c_r\boldu_r) \amp (T' \text{ is linear}) \\
+\amp = T'(\boldv)\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(T(\boldv)=T'(\boldv)\)</span> for all <span class="process-math">\(\boldv\in V\text{,}\)</span> we have <span class="process-math">\(T=T'\text{.}\)</span>
+</div>
+</div></article></details><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="title">Proof of (ii).</span></h5></summary><article class="hiddenproof knowl__content"><div class="para">That there can me <em class="emphasis">at most</em> one such <span class="process-math">\(T\colon V\rightarrow W\)</span> follows from (i). Thus we need only show that such a <span class="process-math">\(T\)</span> exists.</div>
+<div class="para logical">
+<div class="para">Since any <span class="process-math">\(\boldv\in V\)</span> has a <em class="emphasis">unique</em> expression of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_bases_transformations.html ./knowl/xref/eq_bases_transformations.html">
+\begin{equation*}
+\boldv=c_1\boldu_1+c_2\boldu_2+\cdots +c_r\boldu_r\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c_i\ne 0\)</span> for all <span class="process-math">\(1\leq i\leq r\text{,}\)</span> the formula in <a href="s_basis.html#eq_bases_transformations" class="xref" data-knowl="./knowl/xref/eq_bases_transformations.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.2">(3.6.2)</a> defines a function <span class="process-math">\(T\colon V\rightarrow W\)</span> in a well-defined manner. Note also that the formula still applies even if some of the coefficients are equal to 0: if <span class="process-math">\(c_i=0\text{,}\)</span> then <span class="process-math">\(c_iT(\boldv_i)=\boldzero\text{,}\)</span> and the right-hand side of <a href="s_basis.html#eq_bases_transformations" class="xref" data-knowl="./knowl/xref/eq_bases_transformations.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.6.2">(3.6.2)</a> is unchanged. We will use this fact below.</div>
+</div>
+<div class="para logical">
+<div class="para">We now show that <span class="process-math">\(T\)</span> is linear. Given <span class="process-math">\(\boldv, \boldv'\in V\)</span> we can find a common collection of elements <span class="process-math">\(\boldu_1,\boldu_2,\dots, \boldu_r\in B\)</span> for which</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_bases_transformations.html">
+\begin{align*}
+\boldv \amp = c_1\boldu_1+c_2\boldu_2+\cdots +c_r\boldu_r\\
+\boldv'\amp=d_1\boldu_1+d_2\boldu_2+\cdots +d_r\boldu_r 
+\end{align*}
+</div>
+<div class="para">for some <span class="process-math">\(c_i, d_i\in \R\text{.}\)</span> We can no longer assume that <span class="process-math">\(c_i\ne 0\)</span> and <span class="process-math">\(d_i\ne 0\)</span> for all <span class="process-math">\(1\leq i\leq r\text{,}\)</span> but as observed above we still have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_bases_transformations.html">
+\begin{align*}
+T(\boldv) \amp = c_1T(\boldu_1)+c_2T(\boldu_2)+\cdots +c_rT(\boldu_r)\\
+T(\boldv')\amp=d_1T(\boldu_1)+d_2T(\boldu_2)+\cdots +d_rT(\boldu_r) \text{.}
+\end{align*}
+</div>
+<div class="para">Given any <span class="process-math">\(c, d\in \R\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_bases_transformations.html">
+\begin{align*}
+T(c\boldv+d\boldv')\amp=T(cc_1\boldu_1+cc_2\boldu_2+\cdots +cc_r\boldu_r+dd_1\boldu_1+dd_2\boldu_2+\cdots +dd_r\boldu_r) \\
+\amp= T\left((cc_1+dd_1)\boldu_1+(cc_2+dd_2)\boldu_2+\cdots +(cc_r+dd_r)\boldu_r\right) \\
+\amp =(cc_1+dd_1)T(\boldu_1)+(cc_2+dd_2)T(\boldu_2)+\cdots +(cc_r+dd_r)T(\boldu_r) \amp (\knowl{./knowl/xref/eq_bases_transformations.html}{\text{(3.6.2)}}) \\
+\amp= c(c_1T(\boldu_1)+c_2T(\boldu_2)+\cdots +c_rT(\boldu_r))+d(d_1T(\boldu_1)+d_2T(\boldu_2)+\cdots +d_rT(\boldu_r)\\
+\amp =cT(\boldv)+dT(\boldv')\text{.}
+\end{align*}
+</div>
+<div class="para">Thus <span class="process-math">\(T\)</span> is a linear transformation.</div>
+</div></article></details></article></details><span class="incontext"><a class="internal" href="s_basis.html#th_bases_transformations">in-context</a></span>
+</body>
+</html>

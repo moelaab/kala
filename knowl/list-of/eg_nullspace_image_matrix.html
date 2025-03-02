@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix transformation.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{amatrix}[rrrr] 1\amp 2\amp 3\amp 4\\ 2\amp 4\amp 6\amp 8  \end{amatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">and let <span class="process-math">\(T_A\colon \R^4\rightarrow \R^2\)</span> be its associated matrix transformation. Give parametric descriptions of <span class="process-math">\(\NS T_A\)</span> and <span class="process-math">\(\im T_A\text{.}\)</span>
+</div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<div class="para">By definition</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_solveSystem.html ./knowl/xref/proc_solveSystem.html">
+\begin{align*}
+\NS T_A \amp=\{\boldx=(x_1,x_2,x_3,x_4)\colon A\boldx=\boldzero\} \text{.}
+\end{align*}
+</div>
+<div class="para">Thus we must solve the matrix equation <span class="process-math">\(A\boldx=\boldzero\text{.}\)</span> The corresponding augmented matrix row reduces to</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_solveSystem.html ./knowl/xref/proc_solveSystem.html">
+\begin{equation*}
+\begin{amatrix}[rrrr|r] \boxed{1}\amp 2\amp 3\amp 4\amp 0\\ 0\amp 0\amp 0\amp 0\amp 0  \end{amatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Following <a href="s_solving.html#proc_solveSystem" class="xref" data-knowl="./knowl/xref/proc_solveSystem.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a> we conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_solveSystem.html ./knowl/xref/proc_solveSystem.html">
+\begin{equation*}
+\NS T_A=\{(-2r-3s-4t,r,s,t)\colon r,s,t\in \R\}\text{.}
+\end{equation*}
+</div>
+<div class="para">Next, <span class="process-math">\(\im T_A\)</span> is the set of <span class="process-math">\(\boldy=(a,b)\)</span> for which there is an <span class="process-math">\(\boldx\in \R^4\)</span> satisfying <span class="process-math">\(A\boldx=\boldy\text{.}\)</span> Thus we are asking which choices of <span class="process-math">\(\boldy=(a,b)\)</span> make the linear system</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_solveSystem.html ./knowl/xref/proc_solveSystem.html">
+\begin{equation*}
+\begin{linsys}{4}
+x_1\amp +\amp 2x_2\amp +\amp 3x_3\amp+\amp 4x_4\amp=\amp a\\
+2x_1\amp +\amp 4x_2\amp +\amp 6x_3\amp+\amp 8x_4\amp=\amp b
+\end{linsys}
+\end{equation*}
+</div>
+<div class="para">consistent. Again, Gaussian elimination gives us our answer. The corresponding augmented matrix row reduces to</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_solveSystem.html ./knowl/xref/proc_solveSystem.html">
+\begin{equation*}
+\begin{amatrix}[rrrr|r] \boxed{1}\amp 2\amp 3\amp 4\amp a\\ 0\amp 0\amp 0\amp 0 \amp b-a \end{amatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">and conclude from <a href="s_solving.html#proc_solveSystem" class="xref" data-knowl="./knowl/xref/proc_solveSystem.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a> that the system is consistent if and only if <span class="process-math">\(a-b=0\text{,}\)</span> or <span class="process-math">\(a=b\text{.}\)</span> Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_solveSystem.html ./knowl/xref/proc_solveSystem.html">
+\begin{equation*}
+\im T_A=\{(a,b)\in \R^2\colon a=b\}=\{(t,t)\colon t\in \R\}\text{.}
+\end{equation*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_nullspace_image.html#eg_nullspace_image_matrix">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="corollary theorem-like"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.5.10</span><span class="period">.</span><span class="space"> </span><span class="title">Expansion along columns.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(A=[a_{ij}]_{n\times n}\text{.}\)</span> For any <span class="process-math">\(1\leq j\leq n\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det A=  \sum_{k=1}^n(-1)^{k+j}a_{kj}M_{kj}\text{.}
+\end{equation*}
+</div>
+<div class="para">In other words, we can compute <span class="process-math">\(\det A\)</span> by expanding along any row of <span class="process-math">\(A\text{.}\)</span>
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">For any <span class="process-math">\(1\leq j\leq n\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_transpose.html ./knowl/xref/d_det.html ./knowl/xref/th_det_transpose.html">
+\begin{align*}
+\sum_{k=1}^n(-1)^{k+j}a_{kj}M_{kj}\amp =\sum_{k=1}^n(-1)^{k+j}(A^T)_{jk}\det A_{kj} \amp (\knowl{./knowl/xref/d_transpose.html}{\text{Definition 2.1.29}})\\
+\amp = \sum_{k=1}^n(-1)^{k+j}(A^T)_{jk}\det (A^T)_{jk} \amp ( (A^T)_{ij}= A_{ji}) \\
+\amp= \det A^T  \amp (\knowl{./knowl/xref/d_det.html}{\text{Definition 2.5.3}})\\
+\amp=\det A \amp (\knowl{./knowl/xref/th_det_transpose.html}{\text{Theorem 2.5.9}}) \text{.}
+\end{align*}
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_det.html#cor_expansion_columns">in-context</a></span>
+</body>
+</html>

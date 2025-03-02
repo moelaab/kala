@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.10</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(V=M_{22}\text{,}\)</span> <span class="process-math">\(B=(E_{11}, E_{12}, E_{21}, E_{22})\)</span> (standard basis) and <span class="process-math">\(B'=(A_1,A_2,A_3,A_4)\text{,}\)</span> where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A_1=\begin{amatrix}[rr]
+1\amp 1\\ 1\amp 1
+\end{amatrix}, A_2=\begin{amatrix}[rr]
+1\amp -1\\ 1\amp -1
+\end{amatrix}, A_3=\begin{amatrix}[rr]
+1\amp 1\\ -1\amp -1
+\end{amatrix}, A_4=\begin{amatrix}[rr]
+-1\amp 1\\ 1\amp -1
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute <span class="process-math">\(\underset{B'\rightarrow B}{P}\text{.}\)</span>
+</div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\underset{B'\rightarrow B}{P}\amp = \begin{bmatrix}
+\vert\amp \vert\amp \vert\amp \vert\\
+[A_1]_{B}\amp [A_2]_B\amp [A_3]_B\amp [A_4]_B\\
+\vert\amp \vert\amp \vert\amp \vert
+\end{bmatrix}\\
+\amp = \begin{amatrix}[rrrr]
+1\amp 1\amp 1\amp -1\\
+1\amp -1\amp 1\amp 1\\
+1\amp 1\amp -1\amp 1\\
+1\amp -1\amp -1\amp -1
+\end{amatrix} \text{.}
+\end{align*}
+</div>
+<div class="para">Here the coordinate vectors <span class="process-math">\([A_i]_B\)</span> are easily computed by inspection since <span class="process-math">\(B\)</span> is the standard basis.</div>
+</div>
+<div class="para logical">
+<div class="para">It turns out that <span class="process-math">\(\underset{B\rightarrow B'}{P}=(\underset{B'\rightarrow B}{P})^{-1}\)</span> is not so difficult to compute in this case since the columns <span class="process-math">\(\boldc_j\)</span> of <span class="process-math">\(\underset{B'\rightarrow B}{P}\)</span> satisfy</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_dotproduct_method.html">
+\begin{equation*}
+\boldc_i\cdot\boldc_j=\begin{cases} 4\amp \text{if } i=j\\ 0\amp \text{if } i\ne j
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">From this observation and <a href="s_innerproducts.html#th_dotproduct_method" class="xref" data-knowl="./knowl/xref/th_dotproduct_method.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.1.9: Dot product and matrix multiplication">Theorem 4.1.9</a> it is easy to see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_dotproduct_method.html">
+\begin{equation*}
+\underset{B\rightarrow B'}{P}=(\underset{B'\rightarrow B}{P})^{-1}=\frac{1}{4}
+\begin{amatrix}[rrrr]
+1\amp 1\amp 1\amp 1\\
+1\amp -1\amp 1\amp -1\\
+1\amp 1\amp -1\amp -1\\
+-1\amp -1\amp 1\amp -1
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+</div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_changeofbasis.html#eg_changebasis_standard_mat">in-context</a></span>
+</body>
+</html>
