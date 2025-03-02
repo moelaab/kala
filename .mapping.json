@@ -1,1 +1,1 @@
-{"source/c_matrices.ptx": ["c_matrices"], "source/s_matrix.ptx": ["s_matrix", "vid_matrix_mult_methods"], "source/s_algebraic.ptx": ["s_algebraic", "vid_proof_assoc", "vid_proof_transp"], "source/main.ptx": ["appendix-notation", "appendix-exercises", "appendix-defs", "appendix-thms", "appendix-egs", "appendix-sage", "appendix-mantras", "appendix-vids"]}
+{"source/c_matrices.ptx": ["c_matrices"], "source/s_matrix.ptx": ["s_matrix", "vid_matrix_mult_methods"], "source/s_algebraic.ptx": ["s_algebraic", "vid_proof_assoc", "vid_proof_transp"]}
