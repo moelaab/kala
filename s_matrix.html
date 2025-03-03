@@ -384,7 +384,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_attributes" class="internal"><span class="codenumber">0.1.1</span> <span class="title">Dasar dasar Matrik</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_arithmetic" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Penjumlahan, Pengurangan, dan Perkalian Skalar</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_mult" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Matrix multiplication</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_mult" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Perkalian Matrik</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_column_row_method" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Alternative methods of multiplication</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_matrix-7" class="internal"><span class="codenumber">0.1.5</span> <span class="title">Transpose of a matrix</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_matrix.html#s_matrix_ex" class="internal"><span class="codenumber">0.1.6</span> <span class="title">Exercises</span></a></div></li>
@@ -684,22 +684,22 @@ a \amp \amp \amp -\amp 2c\amp =\amp 3
 </div>
 <div class="para">untuk semua <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span> (Lihat <a href="s_matrix.html#ex_entry_lin_comb" class="xref" data-knowl="./knowl/xref/ex_entry_lin_comb.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 0.1.6.11">Exercise 0.1.6.11</a>.)</div>
 </div></article></section><section class="subsection" id="ss_matrix_mult"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.3</span><span class="space"> </span><span class="title">Matrix multiplication</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.3</span><span class="space"> </span><span class="title">Perkalian Matrik</span>
 </h3>
-<div class="para" id="ss_matrix_mult-2">So how do we define the product of two matrices? Looking at the previous operations, you might have guessed that we should define the product of two <span class="process-math">\(m\times n\)</span> matrices by taking the product of their corresponding entries. Not so!</div>
+<div class="para" id="ss_matrix_mult-2">Jadi, bagaimana kita mendefinisikan hasil perkalian dua matriks? Melihat operasi sebelumnya, Anda mungkin telah menduga bahwa kita harus mendefinisikan hasil perkalian dua matriks <span class="process-math">\(m\times n\)</span> dengan mengambil hasil perkalian entri yang sesuai. Tidak demikian!</div>
 <article class="definition definition-like" id="d_matrix_mult"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix multiplication.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Perkalian matrik.</span>
 </h4>
 <div class="para" id="d_matrix_mult-3-1">
-<dfn class="terminology">Matrix multiplication</dfn> is the operation defined as follows: given an <span class="process-math">\(m \times n\)</span> matrix <span class="process-math">\(A = [a_{ij}]_{m \times n}\)</span> and an <span class="process-math">\(n \times r\)</span> matrix <span class="process-math">\(B = [b_{ij}]_{n \times r}\text{,}\)</span> we define their <dfn class="terminology">product</dfn> to be the <span class="process-math">\(m \times r\)</span> matrix <span class="process-math">\(AB\)</span> whose <span class="process-math">\(ij\)</span>-th entry is given by the formula:</div>
+<dfn class="terminology">Perkalian matriks</dfn> adalah operasi yang didefinisikan sebagai berikut: diberikan matriks <span class="process-math">\(m \times n\)</span> <span class="process-math">\(A = [a_{ij}]_{m \times n}\)</span> dan matriks <span class="process-math">\(n \times r\)</span> <span class="process-math">\(B = [b_{ij}]_{n \times r}\text{,}\)</span> kita mendefinisikan <dfn class="terminology">hasil kali</dfn> mereka sebagai matriks <span class="process-math">\(m \times r\)</span> <span class="process-math">\(AB\)</span> yang entri <span class="process-math">\(ij\)</span>-nya diberikan oleh rumus:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 [AB]_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{ir}b_{rj} = \sum_{\ell=1}^r a_{i\ell}b_{\ell j}
 \end{equation*}
 </div>
-<div class="para" id="d_matrix_mult-3-3">for all <span class="process-math">\(1 \leq i \leq m\)</span> and <span class="process-math">\(1 \leq j \leq r\text{.}\)</span>
+<div class="para" id="d_matrix_mult-3-3">untuk semua <span class="process-math">\(1 \leq i \leq m\)</span> and <span class="process-math">\(1 \leq j \leq r\text{.}\)</span>
 </div></article><figure class="figure figure-like" id="fig_matrix_mult"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/im_matrix_mult.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.1.17<span class="period">.</span></span><span class="space"> </span>In <span class="process-math">\(C = AB\text{,}\)</span> the <span class="process-math">\(ij\)</span>-th entry <span class="process-math">\(c_{ij} = \sum_{k=1}^n a_{ik} b_{kj}\)</span> is computed by moving across the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\)</span> and down the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{.}\)</span></figcaption></figure><article class="remark remark-like" id="ss_matrix_mult-5"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.1.17<span class="period">.</span></span><span class="space"> </span>dalam <span class="process-math">\(C = AB\text{,}\)</span> the <span class="process-math">\(ij\)</span>-th entry <span class="process-math">\(c_{ij} = \sum_{k=1}^n a_{ik} b_{kj}\)</span> dihitung dengan  bergerak melintasi baris ke- <span class="process-math">\(i\)</span> dari <span class="process-math">\(A\)</span> dan turun ke kolom ke- <span class="process-math">\(j\)</span> dari <span class="process-math">\(B\text{.}\)</span></figcaption></figure><article class="remark remark-like" id="ss_matrix_mult-5"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Size and matrix multiplication.</span>
 </h4>
 <div class="para" id="ss_matrix_mult-5-2">Perhatikan bahwa, seperti penjumlahan, perkalian matriks tidak didefinisikan untuk sembarang pasangan matriks: harus ada kesepakatan tertentu dalam dimensi mereka.</div>
@@ -717,10 +717,10 @@ a \amp \amp \amp -\amp 2c\amp =\amp 3
 \end{equation*}
 </div>
 </div></article><article class="example example-like" id="eg_matrix_mult"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix multiplication.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Perkalian Matriks.</span>
 </h4>
 <div class="para logical" id="eg_matrix_mult-2">
-<div class="para">Consider the matrices</div>
+<div class="para">Perhatikan matriks-matriks berikut:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_mult.html" id="eg_matrix_mult-2-1">
 \begin{align*}
 A\amp =\begin{amatrix}[rrr]
@@ -734,7 +734,7 @@ A\amp =\begin{amatrix}[rrr]
 \end{amatrix}\text{.}
 \end{align*}
 </div>
-<div class="para">Since the “inner dimensions” of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> agree, we can form the product matrix <span class="process-math">\(C=AB\text{,}\)</span> which has dimension <span class="process-math">\(2\times 2\text{.}\)</span> Let <span class="process-math">\(c_{ij}=[C]_{ij}\)</span> for all <span class="process-math">\(1\leq i,j\leq 2\text{.}\)</span> Using <a href="s_matrix.html#d_matrix_mult" class="xref" data-knowl="./knowl/xref/d_matrix_mult.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.16: Matrix multiplication">Definition 0.1.16</a>, we compute</div>
+<div class="para">Karena “dimensi dalam” dari <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> sesuai, kita dapat membentuk matriks hasil kali <span class="process-math">\(C=AB\text{,}\)</span> yang memiliki dimensi <span class="process-math">\(2\times 2\text{.}\)</span> Misalkan <span class="process-math">\(c_{ij}=[C]_{ij}\)</span> untuk semua <span class="process-math">\(1\leq i,j\leq 2\text{.}\)</span> Menggunakan <a href="s_matrix.html#d_matrix_mult" class="xref" data-knowl="./knowl/xref/d_matrix_mult.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.16: Perkalian matrik">Definition 0.1.16</a>, kita menghitung:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_mult.html" id="eg_matrix_mult-2-10">
 \begin{align*}
 c_{11}\amp =1\cdot 0+0\cdot(-1)+(-3)\cdot 3=-9 \\
@@ -743,7 +743,7 @@ c_{21} \amp =(-2)\cdot 0+1\cdot (-1)+1\cdot 3=2 \\
 c_{22} \amp =(-2)\cdot( -1)+1\cdot 2+1\cdot 1=5\text{.}
 \end{align*}
 </div>
-<div class="para">We conclude that</div>
+<div class="para">Kita simpulkan bahwa:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_mult.html">
 \begin{equation*}
 C=\begin{bmatrix}c_{11} \amp c_{12} \\ c_{21} \amp c_{22}\end{bmatrix}=
