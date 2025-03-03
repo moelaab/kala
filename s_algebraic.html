@@ -365,12 +365,12 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="c_matrices.html" class="internal"><span class="codenumber">0</span> <span class="title">Matrices, their arithmetic, and their algebra</span></a></div>
+<div class="toc-title-box"><a href="c_matrices.html" class="internal"><span class="codenumber">0</span> <span class="title">Matrik, Aritmatika Matrik, dan Aljabar Matrik</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="s_matrix.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Matrix arithmetic</span></a></div>
+<div class="toc-title-box"><a href="s_matrix.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Aritmatika Matrik</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_attributes" class="internal"><span class="codenumber">0.1.1</span> <span class="title">The basics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_attributes" class="internal"><span class="codenumber">0.1.1</span> <span class="title">Dasar dasar Matrik</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_arithmetic" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Addition, subtraction and scalar multiplication</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_mult" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Matrix multiplication</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_column_row_method" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Alternative methods of multiplication</span></a></div></li>
@@ -424,7 +424,7 @@ b, c\in \R\)</span> for which the given expression makes sense.</div>
 <span class="heading"><span class="title">Scaling commutative law.</span></span><div class="para" id="th_matrixscale_comm-2"><span class="process-math">\(a(BC)=(aB)C=B(aC)\text{.}\)</span></div>
 </li>
 </ol>
-</div></article><div class="para" id="s_algebraic-4">How does one actually prove one of these properties? These are all <em class="emphasis">matrix equalities</em> of the form <span class="process-math">\(X=Y\text{,}\)</span> so according to the <a href="s_matrix.html#d_matrix_equality" class="xref" data-knowl="./knowl/xref/d_matrix_equality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.5: Matrix equality">matrix equality definition</a> we must show (1) that the matrices <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> have the same dimension, and (2) that <span class="process-math">\((X)_{ij}=(Y)_{ij}\)</span> for all <span class="process-math">\((i,j)\text{.}\)</span> The proof below illustrates this technique for the <a href="s_algebraic.html#th_matrixmult_assoc" class="xref" data-knowl="./knowl/xref/th_matrixmult_assoc.html" data-reveal-label="Reveal" data-close-label="Close" title="Item iii: Multiplication associative law">multiplication associative law</a> of <a href="s_algebraic.html#th_matrix_alg_props" class="xref" data-knowl="./knowl/xref/th_matrix_alg_props.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.1: Properties of matrix addition, multiplication and scalar multiplication">Theorem 0.2.1</a>.</div>
+</div></article><div class="para" id="s_algebraic-4">How does one actually prove one of these properties? These are all <em class="emphasis">matrix equalities</em> of the form <span class="process-math">\(X=Y\text{,}\)</span> so according to the <a href="s_matrix.html#d_matrix_equality" class="xref" data-knowl="./knowl/xref/d_matrix_equality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.4: Matrix equality">matrix equality definition</a> we must show (1) that the matrices <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> have the same dimension, and (2) that <span class="process-math">\((X)_{ij}=(Y)_{ij}\)</span> for all <span class="process-math">\((i,j)\text{.}\)</span> The proof below illustrates this technique for the <a href="s_algebraic.html#th_matrixmult_assoc" class="xref" data-knowl="./knowl/xref/th_matrixmult_assoc.html" data-reveal-label="Reveal" data-close-label="Close" title="Item iii: Multiplication associative law">multiplication associative law</a> of <a href="s_algebraic.html#th_matrix_alg_props" class="xref" data-knowl="./knowl/xref/th_matrix_alg_props.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.1: Properties of matrix addition, multiplication and scalar multiplication">Theorem 0.2.1</a>.</div>
 <details id="s_algebraic-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Proof of (iii).</span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_algebraic-5-2">
 <div class="para">We prove only the <a href="s_algebraic.html#th_matrixmult_assoc" class="xref" data-knowl="./knowl/xref/th_matrixmult_assoc.html" data-reveal-label="Reveal" data-close-label="Close" title="Item iii: Multiplication associative law">multiplication associative law</a>. Let <span class="process-math">\(A=[a_{ij}]_{m\times r}\text{,}\)</span> <span class="process-math">\(B=[b_{ij}]_{r\times s}\text{,}\)</span> <span class="process-math">\(C=[c_{ij}]_{s\times n}\text{.}\)</span> To show</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixmult_assoc.html">
@@ -443,12 +443,12 @@ A(BC)=(AB)C\text{,}
 </div>
 <div class="para" id="s_algebraic-5-3">(1) The usual observation about “inner” and “outer” dimensions shows that both <span class="process-math">\(A(BC)\)</span> and <span class="process-math">\((AB)C\)</span> have dimension <span class="process-math">\(m\times n\text{.}\)</span>
 </div>
-<a href="s_matrix.html#d_matrix_mult" class="xref" data-knowl="./knowl/xref/d_matrix_mult.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.17: Matrix multiplication">Definition 0.1.17</a><div class="para logical" id="s_algebraic-5-5">
+<a href="s_matrix.html#d_matrix_mult" class="xref" data-knowl="./knowl/xref/d_matrix_mult.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.16: Matrix multiplication">Definition 0.1.16</a><div class="para logical" id="s_algebraic-5-5">
 <div class="para">(2) Given any  <span class="process-math">\((i,j)\)</span> with <span class="process-math">\(1\leq i\leq m\)</span> and <span class="process-math">\(1\leq j\leq n\text{,}\)</span> we have:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_mult.html ./knowl/xref/d_matrix_mult.html" id="s_algebraic-5-5-4">
 \begin{align*}
-[A(BC)]_{ij}\amp=\sum_{\ell=1}^ra_{i\ell}[BC]_{\ell j}  \amp (\knowl{./knowl/xref/d_matrix_mult.html}{\text{Definition 0.1.17}})\\
-\amp=\sum_{\ell=1}^ra_{i\ell}\left(\sum_{k=1}^sb_{\ell k}c_{kj}\right) \amp (\knowl{./knowl/xref/d_matrix_mult.html}{\text{Definition 0.1.17}})\\
+[A(BC)]_{ij}\amp=\sum_{\ell=1}^ra_{i\ell}[BC]_{\ell j}  \amp (\knowl{./knowl/xref/d_matrix_mult.html}{\text{Definition 0.1.16}})\\
+\amp=\sum_{\ell=1}^ra_{i\ell}\left(\sum_{k=1}^sb_{\ell k}c_{kj}\right) \amp (\knowl{./knowl/xref/d_matrix_mult.html}{\text{Definition 0.1.16}})\\
 =\amp \sum_{\ell=1}^r\sum_{k=1}^sa_{i\ell}(b_{\ell k}c_{kj}) \amp \text{ (real dist.) }\\
 =\amp \sum_{k=1}^s\sum_{\ell=1}^r(a_{i\ell}b_{\ell k})c_{kj} \amp \text{ (real comm., real assoc.) }\\
 =\amp \sum_{k=1}^s\left(\sum_{\ell=1}^ra_{i\ell}b_{\ell k}\right)c_{kj} \amp \text{ (real dist.) }\\
@@ -680,16 +680,16 @@ BD=CD \;\not\!\!\!\!\implies B=C\tag{0.2.3}
 <li id="th_trans_scale"><div class="para" id="th_trans_scale-1"><span class="process-math">\(\displaystyle (cA)^T=cA^T\)</span></div></li>
 <li id="th_trans_prod"><div class="para" id="th_trans_prod-1"><span class="process-math">\(\displaystyle (AB)^T=B^TA^T\)</span></div></li>
 <li id="th_trans_owninverse"><div class="para" id="th_trans_owninverse-1"><span class="process-math">\(\displaystyle \left(A^T\right)^T=A\)</span></div></li>
-</ol></article><details id="th_trans_props-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_trans_props-4-1">We prove only the first statement. First observe that if <span class="process-math">\(A\)</span> is <span class="process-math">\(m\times n\text{,}\)</span> then so is <span class="process-math">\(B\)</span> and <span class="process-math">\(A+B\text{.}\)</span> Then <span class="process-math">\((A+B)^T\)</span> is <span class="process-math">\(n\times m\)</span> by <a href="s_matrix.html#d_transpose" class="xref" data-knowl="./knowl/xref/d_transpose.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.29: Matrix transposition">Definition 0.1.29</a>. Similarly, we see that <span class="process-math">\(A^T+B^T\)</span> is <span class="process-math">\(n\times m\text{.}\)</span>
+</ol></article><details id="th_trans_props-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_trans_props-4-1">We prove only the first statement. First observe that if <span class="process-math">\(A\)</span> is <span class="process-math">\(m\times n\text{,}\)</span> then so is <span class="process-math">\(B\)</span> and <span class="process-math">\(A+B\text{.}\)</span> Then <span class="process-math">\((A+B)^T\)</span> is <span class="process-math">\(n\times m\)</span> by <a href="s_matrix.html#d_transpose" class="xref" data-knowl="./knowl/xref/d_transpose.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.28: Matrix transposition">Definition 0.1.28</a>. Similarly, we see that <span class="process-math">\(A^T+B^T\)</span> is <span class="process-math">\(n\times m\text{.}\)</span>
 </div>
 <div class="para logical" id="th_trans_props-4-2">
 <div class="para">Next, given any <span class="process-math">\((i,j)\)</span> with <span class="process-math">\(1\leq i\leq n\text{,}\)</span> <span class="process-math">\(1\leq j\leq m\text{,}\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_transpose.html ./knowl/xref/d_matrix_add_subtract.html ./knowl/xref/d_transpose.html ./knowl/xref/d_matrix_add_subtract.html" id="th_trans_props-4-2-4">
 \begin{align*}
-\left((A+B)^T\right)_{ij}\amp =(A+B)_{ji} \amp (\knowl{./knowl/xref/d_transpose.html}{\text{Definition 0.1.29}})\\
-\amp = A_{ji}+B_{ji} \amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.9}})\\
-\amp =(A^T)_{ij}+(B^T)_{ij} \amp (\knowl{./knowl/xref/d_transpose.html}{\text{Definition 0.1.29}} \\
-\amp =(A^T+B^T)_{ij} \amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.9}})\text{.}
+\left((A+B)^T\right)_{ij}\amp =(A+B)_{ji} \amp (\knowl{./knowl/xref/d_transpose.html}{\text{Definition 0.1.28}})\\
+\amp = A_{ji}+B_{ji} \amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.8}})\\
+\amp =(A^T)_{ij}+(B^T)_{ij} \amp (\knowl{./knowl/xref/d_transpose.html}{\text{Definition 0.1.28}} \\
+\amp =(A^T+B^T)_{ij} \amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.8}})\text{.}
 \end{align*}
 </div>
 <div class="para">Since the <span class="process-math">\(ij\)</span>-entries of both matrices are equal for each <span class="process-math">\((i,j)\text{,}\)</span> it follows that <span class="process-math">\((A+B)^T=A^T+B^T\text{.}\)</span>
@@ -783,9 +783,9 @@ c_{21} \amp  c_{22}
 <div class="para">We  need both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> to be <span class="process-math">\(m\times n \)</span> for the expression to make sense. It is easy to see that <span class="process-math">\(A+B\)</span> and <span class="process-math">\(B+A\)</span> are both <span class="process-math">\(m\times n\)</span> matrices. We must show <span class="process-math">\((A+B)_{ij}=(B+A)_{ij}\)</span> for all <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span> We have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_add_subtract.html ./knowl/xref/d_matrix_add_subtract.html" id="s_algebraic_ex-2-2-2-1-1-1-1-10">
 \begin{align*}
-(A+B)_{ij} \amp =(A)_{ij}+(B)_{ij}\amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.9}}) \\
+(A+B)_{ij} \amp =(A)_{ij}+(B)_{ij}\amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.8}}) \\
 \amp =(B)_{ij}+(A)_{ij}\amp \text{(real addition is comm.)} \\
-\amp =(B+A)_{ij} \amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.9}} \text{.}
+\amp =(B+A)_{ij} \amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.8}} \text{.}
 \end{align*}
 </div>
 </div></li></ol></div></div></details></div></article><article class="exercise exercise-like" id="s_algebraic_ex-2-3"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
