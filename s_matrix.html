@@ -383,7 +383,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <div class="toc-title-box"><a href="s_matrix.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Aritmatika Matrik</span></a></div>
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_attributes" class="internal"><span class="codenumber">0.1.1</span> <span class="title">Dasar dasar Matrik</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_arithmetic" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Addition, subtraction and scalar multiplication</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_arithmetic" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Penjumlahan, Pengurangan, dan Perkalian Skalar</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_mult" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Matrix multiplication</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_column_row_method" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Alternative methods of multiplication</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_matrix-7" class="internal"><span class="codenumber">0.1.5</span> <span class="title">Transpose of a matrix</span></a></div></li>
@@ -557,78 +557,78 @@ show(A.rows())
 <div class="para" id="sage_matrix_entries_rows_cols-10">Gunakan sel kosong di bawah ini untuk mencoba beberapa perintah ini.</div>
 <div id="sage_matrix_entries_rows_cols-11" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
 </script></div></article></details></section><section class="subsection" id="ss_matrix_arithmetic"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.2</span><span class="space"> </span><span class="title">Addition, subtraction and scalar multiplication</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.2</span><span class="space"> </span><span class="title">Penjumlahan, Pengurangan, dan Perkalian Skalar</span>
 </h3>
-<div class="para" id="ss_matrix_arithmetic-2">We now lay out the various algebraic operations we will use to combine and transform matrices; we refer to the use of these operations loosely as <em class="emphasis">matrix arithmetic</em>. Some of these operations resemble familiar operations from real arithmetic in terms of their notation and definition. Do not be lulled into complacency! These are new operations defined for a new class of mathematical objects, and must be treated carefully. In particular, pay close attention to (a) exactly what type of mathematical objects serve as inputs for each operation (the <em class="emphasis">ingredients</em> of the operation), and (b) what type of mathematical object is outputted.</div>
+<div class="para" id="ss_matrix_arithmetic-2">Kita sekarang akan menjelaskan berbagai operasi aljabar yang akan kita gunakan untuk menggabungkan dan mentransformasi matriks; kita menyebut penggunaan operasi-operasi ini secara longgar sebagai <em class="emphasis">aritmatika matriks</em>. Beberapa dari operasi ini menyerupai operasi yang sudah dikenal dari aritmatika bilangan real dalam hal notasi dan definisinya. Jangan lengah! Ini adalah operasi baru yang didefinisikan untuk kelas objek matematika baru, dan harus diperlakukan dengan hati-hati. Secara khusus, perhatikan dengan cermat (a) jenis objek matematika apa yang menjadi masukan untuk setiap operasi (bahan dari operasi), dan (b) jenis objek matematika apa yang dihasilkan.</div>
 <article class="definition definition-like" id="d_matrix_add_subtract"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix addition and subtraction.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Penjumlahan dan Pengurangan Matriks.</span>
 </h4>
 <div class="para" id="d_matrix_add_subtract-4-1"></div> <div class="para logical" id="d_matrix_add_subtract-4-2">
 <div class="para">
-<dfn class="terminology">Matrix addition</dfn> is the operation defined as follows: given two <span class="process-math">\(m\times n\)</span> matrices <span class="process-math">\(A=[a_{ij}]_{m\times n}\)</span> and <span class="process-math">\(B=[b_{ij}]_{m\times n}\text{,}\)</span> we define their <dfn class="terminology">sum</dfn> to be the matrix</div>
+<dfn class="terminology">Penjumlahan matriks</dfn> adalah operasi yang didefinisikan sebagai berikut: diberikan dua matriks <span class="process-math">\(m\times n\)</span> <span class="process-math">\(A=[a_{ij}]_{m\times n}\)</span> dan <span class="process-math">\(B=[b_{ij}]_{m\times n}\text{,}\)</span> kita mendefinisikan <dfn class="terminology">jumlah</dfn> mereka sebagai matriks</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A+B\colon =[a_{ij}+b_{ij}]_{m\times n}\text{.}
 \end{equation*}
 </div>
-<div class="para">In other words <span class="process-math">\(A+B\)</span> is the <span class="process-math">\(m\times n\)</span> matrix satisfying</div>
+<div class="para">Dengan kata lain, <span class="process-math">\(A+B\)</span> adalah matriks <span class="process-math">\(m\times n\)</span> yang memenuhi</div>
 <div class="displaymath process-math">
 \begin{equation*}
 [A+B]_{ij}=[A]_{ij}+[B]_{ij}=a_{ij}+b_{ij}
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(1\leq i\leq m\)</span> and <span class="process-math">\(1\leq j\leq n\text{.}\)</span>
+<div class="para">untuk semua <span class="process-math">\(1\leq i\leq m\)</span> dan <span class="process-math">\(1\leq j\leq n\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="d_matrix_add_subtract-4-3">
 <div class="para">
-<dfn class="terminology">Matrix subtraction</dfn> is the operation defined as follows: given two <span class="process-math">\(m\times n\)</span> matrices <span class="process-math">\(A=[a_{ij}]_{m\times n}\)</span> and <span class="process-math">\(B=[b_{ij}]_{m\times n}\text{,}\)</span> we define their <dfn class="terminology">difference</dfn> to be the matrix</div>
+<dfn class="terminology">Pengurangan matriks</dfn> adalah operasi yang didefinisikan sebagai berikut: diberikan dua matriks <span class="process-math">\(m\times n\)</span> <span class="process-math">\(A=[a_{ij}]_{m\times n}\)</span> dan <span class="process-math">\(B=[b_{ij}]_{m\times n}\text{,}\)</span> kita mendefinisikan <dfn class="terminology">selisih</dfn> mereka sebagai matriks</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A-B\colon =[a_{ij}-b_{ij}]_{m\times n}\text{.}
 \end{equation*}
 </div>
-<div class="para">In other words <span class="process-math">\(A-B\)</span> is the <span class="process-math">\(m\times n\)</span> matrix satisfying</div>
+<div class="para">Dengan kata lain, <span class="process-math">\(A-B\)</span> adalah matriks <span class="process-math">\(m\times n\)</span> yang memenuhi</div>
 <div class="displaymath process-math">
 \begin{equation*}
 [A-B]_{ij}=[A]_{ij}-[B]_{ij}=a_{ij}-b_{ij}
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(1\leq i\leq m\)</span> and <span class="process-math">\(1\leq j\leq n\text{.}\)</span>
+<div class="para">untuk semua <span class="process-math">\(1\leq i\leq m\)</span> dan <span class="process-math">\(1\leq j\leq n\text{.}\)</span>
 </div>
 </div></article><article class="remark remark-like" id="ss_matrix_arithmetic-4"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.9</span><span class="period">.</span>
 </h4>
-<div class="para" id="ss_matrix_arithmetic-4-1">Observe that matrix addition/subtraction is not defined for any pair of matrices. The ingredients of matrix addition (or subtraction) are two matrices <em class="emphasis">of the same dimension</em>; and the output is a third matrix of this common dimension.</div></article><article class="definition definition-like" id="d_matrix_scalar_mult"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Scalar multiplication of matrices.</span>
+<div class="para" id="ss_matrix_arithmetic-4-1">Perhatikan bahwa penjumlahan/pengurangan matriks tidak didefinisikan untuk sembarang pasangan matriks. Bahan untuk penjumlahan (atau pengurangan) matriks adalah dua matriks <em class="emphasis">dengan dimensi yang sama</em>; dan hasilnya adalah matriks ketiga dengan dimensi yang sama.</div></article><article class="definition definition-like" id="d_matrix_scalar_mult"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Perkalian Skalar Matriks.</span>
 </h4>
 <div class="para logical" id="d_matrix_scalar_mult-3-1">
-<div class="para">Given any matrix <span class="process-math">\(A=[a_{ij}]_{m\times n}\)</span> and any constant <span class="process-math">\(c\in \R\text{,}\)</span> we define</div>
+<div class="para">Diberikan matriks apa pun <span class="process-math">\(A=[a_{ij}]_{m\times n}\)</span> dan konstanta apa pun <span class="process-math">\(c\in \R\text{,}\)</span> kita mendefinisikan</div>
 <div class="displaymath process-math">
 \begin{equation*}
 cA=[ca_{ij}]\text{.}
 \end{equation*}
 </div>
-<div class="para">In other words, <span class="process-math">\(cA\)</span> is the <span class="process-math">\(m\times n\)</span> matrix obtained by “scaling” each of the entries of <span class="process-math">\(A\)</span> by the constant <span class="process-math">\(c\text{.}\)</span>
+<div class="para">Dengan kata lain, <span class="process-math">\(cA\)</span> adalah matriks <span class="process-math">\(m\times n\)</span> yang diperoleh dengan “menskalakan” setiap entri dari <span class="process-math">\(A\)</span> dengan konstanta <span class="process-math">\(c\text{.}\)</span>
 </div>
-</div> <div class="para" id="d_matrix_scalar_mult-3-2">We call <span class="process-math">\(cA\)</span> a <dfn class="terminology">scalar multiple</dfn> of <span class="process-math">\(A\text{.}\)</span> Furthermore, to help distinguish between matrices and real numbers, we will refer to elements of <span class="process-math">\(\R\)</span> as <dfn class="terminology">scalars</dfn>.</div></article><article class="remark remark-like" id="ss_matrix_arithmetic-6"><h4 class="heading">
+</div> <div class="para" id="d_matrix_scalar_mult-3-2">Kita menyebut <span class="process-math">\(cA\)</span> sebagai <dfn class="terminology">kelipatan skalar</dfn> dari <span class="process-math">\(A\text{.}\)</span> Selain itu, untuk membantu membedakan antara matriks dan bilangan real, kita akan merujuk elemen-elemen dari <span class="process-math">\(\R\)</span> sebagai <dfn class="terminology">skalar</dfn>.</div></article><article class="remark remark-like" id="ss_matrix_arithmetic-6"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="ss_matrix_arithmetic-6-1">Whereas matrix addition and subtraction closely resemble corresponding operations involving real numbers, there is no obvious real arithmetic analogue to matrix scalar multiplication. In particular, notice how matrix scalar multiplication is a sort of  <em class="emphasis">hybrid</em> operation that combines mathematical objects of two very different natures: a real number (or scalar) on the one hand, and a matrix on the other.</div></article><div class="para" id="ss_matrix_arithmetic-7">We call the result of applying a sequence of matrix additions and scalar multiplications a <em class="emphasis">linear combination of matrices</em>.</div>
+<div class="para" id="ss_matrix_arithmetic-6-1">Sedangkan penjumlahan dan pengurangan matriks sangat mirip dengan operasi yang sesuai yang melibatkan bilangan real, tidak ada analog aritmatika real yang jelas untuk perkalian skalar matriks. Secara khusus, perhatikan bagaimana perkalian skalar matriks adalah semacam operasi <em class="emphasis">hibrida</em> yang menggabungkan objek matematika dari dua sifat yang sangat berbeda: bilangan real (atau skalar) di satu sisi, dan matriks di sisi lain.</div></article><div class="para" id="ss_matrix_arithmetic-7">Kita menyebut hasil dari penerapan urutan penjumlahan matriks dan perkalian skalar sebagai <em class="emphasis">kombinasi linear matriks</em>.</div>
 <article class="definition definition-like" id="d_matrix_lin_comb"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Linear combination of matrices.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Kombinasi Linear Matriks.</span>
 </h4>
 <div class="para logical" id="d_matrix_lin_comb-3-1">
-<div class="para">Given matrices <span class="process-math">\(A_1,A_2,\dots, A_r\)</span> of the same dimension, and scalars <span class="process-math">\(c_1,c_2, \dots ,c_r\text{,}\)</span> the expression</div>
+<div class="para">Diberikan matriks <span class="process-math">\(A_1,A_2,\dots, A_r\)</span> dengan dimensi yang sama, dan skalar <span class="process-math">\(c_1,c_2, \dots ,c_r\text{,}\)</span> ekspresi</div>
 <div class="displaymath process-math">
 \begin{equation*}
 c_1A_1+c_2A_2\cdots +c_rA_r
 \end{equation*}
 </div>
-<div class="para">is called a <dfn class="terminology">linear combination of matrices</dfn>.  The scalars <span class="process-math">\(c_i\)</span> are called the <dfn class="terminology">coefficients</dfn> of the linear combination.</div>
+<div class="para">disebut <dfn class="terminology">kombinasi linear matriks</dfn>. Skalar <span class="process-math">\(c_i\)</span> disebut <dfn class="terminology">koefisien</dfn> dari kombinasi linear.</div>
 </div></article><article class="example example-like" id="ss_matrix_arithmetic-9"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.13</span><span class="period">.</span>
 </h4>
-<div class="para" id="ss_matrix_arithmetic-9-1-1">Let <span class="process-math">\(A=\begin{amatrix}[rrr]1\amp -1\amp 2\\ 0\amp 0\amp 1\end{amatrix}\)</span> and <span class="process-math">\(B=\begin{amatrix}[rrr]0\amp 1\amp 1\\ -1\amp -1\amp 1\end{amatrix}\text{.}\)</span> Compute <span class="process-math">\(2A+(-3)B\text{.}\)</span>
+<div class="para" id="ss_matrix_arithmetic-9-1-1">Misalkan <span class="process-math">\(A=\begin{amatrix}[rrr]1\amp -1\amp 2\\ 0\amp 0\amp 1\end{amatrix}\)</span> dan <span class="process-math">\(B=\begin{amatrix}[rrr]0\amp 1\amp 1\\ -1\amp -1\amp 1\end{amatrix}\text{.}\)</span> Hitunglah <span class="process-math">\(2A+(-3)B\text{.}\)</span>
 </div>
 <div class="solutions"><details id="ss_matrix_arithmetic-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ss_matrix_arithmetic-9-2-1"><div class="displaymath process-math" id="ss_matrix_arithmetic-9-2-1-1">
 \begin{align*}
@@ -639,7 +639,7 @@ c_1A_1+c_2A_2\cdots +c_rA_r
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.14</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="ss_matrix_arithmetic-10-1-1">
-<div class="para">Show that <span class="process-math">\(B=\begin{amatrix}3\amp -3\amp 3 \end{amatrix}\)</span> can be expressed as a linear combination of the matrices</div>
+<div class="para">Tunjukkan bahwa <span class="process-math">\(B=\begin{amatrix}3\amp -3\amp 3 \end{amatrix}\)</span> dapat dinyatakan sebagai kombinasi linear dari matriks-matriks</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A_1=\begin{amatrix}[rrr]1\amp 1\amp 1\end{amatrix}, \
@@ -649,19 +649,19 @@ A_3=\begin{amatrix}[rrr]1\amp 1\amp -2\end{amatrix}\text{.}
 </div>
 </div>
 <div class="solutions"><details id="ss_matrix_arithmetic-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ss_matrix_arithmetic-10-2-1">
-<div class="para">We must solve the matrix (or row vector) equation</div>
+<div class="para">Kita harus menyelesaikan persamaan matriks (atau vektor baris)</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_equality.html">
 \begin{equation*}
 aA_1+bA_2+cA_3=B
 \end{equation*}
 </div>
-<div class="para">for the scalars <span class="process-math">\(a,b,c\text{.}\)</span> Computing the linear combination on the left yields the matrix equation</div>
+<div class="para">untuk skalar <span class="process-math">\(a,b,c\text{.}\)</span> Menghitung kombinasi linear di sebelah kiri menghasilkan persamaan matriks</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_equality.html">
 \begin{equation*}
 \begin{amatrix}[rrr]a+b+c\amp a-b+c\amp a-2c\end{amatrix}=\begin{amatrix}[rrr]3\amp -3\amp 3\end{amatrix}\text{.}
 \end{equation*}
 </div>
-<div class="para">Using the definition of matrix equality (<a href="s_matrix.html#d_matrix_equality" class="xref" data-knowl="./knowl/xref/d_matrix_equality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.4: Kesamaan Matrik">Definition 0.1.4</a>), we get the system of equations</div>
+<div class="para">Menggunakan definisi kesetaraan matriks ( <a href="s_matrix.html#d_matrix_equality" class="xref" data-knowl="./knowl/xref/d_matrix_equality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.4: Kesamaan Matrik">Definition 0.1.4</a>), kita mendapatkan sistem persamaan</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_equality.html">
 \begin{equation*}
 \begin{linsys}{3} 1a \amp +\amp b \amp + \amp c \amp = \amp 3\\
@@ -670,19 +670,19 @@ a \amp \amp \amp -\amp 2c\amp =\amp 3
 \end{linsys}\text{.}
 \end{equation*}
 </div>
-<div class="para">Using Gaussian elimination we find that there is a unique solution to this system: namely, <span class="process-math">\((a,b,c)=(1,3,-1)\text{.}\)</span> We conclude that <span class="process-math">\(B=A_1+3A_2+(-1)A_3=A_1+3A_2-A_3\text{.}\)</span>
+<div class="para">Menggunakan eliminasi Gauss, kita menemukan bahwa ada solusi unik untuk sistem ini: yaitu, <span class="process-math">\((a,b,c)=(1,3,-1)\text{.}\)</span> Kita simpulkan bahwa <span class="process-math">\(B=A_1+3A_2+(-1)A_3=A_1+3A_2-A_3\text{.}\)</span>
 </div>
 </div></div></details></div></article><article class="remark remark-like" id="rm_entry_lin_comb"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.15</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="rm_entry_lin_comb-1">
-<div class="para">Let <span class="process-math">\(A_1, A_2,\dots, A_r\)</span> be <span class="process-math">\(m\times n\)</span> matrices,  An easy induction argument on <span class="process-math">\(r\)</span> shows that for any scalars <span class="process-math">\(c_1,c_2,\dots, c_r\)</span> we have</div>
+<div class="para">Misalkan <span class="process-math">\(A_1, A_2,\dots, A_r\)</span> adalah matriks <span class="process-math">\(m\times n\text{,}\)</span> argumen induksi sederhana pada <span class="process-math">\(r\)</span> menunjukkan bahwa untuk skalar apa pun <span class="process-math">\(c_1,c_2,\dots, c_r\)</span> kita memiliki</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex_entry_lin_comb.html">
 \begin{equation*}
 [c_1A_1+c_2A_2+\cdots +c_rA_r]_{ij} =c_1[A_1]_{ij}+c_2[A_2]_{ij}+\cdots c_r[A_r]_{ij}
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span> (See <a href="s_matrix.html#ex_entry_lin_comb" class="xref" data-knowl="./knowl/xref/ex_entry_lin_comb.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 0.1.6.11">Exercise 0.1.6.11</a>. )</div>
+<div class="para">untuk semua <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span> (Lihat <a href="s_matrix.html#ex_entry_lin_comb" class="xref" data-knowl="./knowl/xref/ex_entry_lin_comb.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 0.1.6.11">Exercise 0.1.6.11</a>.)</div>
 </div></article></section><section class="subsection" id="ss_matrix_mult"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.3</span><span class="space"> </span><span class="title">Matrix multiplication</span>
 </h3>
