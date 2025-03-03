@@ -471,9 +471,9 @@ A \amp =\begin{bmatrix}1\amp 2\amp 3\amp 4 \end{bmatrix}
 </div>
 </div> <div class="para" id="ex_inequality-1-2">Matriks <span class="process-math">\(A=\begin{bmatrix}1\amp 2 \\3\amp 4 \end{bmatrix}\)</span> dan <span class="process-math">\(B=\begin{bmatrix}1\amp 2\\ 5\amp 4\end{bmatrix}\)</span> memiliki dimensi yang sama, tetapi tidak sama karena <span class="process-math">\([A]_{21}=3\ne 5=[B]_{21}\text{.}\)</span>
 </div></article><article class="definition definition-like" id="d_square_matrices"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Square matrices, row vectors, column vectors, zero matrices.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Matriks bujur sangkar, vektor baris, vektor kolom, matriks nol.</span>
 </h4>
-<div class="para" id="d_square_matrices-8-1">Sebuah matriks <span class="process-math">\(A\)</span> disebut <dfn class="terminology">persegi</dfn> jika dimensinya adalah <span class="process-math">\(n\times n\text{.}\)</span> <dfn class="terminology">Diagonal</dfn> dari sebuah matriks persegi <span class="process-math">\(A=[a_{ij}]_{n\times n}\)</span> terdiri dari entri-entri <span class="process-math">\(a_{ii}\)</span> untuk <span class="process-math">\(1\leq i\leq n\text{.}\)</span>
+<div class="para" id="d_square_matrices-8-1">Sebuah matriks <span class="process-math">\(A\)</span> disebut <dfn class="terminology">bujur sangkar</dfn> jika dimensinya adalah <span class="process-math">\(n\times n\text{.}\)</span> <dfn class="terminology">Diagonal</dfn> dari sebuah matriks bujur sangkar <span class="process-math">\(A=[a_{ij}]_{n\times n}\)</span> terdiri dari entri-entri <span class="process-math">\(a_{ii}\)</span> untuk <span class="process-math">\(1\leq i\leq n\text{.}\)</span>
 </div> <div class="para logical" id="d_square_matrices-8-2">
 <div class="para">Sebuah matriks <span class="process-math">\(1\times n\)</span>
 </div>
@@ -535,25 +535,26 @@ A=\begin{bmatrix}\ -\boldr_{1}- \ \\
 </div>
 <div class="para">Garis vertikal dan horizontal dalam <a href="s_matrix.html#eq_columns" class="xref" data-knowl="./knowl/xref/eq_columns.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 0.1.2">(0.1.2)</a> dan <a href="s_matrix.html#eq_rows" class="xref" data-knowl="./knowl/xref/eq_rows.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 0.1.3">(0.1.3)</a> digunakan untuk menekankan bahwa <span class="process-math">\(\boldc_j\)</span> adalah vektor kolom dan <span class="process-math">\(\boldr_i\)</span> adalah vektor baris.</div>
 </div></article><details id="sage_matrix_entries_rows_cols" class="project project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Sage example</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix entries, rows, and columns.</span>
-</h4></summary><article class="project project-like knowl__content"><div class="para" id="sage_matrix_entries_rows_cols-2">Sage syntax for accessing specific entries of a matrix is similar in spirit to our matrix entry notation. However, as with all things Python, we always count from 0. Thus if <code class="code-inline tex2jax_ignore">A</code> is assigned to a matrix in Sage, <code class="code-inline tex2jax_ignore">A[i,j]</code> is its <span class="process-math">\((i+1),(j+1)\)</span>-th entry.</div>
+<span class="type">Sage example</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">Elemen matriks, baris, dan kolom.</span>
+</h4></summary><article class="project project-like knowl__content"><div class="para" id="sage_matrix_entries_rows_cols-2">Sintaks Sage untuk mengakses entri tertentu dari sebuah matriks memiliki kesamaan dengan notasi entri matriks. Akan tetapi dalam  Python, index dimulai dari 0. Jadi, jika <code class="code-inline tex2jax_ignore">A</code> ditetapkan ke matriks di Sage, <code class="code-inline tex2jax_ignore">A[i,j]</code> adalah entri ke-<span class="process-math">\((i+1),(j+1)\text{.}\)</span>
+</div>
 <div id="sage_matrix_entries_rows_cols-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=Matrix([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
 show(A[0,1])
 show(A[1,2])
 show(A[2,3])
 </script></div>
-<div class="para" id="sage_matrix_entries_rows_cols-4">Prescribed subsets of matrix entries are obtained via <em class="emphasis">slicing</em> methods: for example, <code class="code-inline tex2jax_ignore">A[a:b, c:d]</code> returns the collection of entries <span class="process-math">\([A]_{ij}\)</span> with <span class="process-math">\(a+1\leq i\lt b+1\)</span> and <span class="process-math">\(c+1\leq j\lt d\text{,}\)</span> arranged as a matrix.</div>
+<div class="para" id="sage_matrix_entries_rows_cols-4">Subset matriks yang ditentukan diperoleh melalui metode <em class="emphasis">slicing</em>: misalnya, <code class="code-inline tex2jax_ignore">A[a:b, c:d]</code> mengembalikan kumpulan entri <span class="process-math">\([A]_{ij}\)</span> dengan <span class="process-math">\(a+1\leq i\lt b+1\)</span> dan <span class="process-math">\(c+1\leq j\lt d\text{,}\)</span> yang disusun sebagai matriks.</div>
 <div id="sage_matrix_entries_rows_cols-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A[0:2,1:5]
 </script></div>
-<div class="para" id="sage_matrix_entries_rows_cols-6">Leaving the left or right side of <code class="code-inline tex2jax_ignore">:</code> blank in this notation removes the corresponding restriction bound (left or right) from the index in question. Thus <code class="code-inline tex2jax_ignore">A[2, :]</code> returns the third row of <span class="process-math">\(A\text{,}\)</span> and <code class="code-inline tex2jax_ignore">A[1:, 3]</code> returns the portion of the fourth column of <span class="process-math">\(A\)</span> beginning with its second entry.</div>
+<div class="para" id="sage_matrix_entries_rows_cols-6">Membiarkan sisi kiri atau kanan <code class="code-inline tex2jax_ignore">:</code> kosong dalam notasi ini menghilangkan batasan pembatasan yang sesuai (kiri atau kanan) dari indeks yang dimaksud. Jadi <code class="code-inline tex2jax_ignore">A[2, :]</code> mengembalikan baris ketiga dari <span class="process-math">\(A\text{,}\)</span> dan <code class="code-inline tex2jax_ignore">A[1:, 3]</code> mengembalikan bagian kolom keempat dari <span class="process-math">\(A\)</span> yang dimulai dengan entri keduanya.</div>
 <div id="sage_matrix_entries_rows_cols-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show(A[2, :])
 show(A[1:, 3])
 </script></div>
-<div class="para" id="sage_matrix_entries_rows_cols-8">Alternatively, we can obtain a list of all rows or columns of <span class="process-math">\(A\)</span> using the the methods <code class="code-inline tex2jax_ignore">rows()</code> and <code class="code-inline tex2jax_ignore">columns()</code>.</div>
+<div class="para" id="sage_matrix_entries_rows_cols-8">Atau, kita bisa mendapatkan daftar semua baris atau kolom <span class="process-math">\(A\)</span> menggunakan metode <code class="code-inline tex2jax_ignore">rows()</code> dan <code class="code-inline tex2jax_ignore">columns()</code>.</div>
 <div id="sage_matrix_entries_rows_cols-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show(A.columns())
 show(A.rows())
 </script></div>
-<div class="para" id="sage_matrix_entries_rows_cols-10">Use the empty cell below to try out some of these commands.</div>
+<div class="para" id="sage_matrix_entries_rows_cols-10">Gunakan sel kosong di bawah ini untuk mencoba beberapa perintah ini.</div>
 <div id="sage_matrix_entries_rows_cols-11" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
 </script></div></article></details></section><section class="subsection" id="ss_matrix_arithmetic"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.2</span><span class="space"> </span><span class="title">Addition, subtraction and scalar multiplication</span>
