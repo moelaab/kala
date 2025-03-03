@@ -385,9 +385,8 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_attributes" class="internal"><span class="codenumber">0.1.1</span> <span class="title">Dasar dasar Matrik</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_arithmetic" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Penjumlahan, Pengurangan, dan Perkalian Skalar</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_mult" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Perkalian Matrik</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_column_row_method" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Alternative methods of multiplication</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_matrix-7" class="internal"><span class="codenumber">0.1.5</span> <span class="title">Transpose of a matrix</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_matrix.html#s_matrix_ex" class="internal"><span class="codenumber">0.1.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_matrix-6" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Transpose Matriks</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_matrix.html#s_matrix_ex" class="internal"><span class="codenumber">0.1.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -682,7 +681,7 @@ a \amp \amp \amp -\amp 2c\amp =\amp 3
 [c_1A_1+c_2A_2+\cdots +c_rA_r]_{ij} =c_1[A_1]_{ij}+c_2[A_2]_{ij}+\cdots c_r[A_r]_{ij}
 \end{equation*}
 </div>
-<div class="para">untuk semua <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span> (Lihat <a href="s_matrix.html#ex_entry_lin_comb" class="xref" data-knowl="./knowl/xref/ex_entry_lin_comb.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 0.1.6.11">Exercise 0.1.6.11</a>.)</div>
+<div class="para">untuk semua <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span> (Lihat <a href="s_matrix.html#ex_entry_lin_comb" class="xref" data-knowl="./knowl/xref/ex_entry_lin_comb.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 0.1.5.11">Exercise 0.1.5.11</a>.)</div>
 </div></article></section><section class="subsection" id="ss_matrix_mult"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.3</span><span class="space"> </span><span class="title">Perkalian Matrik</span>
 </h3>
@@ -750,69 +749,69 @@ C=\begin{bmatrix}c_{11} \amp c_{12} \\ c_{21} \amp c_{22}\end{bmatrix}=
 \begin{amatrix}[rr]-9\amp -4 \\ 2\amp 5 \end{amatrix} \text{.}
 \end{equation*}
 </div>
-</div></article><div class="para" id="ss_matrix_mult-7">The formula for the <span class="process-math">\(ij\)</span>-th entry of a matrix product <span class="process-math">\(AB\)</span> can be succinctly described as the <em class="emphasis">dot product</em> of the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\)</span> with the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{.}\)</span> You may have already met the dot product in the special case of <span class="process-math">\(2\)</span>- and <span class="process-math">\(3\)</span>-tuples; the definition generalizes easily to <span class="process-math">\(n\)</span>-tuples for any positive integer <span class="process-math">\(n\text{.}\)</span> We will have a lot more to say about the dot product and related operations in . For now we will provide an official definition so that we can conveniently describe matrix multiplication in terms of dot products.</div>
+</div></article><div class="para" id="ss_matrix_mult-7">Rumus untuk entri ke-<span class="process-math">\(ij\)</span> dari produk matriks <span class="process-math">\(AB\)</span> dapat dijelaskan secara ringkas sebagai <em class="emphasis">produk titik</em> dari baris ke-<span class="process-math">\(i\)</span> dari <span class="process-math">\(A\)</span> dengan kolom ke-<span class="process-math">\(j\)</span> dari <span class="process-math">\(B\text{.}\)</span> Anda mungkin telah menemukan produk titik dalam kasus khusus tupel <span class="process-math">\(2\)</span> dan <span class="process-math">\(3\text{;}\)</span> definisi tersebut dapat dengan mudah digeneralisasikan ke tupel <span class="process-math">\(n\)</span> untuk setiap bilangan bulat positif <span class="process-math">\(n\text{.}\)</span> Kami akan membahas lebih lanjut tentang produk titik dan operasi terkait di . Untuk saat ini, kami akan memberikan definisi resmi sehingga kami dapat dengan mudah menjelaskan perkalian matriks dalam bentuk produk titik..</div>
 <article class="definition definition-like" id="d_dot_product"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Dot product.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Perkalian Titik.</span>
 </h4>
 <div class="para logical" id="d_dot_product-4-1">
-<div class="para">Given <span class="process-math">\(n\)</span>-tuples <span class="process-math">\(\boldx=(x_1,x_2,\dots, x_n)\)</span> and <span class="process-math">\(\boldy=(y_1,y_2,\dots, y_n)\text{,}\)</span> their <dfn class="terminology">dot product</dfn>, denoted <span class="process-math">\(\boldx\cdot \boldy\text{,}\)</span> is defined as</div>
+<div class="para">Diberikan <span class="process-math">\(n\)</span>-tupel <span class="process-math">\(\boldx=(x_1,x_2,\dots, x_n)\)</span> dan <span class="process-math">\(\boldy=(y_1,y_2,\dots, y_n)\text{,}\)</span> <dfn class="terminology">hasil kali titik</dfn> mereka yang dinotasikan <span class="process-math">\(\boldx\cdot \boldy\)</span> didefinisikan sebagai:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\boldx\cdot \boldy=x_1y_1+x_2y_2+\cdots +x_ny_n=\sum_{i=1}^nx_iy_i\text{.}
+\boldx\cdot \boldy=x_1y_1+x_2y_2+\cdots +x_ny_n=\sum_{i=1}^nx_iy_i
 \end{equation*}
 </div>
 </div></article><article class="theorem theorem-like" id="th_matrix_mult_dot_product"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.1.21</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="th_matrix_mult_dot_product-1-1">
-<div class="para">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix, and let <span class="process-math">\(B\)</span> be an <span class="process-math">\(n\times r\)</span> matrix. For all <span class="process-math">\(1\leq i\leq m\text{,}\)</span> let <span class="process-math">\(\boldr_i\)</span> be the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\text{;}\)</span> and for all <span class="process-math">\(1\leq k\leq r\)</span> let <span class="process-math">\(\boldc_j\)</span> be the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{.}\)</span> For all <span class="process-math">\(1\leq i\leq m, 1\leq j\leq n\text{,}\)</span> we have</div>
+<div class="para">Misalkan <span class="process-math">\(A\)</span> adalah matriks berukuran <span class="process-math">\(m\times n\text{,}\)</span> dan <span class="process-math">\(B\)</span> adalah matriks berukuran <span class="process-math">\(n\times r\text{.}\)</span> Untuk semua <span class="process-math">\(1\leq i\leq m\text{,}\)</span> misalkan <span class="process-math">\(\boldr_i\)</span> adalah baris ke-<span class="process-math">\(i\)</span> dari <span class="process-math">\(A\text{;}\)</span> dan untuk semua <span class="process-math">\(1\leq k\leq r\text{,}\)</span> misalkan <span class="process-math">\(\boldc_j\)</span> adalah kolom ke-<span class="process-math">\(j\)</span> dari <span class="process-math">\(B\text{.}\)</span> Untuk semua <span class="process-math">\(1\leq i\leq m, 1\leq j\leq n\text{,}\)</span> kita memiliki:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 [AB]_{ij}=\boldr_i\cdot \boldc_j\text{,}
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(\boldr_i\)</span> and <span class="process-math">\(\boldc_j\)</span> are treated as <span class="process-math">\(n\)</span>-tuples. In other words, the <span class="process-math">\(ij\)</span>-th entry of <span class="process-math">\(AB\)</span> is the dot product of the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\)</span> and the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{.}\)</span>
+<div class="para">di mana <span class="process-math">\(\boldr_i\)</span> dan <span class="process-math">\(\boldc_j\)</span> diperlakukan sebagai <span class="process-math">\(n\)</span>-tupel. Dengan kata lain, entri <span class="process-math">\(ij\)</span> dari <span class="process-math">\(AB\)</span> adalah hasil kali titik (dot product) dari baris ke-<span class="process-math">\(i\)</span> dari <span class="process-math">\(A\)</span> dan kolom ke-<span class="process-math">\(j\)</span> dari <span class="process-math">\(B\text{.}\)</span>
 </div>
 </div></article><details id="th_matrix_mult_dot_product-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_matrix_mult_dot_product-2-1">
-<div class="para">Fix a pair <span class="process-math">\((i,j)\)</span> with <span class="process-math">\(1\leq i\leq m\)</span> and <span class="process-math">\(1\leq j\leq r\text{.}\)</span> Considered as <span class="process-math">\(n\)</span>-tuples, the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\)</span> and <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\)</span> are given as</div>
+<div class="para">Tetapkan pasangan <span class="process-math">\((i,j)\)</span> dengan <span class="process-math">\(1\leq i\leq m\)</span> dan <span class="process-math">\(1\leq j\leq r\text{.}\)</span> Jika dipandang sebagai <span class="process-math">\(n\)</span>-tupel, baris ke-<span class="process-math">\(i\)</span> dari <span class="process-math">\(A\)</span> dan kolom ke-<span class="process-math">\(j\)</span> dari <span class="process-math">\(B\)</span> diberikan sebagai:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_mult.html ./knowl/xref/d_dot_product.html" id="th_matrix_mult_dot_product-2-1-9">
 \begin{align*}
 \boldr_i \amp =(a_{i1}, a_{i2},\dots, a_{in})\\
 \boldc_j \amp =(b_{1j},b_{2j},\dots, b_{nj})\text{.}
 \end{align*}
 </div>
-<div class="para">We have</div>
+<div class="para">Kita memiliki:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_mult.html ./knowl/xref/d_dot_product.html" id="th_matrix_mult_dot_product-2-1-10">
 \begin{align*}
 [AB]_{ij} \amp = \sum_{k=1}^na_{ik}b_{kj} \amp( \knowl{./knowl/xref/d_matrix_mult.html}{\text{0.1.16}}) \\
 \amp =\boldr_i\cdot \boldc_j \amp (\knowl{./knowl/xref/d_dot_product.html}{\text{0.1.20}}) \text{,}
 \end{align*}
 </div>
-<div class="para">as claimed.</div>
+<div class="para">seperti yang diklaim.</div>
 </div></article></details><article class="example example-like" id="ss_matrix_mult-10"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix multiplication via dot product.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Perkalian matrik dengan Perkalian titik (dot product).</span>
 </h4>
 <div class="para logical" id="ss_matrix_mult-10-2">
-<div class="para">Consider the matrices</div>
+<div class="para">Perhatikan matriks-matriks berikut:</div>
 <div class="displaymath process-math" id="ss_matrix_mult-10-2-1">
 \begin{align*}
 A \amp =\begin{amatrix}[rrrr]1\amp 1\amp 1\amp 1\\ 1\amp 2\amp 1\amp 2\end{amatrix} 
 \amp B\amp =\begin{amatrix}[rr] 1\amp -1 \\ 0\amp 1\\ 1\amp 0 \\ 0\amp 0 \end{amatrix}\text{.}
 \end{align*}
 </div>
-<div class="para">The two rows of <span class="process-math">\(A\)</span> (in tuple form) are</div>
+<div class="para">Dua baris dari <span class="process-math">\(A\)</span> (dalam bentuk tupel) adalah:</div>
 <div class="displaymath process-math" id="ss_matrix_mult-10-2-3">
 \begin{align*}
 \boldr_1 \amp =(1,1,1,1) \amp \boldr_2=(1,2,1,2)\text{.}
 \end{align*}
 </div>
-<div class="para">The two columns of <span class="process-math">\(B\)</span> (in tuple form) are</div>
+<div class="para">Dua kolom dari <span class="process-math">\(B\)</span> (dalam bentuk tupel) adalah:</div>
 <div class="displaymath process-math" id="ss_matrix_mult-10-2-5">
 \begin{align*}
 \boldc_1 \amp =(1,0,1,0) \amp \boldc_2=(-1,1,0,0)\text{.}
 \end{align*}
 </div>
-<div class="para">Using the dot product description of matrix multiplication, we compute</div>
+<div class="para">Dengan menggunakan deskripsi hasil kali titik untuk perkalian matriks, kita menghitung:</div>
 <div class="displaymath process-math" id="ss_matrix_mult-10-2-6">
 \begin{align*}
 AB \amp =\begin{bmatrix}\boldr_1\cdot \boldc_1 \amp \boldr_1\cdot \boldc_2 \\ 
@@ -821,17 +820,17 @@ AB \amp =\begin{bmatrix}\boldr_1\cdot \boldc_1 \amp \boldr_1\cdot \boldc_2 \\
 \end{align*}
 </div>
 </div></article><div class="para logical" id="ss_matrix_mult-11">
-<div class="para">The definition of a matrix product <span class="process-math">\(AB\)</span> is undoubtedly more complicated than you expected, and seems to come completely out of the blue. All of this will make more sense once we begin thinking of matrices <span class="process-math">\(A\)</span> as defining certain functions <span class="process-math">\(T_A\text{.}\)</span> Our formula for the entries of <span class="process-math">\(AB\)</span> is chosen precisely so that this new matrix corresponds to the <em class="emphasis">composition</em> of the functions <span class="process-math">\(T_A\)</span> and <span class="process-math">\(T_B\text{:}\)</span> i.e. so that</div>
+<div class="para">Definisi dari produk matriks <span class="process-math">\(AB\)</span> tentu lebih rumit daripada yang Anda harapkan, dan tampaknya muncul begitu saja tanpa peringatan. Semua ini akan lebih masuk akal begitu kita mulai memandang matriks <span class="process-math">\(A\)</span> sebagai pemberi definisi fungsi-fungsi tertentu <span class="process-math">\(T_A\text{.}\)</span> Rumus kami untuk entri-entri <span class="process-math">\(AB\)</span> dipilih secara tepat agar matriks baru ini sesuai dengan <em class="emphasis">komposisi</em> dari fungsi-fungsi <span class="process-math">\(T_A\)</span> dan <span class="process-math">\(T_B\text{:}\)</span> i.e. sehingga</div>
 <div class="displaymath process-math">
 \begin{equation*}
 T_{AB}=T_A\circ T_B\text{.}
 \end{equation*}
 </div>
-<div class="para">Under this interpretation, the ponderous restriction on the dimensions of the ingredient matrices ensures that the two functions <span class="process-math">\(T_A\)</span> and <span class="process-math">\(T_B\)</span> can be composed.</div>
+<div class="para">Dengan interpretasi ini, batasan berat pada dimensi matriks-matriks penyusun memastikan bahwa dua fungsi <span class="process-math">\(T_A\)</span> dan <span class="process-math">\(T_B\)</span> dapat dikomposisikan.</div>
 </div>
 <details id="ss_matrix_mult-12" class="project project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Sage example</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix arithmetic.</span>
-</h4></summary><article class="project project-like knowl__content"><div class="para" id="ss_matrix_mult-12-2">We use <code class="code-inline tex2jax_ignore">+</code> and <code class="code-inline tex2jax_ignore">*</code> for matrix addition and multiplication.</div>
+<span class="type">Sage example</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span><span class="space"> </span><span class="title">Aritmatika matrik.</span>
+</h4></summary><article class="project project-like knowl__content"><div class="para" id="ss_matrix_mult-12-2">Kita menggunakan <code class="code-inline tex2jax_ignore">+</code> dan <code class="code-inline tex2jax_ignore">*</code> untuk penjumlahan dan perkalian matriks.</div>
 <div id="ss_matrix_mult-12-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=Matrix(4,3,range(12))
 B=Matrix(4,3,range(12,24))
 C=Matrix(3,5,range(-5,10))
@@ -839,224 +838,43 @@ show(A,B,C)
 show(A+B)
 show(A*C)
 </script></div>
-<div class="para" id="ss_matrix_mult-12-4">As evidence of Sage’s flexibility, the same symbol <code class="code-inline tex2jax_ignore">*</code> is also used for scalar multiplication.</div>
+<div class="para" id="ss_matrix_mult-12-4">Sebagai bukti fleksibilitas Sage, simbol yang sama <code class="code-inline tex2jax_ignore">*</code> juga digunakan untuk perkalian skalar.</div>
 <div id="ss_matrix_mult-12-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">show(5*A*C-2*B*C)
 </script></div>
-<div class="para" id="ss_matrix_mult-12-6">Edit the cell below to practice these operations.</div>
+<div class="para" id="ss_matrix_mult-12-6">Edit sel di bawah ini untuk mempraktikkan operasi ini.</div>
 <div id="ss_matrix_mult-12-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([[1,0,-1],[2,-6,6],[4,4,5]])
 B=matrix([[1,2],[2,-4],[0,1]])
-</script></div></article></details></section><section class="subsection" id="s_column_row_method"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.4</span><span class="space"> </span><span class="title">Alternative methods of multiplication</span>
+</script></div></article></details></section><section class="subsection" id="s_matrix-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.4</span><span class="space"> </span><span class="title">Transpose Matriks</span>
 </h3>
-<div class="para" id="s_column_row_method-2">In addition to the given definition of matrix multiplication, we will make <em class="emphasis">heavy use</em> of two further ways of computing matrix products, called the column and row methods of matrix multiplication.</div>
-<article class="theorem theorem-like" id="th_column_method"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Column method of matrix multiplication.</span>
+<div class="para" id="s_matrix-6-2">Kami mengakhiri bagian ini dengan satu operasi terakhir, <em class="emphasis">transpose matriks</em>. Kami tidak akan banyak menggunakan operasi ini hingga nanti, tetapi ini adalah tempat yang tepat untuk memperkenalkannya.</div>
+<article class="definition definition-like" id="d_transpose"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Transpose Matriks.</span>
 </h4>
-<div class="para" id="th_column_method-3-1">Let <span class="process-math">\(A=[a_{i}]_{m\times n}\)</span> and <span class="process-math">\(B=[b_{ij}]_{n\times r}\text{.}\)</span> The column method of matrix multiplication computes <span class="process-math">\(AB\)</span> using the two steps below.</div> <dl class="description-list">
-<dt id="th_column_method-3-2-1">Step 1</dt>
-<dd><div class="para logical" id="th_column_method-3-2-1-2">
-<div class="para">Let <span class="process-math">\(\boldb_j\)</span> be the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{,}\)</span> considered as a column vector. Then</div>
-<div class="displaymath process-math" id="th_column_method-3-2-1-2-4">
-\begin{align*}
-AB \amp =A\begin{bmatrix}\vert \amp \vert \amp  \amp \vert \\ \boldb_1\amp \boldb_2\amp \cdots\amp \boldb_r\\ \vert \amp \vert \amp  \amp \vert \end{bmatrix}\\
-\amp=\begin{bmatrix}\vert \amp \vert \amp  \amp \vert \\ A\boldb_1\amp A\boldb_2\amp \cdots\amp A\boldb_r\\ \vert \amp  \vert \amp  \amp  \vert \end{bmatrix}\text{.}
-\end{align*}
-</div>
-</div></dd>
-<dt id="th_column_method-3-2-2">Step 2</dt>
-<dd><div class="para logical" id="th_column_method-3-2-2-2">
-<div class="para">Let <span class="process-math">\(\bolda_j\)</span> be the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(A\text{,}\)</span> considered as a column vector. Given <em class="emphasis">any</em> column vector <span class="process-math">\(\boldb=[b_{i}]_{n\times 1}\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A\,\boldb=A\,\begin{bmatrix}b_1\\b_2\\ \vdots \\b_n \end{bmatrix} = b_1\bolda_1+b_2\bolda_2+\cdots +b_n\bolda_n\text{.}
-\end{equation*}
-</div>
-</div></dd>
-</dl></article><details id="th_column_method-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_column_method-4-1">We prove the equalities in both steps separately.</div>
-<article class="case" id="th_column_method-4-2"><h5 class="heading">Proof of Step 1.</h5>
-<div class="para logical" id="th_column_method-4-2-2">
-<div class="para">We must show <span class="process-math">\(AB=C\text{,}\)</span> where</div>
-<div class="displaymath process-math">
-\begin{equation*}
-C=\begin{bmatrix}\vert \amp \vert \amp  \amp \vert \\ A\boldb_1\amp A\boldb_2\amp \cdots\amp A\boldb_r\\ \vert \amp  \vert \amp  \amp  \vert \end{bmatrix}\text{.}
-\end{equation*}
-</div>
-<div class="para">First we show <span class="process-math">\(AB\)</span> and <span class="process-math">\(C\)</span> have the same size. By definition of matrix multiplication, <span class="process-math">\(AB\)</span> is <span class="process-math">\(m\times r\text{.}\)</span> By construction <span class="process-math">\(C\)</span> has <span class="process-math">\(r\)</span> columns and its <span class="process-math">\(j\)</span>-th column is <span class="process-math">\(A\boldb_j\text{.}\)</span> Since <span class="process-math">\(A\)</span> and <span class="process-math">\(\boldb_j\)</span> have size <span class="process-math">\(m\times n\)</span> and <span class="process-math">\(n\times 1\text{,}\)</span> respectively, <span class="process-math">\(A\boldb_j\)</span> has size <span class="process-math">\(m\times 1\text{.}\)</span> Thus each of the <span class="process-math">\(r\)</span> columns of <span class="process-math">\(C\)</span> is an <span class="process-math">\(m\times 1\)</span> column vector. It follows that <span class="process-math">\(C\)</span> is <span class="process-math">\(m\times r\text{,}\)</span> as desired.</div>
-</div>
-<div class="para logical" id="th_column_method-4-2-3">
-<div class="para">Next we show that <span class="process-math">\([AB]_{ij}=[C]_{ij}\)</span> for all <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq r\text{.}\)</span> Since the <span class="process-math">\(ij\)</span>-th entry of <span class="process-math">\(C\)</span> is the <span class="process-math">\(i\)</span>-th entry of the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(C\text{,}\)</span> we have</div>
-<div class="displaymath process-math" id="th_column_method-4-2-3-9">
-\begin{align*}
-[C]_{ij} \amp= [A\boldb_j]_{i}  \\
-\amp=\sum_{k=1}^n a_{ik}b_{kj} \\
-\amp =[AB]_{ij}\text{.}
-\end{align*}
-</div>
-</div></article><article class="case" id="th_column_method-4-3"><h5 class="heading">Proof of Step 2.</h5>
-<div class="para logical" id="th_column_method-4-3-2">
-<div class="para">We must show that <span class="process-math">\(A\boldb=\boldc\text{,}\)</span> where</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rm_entry_lin_comb.html ./knowl/xref/d_matrix_mult.html">
-\begin{equation*}
-\boldc=b_1\bolda_1+b_2\bolda_2+\cdots +b_n\bolda_n\text{.}
-\end{equation*}
-</div>
-<div class="para">The usual argument shows that both <span class="process-math">\(A\boldb\)</span> and <span class="process-math">\(\boldc\)</span> are <span class="process-math">\(m\times 1\)</span> column vectors. It remains only to show that the <span class="process-math">\(i\)</span>-th entry <span class="process-math">\([A\boldb]_i\)</span> of the column <span class="process-math">\(A\boldb\)</span> is equal to the <span class="process-math">\(i\)</span>-th entry <span class="process-math">\([\boldc]_i\)</span> of <span class="process-math">\(\boldc\)</span> for all <span class="process-math">\(1\leq i\leq m\text{.}\)</span> For any such <span class="process-math">\(i\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rm_entry_lin_comb.html ./knowl/xref/d_matrix_mult.html" id="th_column_method-4-3-2-14">
-\begin{align*}
-[\boldc]_i \amp = [b_1\bolda_1+b_2\bolda_2+\cdots +b_n\bolda_n]_i\\
-\amp= b_1[\bolda_1]_i+b_2[\bolda_2]_i+\cdots +b_n[\bolda_n]_i \amp (\knowl{./knowl/xref/rm_entry_lin_comb.html}{\text{Remark 0.1.15}})\\
-\amp= b_1a_{i1}+b_2a_{i2}+\cdots +b_n\bolda_{in}\amp (\text{def. of } \bolda_j) \\
-\amp= a_{i1}b_1+a_{i2}b_2+\cdots+a_{in}b_n \\
-\amp =[A\boldb]_i \amp (\knowl{./knowl/xref/d_matrix_mult.html}{\text{Definition 0.1.16}})\text{.}
-\end{align*}
-</div>
-</div></article></article></details><article class="remark remark-like" id="s_column_row_method-4"><h4 class="heading">
+<div class="para" id="d_transpose-4-1">Diberikan sebuah matriks <span class="process-math">\(m\times n\)</span> <span class="process-math">\(A=[a_{ij}]\text{,}\)</span> transpose-nya <span class="process-math">\(A^T\)</span> adalah matriks yang entri <span class="process-math">\(ij\)</span>-nya adalah entri <span class="process-math">\(ji\)</span>-nya dari <span class="process-math">\(A\text{.}\)</span> Dengan kata lain, <span class="process-math">\(A^T\)</span> adalah matriks <span class="process-math">\(n\times m\)</span> yang memenuhi <span class="process-math">\([A^T]_{ij}=[A]_{ji}\)</span> untuk semua <span class="process-math">\(1\leq i\leq n\)</span> dan <span class="process-math">\(1\leq j\leq m\text{.}\)</span>
+</div></article><article class="remark remark-like" id="s_matrix-6-4"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.24</span><span class="period">.</span>
 </h4>
-<div class="para" id="s_column_row_method-4-1">
-<a href="s_matrix.html#th_column_method" class="xref" data-knowl="./knowl/xref/th_column_method.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.1.23: Column method of matrix multiplication">Theorem 0.1.23</a> amounts to a two-step process for computing an arbitrary matrix product <span class="process-math">\(AB\text{.}\)</span>
-</div>
-<div class="para" id="s_column_row_method-4-2">The first statement (Step 1) tells us that the <span class="process-math">\(j\)</span>-th column of the matrix <span class="process-math">\(AB\)</span> can be obtained by computing the product <span class="process-math">\(A\,\boldb_j\)</span> of <span class="process-math">\(A\)</span> with the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{.}\)</span>
-</div>
-<div class="para" id="s_column_row_method-4-3">The second statement (Step 2) tells us that each product <span class="process-math">\(A\,\boldb_j\)</span> can itself be computed as a certain linear combination of the columns of <span class="process-math">\(A\)</span> with coefficients drawn from <span class="process-math">\(\boldb_j\text{.}\)</span>
-</div>
-<div class="para" id="s_column_row_method-4-4">A similar remark applies to computing matrix products using the row method, as described below in <a href="s_matrix.html#th_row_method" class="xref" data-knowl="./knowl/xref/th_row_method.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.1.25: Row method of matrix multiplication">Theorem 0.1.25</a>.</div></article><article class="theorem theorem-like" id="th_row_method"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.1.25</span><span class="period">.</span><span class="space"> </span><span class="title">Row method of matrix multiplication.</span>
-</h4>
-<div class="para" id="th_row_method-3-1">Let <span class="process-math">\(A=[a_{i}]_{m\times n}\)</span> and <span class="process-math">\(B=[b_{ij}]_{n\times r}\text{.}\)</span> The row method of matrix multiplication computes <span class="process-math">\(AB\)</span> using the two steps below.</div> <dl class="description-list">
-<dt id="th_row_method-3-2-1">Step 1</dt>
-<dd><div class="para logical" id="th_row_method-3-2-1-2">
-<div class="para">Let <span class="process-math">\(\bolda_i\)</span> be the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\text{.}\)</span> Then</div>
-<div class="displaymath process-math" id="th_row_method-3-2-1-2-4">
-\begin{align*}
-AB\amp =\begin{bmatrix} \ - \bolda_1- \  \\ \ - \bolda_2- \  \\ \vdots \\ \ - \bolda_m- \  \end{bmatrix} B\\
-\amp = \begin{bmatrix}\ - \bolda_1B- \  \\ \ -\bolda_2B- \  \\ \vdots \\ \ -\bolda_mB - \ \end{bmatrix}\text{.}
-\end{align*}
-</div>
-</div></dd>
-<dt id="th_row_method-3-2-2">Step 2</dt>
-<dd><div class="para logical" id="th_row_method-3-2-2-2">
-<div class="para">Let <span class="process-math">\(\boldb_i\)</span> be the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(B\text{.}\)</span> Given <em class="emphasis">any</em> row vector <span class="process-math">\(\bolda=[a_{j}]_{1\times n}\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\bolda\, B=\begin{bmatrix}a_1\amp a_2\amp \cdots \amp a_n \end{bmatrix} B= a_1\boldb_1+a_2\boldb_2+\cdots +a_n\boldb_n\text{.}
-\end{equation*}
-</div>
-</div></dd>
-</dl></article><details id="th_row_method-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_row_method-4-1">The proof is very similar to that of <a href="s_matrix.html#th_column_method" class="xref" data-knowl="./knowl/xref/th_column_method.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.1.23: Column method of matrix multiplication">Theorem 0.1.23</a> and is left to the reader.</div></article></details><article class="example example-like" id="s_matrix_ex_product"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.26</span><span class="period">.</span><span class="space"> </span><span class="title">Column and row methods.</span>
-</h4>
-<div class="para" id="s_matrix_ex_product-2-1">Let <span class="process-math">\(A=\begin{amatrix}[rrr] 1\amp 1 \amp -2 \\ 1\amp 3\amp 2\end{amatrix}\)</span> and <span class="process-math">\(B=\begin{amatrix}[rc]1\amp 1\\ 0\amp 1 \\ -2\amp 1 \end{amatrix}\)</span>
-</div> <div class="para" id="s_matrix_ex_product-2-2">Compute <span class="process-math">\(AB\)</span> using (a) the definition of matrix multiplication, (b) the column method, (c) the row method.</div>
-<div class="solutions"><details id="s_matrix_ex_product-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha ol-marker-1" id="s_matrix_ex_product-3-1">
-<li id="s_matrix_ex_product-3-1-1"><div class="para logical" id="s_matrix_ex_product-3-1-1-1">
-<div class="para">Using the definition, we see easily that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-AB=\begin{amatrix}[rr]5\amp 0\\ -3\amp 6 \end{amatrix}
-\end{equation*}
-</div>
+<div class="para logical" id="s_matrix-6-4-1">
+<div class="para">Diberikan sebuah matriks <span class="process-math">\(A\text{,}\)</span> kita dapat memberikan deskripsi berbasis kolom atau baris dari <span class="process-math">\(A^T\)</span> sebagai berikut:</div>
+<ul class="disc" id="s_matrix-6-4-1-3">
+<li id="s_matrix-6-4-1-3-1"><div class="para" id="s_matrix-6-4-1-3-1-1">
+<span class="process-math">\(A^T\)</span> adalah matriks yang baris ke-<span class="process-math">\(i\)</span>-nya adalah kolom ke-<span class="process-math">\(i\)</span> dari <span class="process-math">\(A\text{.}\)</span>
 </div></li>
-<li id="s_matrix_ex_product-3-1-2"><div class="para logical" id="s_matrix_ex_product-3-1-2-1">
-<div class="para">Let <span class="process-math">\(\bolda_1, \bolda_2, \bolda_3\)</span> be the columns of <span class="process-math">\(A\text{,}\)</span> and let <span class="process-math">\(\boldb_1, \boldb_2\)</span> be the columns of <span class="process-math">\(B\text{.}\)</span> We have</div>
-<div class="displaymath process-math" id="s_matrix_ex_product-3-1-2-1-5">
-\begin{align*}
-AB \amp=
-\begin{amatrix}[cc]\vert \amp \vert \\
-A\boldb_1\amp A\boldb_2 \\
-\vert\amp \vert\end{amatrix} \amp \text{(Step 1)} \\
-\amp= \begin{amatrix}[cc]\vert \amp \vert \\
-(1\bolda_1+0\bolda_2-2\bolda_3)\amp (\bolda_1+\bolda_2+\bolda_3) \\
-\vert\amp \vert\end{amatrix} \amp \text{(Step 2)}\\
-\amp= \begin{amatrix}[rr]5\amp 0\\ -3\amp 6 \end{amatrix} \amp \text{(arithmetic)}
-\end{align*}
-</div>
-</div></li>
-<li id="s_matrix_ex_product-3-1-3"><div class="para logical" id="s_matrix_ex_product-3-1-3-1">
-<div class="para">Now let <span class="process-math">\(\bolda_1, \bolda_2\)</span> be the <em class="emphasis">rows</em> of <span class="process-math">\(A\text{,}\)</span> and let <span class="process-math">\(\boldb_1, \boldb_2, \boldb_3\)</span> be the <em class="emphasis">rows</em> of <span class="process-math">\(B\text{.}\)</span> We have</div>
-<div class="displaymath process-math" id="s_matrix_ex_product-3-1-3-1-7">
-\begin{align*}
-AB \amp= \begin{amatrix}[c]--\bolda_1\, B--\\ --\bolda_2\, B-- \end{amatrix}\amp \text{(Step 1)}\\
-\amp= \begin{amatrix}[c]--(1\boldb_1+1\boldb_2-2\boldb_3)-- \\
---(1\boldb_1+3\boldb_2+2\boldb_3)-- \end{amatrix} \amp \text{(Step 2)} \\
-\amp=\begin{amatrix}[rr]5\amp 0\\ -3\amp 6 \end{amatrix} \amp \text{(arithmetic)} 
-\end{align*}
-</div>
-</div></li>
-</ol></div></details></div></article><details id="s_column_row_method-7" class="project project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Sage example</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span><span class="space"> </span><span class="title">Column and row methods.</span>
-</h4></summary><article class="project project-like knowl__content"><div class="para" id="s_column_row_method-7-2">Let’s verify the validity of the column and row methods using Sage in some specific examples. Below we generate random integer matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> of dimension <span class="process-math">\(3\times 5\)</span> and <span class="process-math">\(5\times 4\text{,}\)</span> respectively, and compute their product <span class="process-math">\(C=AB\text{.}\)</span>
-</div>
-<div id="s_column_row_method-7-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">R=MatrixSpace(ZZ,3,5)
-S=MatrixSpace(ZZ,5,4)
-A=R.random_element()
-B=S.random_element()
-C=A*B
-show(A,B)
-show(C)
-</script></div>
-<div class="para" id="s_column_row_method-7-4">Let’s check that the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(C\)</span> is equal to the product of <span class="process-math">\(A\)</span> with the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{.}\)</span>
-</div>
-<div id="s_column_row_method-7-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">colsA=A.columns()
-rowsA=A.rows()
-colsB=B.columns()
-rowsB=B.rows()
-colsC=C.columns()
-rowsC=C.rows()
-for j in range(0,4):
-  print(A*colsB[j]==colsC[j])
-</script></div>
-<div class="para" id="s_column_row_method-7-6">Alternatively, we can visually confirm these equalities using the display of <span class="process-math">\(C\)</span> in the first cell above. Observe that the result of <code class="code-inline tex2jax_ignore">A*colsB[i]</code> is displayed by Sage as a tuple, though technically for us this is a column vector.</div>
-<div id="s_column_row_method-7-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">for j in range(0,4):
-  show(A*colsB[j])
-</script></div>
-<div class="para" id="s_column_row_method-7-8">Next, let’s verify that the result of multiplying <span class="process-math">\(A\)</span> and the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\)</span> is the corresponding linear combination of the columns of <span class="process-math">\(A\)</span> given by the coefficients of this column.</div>
-<div id="s_column_row_method-7-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">for j in range(0,4):
-  c=colsB[j]
-  x=c[0]
-  y=c[1]
-  z=c[2]
-  w=c[3]
-  u=c[4]
-  show(x*colsA[0]+y*colsA[1]+z*colsA[2]+w*colsA[3]+u*colsA[4])
-</script></div>
-<div class="para" id="s_column_row_method-7-10">Now use the Sage cells below to demonstrate the validity of the row method for the product <span class="process-math">\(C=AB\text{.}\)</span> Simply modify the code in the two cells above to reflect the row method, as opposed to the column method.</div>
-<div id="s_column_row_method-7-11" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
-</script></div>
-<div id="s_column_row_method-7-12" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
-</script></div></article></details><section class="paragraphs" id="ss_matrix_mult_vid"><h4 class="heading"><span class="title">Video example of matrix multiplication.</span></h4>
-<figure class="figure figure-like" id="fig_vid_matrix_mult_methods"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Kx4K8TTbl98?&amp;modestbranding=1&amp;rel=0" id="vid_matrix_mult_methods"></iframe></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.1.27<span class="period">.</span></span><span class="space"> </span>Video: three methods of matrix multiplication</figcaption></figure></section></section><section class="subsection" id="s_matrix-7"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.5</span><span class="space"> </span><span class="title">Transpose of a matrix</span>
-</h3>
-<div class="para" id="s_matrix-7-2">We end this section with one last operation, <em class="emphasis">matrix transposition</em>. We will not make much use of this operation until later, but this is as good a place as any to introduce it.</div>
-<article class="definition definition-like" id="d_transpose"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.28</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix transposition.</span>
-</h4>
-<div class="para" id="d_transpose-4-1">Given an <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A=[a_{ij}]\)</span> its transpose <span class="process-math">\(A^T\)</span> is the matrix whose <span class="process-math">\(ij\)</span>-entry is the <span class="process-math">\(ji\)</span>-th entry of <span class="process-math">\(A\text{.}\)</span> In other words, <span class="process-math">\(A^T\)</span> is the <span class="process-math">\(n\times m\)</span> matrix satisfying <span class="process-math">\([A^T]_{ij}=[A]_{ji}\)</span> for all <span class="process-math">\(1\leq i\leq n\)</span> and <span class="process-math">\(1\leq j\leq m\text{.}\)</span>
-</div></article><article class="remark remark-like" id="s_matrix-7-4"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.29</span><span class="period">.</span>
-</h4>
-<div class="para logical" id="s_matrix-7-4-1">
-<div class="para">Given a matrix <span class="process-math">\(A\)</span> we can give a column- or row-based description of <span class="process-math">\(A^T\)</span> as follows:</div>
-<ul class="disc" id="s_matrix-7-4-1-3">
-<li id="s_matrix-7-4-1-3-1"><div class="para" id="s_matrix-7-4-1-3-1-1">
-<span class="process-math">\(A^T\)</span> is the matrix whose <span class="process-math">\(i\)</span>-th row is the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(A\text{.}\)</span>
-</div></li>
-<li id="s_matrix-7-4-1-3-2"><div class="para" id="s_matrix-7-4-1-3-2-1">
-<span class="process-math">\(A^T\)</span> is the matrix whose <span class="process-math">\(j\)</span>-th column is the <span class="process-math">\(j\)</span>-th row of <span class="process-math">\(A\text{.}\)</span>
+<li id="s_matrix-6-4-1-3-2"><div class="para" id="s_matrix-6-4-1-3-2-1">
+<span class="process-math">\(A^T\)</span> adalah matriks yang kolom ke-<span class="process-math">\(j\)</span>-nya adalah baris ke-<span class="process-math">\(j\)</span> dari <span class="process-math">\(A\text{.}\)</span>
 </div></li>
 </ul>
-</div></article><article class="example example-like" id="s_matrix-7-5"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.30</span><span class="period">.</span>
+</div></article><article class="example example-like" id="s_matrix-6-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.25</span><span class="period">.</span>
 </h4>
-<div class="para" id="s_matrix-7-5-1-1">Let <span class="process-math">\(A=\begin{bmatrix}1\amp 2\amp 3\\4\amp 5\amp 6 \end{bmatrix}\text{;}\)</span> then <span class="process-math">\(A^T=\begin{bmatrix}1\amp 4\\2\amp 5\\3\amp 6 \end{bmatrix}\text{.}\)</span>
-</div> <div class="para" id="s_matrix-7-5-1-2">Let <span class="process-math">\(B=\begin{bmatrix}1\\0\\3 \end{bmatrix}\text{,}\)</span> then <span class="process-math">\(B^T=\begin{bmatrix}1\amp 0\amp 3 \end{bmatrix}\text{.}\)</span>
-</div></article><details id="s_matrix-7-6" class="project project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Sage example</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix transposition.</span>
-</h4></summary><article class="project project-like knowl__content"><div class="para" id="s_matrix-7-6-2">Matrix transposition is implemented in Sage as the <code class="code-inline tex2jax_ignore">transpose()</code> method. In the cell below we (a) choose random integers <span class="process-math">\(1\leq m,n\leq 6\text{,}\)</span> (b) choose a random  <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\)</span> with integer entries, and (c) compute the transpose of <span class="process-math">\(A\text{.}\)</span>
+<div class="para" id="s_matrix-6-5-1-1">Misalkan <span class="process-math">\(A=\begin{bmatrix}1\amp 2\amp 3\\4\amp 5\amp 6 \end{bmatrix}\text{;}\)</span> maka <span class="process-math">\(A^T=\begin{bmatrix}1\amp 4\\2\amp 5\\3\amp 6 \end{bmatrix}\text{.}\)</span>
+</div> <div class="para" id="s_matrix-6-5-1-2">Misalkan <span class="process-math">\(B=\begin{bmatrix}1\\0\\3 \end{bmatrix}\text{,}\)</span> maka <span class="process-math">\(B^T=\begin{bmatrix}1\amp 0\amp 3 \end{bmatrix}\text{.}\)</span>
+</div></article><details id="s_matrix-6-6" class="project project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Sage example</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span><span class="space"> </span><span class="title">Transpose Matriks.</span>
+</h4></summary><article class="project project-like knowl__content"><div class="para" id="s_matrix-6-6-2">Transpose matriks diimplementasikan dalam Sage sebagai metode <code class="code-inline tex2jax_ignore">transpose()</code>. Dalam sel di bawah ini, kami (a) memilih bilangan bulat acak <span class="process-math">\(1\leq m,n\leq 6\text{,}\)</span> (b) memilih matriks acak <span class="process-math">\(m\times n\)</span> <span class="process-math">\(A\)</span> dengan entri bilangan bulat, dan (c) menghitung transpose dari <span class="process-math">\(A\text{.}\)</span>
 </div>
-<div id="s_matrix-7-6-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">    m=ZZ.random_element(1,7)
+<div id="s_matrix-6-6-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">    m=ZZ.random_element(1,7)
 n=ZZ.random_element(1,7)
 R=MatrixSpace(ZZ,m,n)
 A=R.random_element()
@@ -1064,10 +882,10 @@ B=A.transpose()
 show(A)
 show(B)
 </script></div>
-<div class="para" id="s_matrix-7-6-4">As usual, experiment with the Sage cell below.</div>
-<div id="s_matrix-7-6-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+<div class="para" id="s_matrix-6-6-4">Seperti biasa, eksperimen dengan sel Sage di bawah ini.</div>
+<div id="s_matrix-6-6-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
 </script></div></article></details></section><section class="exercises" id="s_matrix_ex"><h3 class="heading hide-type">
-<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">0.1.6</span><span class="space"> </span><span class="title">Exercises</span>
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">0.1.5</span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="subexercises" id="s_matrix_ex-1"><h4 class="heading"><span class="title">WeBWork Exercises</span></h4>
 <article class="exercise exercise-like" id="s_matrix_ex-1-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
