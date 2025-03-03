@@ -702,15 +702,15 @@ a \amp \amp \amp -\amp 2c\amp =\amp 3
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.1.17<span class="period">.</span></span><span class="space"> </span>In <span class="process-math">\(C = AB\text{,}\)</span> the <span class="process-math">\(ij\)</span>-th entry <span class="process-math">\(c_{ij} = \sum_{k=1}^n a_{ik} b_{kj}\)</span> is computed by moving across the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\)</span> and down the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{.}\)</span></figcaption></figure><article class="remark remark-like" id="ss_matrix_mult-5"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Size and matrix multiplication.</span>
 </h4>
-<div class="para" id="ss_matrix_mult-5-2">Observe how, like addition, matrix multiplication is not defined for any pair of matrices: there must be a certain agreement in their dimensions.</div>
+<div class="para" id="ss_matrix_mult-5-2">Perhatikan bahwa, seperti penjumlahan, perkalian matriks tidak didefinisikan untuk sembarang pasangan matriks: harus ada kesepakatan tertentu dalam dimensi mereka.</div>
 <div class="para logical" id="ss_matrix_mult-5-3">
-<div class="para">In more detail, for the product of <span class="process-math">\(A_{mn}\)</span> and <span class="process-math">\(B_{pr}\)</span> to be defined, we need <span class="process-math">\(n=p\text{.}\)</span> In other words we need the “inner” dimensions of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> to be equal:</div>
+<div class="para">Secara lebih rinci, agar hasil kali dari <span class="process-math">\(A_{mn}\)</span> dan <span class="process-math">\(B_{pr}\)</span> terdefinisi, kita memerlukan <span class="process-math">\(n = p\text{.}\)</span> Dengan kata lain, kita membutuhkan dimensi “dalam” dari <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\)</span> sama:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \underset{m\times \boxed{n}}{A}\hspace{5pt} \underset{\boxed{n}\times r}{B}\text{.}
 \end{equation*}
 </div>
-<div class="para">If this condition is met, the dimension of the resulting matrix <span class="process-math">\(AB\)</span> is determined by the “outer” dimensions of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Schematically, you can think of the inner dimensions as being “canceled out”:</div>
+<div class="para">Jika kondisi ini terpenuhi, dimensi matriks hasil <span class="process-math">\(AB\)</span> ditentukan oleh dimensi “luar” dari <span class="process-math">\(A\)</span> dan <span class="process-math">\(B\text{.}\)</span> Secara skematis, Anda dapat membayangkan dimensi dalam sebagai “dihapus”:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \underset{\boxed{m}\times\cancel{n}}{A}\hspace{5pt}\underset{\cancel{n}\times\boxed{r}}{B}=\underset{m\times r}{AB}.
