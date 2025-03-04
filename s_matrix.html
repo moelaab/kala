@@ -86,7 +86,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
   "inputLocation": "div.sagecell-sage",
@@ -386,13 +386,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_arithmetic" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Penjumlahan, Pengurangan, dan Perkalian Skalar</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_mult" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Perkalian Matrik</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_matrix-6" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Transpose Matriks</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_matrix.html#s_matrix_ex" class="internal"><span class="codenumber">0.1.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="s_algebraic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Matrix algebra</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_algebraic.html#s_algebraic_ex" class="internal"><span class="codenumber">0.2</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_algebraic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Aljabar Matrik</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -676,12 +672,12 @@ a \amp \amp \amp -\amp 2c\amp =\amp 3
 </h4>
 <div class="para logical" id="rm_entry_lin_comb-1">
 <div class="para">Misalkan <span class="process-math">\(A_1, A_2,\dots, A_r\)</span> adalah matriks <span class="process-math">\(m\times n\text{,}\)</span> argumen induksi sederhana pada <span class="process-math">\(r\)</span> menunjukkan bahwa untuk skalar apa pun <span class="process-math">\(c_1,c_2,\dots, c_r\)</span> kita memiliki</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex_entry_lin_comb.html">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 [c_1A_1+c_2A_2+\cdots +c_rA_r]_{ij} =c_1[A_1]_{ij}+c_2[A_2]_{ij}+\cdots c_r[A_r]_{ij}
 \end{equation*}
 </div>
-<div class="para">untuk semua <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span> (Lihat <a href="s_matrix.html#ex_entry_lin_comb" class="xref" data-knowl="./knowl/xref/ex_entry_lin_comb.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 0.1.5.11">Exercise 0.1.5.11</a>.)</div>
+<div class="para">untuk semua <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span> (Lihat <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "ex_entry_lin_comb" missing or not unique]</code>.)</div>
 </div></article></section><section class="subsection" id="ss_matrix_mult"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.1.3</span><span class="space"> </span><span class="title">Perkalian Matrik</span>
 </h3>
@@ -884,202 +880,7 @@ show(B)
 </script></div>
 <div class="para" id="s_matrix-6-6-4">Seperti biasa, eksperimen dengan sel Sage di bawah ini.</div>
 <div id="s_matrix-6-6-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
-</script></div></article></details></section><section class="exercises" id="s_matrix_ex"><h3 class="heading hide-type">
-<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">0.1.5</span><span class="space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="subexercises" id="s_matrix_ex-1"><h4 class="heading"><span class="title">WeBWork Exercises</span></h4>
-<article class="exercise exercise-like" id="s_matrix_ex-1-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div id="webwork-1" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="1" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/ASU-topics/set119MatrixAlgebra/p17.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-1')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-1-1-1-1">Enter T or F depending on whether the statement is true or false. (You must enter T or F -- True and False will not work.)</div> <div class="para logical" id="extracted-webwork-1-1-1-2"><ol class="lower-alpha lower-alpha-level-1" id="extracted-webwork-1-1-1-2-1">
-<li id="extracted-webwork-1-1-1-2-1-1"><div class="para" id="extracted-webwork-1-1-1-2-1-1-1">If AB is defined, then BA is also defined.</div></li>
-<li id="extracted-webwork-1-1-1-2-1-2"><div class="para" id="extracted-webwork-1-1-1-2-1-2-1">If A is a square matrix such that AA equals the 0 matrix, then A must equal the 0 matrix.</div></li>
-</ol></div>
-</div>
-</div></article><article class="exercise exercise-like" id="s_matrix_ex-1-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div id="webwork-2" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="2" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Dartmouth/setMTWCh1S5/problem_1.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-2')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-2-1-1-1">
-<em class="alert">Matrix Products:</em> Consider the matrices</div> <div class="para logical" id="extracted-webwork-2-1-1-2"><div class="displaymath process-math">
-\begin{equation*}
-A = \begin{pmatrix}3\amp 5\amp 6\\7\amp 9\amp 9\end{pmatrix}, 
-B = \begin{pmatrix}6\amp 3\amp 5\amp 1\\9\amp 3\amp 1\amp 3\\
-4\amp 7\amp 9\amp 10\end{pmatrix},\textrm{ and }
-C = \begin{pmatrix}2\amp 5\\10\amp 8\\3\amp 9\\8\amp 1\end{pmatrix}
-\end{equation*}
-</div></div> <div class="para" id="extracted-webwork-2-1-1-3">Of the possible matrix products <span class="process-math">\(ABC, ACB, BAC, BCA, CAB, CBA\text{,}\)</span>
-</div> <div class="para" id="extracted-webwork-2-1-1-4">which make sense? <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
-</div>
-<div class="solutions"><details id="extracted-webwork-2-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-2-1-2-1">C</div></div></details></div>
-</div>
-</div></article><article class="exercise exercise-like" id="s_matrix_ex-1-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div id="webwork-3" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="3" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/ASU-topics/set119MatrixAlgebra/p32.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-3')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-3-1-1-1">If A is <span class="process-math">\(3 \times 2,\)</span>  B is <span class="process-math">\(4 \times 3\)</span> and C is <span class="process-math">\(2 \times 4\)</span> then:</div> <div class="para" id="extracted-webwork-3-1-1-2">a) BA has dimension    <span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span> <span class="process-math">\(\times\)</span>  <span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span>
-</div> <div class="para" id="extracted-webwork-3-1-1-3">b) CB has dimension    <span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span> <span class="process-math">\(\times\)</span>  <span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span>
-</div> <div class="para" id="extracted-webwork-3-1-1-4">c) AC has dimension    <span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span> <span class="process-math">\(\times\)</span>  <span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-3-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-2-1"><span class="process-math">\(4\)</span></div></div></details><details id="extracted-webwork-3-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-3-1"><span class="process-math">\(2\)</span></div></div></details><details id="extracted-webwork-3-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-4-1"><span class="process-math">\(2\)</span></div></div></details><details id="extracted-webwork-3-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-5-1"><span class="process-math">\(3\)</span></div></div></details><details id="extracted-webwork-3-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-6-1"><span class="process-math">\(3\)</span></div></div></details><details id="extracted-webwork-3-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-3-1-7-1"><span class="process-math">\(4\)</span></div></div></details>
-</div>
-</div>
-</div></article><article class="exercise exercise-like" id="s_matrix_ex-1-5"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div id="webwork-4" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="4" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/ASU-topics/set119MatrixAlgebra/p7.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-4')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-4-1-1-1">Determine <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that</div> <div class="para logical" id="extracted-webwork-4-1-1-2"><div class="displaymath process-math">
-\begin{equation*}
-\left[\begin{array}{ccc}
--1\amp  -1\amp  3 \cr
-2\amp  -4\amp  -3 
-\end{array}\right]
-+ \left[\begin{array}{ccc}
-x-y      \amp  -4 \amp  3 \\
--4 \amp  x        \amp  -3 
-\end{array} \right]
-= \left[\begin{array}{ccc}
-1 \amp  -5 \amp  6 \\
--2 \amp  2 x +y   \amp  -6
-\end{array}\right]
-\end{equation*}
-</div></div> <div class="para" id="extracted-webwork-4-1-1-3">
-<span class="process-math">\(x =\)</span>    <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
-</div> <div class="para" id="extracted-webwork-4-1-1-4">
-<span class="process-math">\(y =\)</span>   <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>
-</div>
-<div class="solutions">
-<details id="extracted-webwork-4-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-4-1-2-1"><span class="process-math">\(-1\)</span></div></div></details><details id="extracted-webwork-4-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-4-1-3-1"><span class="process-math">\(-3\)</span></div></div></details>
-</div>
-</div>
-</div></article><article class="exercise exercise-like" id="s_matrix_ex-1-6"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div id="webwork-5" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="5" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/ASU-topics/set119MatrixAlgebra/p14.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-5')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-5-1-1-1">Determine the value(s) of  <span class="process-math">\(x\)</span>  such that</div> <div class="para" id="extracted-webwork-5-1-1-2"><span class="process-math">\(\left[\begin{array}{ccc}
-x \amp 2 \amp 1\cr
-\end{array}\right] \left[\begin{array}{ccc}
--2 \amp -5 \amp 2\cr
--5 \amp 2 \amp 2\cr
-2 \amp -9 \amp -1
-\end{array}\right] \left[\begin{array}{c}
-x\cr
--1\cr
-0\cr
-\end{array}\right] = [0]\)</span></div> <div class="para" id="extracted-webwork-5-1-1-3">
-<span class="process-math">\(x\)</span> = <span class="fillin underline" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span>
-</div> <div class="para" id="extracted-webwork-5-1-1-4">
-<em class="alert">Note:</em> If there is more than one value separate them by commas.</div>
-<div class="solutions"><details id="extracted-webwork-5-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-5-1-2-1"><span class="process-math">\(-{\frac{5}{2}}, 1\)</span></div></div></details></div>
-</div>
-</div></article></article><article class="subexercises" id="s_matrix_ex-2"><h4 class="heading"><span class="title">Written Exercises</span></h4>
-<article class="exercise exercise-like" id="s_matrix_ex-2-2"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="para" id="s_matrix_ex-2-2-1-1">For each part below write down the most general <span class="process-math">\(3\times 3\)</span> matrix <span class="process-math">\(A=[a_{ij}]\)</span> satisfying the given condition (use letter names <span class="process-math">\(a,b,c\text{,}\)</span>etc. for entries).</div> <ol class="lower-alpha lower-alpha-level-1" id="s_matrix_ex-2-2-1-2">
-<li id="s_matrix_ex-2-2-1-2-1"><div class="para" id="s_matrix_ex-2-2-1-2-1-1">
-<span class="process-math">\(a_{ij}=a_{ji}\)</span> for all <span class="process-math">\(i,j\text{.}\)</span>
-</div></li>
-<li id="s_matrix_ex-2-2-1-2-2"><div class="para" id="s_matrix_ex-2-2-1-2-2-1">
-<span class="process-math">\(a_{ij}=-a_{ji}\)</span> for all <span class="process-math">\(i,j\)</span>
-</div></li>
-<li id="s_matrix_ex-2-2-1-2-3"><div class="para" id="s_matrix_ex-2-2-1-2-3-1">
-<span class="process-math">\(a_{ij}=0\)</span> for <span class="process-math">\(i\ne j\text{.}\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="s_matrix_ex-2-3"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="para logical" id="s_matrix_ex-2-3-1-1">
-<div class="para">Let</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A = \begin{bmatrix}3\amp 0\\ -1\amp 2\\ 1\amp 1 \end{bmatrix} , \hspace{5pt} B = \begin{bmatrix}4\amp -1\\ 0\amp 2 \end{bmatrix} , \hspace{5pt} C = \begin{bmatrix}1\amp 4\amp 2\\ 3\amp 1\amp 5 \end{bmatrix}
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-D = \begin{bmatrix}1\amp 5\amp 2\\ -1\amp 0\amp 1\\ 3\amp 2\amp 4 \end{bmatrix} ,  \hspace{5pt} E = \begin{bmatrix}6\amp 1\amp 3\\ -1\amp 1\amp 2\\ 4\amp 1\amp 3 \end{bmatrix}\text{.}
-\end{equation*}
-</div>
-<div class="para">Compute the following matrices, or else explain why the given expression is not well defined.</div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_matrix_ex-2-3-1-1-3">
-<li id="s_matrix_ex-2-3-1-1-3-1"><div class="para" id="s_matrix_ex-2-3-1-1-3-1-1"><span class="process-math">\(\displaystyle (2D^T-E)A\)</span></div></li>
-<li id="s_matrix_ex-2-3-1-1-3-2"><div class="para" id="s_matrix_ex-2-3-1-1-3-2-1"><span class="process-math">\(\displaystyle (4B)C+2B\)</span></div></li>
-<li id="s_matrix_ex-2-3-1-1-3-3"><div class="para" id="s_matrix_ex-2-3-1-1-3-3-1"><span class="process-math">\(\displaystyle B^T(CC^T-A^TA)\)</span></div></li>
-</ol>
-</div></article><article class="exercise exercise-like" id="s_matrix_ex-2-4"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<div class="para logical" id="s_matrix_ex-2-4-1-1">
-<div class="para">Let</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A = \begin{bmatrix}3\amp -2\amp 7\\ 6\amp 5\amp 4\\ 0\amp 4\amp 9 \end{bmatrix} , \hspace{5pt} B = \begin{bmatrix}6\amp -2\amp 4\\ 0\amp 1\amp 3\\ 7\amp 7\amp 5 \end{bmatrix}\text{.}
-\end{equation*}
-</div>
-<div class="para">Compute the following using either the row or column method of matrix multiplication. Make sure to show how you are using the relevant method.</div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_matrix_ex-2-4-1-1-2">
-<li id="s_matrix_ex-2-4-1-1-2-1"><div class="para" id="s_matrix_ex-2-4-1-1-2-1-1">the first column of <span class="process-math">\(AB\text{;}\)</span>
-</div></li>
-<li id="s_matrix_ex-2-4-1-1-2-2"><div class="para" id="s_matrix_ex-2-4-1-1-2-2-1">the second row of <span class="process-math">\(BB\text{;}\)</span>
-</div></li>
-<li id="s_matrix_ex-2-4-1-1-2-3"><div class="para" id="s_matrix_ex-2-4-1-1-2-3-1">the third column of <span class="process-math">\(AA\text{.}\)</span>
-</div></li>
-</ol>
-</div>
-<div class="solutions"><details id="s_matrix_ex-2-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="s_matrix_ex-2-4-2-1"><ol class="lower-alpha ol-marker-1" id="s_matrix_ex-2-4-2-1-1"><li id="s_matrix_ex-2-4-2-1-1-1"><div class="para logical" id="s_matrix_ex-2-4-2-1-1-1-1">
-<div class="para">Using expansion by columns, the first column of <span class="process-math">\(AB\)</span> is given by <span class="process-math">\(A\)</span> times the first column of <span class="process-math">\(B\text{.}\)</span> We compute</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}3\amp -2\amp 7\\ 6\amp 5\amp 4\\ 0\amp 4\amp 9 \end{bmatrix} \begin{bmatrix}6\\ 0\\ 7 \end{bmatrix} = 6 \begin{amatrix}[r]3 \\ 6 \\ 0  \end{amatrix}+0 \begin{amatrix}[r]-2 \\ 5 \\ 4  \end{amatrix}+7\begin{amatrix}[r]7 \\ 4 \\ 9  \end{amatrix}= \begin{bmatrix}67\\ 64\\ 63 \end{bmatrix}
-\end{equation*}
-</div>
-</div></li></ol></div></div></details></div></article><article class="exercise exercise-like" id="s_matrix_ex-2-5"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
-<div class="para logical" id="s_matrix_ex-2-5-1-1">
-<div class="para">Use the row or column method to quickly compute the following product:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{amatrix}[rrrrr]1\amp -1\amp 1\amp -1\amp 1\\ 1\amp -1\amp 1\amp -1\amp 1\\ 1\amp -1\amp 1\amp -1\amp 1\\ 1\amp -1\amp 1\amp -1\amp 1\\ 1\amp -1\amp 1\amp -1\amp 1 \end{amatrix}
-\begin{amatrix}[rrrr]1\amp 1\amp 1\amp 1\\ -1\amp 0\amp 0\amp 0\\ 0\amp 1\amp 0\amp 0\\ 0\amp 0\amp 2\amp 0\\ 0\amp 0\amp 0\amp 3 \end{amatrix}
-\end{equation*}
-</div>
-</div>
-<div class="solutions"><details id="s_matrix_ex-2-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="s_matrix_ex-2-5-2-1">I’ll just describe the row method here.</div>
-<div class="para logical" id="s_matrix_ex-2-5-2-2">
-<div class="para">Note that the rows of <span class="process-math">\(A\)</span> are all identical, and equal to <span class="process-math">\(\begin{bmatrix}1 \amp -1 \amp 1 \amp -1 \amp 1 \end{bmatrix}\text{.}\)</span> From the row method it follows that each row of <span class="process-math">\(AB\)</span> is given by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}1 \amp -1 \amp 1 \amp -1 \amp 1 \end{bmatrix} B\text{.}
-\end{equation*}
-</div>
-</div>
-<div class="para logical" id="s_matrix_ex-2-5-2-3">
-<div class="para">Thus the rows of <span class="process-math">\(AB\)</span> are all identical, and the row method computes the product above by taking the corresponding alternating sum of the rows of <span class="process-math">\(B\text{:}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}1 \amp -1 \amp 1 \amp -1 \amp 1 \end{bmatrix} B=\begin{bmatrix}2\amp 2\amp -1\amp 4 \end{bmatrix}\text{.}
-\end{equation*}
-</div>
-</div>
-<div class="para" id="s_matrix_ex-2-5-2-4">Thus <span class="process-math">\(AB\)</span> is the the <span class="process-math">\(5\times 4\)</span> matrix, all of whose rows are <span class="process-math">\(\begin{bmatrix}2\amp 2\amp -1\amp 4 \end{bmatrix}\text{.}\)</span>
-</div>
-</div></details></div></article><article class="exercise exercise-like" id="s_matrix_ex-2-6"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
-<div class="para logical" id="s_matrix_ex-2-6-1-1">
-<div class="para">Each of the <span class="process-math">\(3\times 3\)</span> matrices <span class="process-math">\(B_i\)</span> below performs a specific row operation when multiplying a <span class="process-math">\(3\times n\)</span> matrix <span class="process-math">\(A=\begin{bmatrix}-\boldr_1-\\ -\boldr_2-\\ -\boldr_3- \end{bmatrix}\)</span> on the left; i.e., the matrix <span class="process-math">\(B_iA\)</span> is the result of performing a certain row operation on the matrix <span class="process-math">\(A\text{.}\)</span> Use the row method of matrix multiplication to decide what row operation each <span class="process-math">\(B_i\)</span> performs.</div>
-<div class="displaymath process-math">
-\begin{equation*}
-B_1=\begin{bmatrix}1\amp 0\amp 0\\ 0\amp 1\amp 0\\ -2\amp 0\amp 1 \end{bmatrix} , B_2=\begin{bmatrix}1\amp 0\amp 0\\ 0\amp \frac{1}{2}\amp 0\\ 0\amp 0\amp 1 \end{bmatrix} , B_3=\begin{bmatrix}0\amp 0\amp 1\\ 0\amp 1\amp 0\\ 1\amp 0\amp 0 \end{bmatrix}\text{.}
-\end{equation*}
-</div>
-</div></article><article class="exercise exercise-like" id="ex_entry_lin_comb"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
-<div class="para logical" id="ex_entry_lin_comb-1-1">
-<div class="para">Let <span class="process-math">\(r\geq 2\)</span> be an integer. Prove, by induction on <span class="process-math">\(r\text{,}\)</span> that for any <span class="process-math">\(m\times n\)</span> matrices <span class="process-math">\(A_1, A_2,\dots, A_r\)</span> and scalars <span class="process-math">\(c_1,c_2,\dots, c_r\text{,}\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-[c_1A_1+c_2A_2+\cdots +c_rA_r]_{ij} =c_1[A_1]_{ij}+c_2[A_2]_{ij}+\cdots c_r[A_r]_{ij}
-\end{equation*}
-</div>
-<div class="para">for all <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span>
-</div>
-</div></article></article></section></section></div>
+</script></div></article></details></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="c_matrices.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_algebraic.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

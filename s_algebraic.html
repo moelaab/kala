@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Matrix algebra</title>
+<title>Aljabar Matrik</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -86,7 +86,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -374,94 +374,89 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_arithmetic" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Penjumlahan, Pengurangan, dan Perkalian Skalar</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_mult" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Perkalian Matrik</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_matrix-6" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Transpose Matriks</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_matrix.html#s_matrix_ex" class="internal"><span class="codenumber">0.1.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section contains-active">
-<div class="toc-title-box"><a href="s_algebraic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Matrix algebra</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_algebraic.html#s_algebraic_ex" class="internal"><span class="codenumber">0.2</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_algebraic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Aljabar Matrik</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_algebraic"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">0.2</span><span class="space"> </span><span class="title">Matrix algebra</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">0.2</span><span class="space"> </span><span class="title">Aljabar Matrik</span>
 </h2>
-<section class="introduction" id="s_algebraic-2"><div class="para" id="s_algebraic-2-1">The last section was devoted to what might be called the <em class="emphasis">arithmetic</em> of matrices. We learned the basic operations of adding, multiplying, scaling, and transposing matrices. In this section we tackle the <em class="emphasis">algebra</em> of matrices. We will investigate the properties enjoyed (and not enjoyed) by our matrix operations, and will show how to use these operations to solve matrix equations.</div>
-<div class="para" id="s_algebraic-2-2">As you learn about matrix algebra, always keep in mind your old friend, real number algebra. For the most part these two algebraic systems closely resemble one another, as <a href="s_algebraic.html#th_matrix_alg_props" class="xref" data-knowl="./knowl/xref/th_matrix_alg_props.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.1: Properties of matrix addition, multiplication and scalar multiplication">Theorem 0.2.1</a> below makes clear. However, there are two crucial points where they differ (see <a href="s_algebraic.html#th_matrix_abnormalities" class="xref" data-knowl="./knowl/xref/th_matrix_abnormalities.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.8: Matrix algebra abnormalities">Theorem 0.2.8</a>): two important properties of real number algebra that do not hold for matrices. The consequences of these two simple aberrations are far-reaching and imbue matrix algebra with a fascinating richness in comparison to real number algebra.</div></section><article class="theorem theorem-like" id="th_matrix_alg_props"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of matrix addition, multiplication and scalar multiplication.</span>
+<section class="introduction" id="s_algebraic-2"><div class="para" id="s_algebraic-2-1">Bab sebelumnya membahas apa yang bisa disebut sebagai <em class="emphasis">aritmatika</em> matriks. Kita mempelajari operasi dasar seperti penjumlahan, perkalian, penskalaan, dan transpose matriks. Dalam bagian ini, kita akan membahas <em class="emphasis">aljabar</em> matriks. Kita akan menyelidiki sifat-sifat (dan ketiadaan sifat-sifat tertentu) dari operasi matriks kita, serta menunjukkan bagaimana menggunakan operasi-operasi ini untuk menyelesaikan persamaan matriks.</div>
+<div class="para" id="s_algebraic-2-2">Saat Anda mempelajari aljabar matriks, selalu ingat teman lama Anda, yaitu aljabar bilangan real. Secara umum, kedua sistem aljabar ini sangat mirip satu sama lain, seperti yang dijelaskan dalam <a href="s_algebraic.html#th_matrix_alg_props" class="xref" data-knowl="./knowl/xref/th_matrix_alg_props.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.1: Sifat-sifat penjumlahan, perkalian dan perkalian skalar matriks">Theorem 0.2.1</a> di bawah ini. Namun, ada dua perbedaan penting antara keduanya : dua sifat penting dari aljabar bilangan real yang tidak berlaku untuk matriks. Akibat dari dua penyimpangan sederhana ini sangat luas dan memberikan kekayaan yang menarik pada aljabar matriks dibandingkan dengan aljabar bilangan real.</div></section><article class="theorem theorem-like" id="th_matrix_alg_props"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sifat-sifat penjumlahan, perkalian dan perkalian skalar matriks.</span>
 </h3>
 <div class="para logical" id="th_matrix_alg_props-2-1">
-<div class="para">The following properties hold for all matrices <span class="process-math">\(A, B, C\)</span> and scalars <span class="process-math">\(a,
-b, c\in \R\)</span> for which the given expression makes sense.</div>
-<ol class="lower-roman ol-marker-2" id="th_matrix_alg_props-2-1-3">
+<div class="para">Sifat-sifat berikut berlaku untuk semua matriks <span class="process-math">\(A, B, C\)</span> dan skalar <span class="process-math">\(a, b, c\in \R\)</span> untuk ekspresi yang diberikan memiliki makna.</div>
+<ol class="lower-roman ol-marker-1" id="th_matrix_alg_props-2-1-3">
 <li id="th_matrix_comm">
-<span class="heading"><span class="title">Addition commutative law.</span></span><div class="para" id="th_matrix_comm-2"><span class="process-math">\(\displaystyle A+B=B+A\)</span></div>
+<span class="heading"><span class="title">Hukum Komutatif Penjumlahan.</span></span><div class="para" id="th_matrix_comm-2"><span class="process-math">\(\displaystyle A+B=B+A\)</span></div>
 </li>
 <li id="th_matrixadd_assoc">
-<span class="heading"><span class="title">Addition associative law.</span></span><div class="para" id="th_matrixadd_assoc-2"><span class="process-math">\(\displaystyle A+(B+C)=(A+B)+C\)</span></div>
+<span class="heading"><span class="title">Hukum Asosiatif Penjumlahan.</span></span><div class="para" id="th_matrixadd_assoc-2"><span class="process-math">\(\displaystyle A+(B+C)=(A+B)+C\)</span></div>
 </li>
 <li id="th_matrixmult_assoc">
-<span class="heading"><span class="title">Multiplication associative law.</span></span><div class="para" id="th_matrixmult_assoc-2"><span class="process-math">\(\displaystyle A(BC)=(AB)C\)</span></div>
+<span class="heading"><span class="title">Hukum Asosiatif Perkalian.</span></span><div class="para" id="th_matrixmult_assoc-2"><span class="process-math">\(\displaystyle A(BC)=(AB)C\)</span></div>
 </li>
 <li id="th_matrix_leftdist">
-<span class="heading"><span class="title">Left-distributive law.</span></span><div class="para" id="th_matrix_leftdist-2"><span class="process-math">\(\displaystyle A(B+C)=AB+AC\)</span></div>
+<span class="heading"><span class="title">Hukum Distributif Kiri.</span></span><div class="para" id="th_matrix_leftdist-2"><span class="process-math">\(\displaystyle A(B+C)=AB+AC\)</span></div>
 </li>
 <li id="th_matrix_rightdist">
-<span class="heading"><span class="title">Right-distributive law.</span></span><div class="para" id="th_matrix_rightdist-2"><span class="process-math">\(\displaystyle (B+C)A=BA+CA\)</span></div>
+<span class="heading"><span class="title">Hukum Distributif Kanan.</span></span><div class="para" id="th_matrix_rightdist-2"><span class="process-math">\(\displaystyle (B+C)A=BA+CA\)</span></div>
 </li>
 <li id="th_matrixscale_dist">
-<span class="heading"><span class="title">Scaling distributive law.</span></span><div class="para" id="th_matrixscale_dist-2"><span class="process-math">\(\displaystyle a(B+C)=aB+aC\)</span></div>
+<span class="heading"><span class="title">Hukum Distributif Penskalaan.</span></span><div class="para" id="th_matrixscale_dist-2"><span class="process-math">\(\displaystyle a(B+C)=aB+aC\)</span></div>
 </li>
 <li id="th_matrixscale_dist2">
-<span class="heading"><span class="title">Another scaling distributive law.</span></span><div class="para" id="th_matrixscale_dist2-2"><span class="process-math">\(\displaystyle (a+b)C=aC+bC\)</span></div>
+<span class="heading"><span class="title">Hukum Distributif Penskalaan Lainnya.</span></span><div class="para" id="th_matrixscale_dist2-2"><span class="process-math">\(\displaystyle (a+b)C=aC+bC\)</span></div>
 </li>
 <li id="th_matrixscale_assoc">
-<span class="heading"><span class="title">Scaling associative law.</span></span><div class="para" id="th_matrixscale_assoc-2"><span class="process-math">\(\displaystyle a(bC)=(ab)C\)</span></div>
+<span class="heading"><span class="title">Hukum Asosiatif Penskalaan.</span></span><div class="para" id="th_matrixscale_assoc-2"><span class="process-math">\(\displaystyle a(bC)=(ab)C\)</span></div>
 </li>
 <li id="th_matrixscale_comm">
-<span class="heading"><span class="title">Scaling commutative law.</span></span><div class="para" id="th_matrixscale_comm-2"><span class="process-math">\(a(BC)=(aB)C=B(aC)\text{.}\)</span></div>
+<span class="heading"><span class="title">Hukum Komutatif Penskalaan.</span></span><div class="para" id="th_matrixscale_comm-2"><span class="process-math">\(a(BC)=(aB)C=B(aC)\text{.}\)</span></div>
 </li>
 </ol>
-</div></article><div class="para" id="s_algebraic-4">How does one actually prove one of these properties? These are all <em class="emphasis">matrix equalities</em> of the form <span class="process-math">\(X=Y\text{,}\)</span> so according to the <a href="s_matrix.html#d_matrix_equality" class="xref" data-knowl="./knowl/xref/d_matrix_equality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.4: Kesamaan Matrik">matrix equality definition</a> we must show (1) that the matrices <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> have the same dimension, and (2) that <span class="process-math">\((X)_{ij}=(Y)_{ij}\)</span> for all <span class="process-math">\((i,j)\text{.}\)</span> The proof below illustrates this technique for the <a href="s_algebraic.html#th_matrixmult_assoc" class="xref" data-knowl="./knowl/xref/th_matrixmult_assoc.html" data-reveal-label="Reveal" data-close-label="Close" title="Item iii: Multiplication associative law">multiplication associative law</a> of <a href="s_algebraic.html#th_matrix_alg_props" class="xref" data-knowl="./knowl/xref/th_matrix_alg_props.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.1: Properties of matrix addition, multiplication and scalar multiplication">Theorem 0.2.1</a>.</div>
-<details id="s_algebraic-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Proof of (iii).</span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_algebraic-5-2">
-<div class="para">We prove only the <a href="s_algebraic.html#th_matrixmult_assoc" class="xref" data-knowl="./knowl/xref/th_matrixmult_assoc.html" data-reveal-label="Reveal" data-close-label="Close" title="Item iii: Multiplication associative law">multiplication associative law</a>. Let <span class="process-math">\(A=[a_{ij}]_{m\times r}\text{,}\)</span> <span class="process-math">\(B=[b_{ij}]_{r\times s}\text{,}\)</span> <span class="process-math">\(C=[c_{ij}]_{s\times n}\text{.}\)</span> To show</div>
+</div></article><div class="para" id="s_algebraic-4">Bagaimana cara membuktikan salah satu sifat ini? Semua ini merupakan <em class="emphasis">kesamaan matriks</em> dalam bentuk <span class="process-math">\(X=Y\text{,}\)</span> sehingga menurut <a href="s_matrix.html#d_matrix_equality" class="xref" data-knowl="./knowl/xref/d_matrix_equality.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.4: Kesamaan Matrik">definisi kesamaan matriks</a>, kita harus menunjukkan (1) bahwa matriks <span class="process-math">\(X\)</span> dan <span class="process-math">\(Y\)</span> memiliki dimensi yang sama, dan (2) bahwa <span class="process-math">\((X)_{ij}=(Y)_{ij}\)</span> untuk semua <span class="process-math">\((i,j)\text{.}\)</span> Pembuktian di bawah ini menggambarkan teknik ini untuk <a href="s_algebraic.html#th_matrixmult_assoc" class="xref" data-knowl="./knowl/xref/th_matrixmult_assoc.html" data-reveal-label="Reveal" data-close-label="Close" title="Item iii: Hukum Asosiatif Perkalian">hukum asosiatif perkalian</a> dari <a href="s_algebraic.html#th_matrix_alg_props" class="xref" data-knowl="./knowl/xref/th_matrix_alg_props.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.1: Sifat-sifat penjumlahan, perkalian dan perkalian skalar matriks">Theorem 0.2.1</a>.</div>
+<details id="s_algebraic-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Bukti (iii).</span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_algebraic-5-2">
+<div class="para">Kami hanya membuktikan <a href="s_algebraic.html#th_matrixmult_assoc" class="xref" data-knowl="./knowl/xref/th_matrixmult_assoc.html" data-reveal-label="Reveal" data-close-label="Close" title="Item iii: Hukum Asosiatif Perkalian">hukum asosiatif perkalian</a>. Misalkan <span class="process-math">\(A=[a_{ij}]_{m\times r}\text{,}\)</span> <span class="process-math">\(B=[b_{ij}]_{r\times s}\text{,}\)</span> <span class="process-math">\(C=[c_{ij}]_{s\times n}\text{.}\)</span> Untuk menunjukkan</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixmult_assoc.html">
 \begin{equation*}
 A(BC)=(AB)C\text{,}
 \end{equation*}
 </div>
-<div class="para">we must show (1) that <span class="process-math">\(A(BC)\)</span> and <span class="process-math">\((AB)C\)</span> have the same dimension, and (2) that</div>
+<div class="para">kita harus menunjukkan (1) bahwa <span class="process-math">\(A(BC)\)</span> dan <span class="process-math">\((AB)C\)</span> memiliki dimensi yang sama, dan (2) bahwa</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixmult_assoc.html">
 \begin{equation*}
 [A(BC)]_{ij}=[(AB)C]_{ij}
 \end{equation*}
 </div>
-<div class="para">for all possible <span class="process-math">\((i,j)\text{.}\)</span>
+<div class="para">untuk semua kemungkinan <span class="process-math">\((i,j)\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="s_algebraic-5-3">(1) The usual observation about “inner” and “outer” dimensions shows that both <span class="process-math">\(A(BC)\)</span> and <span class="process-math">\((AB)C\)</span> have dimension <span class="process-math">\(m\times n\text{.}\)</span>
+<div class="para" id="s_algebraic-5-3">(1) Pengamatan biasa tentang “dimensi dalam” dan “dimensi luar” menunjukkan bahwa baik <span class="process-math">\(A(BC)\)</span> maupun <span class="process-math">\((AB)C\)</span> memiliki dimensi <span class="process-math">\(m\times n\text{.}\)</span>
 </div>
 <a href="s_matrix.html#d_matrix_mult" class="xref" data-knowl="./knowl/xref/d_matrix_mult.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.16: Perkalian matrik">Definition 0.1.16</a><div class="para logical" id="s_algebraic-5-5">
-<div class="para">(2) Given any  <span class="process-math">\((i,j)\)</span> with <span class="process-math">\(1\leq i\leq m\)</span> and <span class="process-math">\(1\leq j\leq n\text{,}\)</span> we have:</div>
+<div class="para">(2) Diberikan sembarang <span class="process-math">\((i,j)\)</span> dengan <span class="process-math">\(1\leq i\leq m\)</span> dan <span class="process-math">\(1\leq j\leq n\text{,}\)</span> kita memiliki:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_mult.html ./knowl/xref/d_matrix_mult.html" id="s_algebraic-5-5-4">
 \begin{align*}
 [A(BC)]_{ij}\amp=\sum_{\ell=1}^ra_{i\ell}[BC]_{\ell j}  \amp (\knowl{./knowl/xref/d_matrix_mult.html}{\text{Definition 0.1.16}})\\
 \amp=\sum_{\ell=1}^ra_{i\ell}\left(\sum_{k=1}^sb_{\ell k}c_{kj}\right) \amp (\knowl{./knowl/xref/d_matrix_mult.html}{\text{Definition 0.1.16}})\\
-=\amp \sum_{\ell=1}^r\sum_{k=1}^sa_{i\ell}(b_{\ell k}c_{kj}) \amp \text{ (real dist.) }\\
-=\amp \sum_{k=1}^s\sum_{\ell=1}^r(a_{i\ell}b_{\ell k})c_{kj} \amp \text{ (real comm., real assoc.) }\\
-=\amp \sum_{k=1}^s\left(\sum_{\ell=1}^ra_{i\ell}b_{\ell k}\right)c_{kj} \amp \text{ (real dist.) }\\
+=\amp \sum_{\ell=1}^r\sum_{k=1}^sa_{i\ell}(b_{\ell k}c_{kj}) \amp \text{ (distributif bilangan real) }\\
+=\amp \sum_{k=1}^s\sum_{\ell=1}^r(a_{i\ell}b_{\ell k})c_{kj} \amp \text{ (komutatif dan asosiatif bilangan real) }\\
+=\amp \sum_{k=1}^s\left(\sum_{\ell=1}^ra_{i\ell}b_{\ell k}\right)c_{kj} \amp \text{ (distributif bilangan real) }\\
 =\amp \sum_{k=1}^s[AB]_{ik}c_{kj}  =\Bigl[(AB)C]_{ij}
 \end{align*}
 </div>
 </div>
-<div class="para" id="s_algebraic-5-6">This proves that all entries of the two matrices are equal, and hence <span class="process-math">\(A(BC)=(AB)C\text{.}\)</span>
-</div></article></details><div class="para" id="s_algebraic-6">Like real number algebra, we can identify some special matrices that act as <em class="emphasis">additive identities</em> and <em class="emphasis">multiplciative identities</em>; and every matrix has an <em class="emphasis">additive inverse</em>. What we mean here is spelled out in detail in <a href="s_algebraic.html#th_matrix_add_mult_ident" class="xref" data-knowl="./knowl/xref/th_matrix_add_mult_ident.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.4: Additive identities, additive inverses, and multiplicative identities">Theorem 0.2.4</a>.</div>
+<div class="para" id="s_algebraic-5-6">Ini membuktikan bahwa semua entri dari kedua matriks tersebut sama, sehingga <span class="process-math">\(A(BC)=(AB)C\text{.}\)</span>
+</div></article></details><div class="para" id="s_algebraic-6">Sebagaimana dalam aljabar bilangan real, kita dapat mengidentifikasi beberapa matriks khusus yang bertindak sebagai <em class="emphasis">identitas penjumlahan</em> dan <em class="emphasis">identitas perkalian</em>; dan setiap matriks memiliki <em class="emphasis">invers penjumlahan</em>. Apa yang kami maksud di sini dijelaskan secara rinci dalam <a href="s_algebraic.html#th_matrix_add_mult_ident" class="xref" data-knowl="./knowl/xref/th_matrix_add_mult_ident.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.4: Identitas Penjumlahan, Invers Penjumlahan, dan Identitas Perkalian">Theorem 0.2.4</a>.</div>
 <article class="definition definition-like" id="d_matrix_add_inverse"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Additive inverse of a matrix.</span>
 </h3>
 <div class="para logical" id="d_matrix_add_inverse-5-1">
-<div class="para">Given an <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A=[a_{ij}]\text{,}\)</span> its <dfn class="terminology">additive inverse</dfn> <span class="process-math">\(-A\)</span> is defined as</div>
+<div class="para">Diberikan sebuah matriks <span class="process-math">\(m\times n\)</span> <span class="process-math">\(A=[a_{ij}]\text{,}\)</span> <dfn class="terminology">invers penjumlahannya</dfn> <span class="process-math">\(-A\)</span> didefinisikan sebagai</div>
 <div class="displaymath process-math">
 \begin{equation*}
 -A=(-1)A=[-a_{ij}]\text{.}
@@ -471,7 +466,9 @@ A(BC)=(AB)C\text{,}
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Identity matrix.</span>
 </h3>
 <div class="para logical" id="d_identity_matrix-5-1">
-<div class="para">The <dfn class="terminology"><span class="process-math">\(n\times n\)</span> identity matrix</dfn> is the square <span class="process-math">\(n\times n\)</span> matrix</div>
+<div class="para">
+<dfn class="terminology">Matriks identitas <span class="process-math">\(n\times n\)</span></dfn> adalah matriks persegi berukuran <span class="process-math">\(n\times n\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
 I_n=\begin{bmatrix}1\amp 0\amp 0 \amp \dots\amp 0\\ 0\amp 1 \amp 0 \amp \dots \amp 0\\
@@ -479,22 +476,22 @@ I_n=\begin{bmatrix}1\amp 0\amp 0 \amp \dots\amp 0\\ 0\amp 1 \amp 0 \amp \dots \a
 0\amp 0\amp \dots \amp 0\amp 1\end{bmatrix}
 \end{equation*}
 </div>
-<div class="para">with ones along the diagonal and zeros everywhere else. In other words, for all <span class="process-math">\(1\leq i\leq n\)</span> and <span class="process-math">\(1\leq j\leq n\text{,}\)</span> we have</div>
+<div class="para">dengan angka satu di sepanjang diagonal dan nol di semua tempat lainnya. Dengan kata lain, untuk semua <span class="process-math">\(1\leq i\leq n\)</span> dan <span class="process-math">\(1\leq j\leq n\text{,}\)</span> kita memiliki</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(I_n)_{ij}=\begin{cases} 1 \amp \text{if } i=j \\ 0\amp \text{if } i\ne j
+(I_n)_{ij}=\begin{cases} 1 \amp \text{jika } i=j \\ 0\amp \text{jika } i\ne j
 \end{cases}\text{.}
 \end{equation*}
 </div>
-<div class="para">When the size <span class="process-math">\(n\)</span> of the identity matrix is not important, we will often denote it simply as <span class="process-math">\(I\text{.}\)</span>
+<div class="para">Ketika ukuran <span class="process-math">\(n\)</span> dari matriks identitas tidak penting, kita sering menotasikannya secara sederhana sebagai <span class="process-math">\(I\text{.}\)</span>
 </div>
 </div></article><article class="theorem theorem-like" id="th_matrix_add_mult_ident"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Additive identities, additive inverses, and multiplicative identities.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Identitas Penjumlahan, Invers Penjumlahan, dan Identitas Perkalian.</span>
 </h3>
 <ol class="decimal" id="th_matrix_add_mult_ident-2-1">
 <li id="th_matrix_add_ident">
-<span class="heading"><span class="title">Additive identities.</span></span><div class="para logical" id="th_matrix_add_ident-2">
-<div class="para">The <span class="process-math">\(m\times n\)</span> zero matrix <span class="process-math">\(\boldzero_{m\times n}\)</span> is an <em class="emphasis">additive identity</em> for <span class="process-math">\(m\times n\)</span> matrices in the following sense: for any <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\)</span> we have</div>
+<span class="heading"><span class="title">Identitas Penjumlahan.</span></span><div class="para logical" id="th_matrix_add_ident-2">
+<div class="para">Matriks nol berukuran <span class="process-math">\(m\times n\)</span> <span class="process-math">\(\boldzero_{m\times n}\)</span> adalah <em class="emphasis">identitas penjumlahan</em> untuk matriks <span class="process-math">\(m\times n\)</span> dalam arti berikut: untuk sembarang matriks <span class="process-math">\(m\times n\)</span> <span class="process-math">\(A\text{,}\)</span> kita memiliki</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \boldzero_{m\times n}+A=A\text{.}
@@ -503,8 +500,8 @@ I_n=\begin{bmatrix}1\amp 0\amp 0 \amp \dots\amp 0\\ 0\amp 1 \amp 0 \amp \dots \a
 </div>
 </li>
 <li id="th_matrix_add_inverse">
-<span class="heading"><span class="title">Additive inverses.</span></span><div class="para logical" id="th_matrix_add_inverse-2">
-<div class="para">For any <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\)</span> we have</div>
+<span class="heading"><span class="title">Invers Penjumlahan.</span></span><div class="para logical" id="th_matrix_add_inverse-2">
+<div class="para">Untuk sembarang matriks <span class="process-math">\(m\times n\)</span> <span class="process-math">\(A\text{,}\)</span> kita memiliki</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A+-A=A+(-1)A=\boldzero_{m\times n}\text{.}
@@ -513,8 +510,8 @@ A+-A=A+(-1)A=\boldzero_{m\times n}\text{.}
 </div>
 </li>
 <li id="th_matrix_mult_ident">
-<span class="heading"><span class="title">Multiplicative identities.</span></span><div class="para logical" id="th_matrix_mult_ident-2">
-<div class="para">The <span class="process-math">\(n\times n\)</span> identity matrix is a <em class="emphasis">multiplicative identity</em> for <span class="process-math">\(n\times n\)</span> matrices in the following sense: for any <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span> we have</div>
+<span class="heading"><span class="title">Identitas Perkalian.</span></span><div class="para logical" id="th_matrix_mult_ident-2">
+<div class="para">Matriks identitas <span class="process-math">\(n\times n\)</span> adalah <em class="emphasis">identitas perkalian</em> untuk matriks <span class="process-math">\(n\times n\)</span> dalam arti berikut: untuk sembarang matriks <span class="process-math">\(n\times n\)</span> <span class="process-math">\(A\text{,}\)</span> kita memiliki</div>
 <div class="displaymath process-math">
 \begin{equation*}
 I_n\, A=A\, I_n=A\text{.}
@@ -522,346 +519,30 @@ I_n\, A=A\, I_n=A\text{.}
 </div>
 </div>
 </li>
-</ol></article><details id="s_algebraic-10" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="s_algebraic-10-1">Left as an exercise.</div></article></details><article class="corollary theorem-like" id="c_matrix_additive_canc"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">0.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Additive cancellation of matrices.</span>
+</ol></article><article class="theorem theorem-like" id="th_trans_props"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Sifat Matrik Transpose.</span>
 </h3>
-<div class="para logical" id="c_matrix_additive_canc-2-1">
-<div class="para">Given <span class="process-math">\(m\times n\)</span> matrices <span class="process-math">\(A, B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span> we have <span class="process-math">\(A+B=A+C\)</span> if and only if <span class="process-math">\(B=C\text{.}\)</span> Using logical notation:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A+B=A+C \iff  B=C.
-\end{equation*}
-</div>
-</div></article><details id="c_matrix_additive_canc-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="c_matrix_additive_canc-3-1">As simple as this claim might seem, remember that we are dealing with a completely new algebraic system here. We will prove both implications of “if and only if” statement separately.</div>
-<article class="case" id="c_matrix_additive_canc-3-2"><h4 class="heading">Proof: <span class="process-math">\(A+B=A+C\implies B=C\)</span>.</h4>
-<div class="para logical" id="c_matrix_additive_canc-3-2-2">
-<div class="para">We prove this via a chain of implications:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_matrixadd_assoc.html ./knowl/xref/th_matrix_add_inverse.html ./knowl/xref/th_matrix_add_ident.html" id="c_matrix_additive_canc-3-2-2-1">
-\begin{align*}
-A+B=A+C\amp \implies -A+(A+B)=-A+(A+C) \\
-\amp\implies (-A+A)+B=(-A+A)+C\amp (\knowl{./knowl/xref/th_matrixadd_assoc.html}{\text{Addition associative law}}) \\
-\amp\implies \boldzero_{m\times n}+B=\boldzero_{m\times n}+C \amp (\knowl{./knowl/xref/th_matrix_add_inverse.html}{\text{Item 2}}) \\
-\amp \implies B=C \amp (\knowl{./knowl/xref/th_matrix_add_ident.html}{\text{Item 1}}) \text{.}
-\end{align*}
-</div>
-</div></article><article class="case" id="c_matrix_additive_canc-3-3"><h4 class="heading">Proof: <span class="process-math">\(B=C\implies A+B=A+C\)</span>.</h4>
-<div class="para" id="c_matrix_additive_canc-3-3-2">This direction is obvious: if <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are equal matrices, then they remain equal when we add <span class="process-math">\(A\)</span> to each of them.</div></article></article></details><article class="remark remark-like" id="s_algebraic-12"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.2.6</span><span class="period">.</span>
-</h3>
-<div class="para" id="s_algebraic-12-1">The algebraic importance of <a href="s_algebraic.html#c_matrix_additive_canc" class="xref" data-knowl="./knowl/xref/c_matrix_additive_canc.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 0.2.5: Additive cancellation of matrices">Corollary 0.2.5</a> is that we can perform <em class="emphasis">additive cancellation</em>  in matrix equations just as we do in real number algebra. For example, we can solve the matrix equation <span class="process-math">\(A+B=3A\)</span> for <span class="process-math">\(B\)</span> as follows:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/c_matrix_additive_canc.html ./knowl/xref/c_matrix_additive_canc.html" id="s_algebraic-12-2">
-\begin{align*}
-A+B\amp = 3A\\
-A+B\amp = (1+2)A\\
-A+B\amp = A+2A\\
-B\amp = 2A \amp (\knowl{./knowl/xref/c_matrix_additive_canc.html}{\text{Corollary 0.2.5}})\text{.}
-\end{align*}
-</div></article><article class="warning remark-like" id="s_algebraic-13"><h3 class="heading">
-<span class="type">Warning</span><span class="space"> </span><span class="codenumber">0.2.7</span><span class="period">.</span>
-</h3>
-<div class="para logical" id="s_algebraic-13-1">
-<div class="para">Though we can perform additive cancellation in matrix algebra, we can <em class="emphasis">not</em> always perform <em class="emphasis">multiplicative cancellation</em>. For example, consider the matrices</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A=\begin{bmatrix}1\amp 1\\ 1\amp 1\end{bmatrix}, B=\begin{bmatrix}1\amp 0\\ 0\amp 0 \end{bmatrix}, C=\begin{bmatrix}0\amp 0\\ 1\amp 0 \end{bmatrix}\text{.}
-\end{equation*}
-</div>
-<div class="para">Check for yourself that <span class="process-math">\(AB=AC\text{,}\)</span> and yet <span class="process-math">\(B\ne C\text{.}\)</span> In other words, we cannot always “cancel” <span class="process-math">\(A\)</span> from the matrix equation <span class="process-math">\(AB=AC\text{.}\)</span>
-</div>
-</div></article><div class="para" id="s_algebraic-14">The example in our warning above is but one instance of the general failure of the principle of multiplicative cancellation in matrix algebra. This in turn is a consequence of the following theorem, which identifies the two crucial places where matrix algebra differs significantly from real number algebra.</div>
-<article class="theorem theorem-like" id="th_matrix_abnormalities"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix algebra abnormalities.</span>
-</h3>
-<div class="para logical" id="th_matrix_abnormalities-2-1"><ol class="decimal" id="th_matrix_abnormalities-2-1-1">
-<li id="th_mult_not_commutative">
-<span class="heading"><span class="title">Matrix multiplication is not commutative.</span></span><div class="para" id="th_mult_not_commutative-2">For two <span class="process-math">\(n\times n\)</span> matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> we do <em class="emphasis">not</em> necessarily have <span class="process-math">\(AB=BA\text{.}\)</span>
-</div>
-</li>
-<li id="th_mult_has_zero_divisors">
-<span class="heading"><span class="title">Products of nonzero matrices may be equal to zero.</span></span><div class="para logical" id="th_mult_has_zero_divisors-2">
-<div class="para">If the product of two matrices is the zero matrix, we <em class="emphasis">cannot</em> conclude that one of matrices is the zero matrix. In logical notation:</div>
-<div class="displaymath process-math" id="eq_mult_has_zero_divisors">
-\begin{equation}
-\underset{m\times n}{A}\, \underset{n\times r}{B}=\boldzero_{m\times r}\;\not\!\!\!\!\implies A=\boldzero_{m\times n} \text{ or }  B=\boldzero_{n\times r}\text{.}\tag{0.2.1}
-\end{equation}
-</div>
-</div>
-</li>
-</ol></div></article><div class="para logical" id="s_algebraic-16">
-<div class="para">This is a good place to point out that to prove an identity does not hold, it suffices to provide a single counterexample to that effect. We do so for each failed identity of <a href="s_algebraic.html#th_matrix_abnormalities" class="xref" data-knowl="./knowl/xref/th_matrix_abnormalities.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.8: Matrix algebra abnormalities">Theorem 0.2.8</a> in turn. There is no significance to the particular counterexamples chosen here, and indeed there are infinitely many counterexamples to choose from in both cases.</div>
-<ol class="decimal" id="s_algebraic-16-2">
-<li id="s_algebraic-16-2-1"><div class="para logical" id="s_algebraic-16-2-1-1">
-<div class="para">We have</div>
-<div class="displaymath process-math" id="s_algebraic-16-2-1-1-1">
-\begin{align*}
-\begin{bmatrix}1\amp 0\\ 0\amp 0 \end{bmatrix} \begin{bmatrix}0\amp 1\\ 0\amp 0 \end{bmatrix}\amp = \begin{bmatrix} 0\amp 1 \\ 0 \amp 0\end{bmatrix}\\
-\begin{bmatrix}0\amp 1\\ 0\amp 0 \end{bmatrix} \begin{bmatrix}1\amp 0\\ 0\amp 0 \end{bmatrix} \amp = \begin{bmatrix} 0\amp 0\\ 0\amp 0 \end{bmatrix} 
-\end{align*}
-</div>
-<div class="para">and thus</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}1\amp 0\\ 0\amp 0 \end{bmatrix} \begin{bmatrix}0\amp 1\\ 0\amp 0 \end{bmatrix} \ne \begin{bmatrix}0\amp 1\\ 0\amp 0 \end{bmatrix} \begin{bmatrix}1\amp 0\\ 0\amp 0 \end{bmatrix}\text{.}
-\end{equation*}
-</div>
-</div></li>
-<li id="s_algebraic-16-2-2"><div class="para logical" id="s_algebraic-16-2-2-1">
-<div class="para">Observe that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}0\amp 1\\ 0\amp 0 \end{bmatrix} \begin{bmatrix}1\amp 0\\ 0\amp 0 \end{bmatrix} =\begin{bmatrix}0\amp 0\\ 0\amp 0 \end{bmatrix} \text{.}
-\end{equation*}
-</div>
-<div class="para">This is an example of two nonzero matrices whose product is the zero matrix.</div>
-</div></li>
-</ol>
-</div>
-<div class="para" id="s_algebraic-17">An important consequence of the abnormality <a href="s_algebraic.html#eq_mult_has_zero_divisors" class="xref" data-knowl="./knowl/xref/eq_mult_has_zero_divisors.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 0.2.1">(0.2.1)</a> is that matrix algebra does not enjoy the property of <em class="emphasis">multiplicative cancellation</em>.</div>
-<article class="corollary theorem-like" id="th_matrix_cancel"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">0.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Failure of multiplicative cancellation.</span>
-</h3>
-<ol class="decimal" id="th_matrix_cancel-2-1">
-<li id="th_matrix_cancel-2-1-1"><div class="para logical" id="th_matrix_cancel-2-1-1-1">
-<div class="para">Suppose matrices <span class="process-math">\(A, B, C\)</span> satisfy <span class="process-math">\(AB=AC\)</span> and <span class="process-math">\(A\ne \boldzero\text{.}\)</span> We <em class="emphasis">cannot</em> conclude that <span class="process-math">\(B=C\text{.}\)</span> In logical notation:</div>
-<div class="displaymath process-math" id="eq_no_left_cancel">
-\begin{equation}
-AB=AC \;\not\!\!\!\!\implies B=C\tag{0.2.2}
-\end{equation}
-</div>
-</div></li>
-<li id="th_matrix_cancel-2-1-2"><div class="para logical" id="th_matrix_cancel-2-1-2-1">
-<div class="para">Suppose matrices <span class="process-math">\(B, C, D\)</span> satisfy <span class="process-math">\(BD=CD\)</span> and <span class="process-math">\(D\ne \boldzero\text{.}\)</span> We <em class="emphasis">cannot</em> conclude that <span class="process-math">\(B=C\text{.}\)</span> In logical notation:</div>
-<div class="displaymath process-math" id="eq_no_right_cancel">
-\begin{equation}
-BD=CD \;\not\!\!\!\!\implies B=C\tag{0.2.3}
-\end{equation}
-</div>
-</div></li>
-</ol></article><details id="s_algebraic-19" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="s_algebraic-19-1">Again, we need only provide explicit counterexamples for each statement.</div>
-<ol class="decimal" id="s_algebraic-19-2">
-<li id="s_algebraic-19-2-1"><div class="para logical" id="s_algebraic-19-2-1-1">
-<div class="para">Let <span class="process-math">\(A=\begin{bmatrix}1\amp 1\amp 0\\ 0\amp 0\amp 0 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(B=\begin{bmatrix}1\amp 0\\ 0\amp 0\\ 0\amp 0 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(C=\begin{bmatrix}0\amp 0\\ 1\amp 0\\ 0\amp 0 \end{bmatrix}\text{.}\)</span> Verify for yourself that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}1\amp 1\amp 0\\ 0\amp 0\amp 0 \end{bmatrix} \begin{bmatrix}1\amp 0\\ 0\amp 0\\ 0\amp 0 \end{bmatrix} = \begin{bmatrix}1\amp 1\amp 0\\ 0\amp 0\amp 0 \end{bmatrix} \begin{bmatrix}0\amp 0\\ 1\amp 0\\ 0\amp 0 \end{bmatrix}=
-\begin{bmatrix}
-1\amp 0\\ 0\amp 0\\ 0\amp 0
-\end{bmatrix}\text{.}
-\end{equation*}
-</div>
-<div class="para">Thus <span class="process-math">\(AB=AC\text{,}\)</span> but clearly <span class="process-math">\(B\ne C\text{.}\)</span>
-</div>
-</div></li>
-<li id="s_algebraic-19-2-2"><div class="para logical" id="s_algebraic-19-2-2-1">
-<div class="para">Let <span class="process-math">\(B=\begin{bmatrix}2\amp 0\\ 0\amp 0 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(C=\begin{bmatrix}1\amp 1\\ 0\amp 0 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(D=\begin{bmatrix}1\amp 1\amp 1\\ 1\amp 1\amp 1 \end{bmatrix}\text{.}\)</span> We have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}2\amp 0\\ 0\amp 0 \end{bmatrix} \begin{bmatrix}1\amp 1\amp 1\\ 1\amp 1\amp 1 \end{bmatrix} = \begin{bmatrix}1\amp 1\\ 0\amp 0  \end{bmatrix} \begin{bmatrix}1\amp 1\amp 1\\ 1\amp 1\amp 1 \end{bmatrix}=
-\begin{bmatrix}
-2\amp 2\amp 2\\ 2\amp 2\amp 2
-\end{bmatrix}\text{.}
-\end{equation*}
-</div>
-<div class="para">Thus <span class="process-math">\(BD=CD\text{,}\)</span> but <span class="process-math">\(B\ne C\text{.}\)</span>
-</div>
-</div></li>
-</ol></article></details><article class="remark remark-like" id="rm_cancel_failure"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.2.10</span><span class="period">.</span>
-</h3>
-<div class="para" id="rm_cancel_failure-1">Mark well this important abnormality of matrix algebra. Confronted with a real number equation of the form <span class="process-math">\(ab=ac\text{,}\)</span> we have a deeply ingrained impulse to declare that either <span class="process-math">\(a=0\)</span> or <span class="process-math">\(b=c\text{.}\)</span> (If we’re sloppy we may forget about that first possibility.) The corresponding maneuver for the matrix equation <span class="process-math">\(AB=AC\)</span> is simply not available to us, unless we know something more about <span class="process-math">\(A\text{.}\)</span>
-</div></article><div class="para" id="s_algebraic-21">We end our foray into matrix algebra with some properties articulating how matrix transposition interacts with matrix addition, multiplication and scalar multiplication.</div>
-<article class="theorem theorem-like" id="th_trans_props"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of matrix transposition.</span>
-</h3>
-<div class="para" id="th_trans_props-2">The following properties hold for all matrices <span class="process-math">\(A, B, C\)</span> and scalars <span class="process-math">\(c\in \R\)</span> for which the given expression makes sense.</div>
-<ol class="lower-roman ol-marker-2" id="th_trans_props-3-1">
+<div class="para" id="th_trans_props-2">Properti berikut berlaku untuk semua matriks <span class="process-math">\(A, B, C\)</span> dan skalar <span class="process-math">\(c\in \R\)</span> yang ekspresinya masuk akal.</div>
+<ol class="lower-roman ol-marker-1" id="th_trans_props-3-1">
 <li id="th_trans_add"><div class="para" id="th_trans_add-1"><span class="process-math">\(\displaystyle (A+B)^T=A^T+B^T\)</span></div></li>
 <li id="th_trans_scale"><div class="para" id="th_trans_scale-1"><span class="process-math">\(\displaystyle (cA)^T=cA^T\)</span></div></li>
 <li id="th_trans_prod"><div class="para" id="th_trans_prod-1"><span class="process-math">\(\displaystyle (AB)^T=B^TA^T\)</span></div></li>
 <li id="th_trans_owninverse"><div class="para" id="th_trans_owninverse-1"><span class="process-math">\(\displaystyle \left(A^T\right)^T=A\)</span></div></li>
-</ol></article><details id="th_trans_props-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_trans_props-4-1">We prove only the first statement. First observe that if <span class="process-math">\(A\)</span> is <span class="process-math">\(m\times n\text{,}\)</span> then so is <span class="process-math">\(B\)</span> and <span class="process-math">\(A+B\text{.}\)</span> Then <span class="process-math">\((A+B)^T\)</span> is <span class="process-math">\(n\times m\)</span> by <a href="s_matrix.html#d_transpose" class="xref" data-knowl="./knowl/xref/d_transpose.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.23: Transpose Matriks">Definition 0.1.23</a>. Similarly, we see that <span class="process-math">\(A^T+B^T\)</span> is <span class="process-math">\(n\times m\text{.}\)</span>
+</ol></article><details id="th_trans_props-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_trans_props-4-1">Kami hanya membuktikan pernyataan pertama. Pertama, perhatikan bahwa jika <span class="process-math">\(A\)</span> berukuran <span class="process-math">\(m\times n\text{,}\)</span> maka demikian pula <span class="process-math">\(B\)</span> dan <span class="process-math">\(A+B\text{.}\)</span> Kemudian <span class="process-math">\((A+B)^T\)</span> adalah <span class="process-math">\(n\times m\)</span> berdasarkan <a href="s_matrix.html#d_transpose" class="xref" data-knowl="./knowl/xref/d_transpose.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 0.1.23: Transpose Matriks">Definition 0.1.23</a>. Demikian pula, kita melihat bahwa <span class="process-math">\(A^T+B^T\)</span> juga berukuran <span class="process-math">\(n\times m\text{.}\)</span>
 </div>
 <div class="para logical" id="th_trans_props-4-2">
-<div class="para">Next, given any <span class="process-math">\((i,j)\)</span> with <span class="process-math">\(1\leq i\leq n\text{,}\)</span> <span class="process-math">\(1\leq j\leq m\text{,}\)</span> we have</div>
+<div class="para">Selanjutnya, untuk sembarang <span class="process-math">\((i,j)\)</span> dengan <span class="process-math">\(1\leq i\leq n\text{,}\)</span> <span class="process-math">\(1\leq j\leq m\text{,}\)</span> kita memiliki</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_transpose.html ./knowl/xref/d_matrix_add_subtract.html ./knowl/xref/d_transpose.html ./knowl/xref/d_matrix_add_subtract.html" id="th_trans_props-4-2-4">
 \begin{align*}
 \left((A+B)^T\right)_{ij}\amp =(A+B)_{ji} \amp (\knowl{./knowl/xref/d_transpose.html}{\text{Definition 0.1.23}})\\
 \amp = A_{ji}+B_{ji} \amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.8}})\\
-\amp =(A^T)_{ij}+(B^T)_{ij} \amp (\knowl{./knowl/xref/d_transpose.html}{\text{Definition 0.1.23}} \\
+\amp =(A^T)_{ij}+(B^T)_{ij} \amp (\knowl{./knowl/xref/d_transpose.html}{\text{Definition 0.1.23}}) \\
 \amp =(A^T+B^T)_{ij} \amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.8}})\text{.}
 \end{align*}
 </div>
-<div class="para">Since the <span class="process-math">\(ij\)</span>-entries of both matrices are equal for each <span class="process-math">\((i,j)\text{,}\)</span> it follows that <span class="process-math">\((A+B)^T=A^T+B^T\text{.}\)</span>
+<div class="para">Karena entri <span class="process-math">\(ij\)</span> dari kedua matriks tersebut sama untuk setiap <span class="process-math">\((i,j)\text{,}\)</span> maka dapat disimpulkan bahwa <span class="process-math">\((A+B)^T=A^T+B^T\text{.}\)</span>
 </div>
-</div></article></details><section class="paragraphs" id="ss_algebra_video_examples"><h3 class="heading"><span class="title">Video examples: proving matrix equalities.</span></h3>
-<figure class="figure figure-like" id="fig_proof_assoc"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/EDGxkEV5mm0?&amp;modestbranding=1&amp;rel=0" id="vid_proof_assoc"></iframe></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.12<span class="period">.</span></span><span class="space"> </span>Video: matrix multiplication is associative</figcaption></figure><figure class="figure figure-like" id="fig_proof_transp"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/twq0_HdpC3w?&amp;modestbranding=1&amp;rel=0" id="vid_proof_transp"></iframe></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.13<span class="period">.</span></span><span class="space"> </span>Video: transpose property</figcaption></figure></section><section class="exercises" id="s_algebraic_ex"><h3 class="heading hide-type">
-<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="subexercises" id="s_algebraic_ex-1"><h4 class="heading"><span class="title">WeBWork Exercises</span></h4>
-<article class="exercise exercise-like" id="s_algebraic_ex-1-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div id="webwork-6" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="6" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Contrib/MountAllison/1-3_Matrices_and_Matrix_Operations/true_false.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-6')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-6-1-1-1">Determine which of the following statements are true and which are false.</div> <div class="para logical" id="extracted-webwork-6-1-1-2"><ol class="lower-alpha lower-alpha-level-1" id="extracted-webwork-6-1-1-2-1">
-<li id="extracted-webwork-6-1-1-2-1-1"><div class="para" id="extracted-webwork-6-1-1-2-1-1-1">If <span class="process-math">\(\displaystyle A\)</span> and <span class="process-math">\(\displaystyle B\)</span> are square matrices of the same size then <span class="process-math">\(\displaystyle (A+B)^2 = A^2 + 2AB + B^2\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-6-1-1-2-1-2"><div class="para" id="extracted-webwork-6-1-1-2-1-2-1">The matrices <span class="process-math">\(\displaystyle A^TA\)</span> and <span class="process-math">\(\displaystyle AA^T\)</span> are always square, regardless of the size of <span class="process-math">\(\displaystyle A\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-6-1-1-2-1-3"><div class="para" id="extracted-webwork-6-1-1-2-1-3-1">If <span class="process-math">\(\displaystyle A \in \mathcal{M}_{n,m}\)</span> and <span class="process-math">\(\displaystyle \mathbf{b} \in \mathbb{R}^m\)</span> is a column vector, then <span class="process-math">\(\displaystyle A\mathbf{b}\)</span> is a linear combination of the columns of <span class="process-math">\(\displaystyle A\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-6-1-1-2-1-4"><div class="para" id="extracted-webwork-6-1-1-2-1-4-1">If <span class="process-math">\(\displaystyle A \in \mathcal{M}_{n,m}\)</span> and <span class="process-math">\(\displaystyle \mathbf{b} \in \mathbb{R}^m\)</span> is a column vector, then <span class="process-math">\(\displaystyle A\mathbf{b}\)</span> is a linear combination of the rows of <span class="process-math">\(\displaystyle A\text{.}\)</span>
-</div></li>
-<li id="extracted-webwork-6-1-1-2-1-5"><div class="para" id="extracted-webwork-6-1-1-2-1-5-1">If <span class="process-math">\(\displaystyle A\)</span> and <span class="process-math">\(\displaystyle B\)</span> are square matrices of the same size, then <span class="process-math">\(\displaystyle (AB)^T = A^TB^T\text{.}\)</span>
-</div></li>
-</ol></div>
-</div>
-</div></article><article class="exercise exercise-like" id="s_algebraic_ex-1-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div id="webwork-7" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="7" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Utah/Business_Algebra/set10_Matrices/p17.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-7')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-7-1-1-1">Let <span class="process-math">\(A\)</span> be a  5 by 8 matrix. Then <span class="process-math">\(-A\)</span> is a <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> by <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> matrix, and <span class="process-math">\(A^T\)</span> is a <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> by <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> matrix.</div>
-<div class="solutions">
-<details id="extracted-webwork-7-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-7-1-2-1"><span class="process-math">\(5\)</span></div></div></details><details id="extracted-webwork-7-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-7-1-3-1"><span class="process-math">\(8\)</span></div></div></details><details id="extracted-webwork-7-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-7-1-4-1"><span class="process-math">\(8\)</span></div></div></details><details id="extracted-webwork-7-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-7-1-5-1"><span class="process-math">\(5\)</span></div></div></details>
-</div>
-</div>
-</div></article><article class="exercise exercise-like" id="s_algebraic_ex-1-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div id="webwork-8" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="8" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Utah/Business_Algebra/set10_Matrices/p21.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-8')">Activate</button></div>
-<div class="problem-contents">
-<div class="para" id="extracted-webwork-8-1-1-1">Let</div> <div class="para logical" id="extracted-webwork-8-1-1-2"><div class="displaymath process-math">
-\begin{equation*}
-A=\left(\begin{array}{cc} 
-9 \amp  4 \cr
-2 \amp  9
-\end{array}\right)
-, 
-B=\left(\begin{array}{cc} 
--9 \amp  2 \cr
--8 \amp  9
-\end{array}\right)
-, 
-C=\left(\begin{array}{cc} 
-8 \amp  8 \cr
-2 \amp  7
-\end{array}\right).
-\end{equation*}
-</div></div> <div class="para" id="extracted-webwork-8-1-1-3">Then</div> <div class="para logical" id="extracted-webwork-8-1-1-4"><div class="displaymath process-math">
-\begin{equation*}
-A + B^T=\left(\begin{array}{cc} 
-a_{11} \amp  a_{12} \cr
-a_{21} \amp  a_{22} 
-\end{array}\right)
-\end{equation*}
-</div></div> <div class="para" id="extracted-webwork-8-1-1-5">where <span class="process-math">\(a_{11}=\)</span> <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, <span class="process-math">\(a_{12}=\)</span> <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, <span class="process-math">\(a_{21}=\)</span> <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, <span class="process-math">\(a_{22}=\)</span> <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>,</div> <div class="para" id="extracted-webwork-8-1-1-6">and</div> <div class="para logical" id="extracted-webwork-8-1-1-7"><div class="displaymath process-math">
-\begin{equation*}
-A - B + C^T=\left(\begin{array}{cc} 
-c_{11} \amp  c_{12} \cr
-c_{21} \amp  c_{22}
-\end{array}\right)
-\end{equation*}
-</div></div> <div class="para" id="extracted-webwork-8-1-1-8">where <span class="process-math">\(c_{11}=\)</span> <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, <span class="process-math">\(c_{12}=\)</span> <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, <span class="process-math">\(c_{21}=\)</span> <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>, <span class="process-math">\(c_{22}=\)</span> <span class="fillin underline" role="img" aria-label="3-character blank" style="width: 1.363636363636364em;"></span>.</div>
-<div class="solutions">
-<details id="extracted-webwork-8-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-2-1"><span class="process-math">\(0\)</span></div></div></details><details id="extracted-webwork-8-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-3-1"><span class="process-math">\(-4\)</span></div></div></details><details id="extracted-webwork-8-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-4-1"><span class="process-math">\(4\)</span></div></div></details><details id="extracted-webwork-8-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-5-1"><span class="process-math">\(18\)</span></div></div></details><details id="extracted-webwork-8-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-6-1"><span class="process-math">\(26\)</span></div></div></details><details id="extracted-webwork-8-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-7-1"><span class="process-math">\(4\)</span></div></div></details><details id="extracted-webwork-8-1-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-8-1"><span class="process-math">\(18\)</span></div></div></details><details id="extracted-webwork-8-1-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="extracted-webwork-8-1-9-1"><span class="process-math">\(7\)</span></div></div></details>
-</div>
-</div>
-</div></article></article><article class="subexercises" id="s_algebraic_ex-2"><h4 class="heading"><span class="title">Written Exercises</span></h4>
-<article class="exercise exercise-like" id="s_algebraic_ex-2-2"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="s_algebraic_ex-2-2-1-1">In this exercise you will complete the proof of <a href="s_algebraic.html#th_matrix_alg_props" class="xref" data-knowl="./knowl/xref/th_matrix_alg_props.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.1: Properties of matrix addition, multiplication and scalar multiplication">Theorem 0.2.1</a>.</div> <ol class="lower-alpha lower-alpha-level-1" id="s_algebraic_ex-2-2-1-2">
-<li id="s_algebraic_ex-2-2-1-2-1"><div class="para" id="s_algebraic_ex-2-2-1-2-1-1">Prove <a href="s_algebraic.html#th_matrix_comm" class="xref" data-knowl="./knowl/xref/th_matrix_comm.html" data-reveal-label="Reveal" data-close-label="Close" title="Item i: Addition commutative law">Item i</a>.</div></li>
-<li id="s_algebraic_ex-2-2-1-2-2"><div class="para" id="s_algebraic_ex-2-2-1-2-2-1">Prove <a href="s_algebraic.html#th_matrixadd_assoc" class="xref" data-knowl="./knowl/xref/th_matrixadd_assoc.html" data-reveal-label="Reveal" data-close-label="Close" title="Item ii: Addition associative law">Item ii</a>.</div></li>
-<li id="s_algebraic_ex-2-2-1-2-3"><div class="para" id="s_algebraic_ex-2-2-1-2-3-1">Prove <a href="s_algebraic.html#th_matrix_leftdist" class="xref" data-knowl="./knowl/xref/th_matrix_leftdist.html" data-reveal-label="Reveal" data-close-label="Close" title="Item iv: Left-distributive law">Item iv</a>.</div></li>
-<li id="s_algebraic_ex-2-2-1-2-4"><div class="para" id="s_algebraic_ex-2-2-1-2-4-1">Prove <a href="s_algebraic.html#th_matrix_rightdist" class="xref" data-knowl="./knowl/xref/th_matrix_rightdist.html" data-reveal-label="Reveal" data-close-label="Close" title="Item v: Right-distributive law">Item v</a>.</div></li>
-<li id="s_algebraic_ex-2-2-1-2-5"><div class="para" id="s_algebraic_ex-2-2-1-2-5-1">Prove <a href="s_algebraic.html#th_matrixscale_dist" class="xref" data-knowl="./knowl/xref/th_matrixscale_dist.html" data-reveal-label="Reveal" data-close-label="Close" title="Item vi: Scaling distributive law">Item vi</a>.</div></li>
-<li id="s_algebraic_ex-2-2-1-2-6"><div class="para" id="s_algebraic_ex-2-2-1-2-6-1">Prove <a href="s_algebraic.html#th_matrixscale_dist2" class="xref" data-knowl="./knowl/xref/th_matrixscale_dist2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item vii: Another scaling distributive law">Item vii</a>.</div></li>
-<li id="s_algebraic_ex-2-2-1-2-7"><div class="para" id="s_algebraic_ex-2-2-1-2-7-1">Prove <a href="s_algebraic.html#th_matrixscale_assoc" class="xref" data-knowl="./knowl/xref/th_matrixscale_assoc.html" data-reveal-label="Reveal" data-close-label="Close" title="Item viii: Scaling associative law">Item viii</a>.</div></li>
-<li id="s_algebraic_ex-2-2-1-2-8"><div class="para" id="s_algebraic_ex-2-2-1-2-8-1">Prove <a href="s_algebraic.html#th_matrixscale_comm" class="xref" data-knowl="./knowl/xref/th_matrixscale_comm.html" data-reveal-label="Reveal" data-close-label="Close" title="Item ix: Scaling commutative law">Item ix</a>.</div></li>
-</ol>
-<div class="solutions"><details id="s_algebraic_ex-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="s_algebraic_ex-2-2-2-1"><ol class="lower-alpha lower-alpha-level-1" id="s_algebraic_ex-2-2-2-1-1"><li id="s_algebraic_ex-2-2-2-1-1-1"><div class="para logical" id="s_algebraic_ex-2-2-2-1-1-1-1">
-<div class="para">We  need both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> to be <span class="process-math">\(m\times n \)</span> for the expression to make sense. It is easy to see that <span class="process-math">\(A+B\)</span> and <span class="process-math">\(B+A\)</span> are both <span class="process-math">\(m\times n\)</span> matrices. We must show <span class="process-math">\((A+B)_{ij}=(B+A)_{ij}\)</span> for all <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span> We have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_matrix_add_subtract.html ./knowl/xref/d_matrix_add_subtract.html" id="s_algebraic_ex-2-2-2-1-1-1-1-10">
-\begin{align*}
-(A+B)_{ij} \amp =(A)_{ij}+(B)_{ij}\amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.8}}) \\
-\amp =(B)_{ij}+(A)_{ij}\amp \text{(real addition is comm.)} \\
-\amp =(B+A)_{ij} \amp (\knowl{./knowl/xref/d_matrix_add_subtract.html}{\text{Definition 0.1.8}} \text{.}
-\end{align*}
-</div>
-</div></li></ol></div></div></details></div></article><article class="exercise exercise-like" id="s_algebraic_ex-2-3"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="para" id="s_algebraic_ex-2-3-1-1">Prove all three statements of <a href="s_algebraic.html#th_matrix_add_mult_ident" class="xref" data-knowl="./knowl/xref/th_matrix_add_mult_ident.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.4: Additive identities, additive inverses, and multiplicative identities">Theorem 0.2.4</a>.</div></article><article class="exercise exercise-like" id="s_algebraic_ex-2-4"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="para" id="s_algebraic_ex-2-4-1-1">In this exercise you will complete the proof of <a href="s_algebraic.html#th_trans_props" class="xref" data-knowl="./knowl/xref/th_trans_props.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 0.2.11: Properties of matrix transposition">Theorem 0.2.11</a>.</div> <ol class="lower-alpha lower-alpha-level-1" id="s_algebraic_ex-2-4-1-2">
-<li id="s_algebraic_ex-2-4-1-2-1"><div class="para" id="s_algebraic_ex-2-4-1-2-1-1">Prove <a href="s_algebraic.html#th_trans_scale" class="xref" data-knowl="./knowl/xref/th_trans_scale.html" data-reveal-label="Reveal" data-close-label="Close" title="Item ii">Item ii</a>.</div></li>
-<li id="s_algebraic_ex-2-4-1-2-2"><div class="para" id="s_algebraic_ex-2-4-1-2-2-1">Prove <a href="s_algebraic.html#th_trans_prod" class="xref" data-knowl="./knowl/xref/th_trans_prod.html" data-reveal-label="Reveal" data-close-label="Close" title="Item iii">Item iii</a>.</div></li>
-<li id="s_algebraic_ex-2-4-1-2-3"><div class="para" id="s_algebraic_ex-2-4-1-2-3-1">Prove <a href="s_algebraic.html#th_trans_owninverse" class="xref" data-knowl="./knowl/xref/th_trans_owninverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Item iv">Item iv</a>.</div></li>
-</ol></article><article class="exercise exercise-like" id="s_algebraic_ex-2-5"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="para" id="s_algebraic_ex-2-5-1-1">Let <span class="process-math">\(A\)</span> an <span class="process-math">\(n\times n\)</span> matrix. We define its <dfn class="terminology">square</dfn> <span class="process-math">\(A^2\)</span> as <span class="process-math">\(A^2=AA\text{.}\)</span>
-</div> <ol class="lower-alpha lower-alpha-level-1" id="s_algebraic_ex-2-5-1-2">
-<li id="s_algebraic_ex-2-5-1-2-1">
-<div class="para" id="s_algebraic_ex-2-5-1-2-1-1">In real number algebra we know that <span class="process-math">\(a^2=0\implies a=0\text{.}\)</span> By contrast, show that there are infinitely many <span class="process-math">\(2\times 2\)</span> matrices <span class="process-math">\(A\)</span> satisfying <span class="process-math">\(A^2=\boldzero_{2\times 2}\text{.}\)</span>
-</div>
-<div class="para" id="s_algebraic_ex-2-5-1-2-1-2">Optional: can you describe in a parametric manner the set of <em class="emphasis">all</em> matrices <span class="process-math">\(A\)</span> satisfying <span class="process-math">\(A^2=\boldzero_{2\times 2}\text{?}\)</span>
-</div>
-</li>
-<li id="s_algebraic_ex-2-5-1-2-2"><div class="para" id="s_algebraic_ex-2-5-1-2-2-1">In real number algebra we know that <span class="process-math">\(a^2=a\implies a=0 \text{ or } a=1\text{.}\)</span> By contrast, show that there are infinitely many <span class="process-math">\(2\times 2\)</span> matrices <span class="process-math">\(A\)</span> satisfying <span class="process-math">\(A^2=A\text{.}\)</span>
-</div></li>
-<li id="s_algebraic_ex-2-5-1-2-3"><div class="para logical" id="s_algebraic_ex-2-5-1-2-3-1">
-<div class="para">In real number algebra we have the identity <span class="process-math">\((x+y)^2=x^2+2xy+y^2\text{.}\)</span> Show that two <span class="process-math">\(n\times n\)</span> matrices <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\)</span> satisfy</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(A+B)^2=A^2+2AB+B^2
-\end{equation*}
-</div>
-<div class="para">if and only if <span class="process-math">\(AB=BA\text{.}\)</span>
-</div>
-</div></li>
-</ol>
-<div class="solutions"><details id="s_algebraic_ex-2-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="s_algebraic_ex-2-5-2-1">For (a) set <span class="process-math">\(A=\abcdmatrix{a}{b}{c}{d}\text{,}\)</span> compute <span class="process-math">\(A^2\text{,}\)</span> set this matrix equal to <span class="process-math">\(\boldzero_{2\times 2}\text{,}\)</span> and try and find some solutions to the corresponding (nonlinear) system of four equations in the unknowns <span class="process-math">\(a,b,c,d\text{.}\)</span>
-</div>
-<div class="para" id="s_algebraic_ex-2-5-2-2">Similar hint for (b), only now set <span class="process-math">\(A^2=A\text{.}\)</span>
-</div>
-</div></details></div></article><article class="exercise exercise-like" id="s_algebraic_ex-2-6"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<div class="introduction" id="s_algebraic_ex-2-6-1"><div class="para" id="s_algebraic_ex-2-6-1-1">Consider the matrix equation <span class="process-math">\(A\, \begin{bmatrix}
-1\amp 1\\ 1\amp 1
-\end{bmatrix}=\begin{bmatrix}
-1\amp 1\\ 1\amp 1
-\end{bmatrix}\text{.}\)</span>
-</div></div>
-<article class="task exercise-like" id="s_algebraic_ex-2-6-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para logical" id="s_algebraic_ex-2-6-2-1-1">
-<div class="para">The following chain of implications is invalid.</div>
-<div class="displaymath process-math" id="s_algebraic_ex-2-6-2-1-1-1">
-\begin{align*}
-A\, \begin{bmatrix}
-1\amp 1\\ 1\amp 1
-\end{bmatrix}=\begin{bmatrix}
-1\amp 1\\ 1\amp 1
-\end{bmatrix}\amp\implies A\, \begin{bmatrix}
-1\amp 1\\ 1\amp 1
-\end{bmatrix}=I_2\, \begin{bmatrix}
-1\amp 1\\ 1\amp 1
-\end{bmatrix} \\
-\amp\implies A=I_2 \text{.}
-\end{align*}
-</div>
-<div class="para">For each implication in the chain, explain why it is valid or invalid.</div>
-</div></article><article class="task exercise-like" id="s_algebraic_ex-2-6-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para logical" id="s_algebraic_ex-2-6-3-1-1">
-<div class="para">Find all <span class="process-math">\(A\)</span> satisfying</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A\, \begin{bmatrix}
-1\amp 1\\ 1\amp 1
-\end{bmatrix}=\begin{bmatrix}
-1\amp 1\\ 1\amp 1
-\end{bmatrix}\text{.}
-\end{equation*}
-</div>
-</div>
-<div class="solutions"><details id="s_algebraic_ex-2-6-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="s_algebraic_ex-2-6-3-2-1">Write <span class="process-math">\(A=\begin{bmatrix}
-a\amp b\\ c\amp d
-\end{bmatrix}\)</span> and set up a system of linear equations in the unknowns <span class="process-math">\(a,b,c,d\text{.}\)</span>
-</div></div></details></div></article></article></article></section></section></div>
+</div></article></details></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_matrix.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>

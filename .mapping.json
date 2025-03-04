@@ -1,1 +1,1 @@
-{"source/c_matrices.ptx": ["c_matrices"], "source/s_matrix.ptx": ["s_matrix", "ss_matrix_arithmetic"], "source/s_algebraic.ptx": ["s_algebraic", "vid_proof_assoc", "vid_proof_transp"]}
+{"source/c_matrices.ptx": ["c_matrices"], "source/s_matrix.ptx": ["s_matrix", "ss_matrix_arithmetic"], "source/s_algebraic.ptx": ["s_algebraic"]}
