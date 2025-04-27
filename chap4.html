@@ -147,7 +147,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-vectors-lin-combs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root-1-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-vectors-lin-combs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root-1-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section4-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}ula
 
   A open-access textbook to support a two-course sequence in linear
@@ -463,17 +463,26 @@ Notation
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-3" class="internal"><span class="codenumber">0.2.1</span> <span class="title">Vectors</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-4" class="internal"><span class="codenumber">0.2.2</span> <span class="title">Linear combinations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-5" class="internal"><span class="codenumber">0.2.3</span> <span class="title">Summary</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-6" class="internal"><span class="codenumber">0.2.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="chap4.html" class="internal"><span class="codenumber">1</span> <span class="title">Eigenvalues and eigenvectors</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chap4.html" class="internal"><span class="codenumber">1</span> <span class="title">Eigenvalues and eigenvectors</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section4-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">An introduction to eigenvalues and eigenvectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#section4-1-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">A few examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#subsec-eigen-use" class="internal"><span class="codenumber">1.1.2</span> <span class="title">The usefulness of eigenvalues and eigenvectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#section4-1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="chapter" id="chap4"><h2 class="heading">
-<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">1</span><span class="space"> </span><span class="title">Eigenvalues and eigenvectors</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="chap4"><h2 class="heading">
+<span xmlns:xlink="http://www.w3.org/1999/xlink" class="type">Chapter</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="space"> </span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="codenumber">1</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="space"> </span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="title">Eigenvalues and eigenvectors</span>
 </h2>
-<section class="introduction" id="chap4-2"><div class="para" id="chap4-2-1">Our primary concern so far has been to develop an understanding of solutions to linear systems <span class="process-math">\(A\xvec=\bvec\text{.}\)</span> In this way, our two fundamental questions about the existence and uniqueness of solutions led us to the concepts of span and linear independence.</div>
+<section xmlns:xlink="http://www.w3.org/1999/xlink" class="introduction" id="chap4-2"><div class="para" id="chap4-2-1">Our primary concern so far has been to develop an understanding of solutions to linear systems <span class="process-math">\(A\xvec=\bvec\text{.}\)</span> In this way, our two fundamental questions about the existence and uniqueness of solutions led us to the concepts of span and linear independence.</div>
 <div class="para logical" id="chap4-2-2">
 <div class="para">We saw that some linear systems are easier to understand than others.  For instance, given the two matrices</div>
 <div class="displaymath process-math">
@@ -491,9 +500,9 @@ B = \left[\begin{array}{rr}
 </div>
 <div class="para">we would much prefer working with the diagonal matrix <span class="process-math">\(A\text{.}\)</span> Solutions to linear systems <span class="process-math">\(A\xvec=\bvec\)</span> are easily determined, and the geometry of the matrix transformation defined by <span class="process-math">\(A\)</span> is easily described.</div>
 </div>
-<div class="para" id="chap4-2-3">We saw in the last chapter, however, that some problems become simpler when we look at them in a new basis.  Is it possible that questions about the non-diagonal matrix <span class="process-math">\(B\)</span> become simpler when viewed in a different basis?  We will see that the answer is "yes," and see how the theory of eigenvalues and eigenvectors, which will be developed in this chapter, provides the key.  We will see how this theory provides an appropriate change of basis so that questions about the non-diagonal matrix <span class="process-math">\(B\)</span> are equivalent to questions about the diagonal matrix <span class="process-math">\(A\text{.}\)</span>  In fact, we will see that these two matrices are, in some sense, equivalent to one another.</div></section></section></div>
+<div class="para" id="chap4-2-3">We saw in the last chapter, however, that some problems become simpler when we look at them in a new basis.  Is it possible that questions about the non-diagonal matrix <span class="process-math">\(B\)</span> become simpler when viewed in a different basis?  We will see that the answer is "yes," and see how the theory of eigenvalues and eigenvectors, which will be developed in this chapter, provides the key.  We will see how this theory provides an appropriate change of basis so that questions about the non-diagonal matrix <span class="process-math">\(B\)</span> are equivalent to questions about the diagonal matrix <span class="process-math">\(A\text{.}\)</span>  In fact, we will see that these two matrices are, in some sense, equivalent to one another.</div></section><nav class="summary-links"><ul><li xmlns:xlink="http://www.w3.org/1999/xlink"><a href="section4-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">An introduction to eigenvalues and eigenvectors</span></a></li></ul></nav></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-vectors-lin-combs.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="sec-vectors-lin-combs.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section4-1.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

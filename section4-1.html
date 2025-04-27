@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>An introduction to eigenvalues and eigenvectors</title>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="og:type" content="book">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:title" content="Komputasi Aljabar Linier">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:author" content="Mulaab M">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.6.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.33e494184ef307b3.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f7a03b209751032d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script xmlns:xlink="http://www.w3.org/1999/xlink" src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://linear-algebra.northwestern.pub/"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Komputasi Aljabar Linier</span></a></h1>
+<p class="byline">Mulaab M</p>
+</div>
+</div></header><nav xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="chap4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap4.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}ula
+
+  A open-access textbook to support a two-course sequence in linear
+  algebra that does not require calculus as a prerequisite.  The text
+  includes many activities designed to facilitate an active learning
+  environment, embedded Sage cells to develop
+  computational proficiency, and numerous realistic applications.
+
+
+  \newcommand{\avec}{{\mathbf a}}
+  \newcommand{\bvec}{{\mathbf b}}
+  \newcommand{\cvec}{{\mathbf c}}
+  \newcommand{\dvec}{{\mathbf d}}
+  \newcommand{\dtil}{\widetilde{\mathbf d}}
+  \newcommand{\evec}{{\mathbf e}}
+  \newcommand{\fvec}{{\mathbf f}}
+  \newcommand{\nvec}{{\mathbf n}}
+  \newcommand{\pvec}{{\mathbf p}}
+  \newcommand{\qvec}{{\mathbf q}}
+  \newcommand{\svec}{{\mathbf s}}
+  \newcommand{\tvec}{{\mathbf t}}
+  \newcommand{\uvec}{{\mathbf u}}
+  \newcommand{\vvec}{{\mathbf v}}
+  \newcommand{\wvec}{{\mathbf w}}
+  \newcommand{\xvec}{{\mathbf x}}
+  \newcommand{\yvec}{{\mathbf y}}
+  \newcommand{\zvec}{{\mathbf z}}
+  \newcommand{\rvec}{{\mathbf r}}
+  \newcommand{\mvec}{{\mathbf m}}
+  \newcommand{\zerovec}{{\mathbf 0}}
+  \newcommand{\onevec}{{\mathbf 1}}
+  \newcommand{\real}{{\mathbb R}}
+  \newcommand{\twovec}[2]{\left[\begin{array}{r}#1 \\ #2
+  \end{array}\right]}
+  \newcommand{\ctwovec}[2]{\left[\begin{array}{c}#1 \\ #2
+  \end{array}\right]}
+  \newcommand{\threevec}[3]{\left[\begin{array}{r}#1 \\ #2 \\ #3
+  \end{array}\right]}
+  \newcommand{\cthreevec}[3]{\left[\begin{array}{c}#1 \\ #2 \\ #3
+  \end{array}\right]}
+  \newcommand{\fourvec}[4]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\ #4
+  \end{array}\right]}
+  \newcommand{\cfourvec}[4]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\ #4
+  \end{array}\right]}
+  \newcommand{\fivevec}[5]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\
+  #4 \\ #5 \\ \end{array}\right]}
+  \newcommand{\cfivevec}[5]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\
+  #4 \\ #5 \\ \end{array}\right]}
+  \newcommand{\mattwo}[4]{\left[\begin{array}{rr}#1 \amp #2 \\ #3 \amp #4 \\ \end{array}\right]}
+  \newcommand{\laspan}[1]{\text{Span}\{#1\}}
+  \newcommand{\bcal}{{\cal B}}
+  \newcommand{\ccal}{{\cal C}}
+  \newcommand{\scal}{{\cal S}}
+  \newcommand{\wcal}{{\cal W}}
+  \newcommand{\ecal}{{\cal E}}
+  \newcommand{\coords}[2]{\left\{#1\right\}_{#2}}
+  \newcommand{\gray}[1]{\color{gray}{#1}}
+  \newcommand{\lgray}[1]{\color{lightgray}{#1}}
+  \newcommand{\rank}{\operatorname{rank}}
+  \newcommand{\row}{\text{Row}}
+  \newcommand{\col}{\text{Col}}
+  \renewcommand{\row}{\text{Row}}
+  \newcommand{\nul}{\text{Nul}}
+  \newcommand{\var}{\text{Var}}
+  \newcommand{\corr}{\text{corr}}
+  \newcommand{\len}[1]{\left|#1\right|}
+  \newcommand{\bbar}{\overline{\bvec}}
+  \newcommand{\bhat}{\widehat{\bvec}}
+  \newcommand{\bperp}{\bvec^\perp}
+  \newcommand{\xhat}{\widehat{\xvec}}
+  \newcommand{\vhat}{\widehat{\vvec}}
+  \newcommand{\uhat}{\widehat{\uvec}}
+  \newcommand{\what}{\widehat{\wvec}}
+  \newcommand{\Sighat}{\widehat{\Sigma}}
+
+
+Preview Activity
+Notation
+
+
+    \newcommand{\Z}{{\mathbb Z}}
+    \newcommand{\Q}{{\mathbb Q}}
+    \newcommand{\R}{{\mathbb R}}
+    \newcommand{\C}{{\mathbb C}}
+    \newcommand{\T}{{\mathbb T}}
+    \newcommand{\F}{{\mathbb F}}
+    \newcommand{\HH}{{\mathbb H}}
+    \newcommand{\compose}{\circ}
+    \newcommand{\bolda}{{\mathbf a}}
+    \newcommand{\boldb}{{\mathbf b}}
+    \newcommand{\boldc}{{\mathbf c}}
+    \newcommand{\boldd}{{\mathbf d}}
+    \newcommand{\bolde}{{\mathbf e}}
+    \newcommand{\boldi}{{\mathbf i}}
+    \newcommand{\boldj}{{\mathbf j}}
+    \newcommand{\boldk}{{\mathbf k}}
+    \newcommand{\boldn}{{\mathbf n}}
+    \newcommand{\boldp}{{\mathbf p}}
+    \newcommand{\boldq}{{\mathbf q}}
+    \newcommand{\boldr}{{\mathbf r}}
+    \newcommand{\bolds}{{\mathbf s}}
+    \newcommand{\boldt}{{\mathbf t}}
+    \newcommand{\boldu}{{\mathbf u}}
+    \newcommand{\boldv}{{\mathbf v}}
+    \newcommand{\boldw}{{\mathbf w}}
+    \newcommand{\boldx}{{\mathbf x}}
+    \newcommand{\boldy}{{\mathbf y}}
+    \newcommand{\boldz}{{\mathbf z}}
+    \newcommand{\boldzero}{{\mathbf 0}}
+    \newcommand{\boldmod}{\boldsymbol{ \bmod }}
+    \newcommand{\boldT}{{\mathbf T}}
+    \newcommand{\boldN}{{\mathbf N}}
+    \newcommand{\boldB}{{\mathbf B}}
+    \newcommand{\boldF}{{\mathbf F}}
+    \newcommand{\boldS}{{\mathbf S}}
+    \newcommand{\boldG}{{\mathbf G}}
+    \newcommand{\boldK}{{\mathbf K}}
+    \newcommand{\boldL}{{\mathbf L}}
+    \DeclareMathOperator{\lcm}{lcm}
+    \DeclareMathOperator{\Span}{span}
+    \DeclareMathOperator{\tr}{tr}
+    \DeclareMathOperator{\NS}{null}
+    \DeclareMathOperator{\RS}{row}
+    \DeclareMathOperator{\CS}{col}
+    \DeclareMathOperator{\im}{im}
+    \DeclareMathOperator{\range}{range}
+    \DeclareMathOperator{\rank}{rank}
+    \DeclareMathOperator{\nullity}{nullity}
+    \DeclareMathOperator{\sign}{sign}
+    \DeclareMathOperator{\Fix}{Fix}
+    \DeclareMathOperator{\Aff}{Aff}
+    \DeclareMathOperator{\Frac}{Frac}
+    \DeclareMathOperator{\Ann}{Ann}
+    \DeclareMathOperator{\Tor}{Tor}
+    \DeclareMathOperator{\id}{id}
+    \DeclareMathOperator{\mdeg}{mdeg}
+    \DeclareMathOperator{\Lt}{Lt}
+    \DeclareMathOperator{\Lc}{Lc}
+    \DeclareMathOperator{\disc}{disc}
+    \DeclareMathOperator{\Frob}{Frob}
+    \DeclareMathOperator{\adj}{adj}
+    \DeclareMathOperator{\curl}{curl}
+    \DeclareMathOperator{\grad}{grad}
+    \DeclareMathOperator{\diver}{div}
+    \DeclareMathOperator{\flux}{flux}
+    \def\Gal{\operatorname{Gal}}
+    \def\ord{\operatorname{ord}}
+    \def\ML{\operatorname{M}}
+    \def\GL{\operatorname{GL}}
+    \def\PGL{\operatorname{PGL}}
+    \def\SL{\operatorname{SL}}
+    \def\PSL{\operatorname{PSL}}
+    \def\GSp{\operatorname{GSp}}
+    \def\PGSp{\operatorname{PGSp}}
+    \def\Sp{\operatorname{Sp}}
+    \def\PSp{\operatorname{PSp}}
+    \def\Aut{\operatorname{Aut}}
+    \def\Inn{\operatorname{Inn}}
+    \def\Hom{\operatorname{Hom}}
+    \def\End{\operatorname{End}}
+    \def\ch{\operatorname{char}}
+    \def\Zp{\Z/p\Z}
+    \def\Zm{\Z/m\Z}
+    \def\Zn{\Z/n\Z}
+    \def\Fp{\F_p}
+    \newcommand{\surjects}{\twoheadrightarrow}
+    \newcommand{\injects}{\hookrightarrow}
+    \newcommand{\bijects}{\leftrightarrow}
+    \newcommand{\isomto}{\overset{\sim}{\rightarrow}}
+    \newcommand{\floor}[1]{\lfloor#1\rfloor}
+    \newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
+    \newcommand{\mclass}[2][m]{[#2]_{#1}}
+    \newcommand{\val}[2][]{\left\lvert #2\right\rvert_{#1}}
+    \newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
+    \newcommand{\valuation}[2][]{\left\lvert #2\right\rvert_{#1}}
+    \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+    \newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+    \newcommand{\anmonic}{x^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+    \newcommand{\bmpoly}{b_mx^m+b_{m-1}x^{m-1}\cdots +b_1x+b_0}
+    \newcommand{\bnpoly}{b_nx^n+b_{n-1}x^{n-1}\cdots +b_1x+b_0}
+    \newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+    \newcommand{\normalin}{\trianglelefteq}
+    \newcommand{\angvec}[1]{\langle #1\rangle}
+    \newcommand{\varpoly}[2]{#1_{#2}x^{#2}+#1_{#2-1}x^{#2-1}\cdots +#1_1x+#1_0}
+    \newcommand{\varpower}[1][a]{#1_0+#1_1x+#1_1x^2+\cdots}
+    \newcommand{\limasto}[2][x]{\lim_{#1\rightarrow #2}}
+    \def\ntoinfty{\lim_{n\rightarrow\infty}}
+    \def\xtoinfty{\lim_{x\rightarrow\infty}}
+    \def\ii{\item}
+    \def\bb{\begin{enumerate}}
+    \def\ee{\end{enumerate}}
+    \def\ds{\displaystyle}
+    \def\p{\partial}
+    \newcommand{\abcdmatrix}[4]{\begin{bmatrix}#1\amp #2\\ #3\amp #4 \end{bmatrix}
+    }
+    \newenvironment{amatrix}[1][ccc|c]{\left[\begin{array}{#1}}{\end{array}\right]}
+    \newenvironment{linsys}[2][m]{
+    \begin{array}[#1]{@{}*{#2}{rc}r@{}}
+    }{
+    \end{array}}
+    \newcommand{\eqsys}{\begin{array}{rcrcrcr}
+    a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp b_1\\
+    a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp b_2\\
+    \amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp  \\
+    a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp b_m
+    \end{array}
+    }
+    \newcommand{\numeqsys}{\begin{array}{rrcrcrcr}
+    e_1:\amp  a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp b_1\\
+    e_2: \amp a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp b_2\\
+    \amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp  \\
+    e_m: \amp a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp b_m
+    \end{array}
+    }
+    \newcommand{\homsys}{\begin{array}{rcrcrcr}
+    a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp 0\\
+    a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp 0\\
+    \amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp \\
+    a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp 0
+    \end{array}
+    }
+    \newcommand{\vareqsys}[4]{
+    \begin{array}{ccccccc}
+    #3_{11}x_{1}\amp +\amp #3_{12}x_{2}\amp +\cdots+\amp  #3_{1#2}x_{#2}\amp =\amp #4_1\\
+    #3_{21}x_{1}\amp +\amp #3_{22}x_{2}\amp +\cdots+\amp #3_{2#2}x_{#2}\amp =\amp #4_2\\
+    \vdots \amp \amp \vdots \amp  \amp \vdots \amp =\amp  \\
+    #3_{#1 1}x_{1}\amp +\amp #3_{#1 2}x_{2}\amp +\cdots +\amp #3_{#1 #2}x_{#2}\amp =\amp #4_{#1}
+    \end{array}
+    }
+    \newcommand{\genmatrix}[1][a]{
+    \begin{bmatrix}
+    #1_{11} \amp  #1_{12} \amp  \cdots \amp  #1_{1n} \\
+    #1_{21} \amp  #1_{22} \amp  \cdots \amp  #1_{2n} \\
+    \vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \\
+    #1_{m1} \amp  #1_{m2} \amp  \cdots \amp  #1_{mn}
+    \end{bmatrix}
+    }
+    \newcommand{\varmatrix}[3]{
+    \begin{bmatrix}
+    #3_{11} \amp  #3_{12} \amp  \cdots \amp  #3_{1#2} \\
+    #3_{21} \amp  #3_{22} \amp  \cdots \amp  #3_{2#2} \\
+    \vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \\
+    #3_{#1 1} \amp  #3_{#1 2} \amp  \cdots \amp  #3_{#1 #2}
+    \end{bmatrix}
+    }
+    \newcommand{\augmatrix}{
+    \begin{amatrix}[cccc|c]
+    a_{11} \amp  a_{12} \amp  \cdots \amp  a_{1n} \amp b_{1}\\
+    a_{21} \amp  a_{22} \amp  \cdots \amp  a_{2n} \amp b_{2}\\
+    \vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \amp \vdots\\
+    a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
+    \end{amatrix}
+    }
+    \newcommand{\varaugmatrix}[4]{
+    \begin{amatrix}[cccc|c]
+    #3_{11} \amp  #3_{12} \amp  \cdots \amp  #3_{1#2} \amp #4_{1}\\
+    #3_{21} \amp  #3_{22} \amp  \cdots \amp  #3_{2#2} \amp #4_{2}\\
+    \vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \amp \vdots\\
+    #3_{#1 1} \amp  #3_{#1 2} \amp  \cdots \amp  #3_{#1 #2}\amp #4_{#1}
+    \end{amatrix}
+    }
+    \newcommand{\spaceforemptycolumn}{\makebox[\wd\boxofmathplus]{\ }}
+
+    \newcommand{\generalmatrix}[3]{
+    \left(
+    \begin{array}{cccc}
+    #1_{1,1}  \amp #1_{1,2}  \amp \ldots  \amp #1_{1,#2}  \\
+    #1_{2,1}  \amp #1_{2,2}  \amp \ldots  \amp #1_{2,#2}  \\
+    \amp \vdots                         \\
+    #1_{#3,1} \amp #1_{#3,2} \amp \ldots  \amp #1_{#3,#2}
+    \end{array}
+    \right)  }
+    \newcommand{\colvec}[2][c]{\begin{amatrix}[#1] #2 \end{amatrix}}
+    \DeclareMathOperator{\size}{size}
+    \DeclareMathOperator{\adjoint}{adj}
+    \DeclareMathOperator{\sgn}{sgn}
+    \newcommand{\restrictionmap}[2]{{#1}\mathpunct\upharpoonright\hbox{}_{#2}}
+    \renewcommand{\emptyset}{\varnothing}
+
+    \newcommand{\proj}[2]{\mbox{proj}_{#2}({#1}) }
+    \renewcommand{\Re}{\operatorname{Re}}
+     \renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="root-1-2-2.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="root-1-2-2-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="c_matrices.html" class="internal"><span class="codenumber">0</span> <span class="title">Matrik, Aritmatika Matrik, dan Aljabar Matrik</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_matrix.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Aritmatika Matrik</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_attributes" class="internal"><span class="codenumber">0.1.1</span> <span class="title">Dasar dasar Matrik</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_arithmetic" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Penjumlahan, Pengurangan, dan Perkalian Skalar</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_mult" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Perkalian Matrik</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_matrix-6" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Transpose Matriks</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-vectors-lin-combs.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Vectors and linear combinations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-3" class="internal"><span class="codenumber">0.2.1</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-4" class="internal"><span class="codenumber">0.2.2</span> <span class="title">Linear combinations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-5" class="internal"><span class="codenumber">0.2.3</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chap4.html" class="internal"><span class="codenumber">1</span> <span class="title">Eigenvalues and eigenvectors</span></a></div>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="section4-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">An introduction to eigenvalues and eigenvectors</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#section4-1-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">A few examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#subsec-eigen-use" class="internal"><span class="codenumber">1.1.2</span> <span class="title">The usefulness of eigenvalues and eigenvectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#section4-1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="section4-1"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">An introduction to eigenvalues and eigenvectors</span>
+</h2>
+<section class="introduction" id="section4-1-2"><div class="para" id="section4-1-2-1">This section introduces the concept of eigenvalues and eigenvectors and offers an example that motivates our interest in them.  The point here is to develop an intuitive understanding of eigenvalues and eigenvectors and explain how they can be used to simplify some problems that we have previously encountered. In the rest of this chapter, we will develop this concept into a richer theory and illustrate its use with more meaningful examples.</div>
+<details id="section4-1-2-2" class="exploration project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span>
+</h3></summary><article class="exploration project-like knowl__content"><div class="para logical" id="section4-1-2-2-1-1">
+<div class="para">Before we introduce the definition of eigenvectors and eigenvalues, it will be helpful to remember some ideas we have seen previously.</div>
+<ol class="lower-alpha ol-marker-1" id="section4-1-2-2-1-1-1">
+<li id="section4-1-2-2-1-1-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
+<div class="sbspanel top" style="width:51.2820512820513%;"><div class="para" id="section4-1-2-2-1-1-1-1-1-1">Suppose that <span class="process-math">\(\vvec\)</span> is the vector shown in the figure.  Sketch the vector <span class="process-math">\(2\vvec\)</span> and the vector <span class="process-math">\(-\vvec\text{.}\)</span>
+</div></div>
+<div class="sbspanel top" style="width:46.1538461538462%;"><img src="external/images/eigen-intro-vec.svg" role="img" class="contained"></div>
+</div></div></li>
+<li id="section4-1-2-2-1-1-1-2"><div class="para" id="section4-1-2-2-1-1-1-2-1">State the geometric effect that scalar multiplication has on the vector <span class="process-math">\(\vvec\text{.}\)</span>  Then sketch all the vectors of the form <span class="process-math">\(\lambda \vvec\)</span> where <span class="process-math">\(\lambda\)</span> is a scalar.</div></li>
+<li id="section4-1-2-2-1-1-1-3"><div class="para logical" id="section4-1-2-2-1-1-1-3-1">
+<div class="para">State the geometric effect of the matrix transformation defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{array}{rr}
+3 \amp 0 \\
+0 \amp -1 \\
+\end{array}\right]\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="section4-1-2-2-1-1-1-4"><div class="para logical" id="section4-1-2-2-1-1-1-4-1">
+<div class="para">Suppose that <span class="process-math">\(A\)</span> is a <span class="process-math">\(2\times 2\)</span> matrix and that <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\)</span> are vectors such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vvec_1 = 3 \vvec_1, \qquad A\vvec_2 = -\vvec_2\text{.}
+\end{equation*}
+</div>
+<div class="para">Use the linearity of matrix multiplication to express the following vectors in terms of <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\text{.}\)</span>
+</div>
+<ol class="decimal ol-marker-2" id="section4-1-2-2-1-1-1-4-1-8">
+<li id="section4-1-2-2-1-1-1-4-1-8-1"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-1-1"><span class="process-math">\(A(4\vvec_1)\text{.}\)</span></div></li>
+<li id="section4-1-2-2-1-1-1-4-1-8-2"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-2-1"><span class="process-math">\(A(\vvec_1 + \vvec_2)\text{.}\)</span></div></li>
+<li id="section4-1-2-2-1-1-1-4-1-8-3"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-3-1"><span class="process-math">\(A(4\vvec_1 -3\vvec_2)\text{.}\)</span></div></li>
+<li id="section4-1-2-2-1-1-1-4-1-8-4"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-4-1"><span class="process-math">\(A^2\vvec_1\text{.}\)</span></div></li>
+<li id="section4-1-2-2-1-1-1-4-1-8-5"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-5-1"><span class="process-math">\(A^2(4\vvec_1 - 3\vvec_2)\text{.}\)</span></div></li>
+<li id="section4-1-2-2-1-1-1-4-1-8-6"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-6-1"><span class="process-math">\(A^4\vvec_1\text{.}\)</span></div></li>
+</ol>
+</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="section4-1-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-1-2-2-2-1"><ol class="lower-alpha ol-marker-1" id="section4-1-2-2-2-1-1">
+<li id="section4-1-2-2-2-1-1-1"><div class="para" id="section4-1-2-2-2-1-1-1-1">The vectors are as shown. <div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/ex-eigen-intro-vec.svg" role="img" class="contained"></div></div></div>
+</div></li>
+<li id="section4-1-2-2-2-1-1-2"><div class="para" id="section4-1-2-2-2-1-1-2-1">Scalar multiplication has the effect of stretching and possibly flipping <span class="process-math">\(\vvec\)</span> along the line defined by <span class="process-math">\(\vvec\text{.}\)</span>
+</div></li>
+<li id="section4-1-2-2-2-1-1-3"><div class="para" id="section4-1-2-2-2-1-1-3-1">This matrix transformation stretches vectors by a factor of <span class="process-math">\(3\)</span> in the horizontal direction and flips vectors vertically.</div></li>
+<li id="section4-1-2-2-2-1-1-4"><div class="para logical" id="section4-1-2-2-2-1-1-4-1">
+<div class="para">Applying linearity, we see that</div>
+<ol class="decimal ol-marker-2" id="section4-1-2-2-2-1-1-4-1-1">
+<li id="section4-1-2-2-2-1-1-4-1-1-1"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-1-1"><span class="process-math">\(A(4\vvec_1) = 4A\vvec_1 =
+12\vvec_1\text{.}\)</span></div></li>
+<li id="section4-1-2-2-2-1-1-4-1-1-2"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-2-1"><span class="process-math">\(A(\vvec_1+\vvec_2) = A\vvec_1 + A\vvec_2 =
+3\vvec_1 - \vvec_2\text{.}\)</span></div></li>
+<li id="section4-1-2-2-2-1-1-4-1-1-3"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-3-1"><span class="process-math">\(A(4\vvec_1-3\vvec_2) = 4A\vvec_1 -3A\vvec_2 =
+12\vvec_1 + 3\vvec_2\text{.}\)</span></div></li>
+<li id="section4-1-2-2-2-1-1-4-1-1-4"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-4-1"><span class="process-math">\(A^2\vvec_1 = A(3\vvec_1) =
+9\vvec_1\text{.}\)</span></div></li>
+<li id="section4-1-2-2-2-1-1-4-1-1-5"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-5-1"><span class="process-math">\(A^2(4\vvec_1-3\vvec_2) = A(12\vvec_1 +3\vvec_2) =
+36\vvec_1 - 3\vvec_2\text{.}\)</span></div></li>
+<li id="section4-1-2-2-2-1-1-4-1-1-6"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-6-1"><span class="process-math">\(A^4\vvec_1 = 3^4\vvec_1 =
+81\vvec_1\text{.}\)</span></div></li>
+</ol>
+</div></li>
+</ol></div></div></details></div></article></details></section><section class="subsection" id="section4-1-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="space"> </span><span class="title">A few examples</span>
+</h3>
+<div class="para" id="section4-1-3-2">We will now introduce the definition of eigenvalues and eigenvectors and then look at a few simple examples.</div>
+<article class="definition definition-like" id="section4-1-3-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
+</h4> <div class="para logical" id="section4-1-3-3-1-3">
+<div class="para">Given a square <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> we say that a nonzero vector <span class="process-math">\(\vvec\)</span> is an <em class="emphasis">eigenvector</em> of <span class="process-math">\(A\)</span> if there is a scalar <span class="process-math">\(\lambda\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vvec = \lambda \vvec\text{.}
+\end{equation*}
+</div>
+<div class="para">The scalar <span class="process-math">\(\lambda\)</span> is called the <em class="emphasis">eigenvalue</em> associated to the eigenvector <span class="process-math">\(\vvec\text{.}\)</span>
+</div>
+</div></article><div class="para" id="section4-1-3-4">At first glance, there is a lot going on in this definition so let’s look at an example.</div>
+<article class="example example-like" id="section4-1-3-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="section4-1-3-5-1-1">
+<div class="para">Consider the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+7 \amp 6 \\
+6 \amp -2 \\
+\end{array}\right]\)</span> and the vector <span class="process-math">\(\vvec=\twovec{2}{1}\text{.}\)</span>  We find that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vvec = \left[\begin{array}{rr}
+7 \amp 6 \\
+6 \amp -2 \\
+\end{array}\right]
+\twovec{2}{1}
+=
+\twovec{20}{10}
+=10\twovec{2}{1}
+=10\vvec\text{.}
+\end{equation*}
+</div>
+<div class="para">In other words, <span class="process-math">\(A\vvec = 10\vvec\text{,}\)</span> which says that <span class="process-math">\(\vvec\)</span> is an eigenvector of the matrix <span class="process-math">\(A\)</span> with associated eigenvalue <span class="process-math">\(\lambda = 10\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="section4-1-3-5-1-2">
+<div class="para">Similarly, if <span class="process-math">\(\wvec = \twovec{-1}{2}\text{,}\)</span> we find that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\wvec = \left[\begin{array}{rr}
+7 \amp 6 \\
+6 \amp -2 \\
+\end{array}\right]
+\twovec{-1}{2}
+=
+\twovec{5}{-10}
+=-5\twovec{-1}{2}
+=-5\wvec\text{.}
+\end{equation*}
+</div>
+<div class="para">Here again, we have <span class="process-math">\(A\wvec = -5\wvec\)</span> showing that <span class="process-math">\(\wvec\)</span> is an eigenvector of <span class="process-math">\(A\)</span> with associated eigenvalue <span class="process-math">\(\lambda=-5\text{.}\)</span>
+</div>
+</div></article><details id="activity-eigen-geom" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span>
+</h4></summary><article class="activity project-like knowl__content"><div class="para logical" id="activity-eigen-geom-1-1">
+<div class="para">This definition has an important geometric interpretation that we will investigate here.</div>
+<ol class="lower-alpha ol-marker-1" id="activity-eigen-geom-1-1-1">
+<li id="activity-eigen-geom-1-1-1-1"><div class="para" id="activity-eigen-geom-1-1-1-1-1">Suppose that <span class="process-math">\(\vvec\)</span> is a nonzero vector and that <span class="process-math">\(\lambda\)</span> is a scalar.  What is the geometric relationship between <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\lambda\vvec\text{?}\)</span>
+</div></li>
+<li id="activity-eigen-geom-1-1-1-2"><div class="para" id="activity-eigen-geom-1-1-1-2-1">Let’s now consider the eigenvector condition: <span class="process-math">\(A\vvec = \lambda\vvec\text{.}\)</span>  Here we have two vectors, <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(A\vvec\text{.}\)</span>  If <span class="process-math">\(A\vvec =
+\lambda\vvec\text{,}\)</span> what is the geometric relationship between <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(A\vvec\text{?}\)</span>
+</div></li>
+<li id="activity-eigen-geom-1-1-1-3">
+<figure class="figure figure-like" id="js-eigen"><iframe id="interactive-eigen" width="600" height="567" src="interactive-eigen-if.html"></iframe><div class="instructions"><details id="interactive-eigen-2" class="solution-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Instructions<span class="period">.</span></span></h5></summary><div class="solution-like knowl__content"><div class="para" id="interactive-eigen-2-1">The sliders in the diagram below allow you to choose a matrix <span class="process-math">\(A = \begin{bmatrix} a \amp b \\ c \amp d
+\end{bmatrix}\text{.}\)</span>  The vector <span class="process-math">\(\vvec\text{,}\)</span> shaded red, may be moved by clicking in the head of the vector.  The vector <span class="process-math">\(A\vvec\)</span> is then shown in outline.</div></div></details></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.3<span class="period">.</span></span><span class="space"> </span>A geometric interpretation of the eigenvalue-eigenvector condition <span class="process-math">\(A\vvec = \lambda\vvec\)</span> .</figcaption></figure><div class="para" id="activity-eigen-geom-1-1-1-3-2">Choose the matrix <span class="process-math">\(A=
+\left[\begin{array}{rr}
+1\amp 2 \\
+2\amp 1 \\
+\end{array}\right]
+\text{.}\)</span> Move the vector <span class="process-math">\(\vvec\)</span> so that the eigenvector condition holds.  What is the eigenvector <span class="process-math">\(\vvec\)</span> and what is the associated eigenvalue?</div>
+</li>
+<li id="activity-eigen-geom-1-1-1-4"><div class="para" id="activity-eigen-geom-1-1-1-4-1">By algebraically computing <span class="process-math">\(A\vvec\text{,}\)</span> verify that the eigenvector condition holds for the vector <span class="process-math">\(\vvec\)</span> that you found.</div></li>
+<li id="activity-eigen-geom-1-1-1-5"><div class="para" id="activity-eigen-geom-1-1-1-5-1">If you multiply the eigenvector <span class="process-math">\(\vvec\)</span> that you found by <span class="process-math">\(2\text{,}\)</span> do you still have an eigenvector?  If so, what is the associated eigenvalue?</div></li>
+<li id="activity-eigen-geom-1-1-1-6"><div class="para" id="activity-eigen-geom-1-1-1-6-1">Are you able to find another eigenvector <span class="process-math">\(\vvec\)</span> that is not a scalar multiple of the first one that you found? If so, what is the eigenvector and what is the associated eigenvalue?</div></li>
+<li id="activity-eigen-geom-1-1-1-7"><div class="para" id="activity-eigen-geom-1-1-1-7-1">Now consider the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+2 \amp 1 \\
+0 \amp 2 \\
+\end{array}\right]
+\text{.}\)</span> Use the diagram to describe any eigenvectors and associated eigenvalues.</div></li>
+<li id="activity-eigen-geom-1-1-1-8"><div class="para" id="activity-eigen-geom-1-1-1-8-1">Finally, consider the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+0 \amp -1 \\
+1 \amp 0 \\
+\end{array}\right]
+\text{.}\)</span> Use the diagram to describe any eigenvectors and associated eigenvalues.  What geometric transformation does this matrix perform on vectors?  How does this explain the presence of any eigenvectors?</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="activity-eigen-geom-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="activity-eigen-geom-2-1"><ol class="lower-alpha ol-marker-1" id="activity-eigen-geom-2-1-1">
+<li id="activity-eigen-geom-2-1-1-1"><div class="para" id="activity-eigen-geom-2-1-1-1-1">The vectors <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\lambda\vvec\)</span> lie on the same line.</div></li>
+<li id="activity-eigen-geom-2-1-1-2"><div class="para" id="activity-eigen-geom-2-1-1-2-1">The vectors <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(A\vvec\)</span> lie on the same line.</div></li>
+<li id="activity-eigen-geom-2-1-1-3"><div class="para" id="activity-eigen-geom-2-1-1-3-1">There are many possibilities, but we see that <span class="process-math">\(\twovec{1}{1}\)</span> is an eigenvector with associated eigenvalue <span class="process-math">\(\lambda=3\text{.}\)</span>
+</div></li>
+<li id="activity-eigen-geom-2-1-1-4"><div class="para" id="activity-eigen-geom-2-1-1-4-1">If we perform the matrix multiplication, we see that <span class="process-math">\(A\twovec{1}{1} = \twovec{3}{3} =
+3\twovec{1}{1}\text{.}\)</span>
+</div></li>
+<li id="activity-eigen-geom-2-1-1-5"><div class="para" id="activity-eigen-geom-2-1-1-5-1">Yes, <span class="process-math">\(\twovec{2}{2}\)</span> is still an eigenvector with associated eigenvalue <span class="process-math">\(\lambda=3\text{.}\)</span>
+</div></li>
+<li id="activity-eigen-geom-2-1-1-6"><div class="para" id="activity-eigen-geom-2-1-1-6-1">We see that <span class="process-math">\(\twovec{1}{-1}\)</span> is an eigenvector with associated eigenvalue <span class="process-math">\(\lambda=-1\text{.}\)</span>
+</div></li>
+<li id="activity-eigen-geom-2-1-1-7"><div class="para" id="activity-eigen-geom-2-1-1-7-1">The only eigenvectors that appear are scalar multiples of <span class="process-math">\(\twovec{1}{0}\)</span> with associated eigenvalue <span class="process-math">\(\lambda=2\text{.}\)</span>
+</div></li>
+<li id="activity-eigen-geom-2-1-1-8"><div class="para" id="activity-eigen-geom-2-1-1-8-1">There are no eigenvectors.  The matrix transformation rotates vectors by <span class="process-math">\(90^\circ\)</span> so it is not possible for <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(A\vvec\)</span> to lie on the same line.</div></li>
+</ol></div></div></details></div></article></details><div class="para" id="section4-1-3-7">Let’s consider the ideas we saw in the activity in some more depth.  To be an eigenvector of <span class="process-math">\(A\text{,}\)</span> the vector <span class="process-math">\(\vvec\)</span> must satisfy <span class="process-math">\(A\vvec = \lambda\vvec\)</span> for some scalar <span class="process-math">\(\lambda\text{.}\)</span>  This means that <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(A\vvec\)</span> are scalar multiples of each other so they must lie on the same line.</div>
+<div class="para" id="section4-1-3-8">Consider now the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+1 \amp 2 \\
+2 \amp 1 \\
+\end{array}\right]
+\text{.}\)</span> On the left of <a href="section4-1.html#fig-eigen-intro" class="xref" data-knowl="./knowl/xref/fig-eigen-intro.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.4">Figure 1.1.4</a>, we see that <span class="process-math">\(\vvec=\twovec{1}{0}\)</span> is not an eigenvector of <span class="process-math">\(A\)</span> since the vectors <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(A\vvec\)</span> do not lie on the same line.  On the right, however, we see that <span class="process-math">\(\vvec=\twovec{1}{1}\)</span> is an eigenvector.  In fact, <span class="process-math">\(A\vvec\)</span> is obtained from <span class="process-math">\(\vvec\)</span> by stretching <span class="process-math">\(\vvec\)</span> by a factor of <span class="process-math">\(3\text{.}\)</span>  Therefore, <span class="process-math">\(\vvec\)</span> is an eigenvector of <span class="process-math">\(A\)</span> with eigenvalue <span class="process-math">\(\lambda = 3\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="fig-eigen-intro"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/images/eigen-intro-1-0.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/images/eigen-intro-1-1.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.4<span class="period">.</span></span><span class="space"> </span>On the left, the vector <span class="process-math">\(\vvec\)</span> is not an eigenvector. On the right, the vector <span class="process-math">\(\vvec\)</span> is an eigenvector with eigenvalue <span class="process-math">\(\lambda = 3\text{.}\)</span></figcaption></figure><div class="para" id="section4-1-3-10">It is not difficult to see that any multiple of <span class="process-math">\(\twovec{1}{1}\)</span> is also an eigenvector of <span class="process-math">\(A\)</span> with eigenvalue <span class="process-math">\(\lambda = 3\text{.}\)</span>  Indeed, we will see later that all the eigenvectors associated to a given eigenvalue form a subspace of <span class="process-math">\(\real^n\text{.}\)</span>
+</div>
+<div class="para" id="section4-1-3-11">In <a href="section4-1.html#fig-eigen-intro-2" class="xref" data-knowl="./knowl/xref/fig-eigen-intro-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.5">Figure 1.1.5</a>, we see that <span class="process-math">\(\vvec=\twovec{-1}{1}\)</span> is also an eigenvector with eigenvalue <span class="process-math">\(\lambda =-1\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="fig-eigen-intro-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/eigen-intro-1-m1.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.5<span class="period">.</span></span><span class="space"> </span>Here we see another eigenvector <span class="process-math">\(\vvec\)</span> with eigenvalue <span class="process-math">\(\lambda = -1\text{.}\)</span></figcaption></figure><div class="para" id="section4-1-3-13">The interactive diagram we used in the activity is meant to convey the fact that the eigenvectors of a matrix <span class="process-math">\(A\)</span> are special vectors.  Most of the time, the vectors <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(A\vvec\)</span> appear visually unrelated.  For certain vectors, however, <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(A\vvec\)</span> line up with one another. Something important is going on when that happens so we call attention to these vectors by calling them eigenvectors. For these vectors, the operation of multiplying by <span class="process-math">\(A\)</span> reduces to the much simpler operation of scalar multiplying by <span class="process-math">\(\lambda\text{.}\)</span>  The reason eigenvectors are important is because it is extremely convenient to be able to replace matrix multiplication by scalar multiplication.</div></section><section class="subsection" id="subsec-eigen-use"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="space"> </span><span class="title">The usefulness of eigenvalues and eigenvectors</span>
+</h3>
+<div class="para" id="subsec-eigen-use-2">In the next section, we will introduce an algebraic technique for finding the eigenvalues and eigenvectors of a matrix.  Before doing that, however, we would like to discuss why eigenvalues and eigenvectors are so useful.</div>
+<div class="para logical" id="subsec-eigen-use-3">
+<div class="para">Let’s continue looking at the example <span class="process-math">\(A = \left[\begin{array}{rr} 1 \amp 2 \\ 2 \amp 1 \\
+\end{array}\right] \text{.}\)</span>  We have seen that <span class="process-math">\(\vvec_1 =
+\twovec{1}{1}\)</span> is an eigenvector with eigenvalue <span class="process-math">\(\lambda=3\)</span> and <span class="process-math">\(\vvec_2=\twovec{-1}{1}\)</span> is an eigenvector with eigenvalue <span class="process-math">\(\lambda = -1\text{.}\)</span>  This means that <span class="process-math">\(A\vvec_1 = 3\vvec_1\)</span> and <span class="process-math">\(A\vvec_2=-\vvec_2\text{.}\)</span> By the linearity of matrix multiplication, we can determine what happens when we multiply a linear combination of <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\)</span> by <span class="process-math">\(A\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A(c_1\vvec_1 + c_2\vvec_2) = 3c_1\vvec_1 - c_2\vvec_2\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><div class="para logical" id="subsec-eigen-use-4-1">
+<div class="para">For instance, if we consider the vector <span class="process-math">\(\xvec=\vvec_1-2\vvec_2\text{,}\)</span> we find that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+A\xvec\amp{}={}A(\vvec_1 - 2\vvec_2) \\
+A\xvec\amp{}={} 3\vvec_1 + 2\vvec_2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">as seen in the figure.</div>
+</div></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/images/eigen-basis.svg" role="img" class="contained"></div>
+</div></div>
+<div class="para" id="subsec-eigen-use-5">In other words, multiplying by <span class="process-math">\(A\)</span> has the effect of stretching a vector <span class="process-math">\(\xvec\)</span> in the <span class="process-math">\(\vvec_1\)</span> direction by a factor of <span class="process-math">\(3\)</span> and flipping <span class="process-math">\(\xvec\)</span> in <span class="process-math">\(\vvec_2\)</span> direction.</div>
+<div class="para" id="subsec-eigen-use-6">We can draw an analogy with the more familiar example of the diagonal matrix <span class="process-math">\(D=\left[\begin{array}{rr}
+3 \amp 0 \\
+0 \amp -1 \\
+\end{array}\right]
+\text{.}\)</span> As we have seen, the matrix transformation defined by <span class="process-math">\(D\)</span> combines a horizontal stretching by a factor of 3 with a reflection across the horizontal axis, as is illustrated in <a href="section4-1.html#fig-eigen-intro-diagonal" class="xref" data-knowl="./knowl/xref/fig-eigen-intro-diagonal.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.6">Figure 1.1.6</a>.</div>
+<figure class="figure figure-like" id="fig-eigen-intro-diagonal"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/eigen-intro-diagonal.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.6<span class="period">.</span></span><span class="space"> </span>The diagonal matrix <span class="process-math">\(D\)</span> stretches vectors horizontally by a factor of <span class="process-math">\(3\)</span> and flips vectors vertically.</figcaption></figure><div class="para" id="subsec-eigen-use-8">The matrix <span class="process-math">\(A=\left[\begin{array}{rr}
+1 \amp 2 \\
+2 \amp 1 \\
+\end{array}\right]\)</span> has a similar effect when viewed in the basis defined by the eigenvectors <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\text{,}\)</span> as seen in <a href="section4-1.html#fig-eigen-intro-A" class="xref" data-knowl="./knowl/xref/fig-eigen-intro-A.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.7">Figure 1.1.7</a>.</div>
+<figure class="figure figure-like" id="fig-eigen-intro-A"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/eigen-intro-A.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.7<span class="period">.</span></span><span class="space"> </span>The matrix <span class="process-math">\(A\)</span> has the same geometric effect as the diagonal matrix <span class="process-math">\(D\)</span> when expressed in the coordinate system defined by the basis of eigenvectors.</figcaption></figure><div class="para" id="subsec-eigen-use-10">In a sense that will be made precise later, having a set of eigenvectors of <span class="process-math">\(A\)</span> that forms a basis of <span class="process-math">\(\real^2\)</span> enables us to think of <span class="process-math">\(A\)</span> as being equivalent to a diagonal matrix <span class="process-math">\(D\text{.}\)</span>  Of course, as the other examples in the previous activity show, it may not always be possible to form a basis from the eigenvectors of a matrix.  For example, the only eigenvectors of the matrix <span class="process-math">\(\left[\begin{array}{rr} 2 \amp 1 \\ 0 \amp 2
+\end{array}\right]\text{,}\)</span> which represents a shear, have the form <span class="process-math">\(\twovec{x}{0}\text{.}\)</span>  In this example, we are not able to create a basis for <span class="process-math">\(\real^2\)</span> consisting of eigenvectors of the matrix.  This is also true for the matrix <span class="process-math">\(\left[\begin{array}{rr}
+0 \amp -1 \\
+1 \amp 0 \\
+\end{array}\right]
+\text{,}\)</span> which represents a <span class="process-math">\(90^\circ\)</span> rotation.</div>
+<details id="activity-eigen-intro" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span>
+</h4></summary><article class="activity project-like knowl__content"><div class="para" id="activity-eigen-intro-1-1">Let’s consider an example that illustrates how we can put these ideas to use.</div> <div class="para logical" id="activity-eigen-intro-1-2">
+<div class="para">Suppose that we work for a car rental company that has two locations, <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{.}\)</span>  When a customer rents a car at one location, they have the option to return it to either location at the end of the day.  After doing some market research, we determine:</div>
+<ul class="disc" id="activity-eigen-intro-1-2-3">
+<li id="activity-eigen-intro-1-2-3-1"><div class="para" id="activity-eigen-intro-1-2-3-1-1">80% of the cars rented at location <span class="process-math">\(P\)</span> are returned to <span class="process-math">\(P\)</span> and 20% are returned to <span class="process-math">\(Q\text{.}\)</span>
+</div></li>
+<li id="activity-eigen-intro-1-2-3-2"><div class="para" id="activity-eigen-intro-1-2-3-2-1">40% of the cars rented at location <span class="process-math">\(Q\)</span> are returned to <span class="process-math">\(Q\)</span> and 60% are returned to <span class="process-math">\(P\text{.}\)</span>
+</div></li>
+</ul>
+<ol class="lower-alpha ol-marker-1" id="activity-eigen-intro-1-2-4">
+<li id="activity-eigen-intro-1-2-4-1"><div class="para" id="activity-eigen-intro-1-2-4-1-1">Suppose that there are 1000 cars at location <span class="process-math">\(P\)</span> and no cars at location <span class="process-math">\(Q\)</span> on Monday morning.  How many cars are there are locations <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> at the end of the day on Monday?</div></li>
+<li id="activity-eigen-intro-1-2-4-2"><div class="para" id="activity-eigen-intro-1-2-4-2-1">How many are at locations <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> at end of the day on Tuesday?</div></li>
+<li id="activity-eigen-intro-1-2-4-3">
+<div class="para logical" id="activity-eigen-intro-1-2-4-3-1">
+<div class="para">If we let <span class="process-math">\(P_k\)</span> and <span class="process-math">\(Q_k\)</span> be the number of cars at locations <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> respectively, at the end of day <span class="process-math">\(k\text{,}\)</span> we then have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+P_{k+1}\amp {}={} 0.8P_k + 0.6Q_k \\
+Q_{k+1}\amp {}={} 0.2P_k + 0.4Q_k\text{.} \\
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">We can write the vector <span class="process-math">\(\xvec_k = \twovec{P_k}{Q_k}\)</span> to reflect the number of cars at the two locations at the end of day <span class="process-math">\(k\text{,}\)</span> which says that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\xvec_{k+1} =
+\left[\begin{array}{rr}
+0.8 \amp 0.6 \\
+0.2 \amp 0.4 \\
+\end{array}\right]
+\xvec_k
+\end{equation*}
+</div>
+<div class="para">or <span class="process-math">\(\xvec_{k+1} = A\xvec_k\)</span> where <span class="process-math">\(A=\left[\begin{array}{rr}0.8 \amp 0.6 \\ 0.2 \amp 0.4
+\end{array}\right]\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="activity-eigen-intro-1-2-4-3-2">
+<div class="para">Suppose that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vvec_1 = \twovec{3}{1},
+\qquad
+\vvec_2 = \twovec{-1}{1}\text{.}
+\end{equation*}
+</div>
+<div class="para">Compute <span class="process-math">\(A\vvec_1\)</span> and <span class="process-math">\(A\vvec_2\)</span> to demonstrate that <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\)</span> are eigenvectors of <span class="process-math">\(A\text{.}\)</span> What are the associated eigenvalues <span class="process-math">\(\lambda_1\)</span> and <span class="process-math">\(\lambda_2\text{?}\)</span>
+</div>
+</div>
+</li>
+<li id="activity-eigen-intro-1-2-4-4"><div class="para" id="activity-eigen-intro-1-2-4-4-1">We said that 1000 cars are initially at location <span class="process-math">\(P\)</span> and none at location <span class="process-math">\(Q\text{.}\)</span>  This means that the initial vector describing the number of cars is <span class="process-math">\(\xvec_0 =
+\ctwovec{1000}{0}\text{.}\)</span>  Write <span class="process-math">\(\xvec_0\)</span> as a linear combination of <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\text{.}\)</span>
+</div></li>
+<li id="activity-eigen-intro-1-2-4-5"><div class="para" id="activity-eigen-intro-1-2-4-5-1">Remember that <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\)</span> are eigenvectors of <span class="process-math">\(A\text{.}\)</span>  Use the linearity of matrix multiplication to write the vector <span class="process-math">\(\xvec_1 =
+A\xvec_0\text{,}\)</span> describing the number of cars at the two locations at the end of the first day, as a linear combination of <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\text{.}\)</span>
+</div></li>
+<li id="activity-eigen-intro-1-2-4-6"><div class="para logical" id="activity-eigen-intro-1-2-4-6-1">
+<div class="para">Write the vector <span class="process-math">\(\xvec_2 = A\xvec_1\)</span> as a linear combination of <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\text{.}\)</span>  Then write the next few vectors as linear combinations of <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\text{:}\)</span>
+</div>
+<ol class="decimal ol-marker-2" id="activity-eigen-intro-1-2-4-6-1-6">
+<li id="activity-eigen-intro-1-2-4-6-1-6-1"><div class="para" id="activity-eigen-intro-1-2-4-6-1-6-1-1"><span class="process-math">\(\xvec_3 = A\xvec_2\text{.}\)</span></div></li>
+<li id="activity-eigen-intro-1-2-4-6-1-6-2"><div class="para" id="activity-eigen-intro-1-2-4-6-1-6-2-1"><span class="process-math">\(\xvec_4 = A\xvec_3\text{.}\)</span></div></li>
+<li id="activity-eigen-intro-1-2-4-6-1-6-3"><div class="para" id="activity-eigen-intro-1-2-4-6-1-6-3-1"><span class="process-math">\(\xvec_5 = A\xvec_4\text{.}\)</span></div></li>
+<li id="activity-eigen-intro-1-2-4-6-1-6-4"><div class="para" id="activity-eigen-intro-1-2-4-6-1-6-4-1"><span class="process-math">\(\xvec_6 = A\xvec_5\text{.}\)</span></div></li>
+</ol>
+</div></li>
+<li id="activity-eigen-intro-1-2-4-7"><div class="para" id="activity-eigen-intro-1-2-4-7-1">What will happen to the number of cars at the two locations after a very long time?  Explain how writing <span class="process-math">\(\xvec_0\)</span> as a linear combination of eigenvectors helps you determine the long-term behavior.</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="activity-eigen-intro-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="activity-eigen-intro-2-1">The solution to this activity is given in the text below.</div></div></details></div></article></details><div class="para" id="subsec-eigen-use-12">This activity is important and motivates much of our work with eigenvalues and eigenvectors so it’s worth reviewing to make sure we have a clear understanding of the concepts.</div>
+<div class="para logical" id="subsec-eigen-use-13">
+<div class="para">First, we compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+A\vvec_1 =
+\left[\begin{array}{rr}
+0.8 \amp 0.6 \\
+0.2 \amp 0.4 \\
+\end{array}\right]
+\twovec{3}{1}
+\amp {}={}
+\twovec{3}{1}
+= 1\vvec_1
+\\
+\\
+A\vvec_2 =
+\left[\begin{array}{rr}
+0.8 \amp 0.6 \\
+0.2 \amp 0.4 \\
+\end{array}\right]
+\twovec{-1}{1}
+\amp {}={}
+\twovec{-0.2}{0.2}
+= 0.2\vvec_2\text{.} \\
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">This shows that <span class="process-math">\(\vvec_1\)</span> is an eigenvector of <span class="process-math">\(A\)</span> with eigenvalue <span class="process-math">\(\lambda_1 = 1\)</span> and <span class="process-math">\(\vvec_2\)</span> is an eigenvector of <span class="process-math">\(A\)</span> with eigenvalue <span class="process-math">\(\lambda_2=0.2\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="subsec-eigen-use-14">
+<div class="para">By the linearity of matrix matrix multiplication, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A(c_1\vvec_1 + c_2\vvec_2) = c_1\vvec_1 + 0.2c_2\vvec_2\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, we will write the vector describing the initial distribution of cars <span class="process-math">\(\xvec_0=\ctwovec{1000}{0}\)</span> as a linear combination of <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\text{;}\)</span>  that is, <span class="process-math">\(\xvec_0 =
+c_1\vvec_2 + c_2 \vvec_2\text{.}\)</span>  To do, we form the augmented matrix and row reduce:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{array}{rr|r}
+\vvec_1 \amp \vvec_2 \amp \xvec_0
+\end{array}\right]
+=
+\left[\begin{array}{rr|r}
+3 \amp -1 \amp 1000 \\
+1 \amp 1 \amp 0 \\
+\end{array}\right]
+\sim
+\left[\begin{array}{rr|r}
+1 \amp 0 \amp 250 \\
+0 \amp 1 \amp -250 \\
+\end{array}\right]\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, <span class="process-math">\(\xvec_0 = 250\vvec_1 -250\vvec_2\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="subsec-eigen-use-15">
+<div class="para">To determine the distribution of cars on subsequent days, we will repeatedly multiply by <span class="process-math">\(A\text{.}\)</span>  We find that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\xvec_1 = A\xvec_0 \amp {}={}
+A(250\vvec_1 - 250\vvec_2) = 250\vvec_1 - (0.2)250\vvec_2 \\
+\xvec_2 = A\xvec_1 \amp {}={}
+A(250\vvec_1 - (0.2)250\vvec_2) = 250\vvec_1 - (0.2)^2250\vvec_2 \\
+\xvec_3 = A\xvec_2 \amp {}={}
+A(250\vvec_1 - (0.2)^2250\vvec_2) = 250\vvec_1 - (0.2)^3250\vvec_2 \\
+\xvec_4 = A\xvec_3 \amp {}={}
+A(250\vvec_1 - (0.2)^3250\vvec_2) = 250\vvec_1 - (0.2)^4250\vvec_2 \\
+\xvec_5 = A\xvec_4 \amp {}={}
+A(250\vvec_1 - (0.2)^4250\vvec_2) = 250\vvec_1 - (0.2)^5250\vvec_2 \\
+\end{aligned}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="subsec-eigen-use-16">
+<div class="para">In particular, this shows us that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\xvec_5 = 250\vvec_1 - (0.2)^5250\vvec_2 =
+\twovec{250\cdot 3 - (0.2)^5250\cdot(-1)}
+{250\cdot 1 - (0.2)^5250\cdot 1}
+= \twovec{750.09}{249.92}\text{.}
+\end{equation*}
+</div>
+<div class="para">Taking notice of the pattern, we may write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\xvec_k = 250\vvec_1 - (0.2)^k250\vvec_2\text{.}
+\end{equation*}
+</div>
+<div class="para">Multiplying a number by <span class="process-math">\(0.2\)</span> is the same as taking 20% of that number.  As each day goes by, the second term is multiplied by <span class="process-math">\(0.2\)</span> so the coefficient of <span class="process-math">\(\vvec_2\)</span> in the expression for <span class="process-math">\(\xvec_k\)</span> will eventually become extremely small.  We therefore see that the distribution of cars will stabilize at <span class="process-math">\(\xvec=250\vvec_1=\twovec{750}{250}\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="subsec-eigen-use-17">Notice how our understanding of the eigenvectors of the matrix allows us to replace matrix multiplication with the simpler operation of scalar multiplication.  As a result, we can look far into the future without having to repeatedly perform matrix multiplication.</div>
+<div class="para" id="subsec-eigen-use-18">Furthermore, notice how this example relies on the fact that we can express the initial vector <span class="process-math">\(\xvec_0\)</span> as a linear combination of eigenvectors.  For this reason, we would like, when given an <span class="process-math">\(n\times n\)</span> matrix, to be able to create a basis of <span class="process-math">\(\real^n\)</span> that consists of its eigenvectors.  We will frequently return to this question in later sections.</div>
+<article class="question example-like" id="question-eigen-basis"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
+</h4>
+<div class="para" id="question-eigen-basis-1-1">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix, can we form a basis of <span class="process-math">\(\real^n\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{?}\)</span>
+</div></article></section><section class="subsection" id="section4-1-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="space"> </span><span class="title">Summary</span>
+</h3>
+<div class="para logical" id="section4-1-5-2">
+<div class="para">We defined an eigenvector of a square matrix <span class="process-math">\(A\)</span> to be a nonzero vector <span class="process-math">\(\vvec\)</span> such that <span class="process-math">\(A\vvec = \lambda\vvec\)</span> for some scalar <span class="process-math">\(\lambda\text{,}\)</span> which is called the eigenvalue associated to <span class="process-math">\(\vvec\text{.}\)</span>
+</div>
+<ul class="disc" id="section4-1-5-2-6">
+<li id="section4-1-5-2-6-1"><div class="para" id="section4-1-5-2-6-1-1">If <span class="process-math">\(\vvec\)</span> is an eigenvector, then matrix multiplication by <span class="process-math">\(A\)</span> reduces to the simpler operation of scalar multiplication by <span class="process-math">\(\lambda\text{.}\)</span>
+</div></li>
+<li id="section4-1-5-2-6-2"><div class="para" id="section4-1-5-2-6-2-1">Scalar multiples of an eigenvector are also eigenvectors.  In fact, we will see that the eigenvectors associated to an eigenvalue <span class="process-math">\(\lambda\)</span> form a subspace.</div></li>
+<li id="section4-1-5-2-6-3"><div class="para" id="section4-1-5-2-6-3-1">If we can form a basis for <span class="process-math">\(\real^n\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{,}\)</span> then <span class="process-math">\(A\)</span> is, in some sense, equivalent to a diagonal matrix.</div></li>
+<li id="section4-1-5-2-6-4"><div class="para" id="section4-1-5-2-6-4-1">Rewriting a vector <span class="process-math">\(\xvec\)</span> as a linear combination of eigenvectors of <span class="process-math">\(A\)</span> simplifies the process of repeatedly multiplying <span class="process-math">\(\xvec\)</span> by <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+</ul>
+</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="chap4.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:xlink="http://www.w3.org/1999/xlink" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
