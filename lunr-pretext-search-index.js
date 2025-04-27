@@ -280,74 +280,11 @@ var ptx_lunr_docs = [
   "body": " Transpose Matriks  Transpose matriks diimplementasikan dalam Sage sebagai metode transpose() . Dalam sel di bawah ini, kami (a) memilih bilangan bulat acak , (b) memilih matriks acak  dengan entri bilangan bulat, dan (c) menghitung transpose dari .   Seperti biasa, eksperimen dengan sel Sage di bawah ini.   "
 },
 {
-  "id": "s_algebraic",
-  "level": "1",
-  "url": "s_algebraic.html",
-  "type": "Section",
-  "number": "0.2",
-  "title": "Aljabar Matrik",
-  "body": " Aljabar Matrik   Bab sebelumnya membahas apa yang bisa disebut sebagai aritmatika matriks. Kita mempelajari operasi dasar seperti penjumlahan, perkalian, penskalaan, dan transpose matriks. Dalam bagian ini, kita akan membahas aljabar matriks. Kita akan menyelidiki sifat-sifat (dan ketiadaan sifat-sifat tertentu) dari operasi matriks kita, serta menunjukkan bagaimana menggunakan operasi-operasi ini untuk menyelesaikan persamaan matriks.  Saat Anda mempelajari aljabar matriks, selalu ingat teman lama Anda, yaitu aljabar bilangan real. Secara umum, kedua sistem aljabar ini sangat mirip satu sama lain, seperti yang dijelaskan dalam di bawah ini. Namun, ada dua perbedaan penting antara keduanya : dua sifat penting dari aljabar bilangan real yang tidak berlaku untuk matriks. Akibat dari dua penyimpangan sederhana ini sangat luas dan memberikan kekayaan yang menarik pada aljabar matriks dibandingkan dengan aljabar bilangan real.    Sifat-sifat penjumlahan, perkalian dan perkalian skalar matriks   Sifat-sifat berikut berlaku untuk semua matriks dan skalar untuk ekspresi yang diberikan memiliki makna.   Hukum Komutatif Penjumlahan       Hukum Asosiatif Penjumlahan       Hukum Asosiatif Perkalian       Hukum Distributif Kiri       Hukum Distributif Kanan       Hukum Distributif Penskalaan       Hukum Distributif Penskalaan Lainnya       Hukum Asosiatif Penskalaan       Hukum Komutatif Penskalaan   .       Bagaimana cara membuktikan salah satu sifat ini? Semua ini merupakan kesamaan matriks dalam bentuk , sehingga menurut definisi kesamaan matriks , kita harus menunjukkan (1) bahwa matriks dan memiliki dimensi yang sama, dan (2) bahwa untuk semua . Pembuktian di bawah ini menggambarkan teknik ini untuk hukum asosiatif perkalian dari .   Bukti (iii)  Kami hanya membuktikan hukum asosiatif perkalian . Misalkan , , . Untuk menunjukkan , kita harus menunjukkan (1) bahwa dan memiliki dimensi yang sama, dan (2) bahwa untuk semua kemungkinan .  (1) Pengamatan biasa tentang dimensi dalam dan dimensi luar menunjukkan bahwa baik maupun memiliki dimensi .  (2) Diberikan sembarang dengan dan , kita memiliki:   Ini membuktikan bahwa semua entri dari kedua matriks tersebut sama, sehingga .   Sebagaimana dalam aljabar bilangan real, kita dapat mengidentifikasi beberapa matriks khusus yang bertindak sebagai identitas penjumlahan dan identitas perkalian ; dan setiap matriks memiliki invers penjumlahan . Apa yang kami maksud di sini dijelaskan secara rinci dalam .   Additive inverse of a matrix  additive inverse of a matrix  matrix additive inverse    Additive inverse of    Diberikan sebuah matriks  , invers penjumlahannya  didefinisikan sebagai .     Identity matrix  identity matrix  matrix identity matrix    inverse matrix     Matriks identitas adalah matriks persegi berukuran  dengan angka satu di sepanjang diagonal dan nol di semua tempat lainnya. Dengan kata lain, untuk semua dan , kita memiliki . Ketika ukuran dari matriks identitas tidak penting, kita sering menotasikannya secara sederhana sebagai .     Identitas Penjumlahan, Invers Penjumlahan, dan Identitas Perkalian     Identitas Penjumlahan  Matriks nol berukuran  adalah identitas penjumlahan untuk matriks dalam arti berikut: untuk sembarang matriks  , kita memiliki .    Invers Penjumlahan  Untuk sembarang matriks  , kita memiliki .    Identitas Perkalian  Matriks identitas adalah identitas perkalian untuk matriks dalam arti berikut: untuk sembarang matriks  , kita memiliki .       Sifat Matrik Transpose  Properti berikut berlaku untuk semua matriks dan skalar yang ekspresinya masuk akal.                           Kami hanya membuktikan pernyataan pertama. Pertama, perhatikan bahwa jika berukuran , maka demikian pula dan . Kemudian adalah berdasarkan . Demikian pula, kita melihat bahwa juga berukuran .  Selanjutnya, untuk sembarang dengan , , kita memiliki . Karena entri dari kedua matriks tersebut sama untuk setiap , maka dapat disimpulkan bahwa .       "
-},
-{
-  "id": "th_matrix_alg_props",
-  "level": "2",
-  "url": "s_algebraic.html#th_matrix_alg_props",
-  "type": "Theorem",
-  "number": "0.2.1",
-  "title": "Sifat-sifat penjumlahan, perkalian dan perkalian skalar matriks.",
-  "body": " Sifat-sifat penjumlahan, perkalian dan perkalian skalar matriks   Sifat-sifat berikut berlaku untuk semua matriks dan skalar untuk ekspresi yang diberikan memiliki makna.   Hukum Komutatif Penjumlahan       Hukum Asosiatif Penjumlahan       Hukum Asosiatif Perkalian       Hukum Distributif Kiri       Hukum Distributif Kanan       Hukum Distributif Penskalaan       Hukum Distributif Penskalaan Lainnya       Hukum Asosiatif Penskalaan       Hukum Komutatif Penskalaan   .      "
-},
-{
-  "id": "s_algebraic-5",
-  "level": "2",
-  "url": "s_algebraic.html#s_algebraic-5",
-  "type": "Proof",
-  "number": "0.2.1",
-  "title": "Bukti (iii).",
-  "body": " Bukti (iii)  Kami hanya membuktikan hukum asosiatif perkalian . Misalkan , , . Untuk menunjukkan , kita harus menunjukkan (1) bahwa dan memiliki dimensi yang sama, dan (2) bahwa untuk semua kemungkinan .  (1) Pengamatan biasa tentang dimensi dalam dan dimensi luar menunjukkan bahwa baik maupun memiliki dimensi .  (2) Diberikan sembarang dengan dan , kita memiliki:   Ini membuktikan bahwa semua entri dari kedua matriks tersebut sama, sehingga .  "
-},
-{
-  "id": "d_matrix_add_inverse",
-  "level": "2",
-  "url": "s_algebraic.html#d_matrix_add_inverse",
-  "type": "Definition",
-  "number": "0.2.2",
-  "title": "Additive inverse of a matrix.",
-  "body": " Additive inverse of a matrix  additive inverse of a matrix  matrix additive inverse    Additive inverse of    Diberikan sebuah matriks  , invers penjumlahannya  didefinisikan sebagai .   "
-},
-{
-  "id": "d_identity_matrix",
-  "level": "2",
-  "url": "s_algebraic.html#d_identity_matrix",
-  "type": "Definition",
-  "number": "0.2.3",
-  "title": "Identity matrix.",
-  "body": " Identity matrix  identity matrix  matrix identity matrix    inverse matrix     Matriks identitas adalah matriks persegi berukuran  dengan angka satu di sepanjang diagonal dan nol di semua tempat lainnya. Dengan kata lain, untuk semua dan , kita memiliki . Ketika ukuran dari matriks identitas tidak penting, kita sering menotasikannya secara sederhana sebagai .   "
-},
-{
-  "id": "th_matrix_add_mult_ident",
-  "level": "2",
-  "url": "s_algebraic.html#th_matrix_add_mult_ident",
-  "type": "Theorem",
-  "number": "0.2.4",
-  "title": "Identitas Penjumlahan, Invers Penjumlahan, dan Identitas Perkalian.",
-  "body": " Identitas Penjumlahan, Invers Penjumlahan, dan Identitas Perkalian     Identitas Penjumlahan  Matriks nol berukuran  adalah identitas penjumlahan untuk matriks dalam arti berikut: untuk sembarang matriks  , kita memiliki .    Invers Penjumlahan  Untuk sembarang matriks  , kita memiliki .    Identitas Perkalian  Matriks identitas adalah identitas perkalian untuk matriks dalam arti berikut: untuk sembarang matriks  , kita memiliki .     "
-},
-{
-  "id": "th_trans_props",
-  "level": "2",
-  "url": "s_algebraic.html#th_trans_props",
-  "type": "Theorem",
-  "number": "0.2.5",
-  "title": "Sifat Matrik Transpose.",
-  "body": " Sifat Matrik Transpose  Properti berikut berlaku untuk semua matriks dan skalar yang ekspresinya masuk akal.                           Kami hanya membuktikan pernyataan pertama. Pertama, perhatikan bahwa jika berukuran , maka demikian pula dan . Kemudian adalah berdasarkan . Demikian pula, kita melihat bahwa juga berukuran .  Selanjutnya, untuk sembarang dengan , , kita memiliki . Karena entri dari kedua matriks tersebut sama untuk setiap , maka dapat disimpulkan bahwa .   "
-},
-{
   "id": "sec-vectors-lin-combs",
   "level": "1",
   "url": "sec-vectors-lin-combs.html",
   "type": "Section",
-  "number": "0.3",
+  "number": "0.2",
   "title": "Vectors and linear combinations",
   "body": " Vectors and linear combinations   It is a remarkable fact that algebra, which is about symbolic equations and their solutions, and geometry are intimately connected. For instance, the solution set of a linear equation in two unknowns, such as , can be represented graphically by a straight line. The aim of this section is to further this connection by introducing vectors, which will help us to apply geometric intuition to our thinking about linear systems.    Vectors   vector A vector is most simply thought of as a matrix with a single column. For instance, and are both vectors. The entries in a vector are called its components. Since the vector has two components, we say that it is a two-dimensional vector; in the same way, the vector is a four-dimensional vector.  We denote the set of all -dimensional vectors by . Consequently, if is a 3-dimensional vector, we say that is in .  While it can be difficult to visualize a four-dimensional vector, we can draw a simple picture describing the two-dimensional vector , as shown in .  A graphical representation of the vector .       We can think of as describing a walk in the plane where we move two units horizontally and one unit vertically. Though we allow ourselves to begin walking from any point in the plane, we will most frequently begin at the origin in which case we arrive at the the point , as shown in the figure.  There are two simple algebraic operations we often perform on vectors.  Scalar Multiplication  scalar multiplication  We multiply a vector by a real number by multiplying each of the components of by . For instance, We will frequently refer to real numbers, such as -3 in this example, as scalars to distinguish them from vectors.   Vector Addition  vector addition  We add two vectors of the same dimension by adding their components. For instance,       Scalar Multiplication and Vector Addition   Suppose that      Find expressions for the vectors and sketch them using .  Sketch the vectors on this grid.         What geometric effect does scalar multiplication have on a vector? Also, describe the effect that multiplying by a negative scalar has.   Sketch the vectors using .  Sketch the vectors on this grid.         Consider vectors that have the form where is any scalar. Sketch a few of these vectors when, say, and . Give a geometric description of this set of vectors.  Sketch the vectors on this grid.        If and are two scalars, then the vector is called a linear combination of the vectors and . Find the vector that is the linear combination when and .    Can the vector be represented as a linear combination of and ? Asked differently, can we find scalars and such that .      Solutions to this preview activity are given in the text below.    The preview activity demonstrates how we may interpret scalar multiplication and vector addition geometrically.  First, we see that scalar multiplication has the effect of stretching or compressing a vector. Multiplying by a negative scalar changes the direction of the vector. In either case, shows that a scalar multiple of a vector lies on the same line defined by .     Scalar multiples of the vector .    To represent the sum , we imagine walking from the origin with the appropriate horizontal and vertical changes given by . From there, we continue our walk using the horizontal and vertical changes prescribed by , after which we arrive at the sum . This is illustrated on the left of where the tail of is placed on the tip of .      Vector addition as a simple walk in the plane is illustrated on the left. The vector sum is represented as the diagonal of a parallelogram on the right.    Alternatively, we may construct the parallelogram with and as two sides. The sum is then the diagonal of the parallelogram, as illustrated on the right of .  We have now seen that the set of vectors having the form is a line. To form the set of vectors , we can begin with the vector and add multiples of . Geometrically, this means that we begin from the tip of and move in a direction parallel to . The effect is to translate the line by the vector , as shown in .     The set of vectors form a line.    At times, it will be useful for us to think of vectors and points interchangeably. That is, we may wish to think of the vector as describing the point and vice-versa. When we say that the vectors having the form form a line, we really mean that the tips of the vectors all lie on the line passing through and parallel to .   Even though these vector operations are new, it is straightforward to check that some familiar properties hold.   Commutativity   .   Distributivity   .     Sage can perform scalar multiplication and vector addition. We define a vector using the vector command; then * and + denote scalar multiplication and vector addition.     Linear combinations  Linear combinations, which we encountered in the preview activity, provide the link between vectors and linear systems. In particular, they will help us apply geometric intuition to problems involving linear systems.   linear combination  weights  The linear combination of the vectors with scalars is the vector The scalars are called the weights of the linear combination.     In this activity, we will look at linear combinations of a pair of vectors, and .   Linear combinations of vectors and .      The weight is initially set to 0. Explain what happens as you vary while keeping . How is this related to scalar multiplication?   What is the linear combination of and when and ? You may find this result using the diagram, but you should also verify it by computing the linear combination.   Describe the vectors that arise when the weight is set to 1 and is varied. How is this related to our investigations in the preview activity?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Verify the result from the previous part by algebraically finding the weights and that form the linear combination .   Can the vector be expressed as a linear combination of and ? What about the vector ?   Are there any two-dimensional vectors that cannot be expressed as linear combinations of and ?       When we vary with , the linear combination moves along the line defined by .  When and , we find   When and is allowed to vary, the linear combinations lie on the line through parallel to .  If the weights and , then the linear combination is the vector .  If the weights and , then the linear combination is the vector .  We find the linear system for the weights: If we construct the corresponding augmented matrix and determine its reduced row echelon matrix, we find the weights and .  In the same way, we construct a linear system for the weights whose augmented matrix is which shows that there are weights that produce the desired linear combination. The same will happen for any vector that we ask to write as a linear combination of and .  Every two-dimensional vector can be written as a linear combination of and because the coefficient matrix of the linear system remains the same. Since that coefficient matrix has a pivot position in every row, the augmented matrix can never have a pivot position in the rightmost column.        The linear combinations lie on the line defined by .   .  They lie on the line through parallel to .  Yes, with weights .  Yes, with weights and .  This can be done by writing the appropriate linear system for the weights.  No, any two-dimensional vector can be expressed as a linear combination of and .      This activity illustrates how linear combinations are constructed geometrically: the linear combination is found by walking along a total of times followed by walking along a total of times. When one of the weights is held constant while the other varies, the vector moves along a line.    The previous activity also shows that questions about linear combinations lead naturally to linear systems. Suppose we have vectors and . Let's determine whether we can describe the vector as a linear combination of and . In other words, we would like to know whether there are weights and such that   This leads to the equations   Equating the components of the vectors on each side of the equation, we arrive at the linear system This means that is a linear combination of and if this linear system is consistent.  To solve this linear system, we construct its corresponding augmented matrix and find its reduced row echelon form, giving us the weights and ; that is, . In fact, we know more because the reduced row echelon matrix tells us that these are the only possible weights. Therefore, may be expressed as a linear combination of and in exactly one way.    This example demonstrates the connection between linear combinations and linear systems. Asking whether a vector is a linear combination of vectors is equivalent to asking whether an associated linear system is consistent.  In fact, we may easily describe the associated linear system in terms of the vectors , , and . Notice that the augmented matrix we found in our example was The first two columns of this matrix are and and the rightmost column is . As shorthand, we will write this augmented matrix replacing the columns with their vector representation: . This fact is generally true so we record it in the following proposition.    The vector is a linear combination of the vectors if and only if the linear system corresponding to the augmented matrix is consistent. A solution to this linear system gives weights such that .    The next activity puts this proposition to use.   Linear combinations and linear systems     Given the vectors , can be expressed as a linear combination of , , and ? Rephrase this question by writing a linear system for the weights , , and and use the Sage cell below to answer this question.   Consider the following linear system. Identify vectors , , , and such that the question \"Is this linear system consistent?\" is equivalent to the question \"Can be expressed as a linear combination of , , and ?\"   Consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?    Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.   Now consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?    Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.        We find the linear system with corresponding augmented matrix This shows that the linear system is inconsistent so there are no such weights , , and . This means that is not a linear combination of , , and .  We find vectors   This is the same as asking if the linear system corresponding to the following augmented matrix is consistent: From the reduced row echelon form, we see that the system is consistent, which means that can be expressed as a linear combination of , , and . Moreover, there are infinitely many ways in which we can do so.  No, it is not possible to write every three-dimensional as a linear combination of , , and because the matrix does not have a pivot position in every row. This means that, with some choice of vector , we will obtain an inconsistent system.  We find the augmented matrix This shows that can be expressed as a linear combination of , , and in exactly one way.  Every vector can be expressed as a linear combination of , , and in exactly one way because has a pivot position in every row and every column.        The vector cannot be expressed as a linear combination of , , and .  We find vectors   Yes, can be expressed as a linear combination of , , and in infinitely many ways.  No.  Yes, can be expressed as a linear combination of , , and in exactly one way.  Any vector can be expressed as a linear combination of , , and in exactly one way.        Consider the vectors and , as shown in .   Vectors and .      These vectors appear to lie on the same line, a fact that becomes apparent once we notice that . Intuitively, we think of the linear combination as the result of walking times in the direction and times in the direction. With these vectors, we are always walking along the same line so it would seem that any linear combination of these vectors should lie on the same line. In addition, a vector that is not on the line, say , should be not be expressible as a linear combination of and .  We can verify this by checking This shows that the associated linear system is inconsistent, which means that the vector cannot be written as a linear combination of and .  Notice that the reduced row echelon form of the coefficient matrix tells us to expect this. Since there is not a pivot position in the second row of the coefficient matrix , it is possible for a pivot position to appear in the rightmost column of the augmented matrix for some choice of .      Summary  This section has introduced vectors, linear combinations, and their connection to linear systems.   There are two operations we can perform with vectors: scalar multiplication and vector addition. Both of these operations have geometric meaning.   Given a set of vectors and a set of scalars we call weights, we can create a linear combination using scalar multiplication and vector addition.   A solution to the linear system whose augmented matrix is is a set of weights that expresses as a linear combination of .        Consider the vectors    Sketch these vectors below.     Compute the vectors , , , and and add them into the sketch above.  Sketch below the set of vectors having the form where is any scalar.     Sketch below the line . Then identify two vectors and so that this line is described by . Are there other choices for the vectors and ?                    This forms the line passing through parallel to .  There are many possibilities. One is and .                This forms the line passing through parallel to .  There are many possibilities. One is and .       Shown below are two vectors and       Express the labeled points as linear combinations of and .   Sketch the line described parametrically as .       We have   This is the line passing through parallel to .      We have   This is the line passing through parallel to .       Consider the vectors    Find the linear combination with weights , , and .   Can you write the vector as a linear combination of , , and ? If so, describe all the ways in which you can do so.    Can you write the vector as a linear combination using just the first two vectors  ? If so, describe all the ways in which you can do so.    Can you write as a linear combination of and ? If so, in how many ways?       The linear combination   The appropriate linear system corresponds to the augmented matrix This shows we obtain when the weights are chosen so that   In this case, we want , which means that .  We see that .      The linear combination    and .   .   .       Nutritional information about a breakfast cereal is printed on the box. For instance, one serving of Frosted Flakes has 111 calories, 140 milligrams of sodium, and 1.2 grams of protein. We may represent this as a vector . One serving of Cocoa Puffs has 120 calories, 105 milligrams of sodium, and 1.0 grams of protein.    Write the vector describing the nutritional content of Cocoa Puffs.   Suppose you eat servings of Frosted Flakes and servings of Cocoa Puffs. Use the language of vectors and linear combinations to express the quantities of calories, sodium, and protein you have consumed.   How many servings of each cereal have you eaten if you have consumed 342 calories, 385 milligrams of sodium, and 3.4 grams of protein.   Suppose your sister consumed 250 calories, 200 milligrams of sodium, and 4 grams of protein. What can you conclude about her breakfast?       .  The totals consumed are expressed by the vector   We ask to write the vector as a linear combination of the two cereal vectors. This leads to the augmented matrix This means that you had two servings of Frosted Flakes and one serving of Cocoa Puffs.  Now the augmented matrix is which represents an inconsistent system. This means that your sister must have eaten something else.       .  The totals consumed are expressed by the vector   You had two servings of Frosted Flakes and one serving of Cocoa Puffs.  Your sister must have eaten something else.       Consider the vectors     Can you express the vector as a linear combination of , , and ? If so, describe all the ways in which you can do so.   Can you express the vector as a linear combination of , , and ? If so, describe all the ways in which you can do so.   Show that can be written as a linear combination of and .   Explain why any linear combination of , , and , can be rewritten as a linear combination of just and .      We have the system corresponding to the augmented matrix from which we conclude that may be expressed as a linear combination of , , and provided that the weights are related by and .  Here we have which represents an inconsistent system and shows that cannot be written as a linear combination of , , and .  The augmented matrix is which shows that .   .      The vector may be expressed as a linear combination of , , and provided that the weights are related by and .  The vector cannot be written as a linear combination of , , and .   .   .       Consider the vectors For what value(s) of , if any, can the vector be written as a linear combination of and ?    We form the augmented matrix and find a triangular matrix that is row equivalent: This represents a consistent system when .     .      Determine whether the following statements are true or false and provide a justification for your response.  Given two vectors and , the vector is a linear combination of and .  Suppose is a collection of -dimensional vectors and that the matrix has a pivot position in every row. If is any -dimensional vector, then can be written as a linear combination of .  Suppose is a collection of -dimensional vectors and that the matrix has a pivot position in every row and every column. If is any -dimensional vector, then can be written as a linear combination of in exactly one way.  It is possible to find two 3-dimensional vectors and such that every 3-dimensional vector can be written as a linear combination of and .       True, because we can choose the weights and .  True, because the augmented matrix can never have a pivot position in the rightmost column.  True, because the augmented matrix can never have a pivot position in the rightmost column and the corresponding linear system cannot have a free variable.  False, because it is possible to choose a vector such that the augmented matrix has a pivot in the rightmost column.      True  True  True  False       A theme that will later unfold concerns the use of coordinate systems. We can identify the point with the tip of the vector , drawn emanating from the origin. We can then think of the usual Cartesian coordinate system in terms of linear combinations of the vectors For instance, the point is identified with the vector as shown on the left in .       The usual Cartesian coordinate system, defined by the vectors and , is shown on the left along with the representation of the point . The right shows a nonstandard coordinate system defined by vectors and .   If instead we have vectors , we may define a new coordinate system in which a point will correspond to the vector . For instance, the point is shown on the right side of .  Write the point in standard coordinates; that is, find and such that .   Write the point in the new coordinate system; that is, find and such that .   Convert a general point , expressed in the new coordinate system, into standard Cartesian coordinates .   What is the general strategy for converting a point from standard Cartesian coordinates to the new coordinates ? Actually implementing this strategy in general may take a bit of work so just describe the strategy. We will study this in more detail later.      We have   We have . Solving this equation, we find and , which means that .  As in the first part of this problem, we write   We want to solve by constructing the augmented matrix and finding its reduced row echelon form.        .   .     Solve the linear system corresponding to the augmented matrix       "
 },
@@ -356,7 +293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#fig-vector",
   "type": "Figure",
-  "number": "0.3.1",
+  "number": "0.2.1",
   "title": "",
   "body": " A graphical representation of the vector .     "
 },
@@ -374,7 +311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#fig-scalar-mult",
   "type": "Figure",
-  "number": "0.3.5",
+  "number": "0.2.5",
   "title": "",
   "body": "    Scalar multiples of the vector .  "
 },
@@ -383,7 +320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#fig-vector-sum",
   "type": "Figure",
-  "number": "0.3.6",
+  "number": "0.2.6",
   "title": "",
   "body": "     Vector addition as a simple walk in the plane is illustrated on the left. The vector sum is represented as the diagonal of a parallelogram on the right.  "
 },
@@ -392,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#fig-parametric-line",
   "type": "Figure",
-  "number": "0.3.7",
+  "number": "0.2.7",
   "title": "",
   "body": "    The set of vectors form a line.  "
 },
@@ -401,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-3-14",
   "type": "Observation",
-  "number": "0.3.8",
+  "number": "0.2.8",
   "title": "",
   "body": " Even though these vector operations are new, it is straightforward to check that some familiar properties hold.   Commutativity   .   Distributivity   .    "
 },
@@ -410,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-4-3",
   "type": "Definition",
-  "number": "0.3.9",
+  "number": "0.2.9",
   "title": "",
   "body": " linear combination  weights  The linear combination of the vectors with scalars is the vector The scalars are called the weights of the linear combination.  "
 },
@@ -428,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-4-6",
   "type": "Example",
-  "number": "0.3.11",
+  "number": "0.2.11",
   "title": "",
   "body": "  The previous activity also shows that questions about linear combinations lead naturally to linear systems. Suppose we have vectors and . Let's determine whether we can describe the vector as a linear combination of and . In other words, we would like to know whether there are weights and such that   This leads to the equations   Equating the components of the vectors on each side of the equation, we arrive at the linear system This means that is a linear combination of and if this linear system is consistent.  To solve this linear system, we construct its corresponding augmented matrix and find its reduced row echelon form, giving us the weights and ; that is, . In fact, we know more because the reduced row echelon matrix tells us that these are the only possible weights. Therefore, may be expressed as a linear combination of and in exactly one way.   "
 },
@@ -437,7 +374,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#prop-system-comb",
   "type": "Proposition",
-  "number": "0.3.12",
+  "number": "0.2.12",
   "title": "",
   "body": "  The vector is a linear combination of the vectors if and only if the linear system corresponding to the augmented matrix is consistent. A solution to this linear system gives weights such that .   "
 },
@@ -455,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-4-12",
   "type": "Example",
-  "number": "0.3.13",
+  "number": "0.2.13",
   "title": "",
   "body": "  Consider the vectors and , as shown in .   Vectors and .      These vectors appear to lie on the same line, a fact that becomes apparent once we notice that . Intuitively, we think of the linear combination as the result of walking times in the direction and times in the direction. With these vectors, we are always walking along the same line so it would seem that any linear combination of these vectors should lie on the same line. In addition, a vector that is not on the line, say , should be not be expressible as a linear combination of and .  We can verify this by checking This shows that the associated linear system is inconsistent, which means that the vector cannot be written as a linear combination of and .  Notice that the reduced row echelon form of the coefficient matrix tells us to expect this. Since there is not a pivot position in the second row of the coefficient matrix , it is possible for a pivot position to appear in the rightmost column of the augmented matrix for some choice of .   "
 },
@@ -464,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-6-1",
   "type": "Exercise",
-  "number": "0.3.4.1",
+  "number": "0.2.4.1",
   "title": "",
   "body": "  Consider the vectors    Sketch these vectors below.     Compute the vectors , , , and and add them into the sketch above.  Sketch below the set of vectors having the form where is any scalar.     Sketch below the line . Then identify two vectors and so that this line is described by . Are there other choices for the vectors and ?                    This forms the line passing through parallel to .  There are many possibilities. One is and .                This forms the line passing through parallel to .  There are many possibilities. One is and .    "
 },
@@ -473,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-6-2",
   "type": "Exercise",
-  "number": "0.3.4.2",
+  "number": "0.2.4.2",
   "title": "",
   "body": "  Shown below are two vectors and       Express the labeled points as linear combinations of and .   Sketch the line described parametrically as .       We have   This is the line passing through parallel to .      We have   This is the line passing through parallel to .    "
 },
@@ -482,7 +419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-6-3",
   "type": "Exercise",
-  "number": "0.3.4.3",
+  "number": "0.2.4.3",
   "title": "",
   "body": "  Consider the vectors    Find the linear combination with weights , , and .   Can you write the vector as a linear combination of , , and ? If so, describe all the ways in which you can do so.    Can you write the vector as a linear combination using just the first two vectors  ? If so, describe all the ways in which you can do so.    Can you write as a linear combination of and ? If so, in how many ways?       The linear combination   The appropriate linear system corresponds to the augmented matrix This shows we obtain when the weights are chosen so that   In this case, we want , which means that .  We see that .      The linear combination    and .   .   .    "
 },
@@ -491,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-6-4",
   "type": "Exercise",
-  "number": "0.3.4.4",
+  "number": "0.2.4.4",
   "title": "",
   "body": "  Nutritional information about a breakfast cereal is printed on the box. For instance, one serving of Frosted Flakes has 111 calories, 140 milligrams of sodium, and 1.2 grams of protein. We may represent this as a vector . One serving of Cocoa Puffs has 120 calories, 105 milligrams of sodium, and 1.0 grams of protein.    Write the vector describing the nutritional content of Cocoa Puffs.   Suppose you eat servings of Frosted Flakes and servings of Cocoa Puffs. Use the language of vectors and linear combinations to express the quantities of calories, sodium, and protein you have consumed.   How many servings of each cereal have you eaten if you have consumed 342 calories, 385 milligrams of sodium, and 3.4 grams of protein.   Suppose your sister consumed 250 calories, 200 milligrams of sodium, and 4 grams of protein. What can you conclude about her breakfast?       .  The totals consumed are expressed by the vector   We ask to write the vector as a linear combination of the two cereal vectors. This leads to the augmented matrix This means that you had two servings of Frosted Flakes and one serving of Cocoa Puffs.  Now the augmented matrix is which represents an inconsistent system. This means that your sister must have eaten something else.       .  The totals consumed are expressed by the vector   You had two servings of Frosted Flakes and one serving of Cocoa Puffs.  Your sister must have eaten something else.    "
 },
@@ -500,7 +437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-6-5",
   "type": "Exercise",
-  "number": "0.3.4.5",
+  "number": "0.2.4.5",
   "title": "",
   "body": "  Consider the vectors     Can you express the vector as a linear combination of , , and ? If so, describe all the ways in which you can do so.   Can you express the vector as a linear combination of , , and ? If so, describe all the ways in which you can do so.   Show that can be written as a linear combination of and .   Explain why any linear combination of , , and , can be rewritten as a linear combination of just and .      We have the system corresponding to the augmented matrix from which we conclude that may be expressed as a linear combination of , , and provided that the weights are related by and .  Here we have which represents an inconsistent system and shows that cannot be written as a linear combination of , , and .  The augmented matrix is which shows that .   .      The vector may be expressed as a linear combination of , , and provided that the weights are related by and .  The vector cannot be written as a linear combination of , , and .   .   .    "
 },
@@ -509,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-6-6",
   "type": "Exercise",
-  "number": "0.3.4.6",
+  "number": "0.2.4.6",
   "title": "",
   "body": "  Consider the vectors For what value(s) of , if any, can the vector be written as a linear combination of and ?    We form the augmented matrix and find a triangular matrix that is row equivalent: This represents a consistent system when .     .   "
 },
@@ -518,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-6-7",
   "type": "Exercise",
-  "number": "0.3.4.7",
+  "number": "0.2.4.7",
   "title": "",
   "body": "  Determine whether the following statements are true or false and provide a justification for your response.  Given two vectors and , the vector is a linear combination of and .  Suppose is a collection of -dimensional vectors and that the matrix has a pivot position in every row. If is any -dimensional vector, then can be written as a linear combination of .  Suppose is a collection of -dimensional vectors and that the matrix has a pivot position in every row and every column. If is any -dimensional vector, then can be written as a linear combination of in exactly one way.  It is possible to find two 3-dimensional vectors and such that every 3-dimensional vector can be written as a linear combination of and .       True, because we can choose the weights and .  True, because the augmented matrix can never have a pivot position in the rightmost column.  True, because the augmented matrix can never have a pivot position in the rightmost column and the corresponding linear system cannot have a free variable.  False, because it is possible to choose a vector such that the augmented matrix has a pivot in the rightmost column.      True  True  True  False    "
 },
@@ -527,9 +464,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-lin-combs.html#sec-vectors-lin-combs-6-8",
   "type": "Exercise",
-  "number": "0.3.4.8",
+  "number": "0.2.4.8",
   "title": "",
   "body": "  A theme that will later unfold concerns the use of coordinate systems. We can identify the point with the tip of the vector , drawn emanating from the origin. We can then think of the usual Cartesian coordinate system in terms of linear combinations of the vectors For instance, the point is identified with the vector as shown on the left in .       The usual Cartesian coordinate system, defined by the vectors and , is shown on the left along with the representation of the point . The right shows a nonstandard coordinate system defined by vectors and .   If instead we have vectors , we may define a new coordinate system in which a point will correspond to the vector . For instance, the point is shown on the right side of .  Write the point in standard coordinates; that is, find and such that .   Write the point in the new coordinate system; that is, find and such that .   Convert a general point , expressed in the new coordinate system, into standard Cartesian coordinates .   What is the general strategy for converting a point from standard Cartesian coordinates to the new coordinates ? Actually implementing this strategy in general may take a bit of work so just describe the strategy. We will study this in more detail later.      We have   We have . Solving this equation, we find and , which means that .  As in the first part of this problem, we write   We want to solve by constructing the augmented matrix and finding its reduced row echelon form.        .   .     Solve the linear system corresponding to the augmented matrix     "
+},
+{
+  "id": "chap4",
+  "level": "1",
+  "url": "chap4.html",
+  "type": "Chapter",
+  "number": "1",
+  "title": "Eigenvalues and eigenvectors",
+  "body": " Eigenvalues and eigenvectors   Our primary concern so far has been to develop an understanding of solutions to linear systems . In this way, our two fundamental questions about the existence and uniqueness of solutions led us to the concepts of span and linear independence.  We saw that some linear systems are easier to understand than others. For instance, given the two matrices , we would much prefer working with the diagonal matrix . Solutions to linear systems are easily determined, and the geometry of the matrix transformation defined by is easily described.  We saw in the last chapter, however, that some problems become simpler when we look at them in a new basis. Is it possible that questions about the non-diagonal matrix become simpler when viewed in a different basis? We will see that the answer is \"yes,\" and see how the theory of eigenvalues and eigenvectors, which will be developed in this chapter, provides the key. We will see how this theory provides an appropriate change of basis so that questions about the non-diagonal matrix are equivalent to questions about the diagonal matrix . In fact, we will see that these two matrices are, in some sense, equivalent to one another.    "
 }
 ]
 

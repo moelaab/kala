@@ -159,7 +159,7 @@ sagecell.makeSagecell({
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_algebraic.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_matrices.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_matrix.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="c_matrices.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}ula
 
   A open-access textbook to support a two-course sequence in linear
@@ -469,24 +469,24 @@ Notation
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_matrix-6" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Transpose Matriks</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_algebraic.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Aljabar Matrik</span></a></div></li>
 <li class="toc-item toc-section contains-active">
-<div class="toc-title-box"><a href="sec-vectors-lin-combs.html" class="internal"><span class="codenumber">0.3</span> <span class="title">Vectors and linear combinations</span></a></div>
+<div class="toc-title-box"><a href="sec-vectors-lin-combs.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Vectors and linear combinations</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-3" class="internal"><span class="codenumber">0.3.1</span> <span class="title">Vectors</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-4" class="internal"><span class="codenumber">0.3.2</span> <span class="title">Linear combinations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-5" class="internal"><span class="codenumber">0.3.3</span> <span class="title">Summary</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-6" class="internal"><span class="codenumber">0.3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-3" class="internal"><span class="codenumber">0.2.1</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-4" class="internal"><span class="codenumber">0.2.2</span> <span class="title">Linear combinations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-5" class="internal"><span class="codenumber">0.2.3</span> <span class="title">Summary</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-6" class="internal"><span class="codenumber">0.2.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap4.html" class="internal"><span class="codenumber">1</span> <span class="title">Eigenvalues and eigenvectors</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-vectors-lin-combs"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">0.3</span><span class="space"> </span><span class="title">Vectors and linear combinations</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">0.2</span><span class="space"> </span><span class="title">Vectors and linear combinations</span>
 </h2>
 <section class="introduction" id="sec-vectors-lin-combs-2"><div class="para" id="sec-vectors-lin-combs-2-1">It is a remarkable fact that algebra, which is about symbolic equations and their solutions, and geometry are intimately connected.  For instance, the solution set of a linear equation in two unknowns, such as <span class="process-math">\(2x + y = 1\text{,}\)</span> can be represented graphically by a straight line.  The aim of this section is to further this connection by introducing vectors, which will help us to apply geometric intuition to our thinking about linear systems.</div></section><section class="subsection" id="sec-vectors-lin-combs-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.3.1</span><span class="space"> </span><span class="title">Vectors</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.2.1</span><span class="space"> </span><span class="title">Vectors</span>
 </h3>
 <div class="para" id="sec-vectors-lin-combs-3-2"> A <em class="emphasis">vector</em> is most simply thought of as a matrix with a single column.  For instance, <span class="process-math">\(\vvec = \left[
 \begin{array}{r}
@@ -503,8 +503,8 @@ Notation
 \right]\)</span> are both vectors.  The entries in a vector are called its components.  Since the vector <span class="process-math">\(\vvec\)</span> has two components, we say that it is a two-dimensional vector;  in the same way, the vector <span class="process-math">\(\wvec\)</span> is a four-dimensional vector.</div>
 <div class="para" id="sec-vectors-lin-combs-3-3">We denote the set of all <span class="process-math">\(m\)</span>-dimensional vectors by <span class="process-math">\(\real^m\text{.}\)</span>  Consequently, if <span class="process-math">\(\uvec\)</span> is a 3-dimensional vector, we say that <span class="process-math">\(\uvec\)</span> is in <span class="process-math">\(\real^3\text{.}\)</span>
 </div>
-<div class="para" id="sec-vectors-lin-combs-3-4">While it can be difficult to visualize a four-dimensional vector, we can draw a simple picture describing the two-dimensional vector <span class="process-math">\(\vvec\text{,}\)</span> as shown in <a href="sec-vectors-lin-combs.html#fig-vector" class="xref" data-knowl="./knowl/xref/fig-vector.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.3.1">Figure 0.3.1</a>. <figure class="figure figure-like" id="fig-vector"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/vector-u.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3.1<span class="period">.</span></span><span class="space"> </span>A graphical representation of the vector <span class="process-math">\(\vvec = \twovec21\text{.}\)</span></figcaption></figure>
+<div class="para" id="sec-vectors-lin-combs-3-4">While it can be difficult to visualize a four-dimensional vector, we can draw a simple picture describing the two-dimensional vector <span class="process-math">\(\vvec\text{,}\)</span> as shown in <a href="sec-vectors-lin-combs.html#fig-vector" class="xref" data-knowl="./knowl/xref/fig-vector.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.2.1">Figure 0.2.1</a>. <figure class="figure figure-like" id="fig-vector"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/vector-u.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.1<span class="period">.</span></span><span class="space"> </span>A graphical representation of the vector <span class="process-math">\(\vvec = \twovec21\text{.}\)</span></figcaption></figure>
 </div>
 <div class="para" id="sec-vectors-lin-combs-3-5">We can think of <span class="process-math">\(\vvec\)</span> as describing a walk in the plane where we move two units horizontally and one unit vertically.  Though we allow ourselves to begin walking from any point in the plane, we will most frequently begin at the origin in which case we arrive at the the point <span class="process-math">\((2,1)\text{,}\)</span> as shown in the figure.</div>
 <div class="para logical" id="sec-vectors-lin-combs-3-6">
@@ -549,7 +549,7 @@ Notation
 \right].
 \end{equation*}
 </div>
-</div> <div class="para logical" id="sec-vectors-lin-combs-3-7-2-2"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-3-7-2-2-1">
+</div> <div class="para logical" id="sec-vectors-lin-combs-3-7-2-2"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-3-7-2-2-1">
 <li id="sec-vectors-lin-combs-3-7-2-2-1-1"><div class="para logical" id="sec-vectors-lin-combs-3-7-2-2-1-1-1">
 <div class="para">Find expressions for the vectors</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-activity-2-1-1.html">
@@ -560,17 +560,17 @@ Notation
 \end{array}
 \end{equation*}
 </div>
-<div class="para">and sketch them using <a href="sec-vectors-lin-combs.html#fig-activity-2-1-1" class="xref" data-knowl="./knowl/xref/fig-activity-2-1-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.3.2">Figure 0.3.2</a>. <figure class="figure figure-like" id="fig-activity-2-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/empty-6.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3.2<span class="period">.</span></span><span class="space"> </span>Sketch the vectors on this grid.</figcaption></figure>
+<div class="para">and sketch them using <a href="sec-vectors-lin-combs.html#fig-activity-2-1-1" class="xref" data-knowl="./knowl/xref/fig-activity-2-1-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.2.2">Figure 0.2.2</a>. <figure class="figure figure-like" id="fig-activity-2-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/empty-6.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.2<span class="period">.</span></span><span class="space"> </span>Sketch the vectors on this grid.</figcaption></figure>
 </div>
 </div></li>
 <li id="sec-vectors-lin-combs-3-7-2-2-1-2"><div class="para" id="sec-vectors-lin-combs-3-7-2-2-1-2-1">What geometric effect does scalar multiplication have on a vector?  Also, describe the effect that multiplying by a negative scalar has.</div></li>
-<li id="sec-vectors-lin-combs-3-7-2-2-1-3"><div class="para" id="sec-vectors-lin-combs-3-7-2-2-1-3-1">Sketch the vectors <span class="process-math">\(\vvec, \wvec, \vvec + \wvec\)</span> using <a href="sec-vectors-lin-combs.html#fig-activity-2-1-2" class="xref" data-knowl="./knowl/xref/fig-activity-2-1-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.3.3">Figure 0.3.3</a>. <figure class="figure figure-like" id="fig-activity-2-1-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/empty-6.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3.3<span class="period">.</span></span><span class="space"> </span>Sketch the vectors on this grid.</figcaption></figure>
+<li id="sec-vectors-lin-combs-3-7-2-2-1-3"><div class="para" id="sec-vectors-lin-combs-3-7-2-2-1-3-1">Sketch the vectors <span class="process-math">\(\vvec, \wvec, \vvec + \wvec\)</span> using <a href="sec-vectors-lin-combs.html#fig-activity-2-1-2" class="xref" data-knowl="./knowl/xref/fig-activity-2-1-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.2.3">Figure 0.2.3</a>. <figure class="figure figure-like" id="fig-activity-2-1-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/empty-6.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.3<span class="period">.</span></span><span class="space"> </span>Sketch the vectors on this grid.</figcaption></figure>
 </div></li>
 <li id="sec-vectors-lin-combs-3-7-2-2-1-4"><div class="para" id="sec-vectors-lin-combs-3-7-2-2-1-4-1">Consider vectors that have the form <span class="process-math">\(\vvec +
 c\wvec\)</span> where <span class="process-math">\(c\)</span> is any scalar.  Sketch a few of these vectors when, say, <span class="process-math">\(c = -2, -1, 0, 1, \)</span> and <span class="process-math">\(2\text{.}\)</span>  Give a geometric description of this set of vectors. <figure class="figure figure-like" id="fig-activity-2-1-3"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/empty-6.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3.4<span class="period">.</span></span><span class="space"> </span>Sketch the vectors on this grid.</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.4<span class="period">.</span></span><span class="space"> </span>Sketch the vectors on this grid.</figcaption></figure>
 </div></li>
 <li id="sec-vectors-lin-combs-3-7-2-2-1-5"><div class="para logical" id="sec-vectors-lin-combs-3-7-2-2-1-5-1">
 <div class="para">If <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> are two scalars, then the vector</div>
@@ -587,24 +587,24 @@ c \vvec + d \wvec
 </div></li>
 </ol></div>
 <div class="solutions"><details id="sec-vectors-lin-combs-3-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-vectors-lin-combs-3-7-3-1">Solutions to this preview activity are given in the text below.</div></div></details></div></article></details><div class="para" id="sec-vectors-lin-combs-3-8">The preview activity demonstrates how we may interpret scalar multiplication and vector addition geometrically.</div>
-<div class="para" id="sec-vectors-lin-combs-3-9">First, we see that scalar multiplication has the effect of stretching or compressing a vector.  Multiplying by a negative scalar changes the direction of the vector.  In either case, <a href="sec-vectors-lin-combs.html#fig-scalar-mult" class="xref" data-knowl="./knowl/xref/fig-scalar-mult.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.3.5">Figure 0.3.5</a> shows that a scalar multiple of a vector <span class="process-math">\(\vvec\)</span> lies on the same line defined by <span class="process-math">\(\vvec\text{.}\)</span> <figure class="figure figure-like" id="fig-scalar-mult"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/scalar-mult.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3.5<span class="period">.</span></span><span class="space"> </span>Scalar multiples of the vector <span class="process-math">\(\vvec=\twovec21\text{.}\)</span></figcaption></figure>
+<div class="para" id="sec-vectors-lin-combs-3-9">First, we see that scalar multiplication has the effect of stretching or compressing a vector.  Multiplying by a negative scalar changes the direction of the vector.  In either case, <a href="sec-vectors-lin-combs.html#fig-scalar-mult" class="xref" data-knowl="./knowl/xref/fig-scalar-mult.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.2.5">Figure 0.2.5</a> shows that a scalar multiple of a vector <span class="process-math">\(\vvec\)</span> lies on the same line defined by <span class="process-math">\(\vvec\text{.}\)</span> <figure class="figure figure-like" id="fig-scalar-mult"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/scalar-mult.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.5<span class="period">.</span></span><span class="space"> </span>Scalar multiples of the vector <span class="process-math">\(\vvec=\twovec21\text{.}\)</span></figcaption></figure>
 </div>
 <div class="para" id="sec-vectors-lin-combs-3-10">To represent the sum <span class="process-math">\(\vvec + \wvec\text{,}\)</span> we imagine walking from the origin with the appropriate horizontal and vertical changes given by <span class="process-math">\(\vvec\text{.}\)</span>  From there, we continue our walk using the horizontal and vertical changes prescribed by <span class="process-math">\(\wvec\text{,}\)</span> after which we arrive at the sum <span class="process-math">\(\vvec
-+ \wvec\text{.}\)</span>  This is illustrated on the left of <a href="sec-vectors-lin-combs.html#fig-vector-sum" class="xref" data-knowl="./knowl/xref/fig-vector-sum.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.3.6">Figure 0.3.6</a> where the tail of <span class="process-math">\(\wvec\)</span> is placed on the tip of <span class="process-math">\(\vvec\text{.}\)</span> <figure class="figure figure-like" id="fig-vector-sum"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
++ \wvec\text{.}\)</span>  This is illustrated on the left of <a href="sec-vectors-lin-combs.html#fig-vector-sum" class="xref" data-knowl="./knowl/xref/fig-vector-sum.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.2.6">Figure 0.2.6</a> where the tail of <span class="process-math">\(\wvec\)</span> is placed on the tip of <span class="process-math">\(\vvec\text{.}\)</span> <figure class="figure figure-like" id="fig-vector-sum"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/images/vector-addition-a.svg" role="img" class="contained"></div>
 <div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/images/vector-addition.svg" role="img" class="contained"></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3.6<span class="period">.</span></span><span class="space"> </span>Vector addition as a simple walk in the plane is illustrated on the left.  The vector sum is represented as the diagonal of a parallelogram on the right.</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.6<span class="period">.</span></span><span class="space"> </span>Vector addition as a simple walk in the plane is illustrated on the left.  The vector sum is represented as the diagonal of a parallelogram on the right.</figcaption></figure>
 </div>
-<div class="para" id="sec-vectors-lin-combs-3-11">Alternatively, we may construct the parallelogram with <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\)</span> as two sides.  The sum is then the diagonal of the parallelogram, as illustrated on the right of <a href="sec-vectors-lin-combs.html#fig-vector-sum" class="xref" data-knowl="./knowl/xref/fig-vector-sum.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.3.6">Figure 0.3.6</a>.</div>
-<div class="para" id="sec-vectors-lin-combs-3-12">We have now seen that the set of vectors having the form <span class="process-math">\(c\vvec\)</span> is a line.  To form the set of vectors <span class="process-math">\(c\vvec+\wvec\text{,}\)</span> we can begin with the vector <span class="process-math">\(\wvec\)</span> and add multiples of <span class="process-math">\(\vvec\text{.}\)</span>  Geometrically, this means that we begin from the tip of <span class="process-math">\(\wvec\)</span> and move in a direction parallel to <span class="process-math">\(\vvec\text{.}\)</span>  The effect is to translate the line <span class="process-math">\(c\vvec\)</span> by the vector <span class="process-math">\(\wvec\text{,}\)</span> as shown in <a href="sec-vectors-lin-combs.html#fig-parametric-line" class="xref" data-knowl="./knowl/xref/fig-parametric-line.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.3.7">Figure 0.3.7</a>. <figure class="figure figure-like" id="fig-parametric-line"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/line-param.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3.7<span class="period">.</span></span><span class="space"> </span>The set of vectors <span class="process-math">\(c\vvec + \wvec\)</span> form a line.</figcaption></figure>
+<div class="para" id="sec-vectors-lin-combs-3-11">Alternatively, we may construct the parallelogram with <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\)</span> as two sides.  The sum is then the diagonal of the parallelogram, as illustrated on the right of <a href="sec-vectors-lin-combs.html#fig-vector-sum" class="xref" data-knowl="./knowl/xref/fig-vector-sum.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.2.6">Figure 0.2.6</a>.</div>
+<div class="para" id="sec-vectors-lin-combs-3-12">We have now seen that the set of vectors having the form <span class="process-math">\(c\vvec\)</span> is a line.  To form the set of vectors <span class="process-math">\(c\vvec+\wvec\text{,}\)</span> we can begin with the vector <span class="process-math">\(\wvec\)</span> and add multiples of <span class="process-math">\(\vvec\text{.}\)</span>  Geometrically, this means that we begin from the tip of <span class="process-math">\(\wvec\)</span> and move in a direction parallel to <span class="process-math">\(\vvec\text{.}\)</span>  The effect is to translate the line <span class="process-math">\(c\vvec\)</span> by the vector <span class="process-math">\(\wvec\text{,}\)</span> as shown in <a href="sec-vectors-lin-combs.html#fig-parametric-line" class="xref" data-knowl="./knowl/xref/fig-parametric-line.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.2.7">Figure 0.2.7</a>. <figure class="figure figure-like" id="fig-parametric-line"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/line-param.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.7<span class="period">.</span></span><span class="space"> </span>The set of vectors <span class="process-math">\(c\vvec + \wvec\)</span> form a line.</figcaption></figure>
 </div>
 <div class="para" id="sec-vectors-lin-combs-3-13">At times, it will be useful for us to think of vectors and points interchangeably.  That is, we may wish to think of the vector <span class="process-math">\(\left[\begin{array}{r} 2 \\ 1 \end{array}\right]\)</span> as describing the point <span class="process-math">\((2,1)\)</span> and vice-versa.  When we say that the vectors having the form <span class="process-math">\(c\vvec + \wvec\)</span> form a line, we really mean that the tips of the vectors all lie on the line passing through <span class="process-math">\(\wvec\)</span> and parallel to <span class="process-math">\(\vvec\text{.}\)</span>
 </div>
 <article class="observation remark-like" id="sec-vectors-lin-combs-3-14"><h4 class="heading">
-<span class="type">Observation</span><span class="space"> </span><span class="codenumber">0.3.8</span><span class="period">.</span>
+<span class="type">Observation</span><span class="space"> </span><span class="codenumber">0.2.8</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="sec-vectors-lin-combs-3-14-1">
 <div class="para">Even though these vector operations are new, it is straightforward to check that some familiar properties hold.</div>
@@ -620,11 +620,11 @@ print (2*v)
 print (v + w)
 </script></div>
 </div></section><section class="subsection" id="sec-vectors-lin-combs-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.3.2</span><span class="space"> </span><span class="title">Linear combinations</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.2.2</span><span class="space"> </span><span class="title">Linear combinations</span>
 </h3>
 <div class="para" id="sec-vectors-lin-combs-4-2">Linear combinations, which we encountered in the preview activity, provide the link between vectors and linear systems.  In particular, they will help us apply geometric intuition to problems involving linear systems.</div>
 <article class="definition definition-like" id="sec-vectors-lin-combs-4-3"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.3.9</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.2.9</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="sec-vectors-lin-combs-4-3-3">
 <div class="para">The <em class="emphasis">linear combination</em> of the vectors <span class="process-math">\(\vvec_1,\vvec_2,\ldots,\vvec_n\)</span> with scalars <span class="process-math">\(c_1,c_2,\ldots,c_n\)</span> is the vector</div>
@@ -647,7 +647,7 @@ c\vvec + d\wvec
 </div>
 <div class="para">is shaded red.</div>
 </div></div></details></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3.10<span class="period">.</span></span><span class="space"> </span>Linear combinations of vectors <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\text{.}\)</span></figcaption></figure> <ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-4-4-1-3">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.10<span class="period">.</span></span><span class="space"> </span>Linear combinations of vectors <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\text{.}\)</span></figcaption></figure> <ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-4-4-1-3">
 <li id="sec-vectors-lin-combs-4-4-1-3-1"><div class="para" id="sec-vectors-lin-combs-4-4-1-3-1-1">The weight <span class="process-math">\(d\)</span> is initially set to 0.  Explain what happens as you vary <span class="process-math">\(c\)</span> while keeping <span class="process-math">\(d=0\text{.}\)</span> How is this related to scalar multiplication?</div></li>
 <li id="sec-vectors-lin-combs-4-4-1-3-2"><div class="para" id="sec-vectors-lin-combs-4-4-1-3-2-1">What is the linear combination of <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\)</span> when <span class="process-math">\(c = 1\)</span> and <span class="process-math">\(d=-2\text{?}\)</span>  You may find this result using the diagram, but you should also verify it by computing the linear combination.</div></li>
 <li id="sec-vectors-lin-combs-4-4-1-3-3"><div class="para" id="sec-vectors-lin-combs-4-4-1-3-3-1">Describe the vectors that arise when the weight <span class="process-math">\(d\)</span> is set to 1 and <span class="process-math">\(c\)</span> is varied.  How is this related to our investigations in the preview activity?</div></li>
@@ -663,7 +663,7 @@ c\vvec + d\wvec
 </div></li>
 </ol>
 <div class="solutions">
-<details id="sec-vectors-lin-combs-4-4-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-4-4-3-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-4-4-3-1-1">
+<details id="sec-vectors-lin-combs-4-4-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-4-4-3-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-4-4-3-1-1">
 <li id="sec-vectors-lin-combs-4-4-3-1-1-1"><div class="para" id="sec-vectors-lin-combs-4-4-3-1-1-1-1">The linear combinations lie on the line defined by <span class="process-math">\(\vvec\text{.}\)</span>
 </div></li>
 <li id="sec-vectors-lin-combs-4-4-3-1-1-2"><div class="para" id="sec-vectors-lin-combs-4-4-3-1-1-2-1"><span class="process-math">\(\twovec{0}{-3}\text{.}\)</span></div></li>
@@ -676,7 +676,7 @@ c\vvec + d\wvec
 <li id="sec-vectors-lin-combs-4-4-3-1-1-6"><div class="para" id="sec-vectors-lin-combs-4-4-3-1-1-6-1">This can be done by writing the appropriate linear system for the weights.</div></li>
 <li id="sec-vectors-lin-combs-4-4-3-1-1-7"><div class="para" id="sec-vectors-lin-combs-4-4-3-1-1-7-1">No, any two-dimensional vector can be expressed as a linear combination of <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\text{.}\)</span>
 </div></li>
-</ol></div></div></details><details id="sec-vectors-lin-combs-4-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-4-4-2-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-4-4-2-1-1">
+</ol></div></div></details><details id="sec-vectors-lin-combs-4-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-4-4-2-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-4-4-2-1-1">
 <li id="sec-vectors-lin-combs-4-4-2-1-1-1"><div class="para" id="sec-vectors-lin-combs-4-4-2-1-1-1-1">When we vary <span class="process-math">\(c\)</span> with <span class="process-math">\(d=0\text{,}\)</span> the linear combination moves along the line defined by <span class="process-math">\(\vvec\text{.}\)</span>
 </div></li>
 <li id="sec-vectors-lin-combs-4-4-2-1-1-2"><div class="para logical" id="sec-vectors-lin-combs-4-4-2-1-1-2-1">
@@ -731,7 +731,7 @@ c\vvec + d\wvec
 </div></article></details><div class="para" id="sec-vectors-lin-combs-4-5">This activity illustrates how linear combinations are constructed geometrically: the linear combination <span class="process-math">\(c\vvec +
 d\wvec\)</span> is found by walking along <span class="process-math">\(\vvec\)</span> a total of <span class="process-math">\(c\)</span> times followed by walking along <span class="process-math">\(\wvec\)</span> a total of <span class="process-math">\(d\)</span> times.  When one of the weights is held constant while the other varies, the vector moves along a line.</div>
 <article class="example example-like" id="sec-vectors-lin-combs-4-6"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.3.11</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.2.11</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="sec-vectors-lin-combs-4-6-1-1">
 <div class="para">The previous activity also shows that questions about linear combinations lead naturally to linear systems.  Suppose we have vectors <span class="process-math">\(\vvec = \twovec3{-1}\)</span> and <span class="process-math">\(\wvec=\twovec43\text{.}\)</span>  Let’s determine whether we can describe the vector <span class="process-math">\(\bvec=\twovec{-11}{-18}\)</span> as a linear combination of <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\text{.}\)</span>  In other words, we would like to know whether there are weights <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> such that</div>
@@ -814,7 +814,7 @@ c\twovec3{-1} + d\twovec43
 <div class="para">This fact is generally true so we record it in the following proposition.</div>
 </div>
 <article class="proposition theorem-like" id="prop-system-comb"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">0.3.12</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">0.2.12</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="prop-system-comb-1-1">
 <div class="para">The vector <span class="process-math">\(\bvec\)</span> is a linear combination of the vectors <span class="process-math">\(\vvec_1,\vvec_2,\ldots,\vvec_n\)</span> if and only if the linear system corresponding to the augmented matrix</div>
@@ -837,7 +837,7 @@ c_1\vvec_1 + c_2\vvec_2 + \ldots + c_n\vvec_n = \bvec\text{.}
 </div></article><div class="para" id="sec-vectors-lin-combs-4-10">The next activity puts this proposition to use.</div>
 <details id="sec-vectors-lin-combs-4-11" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span><span class="space"> </span><span class="title">Linear combinations and linear systems.</span>
-</h4></summary><article class="activity project-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-4-11-2-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-4-11-2-1-1">
+</h4></summary><article class="activity project-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-4-11-2-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-4-11-2-1-1">
 <li id="sec-vectors-lin-combs-4-11-2-1-1-1"><div class="para logical" id="sec-vectors-lin-combs-4-11-2-1-1-1-1">
 <div class="para">Given the vectors</div>
 <div class="displaymath process-math">
@@ -912,7 +912,7 @@ x_1 \amp \amp \amp {}+{} 2x_3 \amp {}={} \amp 0 \\
 \vvec_2 \amp \vvec_3 \end{array} \right]\)</span> help answer this question.</div></li>
 </ol></div>
 <div class="solutions">
-<details id="sec-vectors-lin-combs-4-11-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-4-11-4-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-4-11-4-1-1">
+<details id="sec-vectors-lin-combs-4-11-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-4-11-4-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-4-11-4-1-1">
 <li id="sec-vectors-lin-combs-4-11-4-1-1-1"><div class="para" id="sec-vectors-lin-combs-4-11-4-1-1-1-1">The vector <span class="process-math">\(\bvec\)</span> cannot be expressed as a linear combination of <span class="process-math">\(\vvec_1\text{,}\)</span> <span class="process-math">\(\vvec_2\text{,}\)</span> and <span class="process-math">\(\vvec_3\text{.}\)</span>
 </div></li>
 <li id="sec-vectors-lin-combs-4-11-4-1-1-2"><div class="para logical" id="sec-vectors-lin-combs-4-11-4-1-1-2-1">
@@ -930,7 +930,7 @@ x_1 \amp \amp \amp {}+{} 2x_3 \amp {}={} \amp 0 \\
 <li id="sec-vectors-lin-combs-4-11-4-1-1-4"><div class="para" id="sec-vectors-lin-combs-4-11-4-1-1-4-1">No.</div></li>
 <li id="sec-vectors-lin-combs-4-11-4-1-1-5"><div class="para" id="sec-vectors-lin-combs-4-11-4-1-1-5-1">Yes, <span class="process-math">\(\bvec\)</span> can be expressed as a linear combination of <span class="process-math">\(\vvec_1\text{,}\)</span> <span class="process-math">\(\vvec_2\text{,}\)</span> and <span class="process-math">\(\vvec_3\)</span> in exactly one way.</div></li>
 <li id="sec-vectors-lin-combs-4-11-4-1-1-6"><div class="para" id="sec-vectors-lin-combs-4-11-4-1-1-6-1">Any vector <span class="process-math">\(\bvec\)</span> can be expressed as a linear combination of <span class="process-math">\(\vvec_1\text{,}\)</span> <span class="process-math">\(\vvec_2\text{,}\)</span> and <span class="process-math">\(\vvec_3\)</span> in exactly one way.</div></li>
-</ol></div></div></details><details id="sec-vectors-lin-combs-4-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-4-11-3-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-4-11-3-1-1">
+</ol></div></div></details><details id="sec-vectors-lin-combs-4-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-4-11-3-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-4-11-3-1-1">
 <li id="sec-vectors-lin-combs-4-11-3-1-1-1"><div class="para logical" id="sec-vectors-lin-combs-4-11-3-1-1-1-1">
 <div class="para">We find the linear system</div>
 <div class="displaymath process-math">
@@ -1023,10 +1023,10 @@ c_1 \amp {}+{} \amp c_2 \amp \amp \amp
 \vvec_3 \end{array}\right]\)</span> has a pivot position in every row and every column.</div></li>
 </ol></div></div></details>
 </div></article></details><article class="example example-like" id="sec-vectors-lin-combs-4-12"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.3.13</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.2.13</span><span class="period">.</span>
 </h4>
-<div class="para" id="sec-vectors-lin-combs-4-12-1-1">Consider the vectors <span class="process-math">\(\vvec=\twovec{-1}1\)</span> and <span class="process-math">\(\wvec=\twovec{2}{-2}\text{,}\)</span> as shown in <a href="sec-vectors-lin-combs.html#fig-lin-comb-ex" class="xref" data-knowl="./knowl/xref/fig-lin-comb-ex.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.3.14">Figure 0.3.14</a>.</div> <figure class="figure figure-like" id="fig-lin-comb-ex"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/lin-comb-ex.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3.14<span class="period">.</span></span><span class="space"> </span>Vectors <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\text{.}\)</span></figcaption></figure> <div class="para logical" id="sec-vectors-lin-combs-4-12-1-3">
+<div class="para" id="sec-vectors-lin-combs-4-12-1-1">Consider the vectors <span class="process-math">\(\vvec=\twovec{-1}1\)</span> and <span class="process-math">\(\wvec=\twovec{2}{-2}\text{,}\)</span> as shown in <a href="sec-vectors-lin-combs.html#fig-lin-comb-ex" class="xref" data-knowl="./knowl/xref/fig-lin-comb-ex.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.2.14">Figure 0.2.14</a>.</div> <figure class="figure figure-like" id="fig-lin-comb-ex"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/lin-comb-ex.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.14<span class="period">.</span></span><span class="space"> </span>Vectors <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\text{.}\)</span></figcaption></figure> <div class="para logical" id="sec-vectors-lin-combs-4-12-1-3">
 <div class="para">These vectors appear to lie on the same line, a fact that becomes apparent once we notice that <span class="process-math">\(\wvec =
 -2\vvec\text{.}\)</span>  Intuitively, we think of the linear combination</div>
 <div class="displaymath process-math">
@@ -1088,7 +1088,7 @@ c\vvec + d\wvec
 <div class="para">for some choice of <span class="process-math">\(\bvec\text{.}\)</span>
 </div>
 </div></article></section><section class="subsection" id="sec-vectors-lin-combs-5"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.3.3</span><span class="space"> </span><span class="title">Summary</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">0.2.3</span><span class="space"> </span><span class="title">Summary</span>
 </h3>
 <div class="para logical" id="sec-vectors-lin-combs-5-2">
 <div class="para">This section has introduced vectors, linear combinations, and their connection to linear systems.</div>
@@ -1108,7 +1108,7 @@ c\vvec + d\wvec
 </div></li>
 </ul>
 </div></section><section class="exercises" id="sec-vectors-lin-combs-6"><h3 class="heading hide-type">
-<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">0.3.4</span><span class="space"> </span><span class="title">Exercises</span>
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">0.2.4</span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="sec-vectors-lin-combs-6-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="para logical" id="sec-vectors-lin-combs-6-1-1-1">
@@ -1119,7 +1119,7 @@ c\vvec + d\wvec
 \wvec = \left[\begin{array}{r} 3 \\ 1 \end{array}\right]
 \end{equation*}
 </div>
-<ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-1-1-1-2">
+<ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-1-1-1-2">
 <li id="ex2-1-1-a"><div class="para" id="ex2-1-1-a-1">Sketch these vectors below. <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/empty-6.svg" role="img" class="contained"></div></div></div>
 </div></li>
 <li id="ex2-1-1-b"><div class="para" id="ex2-1-1-b-1">Compute the vectors <span class="process-math">\(-3\vvec\text{,}\)</span> <span class="process-math">\(2\wvec\text{,}\)</span> <span class="process-math">\(\vvec + \wvec\text{,}\)</span> and <span class="process-math">\(\vvec - \wvec\)</span> and add them into the sketch above.</div></li>
@@ -1131,14 +1131,14 @@ c\wvec\)</span> where <span class="process-math">\(c\)</span> is any scalar. <di
 </ol>
 </div>
 <div class="solutions">
-<details id="sec-vectors-lin-combs-6-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-1-3-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-1-3-1-1">
+<details id="sec-vectors-lin-combs-6-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-1-3-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-1-3-1-1">
 <li id="sec-vectors-lin-combs-6-1-3-1-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/ex2-1-1-a.svg" role="img" class="contained"></div></div></div></li>
 <li id="sec-vectors-lin-combs-6-1-3-1-1-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/ex2-1-1-b.svg" role="img" class="contained"></div></div></div></li>
 <li id="sec-vectors-lin-combs-6-1-3-1-1-3"><div class="para" id="sec-vectors-lin-combs-6-1-3-1-1-3-1">This forms the line passing through <span class="process-math">\(2\vvec\)</span> parallel to <span class="process-math">\(\wvec\text{.}\)</span>
 </div></li>
 <li id="sec-vectors-lin-combs-6-1-3-1-1-4"><div class="para" id="sec-vectors-lin-combs-6-1-3-1-1-4-1">There are many possibilities.  One is <span class="process-math">\(\vvec=\twovec{0}{-2}\)</span> and <span class="process-math">\(\wvec=\twovec{1}{3}\text{.}\)</span>
 </div></li>
-</ol></div></div></details><details id="sec-vectors-lin-combs-6-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-1-2-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-1-2-1-1">
+</ol></div></div></details><details id="sec-vectors-lin-combs-6-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-1-2-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-1-2-1-1">
 <li id="sec-vectors-lin-combs-6-1-2-1-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/ex2-1-1-a.svg" role="img" class="contained"></div></div></div></li>
 <li id="sec-vectors-lin-combs-6-1-2-1-1-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/ex2-1-1-b.svg" role="img" class="contained"></div></div></div></li>
 <li id="sec-vectors-lin-combs-6-1-2-1-1-3"><div class="para" id="sec-vectors-lin-combs-6-1-2-1-1-3-1">This forms the line passing through <span class="process-math">\(2\vvec\)</span> parallel to <span class="process-math">\(\wvec\text{.}\)</span>
@@ -1150,7 +1150,7 @@ c\wvec\)</span> where <span class="process-math">\(c\)</span> is any scalar. <di
 <div class="para logical" id="sec-vectors-lin-combs-6-2-1-1">
 <div class="para">Shown below are two vectors <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\)</span> <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/ex-linear-comb.svg" role="img" class="contained"></div></div></div>
 </div>
-<ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-2-1-1-4">
+<ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-2-1-1-4">
 <li id="sec-vectors-lin-combs-6-2-1-1-4-1"><div class="para" id="sec-vectors-lin-combs-6-2-1-1-4-1-1">Express the labeled points as linear combinations of <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\text{.}\)</span>
 </div></li>
 <li id="sec-vectors-lin-combs-6-2-1-1-4-2"><div class="para" id="sec-vectors-lin-combs-6-2-1-1-4-2-1">Sketch the line described parametrically as <span class="process-math">\(-2\vvec +
@@ -1159,7 +1159,7 @@ c\wvec\text{.}\)</span>
 </ol>
 </div>
 <div class="solutions">
-<details id="sec-vectors-lin-combs-6-2-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-2-3-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-2-3-1-1">
+<details id="sec-vectors-lin-combs-6-2-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-2-3-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-2-3-1-1">
 <li id="sec-vectors-lin-combs-6-2-3-1-1-1"><div class="para logical" id="sec-vectors-lin-combs-6-2-3-1-1-1-1">
 <div class="para">We have</div>
 <div class="displaymath process-math">
@@ -1175,7 +1175,7 @@ v = 3.5\vvec+1.5\wvec\text{.}
 </div></li>
 <li id="sec-vectors-lin-combs-6-2-3-1-1-2"><div class="para" id="sec-vectors-lin-combs-6-2-3-1-1-2-1">This is the line passing through <span class="process-math">\(-2\vvec\)</span> parallel to <span class="process-math">\(\wvec\text{.}\)</span>
 </div></li>
-</ol></div></div></details><details id="sec-vectors-lin-combs-6-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-2-2-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-2-2-1-1">
+</ol></div></div></details><details id="sec-vectors-lin-combs-6-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-2-2-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-2-2-1-1">
 <li id="sec-vectors-lin-combs-6-2-2-1-1-1"><div class="para logical" id="sec-vectors-lin-combs-6-2-2-1-1-1-1">
 <div class="para">We have</div>
 <div class="displaymath process-math">
@@ -1202,7 +1202,7 @@ v = 3.5\vvec+1.5\wvec\text{.}
 \vvec_3 = \left[\begin{array}{r} -2 \\ 0 \end{array} \right]
 \end{equation*}
 </div>
-<ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-3-1-1-2">
+<ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-3-1-1-2">
 <li id="sec-vectors-lin-combs-6-3-1-1-2-1"><div class="para" id="sec-vectors-lin-combs-6-3-1-1-2-1-1">Find the linear combination with weights <span class="process-math">\(c_1 =
 2\text{,}\)</span> <span class="process-math">\(c_2=-3\text{,}\)</span> and <span class="process-math">\(c_3=1\text{.}\)</span>
 </div></li>
@@ -1220,7 +1220,7 @@ v = 3.5\vvec+1.5\wvec\text{.}
 </ol>
 </div>
 <div class="solutions">
-<details id="sec-vectors-lin-combs-6-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-3-3-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-3-3-1-1">
+<details id="sec-vectors-lin-combs-6-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-3-3-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-3-3-1-1">
 <li id="sec-vectors-lin-combs-6-3-3-1-1-1"><div class="para logical" id="sec-vectors-lin-combs-6-3-3-1-1-1-1">
 <div class="para">The linear combination</div>
 <div class="displaymath process-math">
@@ -1234,7 +1234,7 @@ v = 3.5\vvec+1.5\wvec\text{.}
 </div></li>
 <li id="sec-vectors-lin-combs-6-3-3-1-1-3"><div class="para" id="sec-vectors-lin-combs-6-3-3-1-1-3-1"><span class="process-math">\(c_1=c_2=0\text{.}\)</span></div></li>
 <li id="sec-vectors-lin-combs-6-3-3-1-1-4"><div class="para" id="sec-vectors-lin-combs-6-3-3-1-1-4-1"><span class="process-math">\(\vvec_3=-\frac23\vvec_1 + \frac23\vvec_2\text{.}\)</span></div></li>
-</ol></div></div></details><details id="sec-vectors-lin-combs-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-3-2-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-3-2-1-1">
+</ol></div></div></details><details id="sec-vectors-lin-combs-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-3-2-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-3-2-1-1">
 <li id="sec-vectors-lin-combs-6-3-2-1-1-1"><div class="para logical" id="sec-vectors-lin-combs-6-3-2-1-1-1-1">
 <div class="para">The linear combination</div>
 <div class="displaymath process-math">
@@ -1284,7 +1284,7 @@ c_2 \amp {}={} -\frac23 c_3\text{.} \\
 <div class="para">One serving of Cocoa Puffs has 120 calories, 105 milligrams of sodium, and 1.0 grams of protein. <div id="sec-vectors-lin-combs-6-4-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
 </script></div>
 </div>
-<ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-4-1-1-3">
+<ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-4-1-1-3">
 <li id="sec-vectors-lin-combs-6-4-1-1-3-1"><div class="para" id="sec-vectors-lin-combs-6-4-1-1-3-1-1">Write the vector describing the nutritional content of Cocoa Puffs.</div></li>
 <li id="sec-vectors-lin-combs-6-4-1-1-3-2"><div class="para" id="sec-vectors-lin-combs-6-4-1-1-3-2-1">Suppose you eat <span class="process-math">\(c\)</span> servings of Frosted Flakes and <span class="process-math">\(d\)</span> servings of Cocoa Puffs.  Use the language of vectors and linear combinations to express the quantities of calories, sodium, and protein you have consumed.</div></li>
 <li id="sec-vectors-lin-combs-6-4-1-1-3-3"><div class="para" id="sec-vectors-lin-combs-6-4-1-1-3-3-1">How many servings of each cereal have you eaten if you have consumed 342 calories, 385 milligrams of sodium, and 3.4 grams of protein.</div></li>
@@ -1292,7 +1292,7 @@ c_2 \amp {}={} -\frac23 c_3\text{.} \\
 </ol>
 </div>
 <div class="solutions">
-<details id="sec-vectors-lin-combs-6-4-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-4-3-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-4-3-1-1">
+<details id="sec-vectors-lin-combs-6-4-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-4-3-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-4-3-1-1">
 <li id="sec-vectors-lin-combs-6-4-3-1-1-1"><div class="para" id="sec-vectors-lin-combs-6-4-3-1-1-1-1"><span class="process-math">\(\threevec{120}{105}{1.0}\text{.}\)</span></div></li>
 <li id="sec-vectors-lin-combs-6-4-3-1-1-2"><div class="para logical" id="sec-vectors-lin-combs-6-4-3-1-1-2-1">
 <div class="para">The totals consumed are expressed by the vector</div>
@@ -1305,7 +1305,7 @@ d\threevec{120}{105}{1.0}\text{.}
 </div></li>
 <li id="sec-vectors-lin-combs-6-4-3-1-1-3"><div class="para" id="sec-vectors-lin-combs-6-4-3-1-1-3-1">You had two servings of Frosted Flakes and one serving of Cocoa Puffs.</div></li>
 <li id="sec-vectors-lin-combs-6-4-3-1-1-4"><div class="para" id="sec-vectors-lin-combs-6-4-3-1-1-4-1">Your sister must have eaten something else.</div></li>
-</ol></div></div></details><details id="sec-vectors-lin-combs-6-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-4-2-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-4-2-1-1">
+</ol></div></div></details><details id="sec-vectors-lin-combs-6-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-4-2-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-4-2-1-1">
 <li id="sec-vectors-lin-combs-6-4-2-1-1-1"><div class="para" id="sec-vectors-lin-combs-6-4-2-1-1-1-1"><span class="process-math">\(\threevec{120}{105}{1.0}\text{.}\)</span></div></li>
 <li id="sec-vectors-lin-combs-6-4-2-1-1-2"><div class="para logical" id="sec-vectors-lin-combs-6-4-2-1-1-2-1">
 <div class="para">The totals consumed are expressed by the vector</div>
@@ -1370,7 +1370,7 @@ d\threevec{120}{105}{1.0}\text{.}
 </div>
 <div class="para"><div id="sec-vectors-lin-combs-6-5-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
 </script></div></div>
-<ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-5-1-1-3">
+<ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-5-1-1-3">
 <li id="sec-vectors-lin-combs-6-5-1-1-3-1"><div class="para" id="sec-vectors-lin-combs-6-5-1-1-3-1-1">Can you express the vector <span class="process-math">\(\bvec=\left[\begin{array}{r} 10 \\ 1 \\ -8
 \end{array}\right]\)</span> as a linear combination of <span class="process-math">\(\vvec_1\text{,}\)</span> <span class="process-math">\(\vvec_2\text{,}\)</span> and <span class="process-math">\(\vvec_3\text{?}\)</span> If so, describe all the ways in which you can do so.</div></li>
 <li id="sec-vectors-lin-combs-6-5-1-1-3-2"><div class="para" id="sec-vectors-lin-combs-6-5-1-1-3-2-1">Can you express the vector <span class="process-math">\(\bvec=\left[\begin{array}{r} 3 \\ 7 \\ 1
@@ -1391,7 +1391,7 @@ a\vvec_1 + b\vvec_2 + c\vvec_3,
 </ol>
 </div>
 <div class="solutions">
-<details id="sec-vectors-lin-combs-6-5-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-5-3-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-5-3-1-1">
+<details id="sec-vectors-lin-combs-6-5-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-5-3-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-5-3-1-1">
 <li id="sec-vectors-lin-combs-6-5-3-1-1-1"><div class="para" id="sec-vectors-lin-combs-6-5-3-1-1-1-1">The vector <span class="process-math">\(\bvec\)</span> may be expressed as a linear combination of <span class="process-math">\(\vvec_1\text{,}\)</span> <span class="process-math">\(\vvec_2\text{,}\)</span> and <span class="process-math">\(\vvec_3\)</span> provided that the weights are related by <span class="process-math">\(c_1=5-2c_3\)</span> and <span class="process-math">\(c_2=2-2c_3\text{.}\)</span>
 </div></li>
 <li id="sec-vectors-lin-combs-6-5-3-1-1-2"><div class="para" id="sec-vectors-lin-combs-6-5-3-1-1-2-1">The vector <span class="process-math">\(\bvec\)</span> cannot be written as a linear combination of <span class="process-math">\(\vvec_1\text{,}\)</span> <span class="process-math">\(\vvec_2\text{,}\)</span> and <span class="process-math">\(\vvec_3\text{.}\)</span>
@@ -1399,7 +1399,7 @@ a\vvec_1 + b\vvec_2 + c\vvec_3,
 <li id="sec-vectors-lin-combs-6-5-3-1-1-3"><div class="para" id="sec-vectors-lin-combs-6-5-3-1-1-3-1"><span class="process-math">\(\vvec_3=2\vvec_1+2\vvec_2\text{.}\)</span></div></li>
 <li id="sec-vectors-lin-combs-6-5-3-1-1-4"><div class="para" id="sec-vectors-lin-combs-6-5-3-1-1-4-1"><span class="process-math">\(a\vvec_1+b\vvec_2+c\vvec_3=
 (a+2c)\vvec_1+(b+2c)\vvec_2\text{.}\)</span></div></li>
-</ol></div></div></details><details id="sec-vectors-lin-combs-6-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-5-2-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-5-2-1-1">
+</ol></div></div></details><details id="sec-vectors-lin-combs-6-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-5-2-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-5-2-1-1">
 <li id="sec-vectors-lin-combs-6-5-2-1-1-1"><div class="para logical" id="sec-vectors-lin-combs-6-5-2-1-1-1-1">
 <div class="para">We have the system corresponding to the augmented matrix</div>
 <div class="displaymath process-math">
@@ -1499,7 +1499,7 @@ c(2\vvec_1+2\vvec_2) = (a+2c)\vvec_1+(b+2c)\vvec_2\text{.}\)</span></div></li>
 </div></article><article class="exercise exercise-like" id="sec-vectors-lin-combs-6-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
 <div class="para logical" id="sec-vectors-lin-combs-6-7-1-1">
 <div class="para">Determine whether the following statements are true or false and provide a justification for your response.</div>
-<ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-7-1-1-1">
+<ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-7-1-1-1">
 <li id="sec-vectors-lin-combs-6-7-1-1-1-1"><div class="para" id="sec-vectors-lin-combs-6-7-1-1-1-1-1">Given two vectors <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\text{,}\)</span> the vector <span class="process-math">\(2\vvec\)</span> is a linear combination of <span class="process-math">\(\vvec\)</span> and <span class="process-math">\(\wvec\text{.}\)</span>
 </div></li>
 <li id="sec-vectors-lin-combs-6-7-1-1-1-2"><div class="para" id="sec-vectors-lin-combs-6-7-1-1-1-2-1">Suppose <span class="process-math">\(\vvec_1,\vvec_2,\ldots,\vvec_n\)</span> is a collection of <span class="process-math">\(m\)</span>-dimensional vectors and that the matrix <span class="process-math">\(\left[\begin{array}{rrrr}
@@ -1514,12 +1514,12 @@ c(2\vvec_1+2\vvec_2) = (a+2c)\vvec_1+(b+2c)\vvec_2\text{.}\)</span></div></li>
 </ol>
 </div>
 <div class="solutions">
-<details id="sec-vectors-lin-combs-6-7-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-7-3-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-7-3-1-1">
+<details id="sec-vectors-lin-combs-6-7-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-7-3-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-7-3-1-1">
 <li id="sec-vectors-lin-combs-6-7-3-1-1-1"><div class="para" id="sec-vectors-lin-combs-6-7-3-1-1-1-1">True</div></li>
 <li id="sec-vectors-lin-combs-6-7-3-1-1-2"><div class="para" id="sec-vectors-lin-combs-6-7-3-1-1-2-1">True</div></li>
 <li id="sec-vectors-lin-combs-6-7-3-1-1-3"><div class="para" id="sec-vectors-lin-combs-6-7-3-1-1-3-1">True</div></li>
 <li id="sec-vectors-lin-combs-6-7-3-1-1-4"><div class="para" id="sec-vectors-lin-combs-6-7-3-1-1-4-1">False</div></li>
-</ol></div></div></details><details id="sec-vectors-lin-combs-6-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-7-2-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-7-2-1-1">
+</ol></div></div></details><details id="sec-vectors-lin-combs-6-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-7-2-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-7-2-1-1">
 <li id="sec-vectors-lin-combs-6-7-2-1-1-1"><div class="para" id="sec-vectors-lin-combs-6-7-2-1-1-1-1">True, because we can choose the weights <span class="process-math">\(c=2\)</span> and <span class="process-math">\(d=0\text{.}\)</span>
 </div></li>
 <li id="sec-vectors-lin-combs-6-7-2-1-1-2"><div class="para" id="sec-vectors-lin-combs-6-7-2-1-1-2-1">True, because the augmented matrix <span class="process-math">\(\left[\begin{array}{rrrr|r}
@@ -1548,12 +1548,12 @@ c(2\vvec_1+2\vvec_2) = (a+2c)\vvec_1+(b+2c)\vvec_2\text{.}\)</span></div></li>
 \end{array}\right] = 2\evec_1 - 3\evec_2,
 \end{equation*}
 </div>
-<div class="para">as shown on the left in <a href="sec-vectors-lin-combs.html#fig-ex-coords-1" class="xref" data-knowl="./knowl/xref/fig-ex-coords-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.3.15">Figure 0.3.15</a>.</div>
+<div class="para">as shown on the left in <a href="sec-vectors-lin-combs.html#fig-ex-coords-1" class="xref" data-knowl="./knowl/xref/fig-ex-coords-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.2.15">Figure 0.2.15</a>.</div>
 </div> <figure class="figure figure-like" id="fig-ex-coords-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/images/ex-coord-std.svg" role="img" class="contained"></div>
 <div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/images/ex-coord-nonstd.svg" role="img" class="contained"></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3.15<span class="period">.</span></span><span class="space"> </span>The usual Cartesian coordinate system, defined by the vectors <span class="process-math">\(\evec_1\)</span> and <span class="process-math">\(\evec_2\text{,}\)</span> is shown on the left along with the representation of the point <span class="process-math">\((2,-3)\text{.}\)</span>  The right shows a nonstandard coordinate system defined by vectors <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\text{.}\)</span></figcaption></figure> <div class="para logical" id="sec-vectors-lin-combs-6-8-1-3">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2.15<span class="period">.</span></span><span class="space"> </span>The usual Cartesian coordinate system, defined by the vectors <span class="process-math">\(\evec_1\)</span> and <span class="process-math">\(\evec_2\text{,}\)</span> is shown on the left along with the representation of the point <span class="process-math">\((2,-3)\text{.}\)</span>  The right shows a nonstandard coordinate system defined by vectors <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\text{.}\)</span></figcaption></figure> <div class="para logical" id="sec-vectors-lin-combs-6-8-1-3">
 <div class="para">If instead we have vectors</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-ex-coords-1.html">
 \begin{equation*}
@@ -1567,8 +1567,8 @@ c(2\vvec_1+2\vvec_2) = (a+2c)\vvec_1+(b+2c)\vvec_2\text{.}\)</span></div></li>
 c\vvec_1 + d\vvec_2\text{.}
 \end{equation*}
 </div>
-<div class="para">For instance, the point <span class="process-math">\(\{2,-3\}\)</span> is shown on the right side of <a href="sec-vectors-lin-combs.html#fig-ex-coords-1" class="xref" data-knowl="./knowl/xref/fig-ex-coords-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.3.15">Figure 0.3.15</a>.</div>
-<ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-8-1-3-6">
+<div class="para">For instance, the point <span class="process-math">\(\{2,-3\}\)</span> is shown on the right side of <a href="sec-vectors-lin-combs.html#fig-ex-coords-1" class="xref" data-knowl="./knowl/xref/fig-ex-coords-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.2.15">Figure 0.2.15</a>.</div>
+<ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-8-1-3-6">
 <li id="sec-vectors-lin-combs-6-8-1-3-6-1"><div class="para logical" id="sec-vectors-lin-combs-6-8-1-3-6-1-1">
 <div class="para">Write the point <span class="process-math">\(\{2,-3\}\)</span> in standard coordinates;  that is, find <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that</div>
 <div class="displaymath process-math">
@@ -1591,7 +1591,7 @@ c\vvec_1 + d\vvec_2\text{.}
 </ol>
 </div>
 <div class="solutions">
-<details id="sec-vectors-lin-combs-6-8-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-8-3-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-8-3-1-1">
+<details id="sec-vectors-lin-combs-6-8-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-8-3-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-8-3-1-1">
 <li id="sec-vectors-lin-combs-6-8-3-1-1-1"><div class="para" id="sec-vectors-lin-combs-6-8-3-1-1-1-1"><span class="process-math">\((1,-4) = \{2,-3\}\text{.}\)</span></div></li>
 <li id="sec-vectors-lin-combs-6-8-3-1-1-2"><div class="para" id="sec-vectors-lin-combs-6-8-3-1-1-2-1"><span class="process-math">\(\{7/3, -8/3\} = (2,-3)\text{.}\)</span></div></li>
 <li id="sec-vectors-lin-combs-6-8-3-1-1-3"><div class="para logical" id="sec-vectors-lin-combs-6-8-3-1-1-3-1"><div class="displaymath process-math">
@@ -1613,7 +1613,7 @@ y \amp {}={} \amp c+2d\text{.} \\
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details><details id="sec-vectors-lin-combs-6-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-8-2-1"><ol class="lower-alpha ol-marker-2" id="sec-vectors-lin-combs-6-8-2-1-1">
+</ol></div></div></details><details id="sec-vectors-lin-combs-6-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-vectors-lin-combs-6-8-2-1"><ol class="lower-alpha ol-marker-1" id="sec-vectors-lin-combs-6-8-2-1-1">
 <li id="sec-vectors-lin-combs-6-8-2-1-1-1"><div class="para logical" id="sec-vectors-lin-combs-6-8-2-1-1-1-1">
 <div class="para">We have</div>
 <div class="displaymath process-math">
@@ -1651,7 +1651,7 @@ y \amp {}={} \amp c+2d\text{.} \\
 </ol></div></div></details>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_algebraic.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="s_matrix.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="chap4.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
