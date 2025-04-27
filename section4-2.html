@@ -483,8 +483,12 @@ Notation
 <div class="toc-title-box"><a href="chap4.html" class="internal"><span class="codenumber">1</span> <span class="title">Eigenvalues and eigenvectors</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section4-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Pendahuluan untuk Nilai Eigen dan Vektor Eigen</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#section4-1-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Beberapa Contoh</span></a></div></li></ul>
+<div class="toc-title-box"><a href="section4-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Transformasi Matriks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#matrix-trans-matrices-functions" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Matriks sebagai Fungsi</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#matrix-trans-transformations" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Transformasi</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#section4-1-6" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Transformasi Matriks</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section4-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Finding eigenvalues and eigenvectors</span></a></div>
@@ -502,7 +506,7 @@ Notation
 </h2>
 <section class="introduction" id="section4-2-2"><div class="para" id="section4-2-2-1">Bagian terakhir memperkenalkan nilai eigen dan vektor eigen, menyajikan intuisi geometris yang mendasari definisi mereka, dan menunjukkan penggunaannya dalam memahami perilaku jangka panjang dari sistem tertentu. Sekarang kita akan mengembangkan pemahaman aljabar tentang nilai eigen dan vektor eigen. Secara khusus, kita akan menemukan metode aljabar untuk menentukan nilai eigen dan vektor eigen dari matriks persegi.</div>
 <details id="section4-2-2-2" class="exploration project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span>
 </h3></summary><article class="exploration project-like knowl__content"><div class="para logical" id="section4-2-2-2-1-1">
 <div class="para">Mari kita mulai dengan meninjau beberapa ide penting yang telah kita lihat sebelumnya.</div>
 <ol class="lower-alpha ol-marker-1" id="section4-2-2-2-1-1-1">
@@ -569,7 +573,7 @@ A\vvec - \lambda I\vvec \amp {}={} \zerovec \\
 <div class="para">Dengan kata lain, vektor eigen <span class="process-math">\(\vvec\)</span> adalah solusi dari persamaan homogen <span class="process-math">\((A-\lambda I)\vvec=\zerovec\text{.}\)</span> Ini membawa kita ke wilayah yang sudah dikenal seperti yang dijelajahi dalam aktivitas berikut.</div>
 </div>
 <details id="section4-2-3-3" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span>
 </h4></summary><article class="activity project-like knowl__content"><div class="para logical" id="section4-2-3-3-1-1">
 <div class="para">Nilai eigen dari matriks persegi didefinisikan dengan syarat bahwa ada solusi tak nol untuk persamaan homogen <span class="process-math">\((A-\lambda I)\vvec=\zerovec\text{.}\)</span>
 </div>
@@ -745,7 +749,7 @@ E_\lambda = \nul(A-\lambda I)\text{.}
 <div class="para">Kita mengatakan bahwa <span class="process-math">\(E_\lambda\)</span> adalah <em class="emphasis">eigenspace</em> dari <span class="process-math">\(A\)</span> yang terkait dengan nilai eigen <span class="process-math">\(\lambda\text{.}\)</span> </div>
 </div>
 <details id="section4-2-4-4" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span>
 </h4></summary><article class="activity project-like knowl__content"><div class="para logical" id="section4-2-4-4-1-1">
 <div class="para">Dalam aktivitas ini, kita akan menemukan vektor eigen dari sebuah matriks sebagai ruang nol dari matriks <span class="process-math">\(A-\lambda I\text{.}\)</span>
 </div>

@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Pendahuluan untuk Nilai Eigen dan Vektor Eigen</title>
+<title>Transformasi Matriks</title>
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -471,8 +471,12 @@ Notation
 <div class="toc-title-box"><a href="chap4.html" class="internal"><span class="codenumber">1</span> <span class="title">Eigenvalues and eigenvectors</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section contains-active">
-<div class="toc-title-box"><a href="section4-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Pendahuluan untuk Nilai Eigen dan Vektor Eigen</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#section4-1-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Beberapa Contoh</span></a></div></li></ul>
+<div class="toc-title-box"><a href="section4-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Transformasi Matriks</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#matrix-trans-matrices-functions" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Matriks sebagai Fungsi</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#matrix-trans-transformations" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Transformasi</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#section4-1-6" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Transformasi Matriks</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section4-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Finding eigenvalues and eigenvectors</span></a></div>
@@ -486,131 +490,319 @@ Notation
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="section4-1"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Pendahuluan untuk Nilai Eigen dan Vektor Eigen</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Transformasi Matriks</span>
 </h2>
-<section class="introduction" id="section4-1-2"><div class="para" id="section4-1-2-1">Bagian ini memperkenalkan konsep nilai eigen dan vektor eigen serta memberikan contoh sehingga kita dapat belajar lebih banyak tentang apa itu nilai eigen dan vektor eigen. Kemudian kita dapat menggunakan konsep tersebut dalam kehidupan kita untuk menyelesaikan masalah tertentu.</div>
-<details id="section4-1-2-2" class="exploration project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span>
-</h3></summary><article class="exploration project-like knowl__content"><div class="para logical" id="section4-1-2-2-1-1">
-<div class="para">Sebelum kita memperkenalkan definisi vektor eigen dan nilai eigen, ada beberapa hal yang perlu diperhatikan berikut ini:</div>
-<ol class="lower-alpha ol-marker-1" id="section4-1-2-2-1-1-1">
-<li id="section4-1-2-2-1-1-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
-<div class="sbspanel top" style="width:51.2820512820513%;"><div class="para" id="section4-1-2-2-1-1-1-1-1-1">Misalkan <span class="process-math">\(\vvec\)</span> adalah vektor yang ditunjukkan pada gambar. Gambarkan vektor <span class="process-math">\(2\vvec\)</span> dan vektor <span class="process-math">\(-\vvec\text{.}\)</span>
-</div></div>
-<div class="sbspanel top" style="width:46.1538461538462%;"><img src="external/images/eigen-intro-vec.svg" role="img" class="contained"></div>
-</div></div></li>
-<li id="section4-1-2-2-1-1-1-2"><div class="para" id="section4-1-2-2-1-1-1-2-1">Jelaskan efek geometris dari perkalian skalar pada vektor <span class="process-math">\(\vvec\text{.}\)</span> Kemudian sketsakan semua vektor berbentuk <span class="process-math">\(\lambda \vvec\)</span> di mana <span class="process-math">\(\lambda\)</span> adalah skalar.</div></li>
-<li id="section4-1-2-2-1-1-1-3"><div class="para logical" id="section4-1-2-2-1-1-1-3-1">
-<div class="para">Jelaskan efek geometris dari transformasi matriks yang didefinisikan oleh</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\left[\begin{array}{rr}
-3 \amp 0 \\
-0 \amp -1 \\
-\end{array}\right]\text{.}
-\end{equation*}
-</div>
-</div></li>
-<li id="section4-1-2-2-1-1-1-4"><div class="para logical" id="section4-1-2-2-1-1-1-4-1">
-<div class="para">Misalkan <span class="process-math">\(A\)</span> adalah matriks <span class="process-math">\(2\times 2\)</span> dan <span class="process-math">\(\vvec_1\)</span> dan <span class="process-math">\(\vvec_2\)</span> adalah vektor sedemikian rupa sehingga</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A\vvec_1 = 3 \vvec_1, \qquad A\vvec_2 = -\vvec_2\text{.}
-\end{equation*}
-</div>
-<div class="para">Gunakan linearitas perkalian matriks untuk menyatakan vektor-vektor berikut dalam bentuk <span class="process-math">\(\vvec_1\)</span> dan <span class="process-math">\(\vvec_2\text{.}\)</span>
-</div>
-<ol class="decimal ol-marker-2" id="section4-1-2-2-1-1-1-4-1-8">
-<li id="section4-1-2-2-1-1-1-4-1-8-1"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-1-1"><span class="process-math">\(A(4\vvec_1)\text{.}\)</span></div></li>
-<li id="section4-1-2-2-1-1-1-4-1-8-2"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-2-1"><span class="process-math">\(A(\vvec_1 + \vvec_2)\text{.}\)</span></div></li>
-<li id="section4-1-2-2-1-1-1-4-1-8-3"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-3-1"><span class="process-math">\(A(4\vvec_1 -3\vvec_2)\text{.}\)</span></div></li>
-<li id="section4-1-2-2-1-1-1-4-1-8-4"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-4-1"><span class="process-math">\(A^2\vvec_1\text{.}\)</span></div></li>
-<li id="section4-1-2-2-1-1-1-4-1-8-5"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-5-1"><span class="process-math">\(A^2(4\vvec_1 - 3\vvec_2)\text{.}\)</span></div></li>
-<li id="section4-1-2-2-1-1-1-4-1-8-6"><div class="para" id="section4-1-2-2-1-1-1-4-1-8-6-1"><span class="process-math">\(A^4\vvec_1\text{.}\)</span></div></li>
-</ol>
-</div></li>
-</ol>
-</div>
-<div class="solutions"><details id="section4-1-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-1-2-2-2-1"><ol class="lower-alpha ol-marker-1" id="section4-1-2-2-2-1-1">
-<li id="section4-1-2-2-2-1-1-1"><div class="para" id="section4-1-2-2-2-1-1-1-1">Vektor-vektor tersebut ditunjukkan seperti berikut. <div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/ex-eigen-intro-vec.svg" role="img" class="contained"></div></div></div>
-</div></li>
-<li id="section4-1-2-2-2-1-1-2"><div class="para" id="section4-1-2-2-2-1-1-2-1">Perkalian skalar memiliki efek meregangkan dan mungkin membalik <span class="process-math">\(\vvec\)</span> sepanjang garis yang didefinisikan oleh <span class="process-math">\(\vvec\text{.}\)</span>
-</div></li>
-<li id="section4-1-2-2-2-1-1-3"><div class="para" id="section4-1-2-2-2-1-1-3-1">Transformasi matriks ini meregangkan vektor dengan faktor <span class="process-math">\(3\)</span> dalam arah horizontal dan membalik vektor secara vertikal.</div></li>
-<li id="section4-1-2-2-2-1-1-4"><div class="para logical" id="section4-1-2-2-2-1-1-4-1">
-<div class="para">Dengan menerapkan linearitas, kita melihat bahwa</div>
-<ol class="decimal ol-marker-2" id="section4-1-2-2-2-1-1-4-1-1">
-<li id="section4-1-2-2-2-1-1-4-1-1-1"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-1-1"><span class="process-math">\(A(4\vvec_1) = 4A\vvec_1 =
-12\vvec_1\text{.}\)</span></div></li>
-<li id="section4-1-2-2-2-1-1-4-1-1-2"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-2-1"><span class="process-math">\(A(\vvec_1+\vvec_2) = A\vvec_1 + A\vvec_2 =
-3\vvec_1 - \vvec_2\text{.}\)</span></div></li>
-<li id="section4-1-2-2-2-1-1-4-1-1-3"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-3-1"><span class="process-math">\(A(4\vvec_1-3\vvec_2) = 4A\vvec_1 -3A\vvec_2 =
-12\vvec_1 + 3\vvec_2\text{.}\)</span></div></li>
-<li id="section4-1-2-2-2-1-1-4-1-1-4"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-4-1"><span class="process-math">\(A^2\vvec_1 = A(3\vvec_1) =
-9\vvec_1\text{.}\)</span></div></li>
-<li id="section4-1-2-2-2-1-1-4-1-1-5"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-5-1"><span class="process-math">\(A^2(4\vvec_1-3\vvec_2) = A(12\vvec_1 +3\vvec_2) =
-36\vvec_1 - 3\vvec_2\text{.}\)</span></div></li>
-<li id="section4-1-2-2-2-1-1-4-1-1-6"><div class="para" id="section4-1-2-2-2-1-1-4-1-1-6-1"><span class="process-math">\(A^4\vvec_1 = 3^4\vvec_1 =
-81\vvec_1\text{.}\)</span></div></li>
-</ol>
-</div></li>
-</ol></div></div></details></div></article></details></section><section class="subsection" id="section4-1-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="space"> </span><span class="title">Beberapa Contoh</span>
+<article class="objectives goal-like" id="section4-1-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ol class="decimal" id="section4-1-2-1">
+<li id="section4-1-2-1-1"><div class="para" id="p-derived-section4-1-2-1-1">Belajar memandang matriks secara geometris sebagai fungsi.</div></li>
+<li id="section4-1-2-1-2"><div class="para" id="p-derived-section4-1-2-1-2">Mempelajari contoh transformasi matriks: refleksi, dilatasi, rotasi, geser, proyeksi.</div></li>
+<li id="section4-1-2-1-3"><div class="para" id="p-derived-section4-1-2-1-3">Memahami kosakata seputar transformasi: domain, kodomain, range.</div></li>
+<li id="section4-1-2-1-4"><div class="para" id="p-derived-section4-1-2-1-4">Memahami domain, kodomain, dan range dari transformasi matriks.</div></li>
+<li id="section4-1-2-1-5"><div class="para" id="p-derived-section4-1-2-1-5">
+<em class="emphasis">Gambar:</em> transformasi matriks umum.</div></li>
+<li id="section4-1-2-1-6"><div class="para" id="p-derived-section4-1-2-1-6">
+<em class="emphasis">Kosakata:</em> <dfn class="terminology">transformasi</dfn> / <dfn class="terminology">fungsi</dfn>, <dfn class="terminology">domain</dfn>, <dfn class="terminology">kodomain</dfn>, <dfn class="terminology">range</dfn>, <dfn class="terminology">transformasi identitas</dfn>, <dfn class="terminology">transformasi matriks</dfn>.</div></li>
+</ol></article><section class="introduction" id="section4-1-3"><div class="para" id="section4-1-3-1">Pada bagian ini kita akan mempelajari matriks secara geometris sebagai <em class="emphasis">fungsi</em> atau <em class="emphasis">transformasi</em>. Kita akan membahas transformasi secara umum, kemudian khusus pada transformasi matriks, yaitu transformasi yang berasal dari matriks.</div></section><section class="subsection" id="matrix-trans-matrices-functions"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="space"> </span><span class="title">Matriks sebagai Fungsi</span>
 </h3>
-<div class="para" id="section4-1-3-2">Kita akan sekarang memperkenalkan definisi nilai eigen dan vektor eigen dan kemudian melihat beberapa contoh sederhana.</div>
-<article class="definition definition-like" id="section4-1-3-3"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
-</h4> <div class="para logical" id="section4-1-3-3-1-3">
-<div class="para">Diberikan matriks persegi <span class="process-math">\(n\times n\text{,}\)</span> <span class="process-math">\(A\text{,}\)</span> kita katakan bahwa vektor tak-nol <span class="process-math">\(\vvec\)</span> adalah <em class="emphasis">vektor eigen</em> dari <span class="process-math">\(A\)</span> jika ada skalar <span class="process-math">\(\lambda\)</span> sedemikian rupa sehingga</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A\vvec = \lambda \vvec\text{.}
-\end{equation*}
+<div class="para" id="matrix-trans-matrices-functions-2">Secara informal, <em class="emphasis">fungsi</em> adalah aturan yang menerima input dan menghasilkan output. Misalnya, <span class="process-math">\(f(x) = x^2\)</span> adalah fungsi yang menerima satu angka <span class="process-math">\(x\)</span> sebagai input, dan menghasilkan kuadrat dari angka tersebut: <span class="process-math">\(f(2) = 4\text{.}\)</span> Pada subbagian ini, kita akan menginterpretasikan matriks sebagai fungsi.</div>
+<div class="para logical" id="matrix-trans-matrices-functions-3">
+<div class="para"> Misalkan <span class="process-math">\(A\)</span> adalah matriks dengan <span class="process-math">\(m\)</span> baris dan <span class="process-math">\(n\)</span> kolom. Pertimbangkan persamaan matriks <span class="process-math">\(b=Ax\)</span> (kita menulisnya seperti ini sebagai pengingat notasi <span class="process-math">\(y=f(x)\)</span>). Jika kita mengubah <span class="process-math">\(x\text{,}\)</span> maka <span class="process-math">\(b\)</span> juga akan berubah; dengan cara ini, kita menganggap <span class="process-math">\(A\)</span> sebagai fungsi dengan variabel independen <span class="process-math">\(x\)</span> dan variabel dependen <span class="process-math">\(b\text{.}\)</span>
 </div>
-<div class="para">Skalar <span class="process-math">\(\lambda\)</span> disebut <em class="emphasis">nilai eigen</em> yang terkait dengan vektor eigen <span class="process-math">\(\vvec\text{.}\)</span>
+<ul class="disc" id="matrix-trans-matrices-functions-3-13">
+<li id="matrix-trans-matrices-functions-3-13-1"><div class="para" id="p-derived-matrix-trans-matrices-functions-3-13-1">Variabel independen (input) adalah <span class="process-math">\(x\text{,}\)</span> yaitu vektor di <span class="process-math">\(\R^n\text{.}\)</span>
+</div></li>
+<li id="matrix-trans-matrices-functions-3-13-2"><div class="para" id="p-derived-matrix-trans-matrices-functions-3-13-2">Variabel dependen (output) adalah <span class="process-math">\(b\text{,}\)</span> yaitu vektor di <span class="process-math">\(\R^m\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">Himpunan semua vektor output yang mungkin adalah vektor <span class="process-math">\(b\)</span> sehingga <span class="process-math">\(Ax=b\)</span> memiliki solusi; ini sama dengan ruang kolom dari <span class="process-math">\(A\)</span> seperti yang dijelaskan dalam <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "matrixeq-spans-consistency" missing or not unique]</code>. \begin{tikzpicture}[thin border nodes] \path[use as bounding box] (-3,-5.5) -- (15,3); \draw[grid lines, light gray] (-3,-3) grid (3,3); \node (A) at (0,-3.5) {$\R^n$}; \node (B) at (8,-3.5) {$\R^m$}; \draw[-&gt;] (A.east) +(5mm,0) -- node[midway,above=1mm] {$b=Ax$} ($(B.west)-(5mm,0)$); \point["$x$" left] (P) at (1,1,5); \begin{scope}[myxyz, xshift=8cm] \path[clip, resetxy] (-3,-3) rectangle (3,3); \def\v{(-1,2,1)} \def\w{(0,1,-1)} \node[coordinate] (X) at \v {}; \node[coordinate] (Y) at \w {}; \draw[very thin] (-2,0,0) -- (0,0,0); \draw[very thin] (0,-2,0) -- (0,0,0); \draw[very thin] (0,0,-2) -- (0,0,0); \begin{scope}[x=(X), y=(Y), transformxy] \fill[seq4!10, nearly opaque] (-1,-1) rectangle (1,1); \draw[step=.5cm, seq4!30, very thin] (-1,-1) grid (1,1); \point["$Ax$" {fill=none,below}] (Q) at (-.5,.5); \node[coordinate, pin={[pin edge={very thin,-},pin distance=3mm,anchor=north]-70:$\Col(A)$}] at (0.1,1) {}; \end{scope} \draw[-&gt;, very thin] (0,0,0) -- (2,0,0); \draw[-&gt;, very thin] (0,0,0) -- (0,2,0); \draw[-&gt;, very thin] (0,0,0) -- (0,0,2); \draw[resetxy] (-3,-3) rectangle (3,3); \end{scope} \draw[|-&gt;, shorten &gt;=.35mm, shorten &lt;=.35mm] (P.east) .. controls +(0:3cm) and +(190:3cm) .. (Q.west); \end{tikzpicture}</div>
 </div>
-</div></article><div class="para" id="section4-1-3-4">Pada pandangan pertama, ada banyak hal yang terjadi dalam definisi ini, jadi mari kita lihat sebuah contoh.</div>
-<article class="example example-like" id="section4-1-3-5"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
+<article class="example example-like" id="matrix-trans-matrices-functions-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Interaktif: Matriks <span class="process-math">\(2\times 3\)</span>.</span>
 </h4>
-<div class="para logical" id="section4-1-3-5-1-1">
-<div class="para">Perhatikan matriks <span class="process-math">\(A = \left[\begin{array}{rr}
-7 \amp 6 \\
-6 \amp -2 \\
-\end{array}\right]\)</span> dan vektor <span class="process-math">\(\vvec=\twovec{2}{1}\text{.}\)</span> Kita mendapatkan</div>
+<figure class="figure figure-like" id="matrix-trans-matrices-functions-4-2"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.2<span class="period">.</span></span><span class="space"> </span>Gambar matriks <span class="process-math">\(2\times 3\text{,}\)</span> dianggap sebagai fungsi. Vektor input adalah <span class="process-math">\(x\text{,}\)</span> yaitu vektor di <span class="process-math">\(\R^3\text{,}\)</span> dan vektor output adalah <span class="process-math">\(b=Ax\text{,}\)</span> yaitu vektor di <span class="process-math">\(\R^2\text{.}\)</span> Garis ungu di sebelah kanan adalah ruang kolom; saat Anda mengubah <span class="process-math">\(x\text{,}\)</span> output <span class="process-math">\(b\)</span> terbatas pada garis ini.</figcaption></figure></article><article class="example example-like" id="matrix-trans-matrices-functions-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Interaktif: Matriks <span class="process-math">\(3\times 2\)</span>.</span>
+</h4>
+<figure class="figure figure-like" id="matrix-trans-matrices-functions-5-2"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.4<span class="period">.</span></span><span class="space"> </span>Gambar matriks <span class="process-math">\(3\times 2\text{,}\)</span> dianggap sebagai fungsi. Vektor input adalah <span class="process-math">\(x\text{,}\)</span> yaitu vektor di <span class="process-math">\(\R^2\text{,}\)</span> dan vektor output adalah <span class="process-math">\(b=Ax\text{,}\)</span> yaitu vektor di <span class="process-math">\(\R^3\text{.}\)</span> Bidang ungu di sebelah kanan adalah ruang kolom; saat Anda mengubah <span class="process-math">\(x\text{,}\)</span> output <span class="process-math">\(b\)</span> terbatas pada bidang ini.</figcaption></figure></article><article class="example example-like" id="matrix-trans-eg-projection"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Proyeksi ke bidang <span class="process-math">\(xy\)</span>.</span>
+</h4>
+<div class="para logical" id="matrix-trans-eg-projection-4-1">
+<div class="para">Misalkan</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A\vvec = \left[\begin{array}{rr}
-7 \amp 6 \\
-6 \amp -2 \\
-\end{array}\right]
-\twovec{2}{1}
-=
-\twovec{20}{10}
-=10\twovec{2}{1}
-=10\vvec\text{.}
+A = \mat{1 0 0; 0 1 0; 0 0 0}.
 \end{equation*}
 </div>
-<div class="para">Dengan kata lain, <span class="process-math">\(A\vvec = 10\vvec\text{,}\)</span> yang mengatakan bahwa <span class="process-math">\(\vvec\)</span> adalah vektor eigen dari matriks <span class="process-math">\(A\)</span> dengan nilai eigen terkait <span class="process-math">\(\lambda = 10\text{.}\)</span>
+<div class="para">Jelaskan fungsi <span class="process-math">\(b=Ax\)</span> secara geometris.</div>
 </div>
-</div> <div class="para logical" id="section4-1-3-5-1-2">
-<div class="para">Demikian pula, jika <span class="process-math">\(\wvec = \twovec{-1}{2}\text{,}\)</span> kita mendapatkan</div>
+<div class="solutions"><details id="matrix-trans-eg-projection-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="matrix-trans-eg-projection-5-1">
+<div class="para">Dalam persamaan <span class="process-math">\(Ax=b\text{,}\)</span> vektor input <span class="process-math">\(x\)</span> dan vektor output <span class="process-math">\(b\)</span> keduanya berada di <span class="process-math">\(\R^3\text{.}\)</span> Pertama kita kalikan <span class="process-math">\(A\)</span> dengan sebuah vektor untuk melihat apa yang dilakukannya:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A\wvec = \left[\begin{array}{rr}
-7 \amp 6 \\
-6 \amp -2 \\
-\end{array}\right]
-\twovec{-1}{2}
-=
-\twovec{5}{-10}
-=-5\twovec{-1}{2}
-=-5\wvec\text{.}
+A\vec{x y z} = \mat{1 0 0; 0 1 0; 0 0 0}\vec{x y z} = \vec{x y 0}.
 \end{equation*}
 </div>
-<div class="para">Di sini juga, kita memiliki <span class="process-math">\(A\wvec = -5\wvec\)</span> yang menunjukkan bahwa <span class="process-math">\(\wvec\)</span> adalah vektor eigen dari <span class="process-math">\(A\)</span> dengan nilai eigen terkait <span class="process-math">\(\lambda=-5\text{.}\)</span>
+<div class="para">Perkalian dengan <span class="process-math">\(A\)</span> hanya mengatur koordinat <span class="process-math">\(z\)</span> sama dengan nol: ini adalah <em class="emphasis">proyeksi vertikal ke bidang <span class="process-math">\(xy\)</span></em>. \begin{tikzpicture}[myxyz] \begin{scope}[arrows={|[width=4pt]-&gt;[width=4pt]}, shorten=4pt] \draw (-1,-1,-2.5) node[point, seq2] {} -- (-1,-1,0); \draw (2,-2,-1) node[point, seq5] {} -- (2,-2,0); \end{scope} \begin{scope}[transformxy] \fill[white, nearly opaque] (-3, -3) rectangle (3, 3); \draw[step=1cm, help lines] (-3, -3) grid (3, 3); \end{scope} \begin{scope}[arrows={|[width=4pt]-&gt;[width=4pt]}, shorten=4pt] \draw (2,1,3) node[point,seq1] {} -- (2,1,0) node[point,seq1] {}; \point[seq2] at (-1,-1,0); \point[seq5] at (2,-2,0); \draw (-1,2,2) node[point,seq3] {} -- (-1,2,0) node[point,seq3] {}; \draw (-2,0,1) node[point,seq4] {} -- (-2,0,0) node[point,seq4] {}; \end{scope} \end{tikzpicture}</div>
 </div>
-</div></article></section></section></div>
+<figure class="figure figure-like" id="matrix-trans-eg-projection-5-2"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.6<span class="period">.</span></span><span class="space"> </span>Perkalian dengan matriks <span class="process-math">\(A\)</span> memproyeksikan sebuah vektor ke bidang <span class="process-math">\(xy\text{.}\)</span> Gerakkan vektor input <span class="process-math">\(x\)</span> untuk melihat bagaimana vektor output <span class="process-math">\(b\)</span> berubah.</figcaption></figure>
+</div></details></div></article><article class="example example-like" id="matrix-trans-eg-reflection"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Refleksi.</span>
+</h4>
+<div class="para logical" id="matrix-trans-eg-reflection-3-1">
+<div class="para">Misalkan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \mat{-1 0; 0 1}.
+\end{equation*}
+</div>
+<div class="para">Jelaskan fungsi <span class="process-math">\(b=Ax\)</span> secara geometris.</div>
+</div>
+<div class="solutions"><details id="matrix-trans-eg-reflection-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="matrix-trans-eg-reflection-4-1">
+<div class="para">Dalam persamaan <span class="process-math">\(Ax=b\text{,}\)</span> vektor input <span class="process-math">\(x\)</span> dan vektor output <span class="process-math">\(b\)</span> keduanya berada di <span class="process-math">\(\R^2\text{.}\)</span> Pertama kita kalikan <span class="process-math">\(A\)</span> dengan sebuah vektor untuk melihat apa yang dilakukannya:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x y} = \mat{-1 0; 0 1}\vec{x y} = \vec{-x y}.
+\end{equation*}
+</div>
+<div class="para">Perkalian dengan <span class="process-math">\(A\)</span> mengubah tanda koordinat <span class="process-math">\(x\text{:}\)</span> ini adalah <em class="emphasis">refleksi melalui sumbu <span class="process-math">\(y\)</span></em>. \def\theo{\includegraphics[width=4cm]{theo2.jpg}} \begin{tikzpicture} \node (theo1) at (0,0,0) {\theo}; \draw[-&gt;,opacity=.3] (-1.8,0) -- (1.8,0); \draw[-&gt;,opacity=.3] (0,-1.8) -- (0,1.8); \begin{scope}[xshift=7cm] \node[xscale=-1] (theo2) at (0,0,0) {\theo}; \draw[-&gt;,opacity=.3] (-1.8,0) -- (1.8,0); \draw[-&gt;,opacity=.3] (0,-1.8) -- (0,1.8); \end{scope} \draw[-&gt;] (theo1.20) to[out=20,in=160] node[midway,above] {$b=Ax$} (theo2.20); \end{tikzpicture}</div>
+</div>
+<figure class="figure figure-like" id="matrix-trans-eg-reflection-4-2"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.8<span class="period">.</span></span><span class="space"> </span>Perkalian dengan matriks <span class="process-math">\(A\)</span> merefleksikan melalui sumbu <span class="process-math">\(y\text{.}\)</span> Gerakkan vektor input <span class="process-math">\(x\)</span> untuk melihat bagaimana vektor output <span class="process-math">\(b\)</span> berubah.</figcaption></figure>
+</div></details></div></article><article class="example example-like" id="matrix-trans-eg-dilation"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Dilatasi.</span>
+</h4>
+<div class="para logical" id="matrix-trans-eg-dilation-5-1">
+<div class="para">Misalkan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \mat{1.5 0; 0 1.5}.
+\end{equation*}
+</div>
+<div class="para">Jelaskan fungsi <span class="process-math">\(b=Ax\)</span> secara geometris.</div>
+</div>
+<div class="solutions"><details id="matrix-trans-eg-dilation-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="matrix-trans-eg-dilation-6-1">
+<div class="para">Dalam persamaan <span class="process-math">\(Ax=b\text{,}\)</span> vektor input <span class="process-math">\(x\)</span> dan vektor output <span class="process-math">\(b\)</span> keduanya berada di <span class="process-math">\(\R^2\text{.}\)</span> Pertama kita kalikan <span class="process-math">\(A\)</span> dengan sebuah vektor untuk melihat apa yang dilakukannya:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x y} = \mat{1.5 0; 0 1.5}\vec{x y} = \vec{1.5x 1.5y}
+= 1.5\vec{x y}.
+\end{equation*}
+</div>
+<div class="para">Perkalian dengan <span class="process-math">\(A\)</span> sama dengan perkalian skalar dengan <span class="process-math">\(1.5\text{:}\)</span> ini <em class="emphasis">menskalakan</em> atau <em class="emphasis">mendilatasi</em> bidang dengan faktor <span class="process-math">\(1.5\text{.}\)</span> \def\theo{\includegraphics[width=3.5cm]{theo3.jpg}} \begin{tikzpicture} \node (theo1) at (0,0,0) {\theo}; \draw[-&gt;,opacity=.6] (-1.3,0) -- (1.3,0); \draw[-&gt;,opacity=.6] (0,-1.3) -- (0,1.3); \begin{scope}[xshift=7cm] \node[scale=1.5] (theo2) at (0,0,0) {\theo}; \draw[-&gt;,opacity=.6] (-1.3,0) -- (1.3,0); \draw[-&gt;,opacity=.6] (0,-1.3) -- (0,1.3); \end{scope} \draw[-&gt;] ($(theo1.east)+(0,.3)$) to[bend left, "$b = Ax$"] ($(theo2.west)+(0,.3)$); \end{tikzpicture}</div>
+</div>
+<figure class="figure figure-like" id="matrix-trans-eg-dilation-6-2"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.10<span class="period">.</span></span><span class="space"> </span>Perkalian dengan matriks <span class="process-math">\(A\)</span> mendilatasi bidang dengan faktor <span class="process-math">\(1.5\text{.}\)</span> Gerakkan vektor input <span class="process-math">\(x\)</span> untuk melihat bagaimana vektor output <span class="process-math">\(b\)</span> berubah.</figcaption></figure>
+</div></details></div></article><article class="example example-like" id="matrix-trans-eg-identity"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Identitas.</span>
+</h4>
+<div class="para logical" id="matrix-trans-eg-identity-3-1">
+<div class="para">Misalkan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \mat{1 0; 0 1}.
+\end{equation*}
+</div>
+<div class="para">Jelaskan fungsi <span class="process-math">\(b=Ax\)</span> secara geometris.</div>
+</div>
+<div class="solutions"><details id="matrix-trans-eg-identity-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="matrix-trans-eg-identity-4-1">
+<div class="para">Dalam persamaan <span class="process-math">\(Ax=b\text{,}\)</span> vektor input <span class="process-math">\(x\)</span> dan vektor output <span class="process-math">\(b\)</span> keduanya berada di <span class="process-math">\(\R^2\text{.}\)</span> Pertama kita kalikan <span class="process-math">\(A\)</span> dengan sebuah vektor untuk melihat apa yang dilakukannya:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x y} = \mat{1 0; 0 1}\vec{x y} = \vec{x y}.
+\end{equation*}
+</div>
+<div class="para">Perkalian dengan <span class="process-math">\(A\)</span> tidak mengubah vektor input sama sekali: ini adalah <em class="emphasis">transformasi identitas yang tidak melakukan apa-apa</em>. \def\theo{\includegraphics[width=4cm]{theo11.jpg}} \begin{tikzpicture} \node (theo1) at (0,0,0) {\theo}; \draw[-&gt;,opacity=.6] (-1.3,0) -- (1.3,0); \draw[-&gt;,opacity=.6] (0,-1.3) -- (0,1.3); \begin{scope}[xshift=7cm] \node (theo2) at (0,0,0) {\theo}; \draw[-&gt;,opacity=.6] (-1.3,0) -- (1.3,0); \draw[-&gt;,opacity=.6] (0,-1.3) -- (0,1.3); \end{scope} \draw[-&gt;] ($(theo1.east)+(0,.3)$) to[bend left, "$b = Ax$"] ($(theo2.west)+(0,.3)$); \end{tikzpicture}</div>
+</div>
+<figure class="figure figure-like" id="matrix-trans-eg-identity-4-2"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.12<span class="period">.</span></span><span class="space"> </span>Perkalian dengan matriks <span class="process-math">\(A\)</span> tidak menggerakkan vektor <span class="process-math">\(x\text{:}\)</span> yaitu, <span class="process-math">\(b=Ax=x\text{.}\)</span> Gerakkan vektor input <span class="process-math">\(x\)</span> untuk melihat bagaimana vektor output <span class="process-math">\(b\)</span> berubah.</figcaption></figure>
+</div></details></div></article><article class="example example-like" id="matrix-trans-eg-rotation"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Rotasi.</span>
+</h4>
+<div class="para logical" id="matrix-trans-eg-rotation-3-1">
+<div class="para">Misalkan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \mat{0 -1; 1 0}.
+\end{equation*}
+</div>
+<div class="para">Jelaskan fungsi <span class="process-math">\(b=Ax\)</span> secara geometris.</div>
+</div>
+<div class="solutions"><details id="matrix-trans-eg-rotation-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="matrix-trans-eg-rotation-4-1">
+<div class="para">Dalam persamaan <span class="process-math">\(Ax=b\text{,}\)</span> vektor input <span class="process-math">\(x\)</span> dan vektor output <span class="process-math">\(b\)</span> keduanya berada di <span class="process-math">\(\R^2\text{.}\)</span> Pertama kita kalikan <span class="process-math">\(A\)</span> dengan sebuah vektor untuk melihat apa yang dilakukannya:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x y} = \mat{0 -1; 1 0}\vec{x y} = \vec{-y x}.
+\end{equation*}
+</div>
+<div class="para">Kita substitusikan beberapa titik uji untuk memahami geometri transformasi: \def\arcarrow#1;{ \pgfmathanglebetweenpoints{\pgfpoint{0cm}{0cm}}{\pgfpointanchor{#1}{center}} \let\sangle=\pgfmathresult \draw[|-&gt;, shorten=2mm] let \p1 = (#1.center), \n1={veclen(\x1,\y1)} in (#1) arc[radius=\n1, delta angle=90, start angle=\sangle]; } \begin{minipage}{5cm} \[\begin{split} A\color{seq1}\vec{1 2} &amp;= \color{seq1}\vec{-2 1} \\ A\color{seq2}\vec{-1 1} &amp;= \color{seq2}\vec{-1 -1} \\ A\color{seq3}\vec{0 -2} &amp;= \color{seq3}\vec{2 0} \\ \end{split}\] \end{minipage} \qquad \begin{tikzpicture}[baseline=0] \draw[help lines] (-3,-3) grid (3,3); \draw[-&gt;] (-3,0) -- (3,0); \draw[-&gt;] (0,-3) -- (0,3); \point[seq1] (X1) at (1,2); \point[seq1] (TX1) at (-2,1); \arcarrow X1; \point[seq2] (X2) at (-1,1); \point[seq2] (TX2) at (-1,-1); \arcarrow X2; \point[seq3] (TX3) at (2,0); \point[seq3] (X3) at (0,-2); \arcarrow X3; \end{tikzpicture} Perkalian dengan <span class="process-math">\(A\)</span> adalah <em class="emphasis">rotasi berlawanan arah jarum jam sebesar <span class="process-math">\(90^\circ\)</span></em>. \def\theo{\includegraphics[width=4cm]{theo8.jpg}} \begin{tikzpicture} \node (theo1) at (0,0,0) {\theo}; \draw[-&gt;,opacity=.6] (-1.3,0) -- (1.3,0); \draw[-&gt;,opacity=.6] (0,-1.3) -- (0,1.3); \begin{scope}[xshift=7cm] \node[rotate=90] (theo2) at (0,0,0) {\theo}; \draw[-&gt;,opacity=.6] (-1.3,0) -- (1.3,0); \draw[-&gt;,opacity=.6] (0,-1.3) -- (0,1.3); \end{scope} \draw[-&gt;] ($(theo1.east)+(0,.3)$) to[bend left, "$b = Ax$"] ($(theo2.north)+(0,.3)$); \end{tikzpicture}</div>
+</div>
+<figure class="figure figure-like" id="matrix-trans-eg-rotation-4-2"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.14<span class="period">.</span></span><span class="space"> </span>Perkalian dengan matriks <span class="process-math">\(A\)</span> memutar vektor <span class="process-math">\(x\)</span> berlawanan arah jarum jam sebesar <span class="process-math">\(90^\circ\text{.}\)</span> Gerakkan vektor input <span class="process-math">\(x\)</span> untuk melihat bagaimana vektor output <span class="process-math">\(b\)</span> berubah.</figcaption></figure>
+</div></details></div></article><article class="example example-like" id="matrix-trans-shear"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Geser.</span>
+</h4>
+<div class="para logical" id="matrix-trans-shear-3-1">
+<div class="para">Misalkan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \mat{1 1; 0 1}.
+\end{equation*}
+</div>
+<div class="para">Jelaskan fungsi <span class="process-math">\(b=Ax\)</span> secara geometris.</div>
+</div>
+<div class="solutions"><details id="matrix-trans-shear-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="matrix-trans-shear-4-1">
+<div class="para">Dalam persamaan <span class="process-math">\(Ax=b\text{,}\)</span> vektor input <span class="process-math">\(x\)</span> dan vektor output <span class="process-math">\(b\)</span> keduanya berada di <span class="process-math">\(\R^2\text{.}\)</span> Pertama kita kalikan <span class="process-math">\(A\)</span> dengan sebuah vektor untuk melihat apa yang dilakukannya:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\vec{x y} = \mat{1 1; 0 1}\vec{x y} = \vec{x+y y}.
+\end{equation*}
+</div>
+<div class="para">Perkalian dengan <span class="process-math">\(A\)</span> menambahkan koordinat <span class="process-math">\(y\)</span> ke koordinat <span class="process-math">\(x\text{;}\)</span> ini disebut <em class="emphasis">geser dalam arah <span class="process-math">\(x\)</span></em>. \def\sheep{\includegraphics[width=4cm]{sheep.jpg}} \begin{tikzpicture} \node (sheep1) at (0,0,0) {\sheep}; \draw[-&gt;,opacity=.6] (-1.3,0) -- (1.3,0); \draw[-&gt;,opacity=.6] (0,-1.3) -- (0,1.3); \begin{scope}[xshift=7cm] \node[cm={1,0,1,1,(0,0)}] (sheep2) at (0,0,0) {\sheep}; \draw[-&gt;,opacity=.6] (-1.3,0) -- (1.3,0); \draw[-&gt;,opacity=.6] (0,-1.3) -- (0,1.3); \end{scope} \draw[-&gt;] ($(sheep1.east)+(0,.3)$) to[bend left, "$b = Ax$"] ($(sheep2.west)+(0,.3)$); \end{tikzpicture}</div>
+</div>
+<figure class="figure figure-like" id="matrix-trans-shear-4-2"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.16<span class="period">.</span></span><span class="space"> </span>Perkalian dengan matriks <span class="process-math">\(A\)</span> menambahkan koordinat <span class="process-math">\(y\)</span> ke koordinat <span class="process-math">\(x\text{.}\)</span> Gerakkan vektor input <span class="process-math">\(x\)</span> untuk melihat bagaimana vektor output <span class="process-math">\(b\)</span> berubah.</figcaption></figure>
+</div></details></div></article></section><section class="subsection" id="matrix-trans-transformations"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="space"> </span><span class="title">Transformasi</span>
+</h3>
+<div class="para" id="matrix-trans-transformations-2">Pada titik ini, ada baiknya kita menetapkan gagasan dan terminologi kita mengenai fungsi, yang dalam buku ini akan kita sebut sebagai <em class="emphasis">transformasi</em>. Ini memungkinkan kita untuk mensistematisasi pembahasan tentang matriks sebagai fungsi.</div>
+<article class="definition definition-like" id="matrix-trans-transformations-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.17</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="matrix-trans-transformations-3-10-1">
+<div class="para">Sebuah <dfn class="terminology">transformasi</dfn> dari <span class="process-math">\(\R^n\)</span> ke <span class="process-math">\(\R^m\)</span> adalah suatu aturan <span class="process-math">\(T\)</span> yang memasangkan setiap vektor <span class="process-math">\(x\)</span> dalam <span class="process-math">\(\R^n\)</span> dengan sebuah vektor <span class="process-math">\(T(x)\)</span> dalam <span class="process-math">\(\R^m\text{.}\)</span>
+</div>
+<ul class="disc" id="matrix-trans-transformations-3-10-1-9">
+<li id="matrix-trans-transformations-3-10-1-9-1"><div class="para" id="p-derived-matrix-trans-transformations-3-10-1-9-1">
+<span class="process-math">\(\R^n\)</span> disebut sebagai <dfn class="terminology">domain</dfn> dari <span class="process-math">\(T\text{.}\)</span>
+</div></li>
+<li id="matrix-trans-transformations-3-10-1-9-2"><div class="para" id="p-derived-matrix-trans-transformations-3-10-1-9-2">
+<span class="process-math">\(\R^m\)</span> disebut sebagai <dfn class="terminology">kodomain</dfn> dari <span class="process-math">\(T\text{.}\)</span>
+</div></li>
+<li id="matrix-trans-transformations-3-10-1-9-3"><div class="para" id="p-derived-matrix-trans-transformations-3-10-1-9-3">Untuk <span class="process-math">\(x\)</span> dalam <span class="process-math">\(\R^n\text{,}\)</span> vektor <span class="process-math">\(T(x)\)</span> dalam <span class="process-math">\(\R^m\)</span> disebut <dfn class="terminology">citra</dfn> dari <span class="process-math">\(x\)</span> oleh <span class="process-math">\(T\text{.}\)</span>
+</div></li>
+<li id="matrix-trans-transformations-3-10-1-9-4"><div class="para" id="p-derived-matrix-trans-transformations-3-10-1-9-4">Himpunan semua citra <span class="process-math">\(\{T(x)\mid x\text{ dalam }\R^n\}\)</span> disebut <dfn class="terminology">range</dfn> dari <span class="process-math">\(T\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">Notasi <span class="process-math">\(T\colon\R^n\To\R^m\)</span> berarti “<span class="process-math">\(T\)</span> adalah sebuah transformasi dari <span class="process-math">\(\R^n\)</span> ke <span class="process-math">\(\R^m\text{.}\)</span>”</div>
+</div></article><div class="para" id="matrix-trans-transformations-4"> Mungkin membantu untuk membayangkan <span class="process-math">\(T\)</span> sebagai sebuah “mesin” yang menerima <span class="process-math">\(x\)</span> sebagai masukan, dan memberikan <span class="process-math">\(T(x)\)</span> sebagai keluaran. ... (konten kode latex tetap, tidak perlu diterjemahkan) ... Titik-titik pada domain <span class="process-math">\(\R^n\)</span> adalah <em class="emphasis">masukan</em> untuk <span class="process-math">\(T\text{:}\)</span> ini berarti bahwa masuk akal untuk mengevaluasi <span class="process-math">\(T\)</span> pada vektor-vektor dengan <span class="process-math">\(n\)</span> entri, yaitu daftar yang berisi <span class="process-math">\(n\)</span> bilangan. Demikian pula, titik-titik pada kodomain <span class="process-math">\(\R^m\)</span> adalah <em class="emphasis">keluaran</em> dari <span class="process-math">\(T\text{:}\)</span> artinya, hasil evaluasi <span class="process-math">\(T\)</span> selalu berupa vektor dengan <span class="process-math">\(m\)</span> entri.</div>
+<div class="para" id="matrix-trans-transformations-5">
+<em class="emphasis">Range</em> dari <span class="process-math">\(T\)</span> adalah himpunan semua vektor dalam kodomain yang benar-benar muncul sebagai keluaran dari fungsi <span class="process-math">\(T\)</span> untuk beberapa masukan tertentu. Dengan kata lain, range adalah semua vektor <span class="process-math">\(b\)</span> dalam kodomain sedemikian hingga <span class="process-math">\(T(x) = b\)</span> memiliki solusi <span class="process-math">\(x\)</span> dalam domain.</div>
+<article class="example example-like" id="matrix-trans-transformations-6"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Fungsi satu variabel.</span>
+</h4>
+<div class="para logical" id="matrix-trans-transformations-6-3">
+<div class="para">Sebagian besar fungsi yang mungkin pernah Anda lihat sebelumnya memiliki domain dan kodomain yang sama, yaitu <span class="process-math">\(\R = \R^1\text{.}\)</span> Misalnya,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin\colon\R\To\R \qquad \sin(x) =
+\left(\,\parbox{5cm}{
+panjang sisi depan dibagi dengan hipotenusa dalam sebuah segitiga siku-siku dengan sudut $x$ dalam radian}\,\right).
+\end{equation*}
+</div>
+<div class="para">Perhatikan bahwa kita mendefinisikan <span class="process-math">\(\sin\)</span> dengan sebuah aturan: fungsi didefinisikan dengan menentukan apa keluaran fungsi untuk setiap masukan yang mungkin.</div>
+</div>
+<div class="para" id="matrix-trans-transformations-6-4">Anda mungkin terbiasa memikirkan fungsi-fungsi semacam ini dalam bentuk grafik: ... (kode latex grafik tetap) ... Dalam kasus ini, sumbu horizontal adalah domain, dan sumbu vertikal adalah kodomain. Ini berguna jika domain dan kodomain adalah <span class="process-math">\(\R\text{,}\)</span> tetapi akan sulit dilakukan ketika domain adalah <span class="process-math">\(\R^2\)</span> dan kodomain adalah <span class="process-math">\(\R^3\text{.}\)</span> Grafik fungsi semacam itu merupakan subset dari <span class="process-math">\(\R^5\text{,}\)</span> yang sulit divisualisasikan. Oleh karena itu, kita jarang menggambarkan grafik suatu transformasi.</div>
+<div class="para" id="matrix-trans-transformations-6-5">Perlu dicatat bahwa <em class="emphasis">range</em> dari <span class="process-math">\(\sin\)</span> adalah interval <span class="process-math">\([-1,1]\text{:}\)</span> ini adalah himpunan semua keluaran yang mungkin dari fungsi <span class="process-math">\(\sin\text{.}\)</span>
+</div></article><article class="example example-like" id="matrix-trans-transformations-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Fungsi beberapa variabel.</span>
+</h4>
+<div class="para logical" id="matrix-trans-transformations-7-3">
+<div class="para">Berikut contoh fungsi dari <span class="process-math">\(\R^2\)</span> ke <span class="process-math">\(\R^3\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\vec{x y} = \vec{x+y \cos(y) y-x^2}.
+\end{equation*}
+</div>
+<div class="para">Masukan dari <span class="process-math">\(f\)</span> masing-masing memiliki dua entri, dan keluarannya memiliki tiga entri. Dalam kasus ini, kita mendefinisikan <span class="process-math">\(f\)</span> dengan sebuah formula, jadi kita mengevaluasi <span class="process-math">\(f\)</span> dengan menggantikan nilai-nilai untuk variabel-variabel:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\vec{2 3} = \vec{2+3 \cos(3) 3-2^2} = \vec{5 \cos(3) -1}.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="matrix-trans-transformations-7-4">
+<div class="para">Berikut contoh fungsi dari <span class="process-math">\(\R^3\)</span> ke <span class="process-math">\(\R^3\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(v) = \left(\,\parbox{5.5cm}{rotasi berlawanan arah jarum jam sebesar $42^\circ$ terhadap sumbu $z$}\,\right).
+\end{equation*}
+</div>
+<div class="para">Dengan kata lain, <span class="process-math">\(f\)</span> mengambil vektor dengan tiga entri, lalu memutarnya; sehingga keluaran <span class="process-math">\(f\)</span> juga memiliki tiga entri. Dalam kasus ini, <span class="process-math">\(f\)</span> didefinisikan oleh aturan geometris.</div>
+</div></article><article class="definition definition-like" id="matrix-trans-identity"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.20</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="matrix-trans-identity-4-1">
+<div class="para">
+<dfn class="terminology">Transformasi identitas</dfn> <span class="process-math">\(\Id_{\R^n}\colon\R^n\to\R^n\)</span> adalah transformasi yang didefinisikan dengan aturan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Id_{\R^n}(x) = x \qquad\text{untuk semua $x$ dalam $\R^n$}.
+\end{equation*}
+</div>
+</div></article><div class="para" id="matrix-trans-transformations-9">Dengan kata lain, transformasi identitas tidak mengubah vektor masukan: keluaran sama persis dengan masukannya. Domain dan kodomainnya keduanya adalah <span class="process-math">\(\R^n\text{,}\)</span> dan range-nya juga <span class="process-math">\(\R^n\text{,}\)</span> karena setiap vektor dalam <span class="process-math">\(\R^n\)</span> adalah keluarannya sendiri.</div>
+<article class="example example-like" id="matrix-trans-eg-robot"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Transformasi dunia nyata: robotika.</span>
+</h4>
+<div class="para" id="matrix-trans-eg-robot-2">Definisi <em class="emphasis">transformasi</em> beserta kosakata terkaitnya mungkin terdengar abstrak, namun transformasi sangat umum dalam kehidupan nyata. Berikut adalah contoh dari bidang robotika dan grafika komputer.</div>
+<div class="para" id="matrix-trans-eg-robot-3">Misalkan Anda sedang membangun sebuah lengan robot dengan tiga sambungan yang dapat menggerakkan tangan di atas sebuah bidang, seperti pada gambar berikut. ... (kode latex lanjutan tetap) ...</div></article></section><section class="subsection" id="section4-1-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="space"> </span><span class="title">Transformasi Matriks</span>
+</h3>
+<div class="para" id="section4-1-6-2">Sekarang kita memperjelas pengertian umum dan kosakata dari <a href="section4-1.html#matrix-trans-transformations" class="internal" title="Subsection 1.1.2: Transformasi">Subsection 1.1.2</a> sebelumnya ke fungsi-fungsi yang didefinisikan oleh matriks yang telah kita bahas di <a href="section4-1.html#matrix-trans-matrices-functions" class="internal" title="Subsection 1.1.1: Matriks sebagai Fungsi">Subsection 1.1.1</a>.</div>
+<article class="definition definition-like" id="matrix-trans-defn-of"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.22</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="matrix-trans-defn-of-3-1">
+<div class="para">Misalkan <span class="process-math">\(A\)</span> adalah matriks berukuran <span class="process-math">\(m\times n\text{.}\)</span> <dfn class="terminology">Transformasi matriks</dfn> yang terkait dengan <span class="process-math">\(A\)</span> adalah transformasi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T\colon \R^n\To\R^m \sptxt{didefinisikan oleh} T(x) = Ax.
+\end{equation*}
+</div>
+<div class="para">Ini adalah transformasi yang membawa vektor <span class="process-math">\(x\)</span> di <span class="process-math">\(\R^n\)</span> ke vektor <span class="process-math">\(Ax\)</span> di <span class="process-math">\(\R^m\text{.}\)</span>
+</div>
+</div></article><div class="para" id="section4-1-6-4">Jika <span class="process-math">\(A\)</span> memiliki <span class="process-math">\(n\)</span> kolom, maka hanya masuk akal untuk mengalikan <span class="process-math">\(A\)</span> dengan vektor yang memiliki <span class="process-math">\(n\)</span> entri. Inilah sebabnya domain dari <span class="process-math">\(T(x)=Ax\)</span> adalah <span class="process-math">\(\R^n\text{.}\)</span> Jika <span class="process-math">\(A\)</span> memiliki <span class="process-math">\(m\)</span> baris, maka <span class="process-math">\(Ax\)</span> memiliki <span class="process-math">\(m\)</span> entri untuk setiap vektor <span class="process-math">\(x\)</span> di <span class="process-math">\(\R^n\text{;}\)</span> inilah sebabnya kodomain dari <span class="process-math">\(T(x)=Ax\)</span> adalah <span class="process-math">\(\R^m\text{.}\)</span>
+</div>
+<div class="para logical" id="section4-1-6-5">
+<div class="para">Definisi transformasi matriks <span class="process-math">\(T\)</span> memberi tahu kita bagaimana mengevaluasi <span class="process-math">\(T\)</span> pada vektor tertentu: kita mengalikan vektor input dengan matriks. Misalnya, misalkan</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \mat{1 2 3; 4 5 6}
+\end{equation*}
+</div>
+<div class="para">dan <span class="process-math">\(T(x)=Ax\)</span> adalah transformasi matriks yang terkait. Maka</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T\vec{-1 -2 -3} = A\vec{-1 -2 -3} = \mat{1 2 3; 4 5 6}\vec{-1 -2 -3}
+= \vec{-14 -32}.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="section4-1-6-6">
+<div class="para">Misalkan <span class="process-math">\(A\)</span> memiliki kolom-kolom <span class="process-math">\(v_1,v_2,\ldots,v_n\text{.}\)</span> Jika kita mengalikan <span class="process-math">\(A\)</span> dengan vektor umum <span class="process-math">\(x\text{,}\)</span> kita mendapatkan</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+Ax = \mat{| | ,, |; v_1 v_2 \cdots, v_n; | | ,, |}\vec{x_1 x_2 \vdots, x_n}
+= x_1v_1 + x_2v_2 + \cdots + x_nv_n.
+\end{equation*}
+</div>
+<div class="para">Ini hanyalah kombinasi linear umum dari <span class="process-math">\(v_1,v_2,\ldots,v_n\text{.}\)</span> Oleh karena itu, output dari <span class="process-math">\(T(x) = Ax\)</span> tepatnya adalah kombinasi linear dari kolom-kolom <span class="process-math">\(A\text{:}\)</span> <em class="emphasis">jangkauan</em> dari <span class="process-math">\(T\)</span> adalah ruang kolom dari <span class="process-math">\(A\text{.}\)</span> Lihat <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "matrixeq-spans-consistency" missing or not unique]</code>.</div>
+</div> <div class="para logical" id="matrix-trans-dictionary-5">
+<div class="para">Misalkan <span class="process-math">\(A\)</span> adalah matriks berukuran <span class="process-math">\(m\times n\text{,}\)</span> dan <span class="process-math">\(T(x)=Ax\)</span> adalah transformasi matriks terkait.</div>
+<ul class="disc" id="matrix-trans-dictionary-5-4">
+<li id="matrix-trans-dictionary-5-4-1"><div class="para" id="p-derived-matrix-trans-dictionary-5-4-1">
+<em class="emphasis">Domain</em> dari <span class="process-math">\(T\)</span> adalah <span class="process-math">\(\R^n\text{,}\)</span> di mana <span class="process-math">\(n\)</span> adalah jumlah <em class="emphasis">kolom</em> dari <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="matrix-trans-dictionary-5-4-2"><div class="para" id="p-derived-matrix-trans-dictionary-5-4-2">
+<em class="emphasis">Kodomain</em> dari <span class="process-math">\(T\)</span> adalah <span class="process-math">\(\R^m\text{,}\)</span> di mana <span class="process-math">\(m\)</span> adalah jumlah <em class="emphasis">baris</em> dari <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="matrix-trans-dictionary-5-4-3"><div class="para" id="p-derived-matrix-trans-dictionary-5-4-3">
+<em class="emphasis">Jangkauan</em> dari <span class="process-math">\(T\)</span> adalah <em class="emphasis">ruang kolom</em> dari <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+</ul>
+</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="chap4.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section4-2.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
