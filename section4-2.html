@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Finding eigenvalues and eigenvectors</title>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="og:type" content="book">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:title" content="Komputasi Aljabar Linier">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:author" content="Mulaab M">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.6.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.33e494184ef307b3.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f7a03b209751032d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script xmlns:xlink="http://www.w3.org/1999/xlink" src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://linear-algebra.northwestern.pub/"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Komputasi Aljabar Linier</span></a></h1>
+<p class="byline">Mulaab M</p>
+</div>
+</div></header><nav xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="section4-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap4.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}ula
+
+  A open-access textbook to support a two-course sequence in linear
+  algebra that does not require calculus as a prerequisite.  The text
+  includes many activities designed to facilitate an active learning
+  environment, embedded Sage cells to develop
+  computational proficiency, and numerous realistic applications.
+
+
+  \newcommand{\avec}{{\mathbf a}}
+  \newcommand{\bvec}{{\mathbf b}}
+  \newcommand{\cvec}{{\mathbf c}}
+  \newcommand{\dvec}{{\mathbf d}}
+  \newcommand{\dtil}{\widetilde{\mathbf d}}
+  \newcommand{\evec}{{\mathbf e}}
+  \newcommand{\fvec}{{\mathbf f}}
+  \newcommand{\nvec}{{\mathbf n}}
+  \newcommand{\pvec}{{\mathbf p}}
+  \newcommand{\qvec}{{\mathbf q}}
+  \newcommand{\svec}{{\mathbf s}}
+  \newcommand{\tvec}{{\mathbf t}}
+  \newcommand{\uvec}{{\mathbf u}}
+  \newcommand{\vvec}{{\mathbf v}}
+  \newcommand{\wvec}{{\mathbf w}}
+  \newcommand{\xvec}{{\mathbf x}}
+  \newcommand{\yvec}{{\mathbf y}}
+  \newcommand{\zvec}{{\mathbf z}}
+  \newcommand{\rvec}{{\mathbf r}}
+  \newcommand{\mvec}{{\mathbf m}}
+  \newcommand{\zerovec}{{\mathbf 0}}
+  \newcommand{\onevec}{{\mathbf 1}}
+  \newcommand{\real}{{\mathbb R}}
+  \newcommand{\twovec}[2]{\left[\begin{array}{r}#1 \\ #2
+  \end{array}\right]}
+  \newcommand{\ctwovec}[2]{\left[\begin{array}{c}#1 \\ #2
+  \end{array}\right]}
+  \newcommand{\threevec}[3]{\left[\begin{array}{r}#1 \\ #2 \\ #3
+  \end{array}\right]}
+  \newcommand{\cthreevec}[3]{\left[\begin{array}{c}#1 \\ #2 \\ #3
+  \end{array}\right]}
+  \newcommand{\fourvec}[4]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\ #4
+  \end{array}\right]}
+  \newcommand{\cfourvec}[4]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\ #4
+  \end{array}\right]}
+  \newcommand{\fivevec}[5]{\left[\begin{array}{r}#1 \\ #2 \\ #3 \\
+  #4 \\ #5 \\ \end{array}\right]}
+  \newcommand{\cfivevec}[5]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\
+  #4 \\ #5 \\ \end{array}\right]}
+  \newcommand{\mattwo}[4]{\left[\begin{array}{rr}#1 \amp #2 \\ #3 \amp #4 \\ \end{array}\right]}
+  \newcommand{\laspan}[1]{\text{Span}\{#1\}}
+  \newcommand{\bcal}{{\cal B}}
+  \newcommand{\ccal}{{\cal C}}
+  \newcommand{\scal}{{\cal S}}
+  \newcommand{\wcal}{{\cal W}}
+  \newcommand{\ecal}{{\cal E}}
+  \newcommand{\coords}[2]{\left\{#1\right\}_{#2}}
+  \newcommand{\gray}[1]{\color{gray}{#1}}
+  \newcommand{\lgray}[1]{\color{lightgray}{#1}}
+  \newcommand{\rank}{\operatorname{rank}}
+  \newcommand{\row}{\text{Row}}
+  \newcommand{\col}{\text{Col}}
+  \renewcommand{\row}{\text{Row}}
+  \newcommand{\nul}{\text{Nul}}
+  \newcommand{\var}{\text{Var}}
+  \newcommand{\corr}{\text{corr}}
+  \newcommand{\len}[1]{\left|#1\right|}
+  \newcommand{\bbar}{\overline{\bvec}}
+  \newcommand{\bhat}{\widehat{\bvec}}
+  \newcommand{\bperp}{\bvec^\perp}
+  \newcommand{\xhat}{\widehat{\xvec}}
+  \newcommand{\vhat}{\widehat{\vvec}}
+  \newcommand{\uhat}{\widehat{\uvec}}
+  \newcommand{\what}{\widehat{\wvec}}
+  \newcommand{\Sighat}{\widehat{\Sigma}}
+
+
+Preview Activity
+Notation
+
+
+    \newcommand{\Z}{{\mathbb Z}}
+    \newcommand{\Q}{{\mathbb Q}}
+    \newcommand{\R}{{\mathbb R}}
+    \newcommand{\C}{{\mathbb C}}
+    \newcommand{\T}{{\mathbb T}}
+    \newcommand{\F}{{\mathbb F}}
+    \newcommand{\HH}{{\mathbb H}}
+    \newcommand{\compose}{\circ}
+    \newcommand{\bolda}{{\mathbf a}}
+    \newcommand{\boldb}{{\mathbf b}}
+    \newcommand{\boldc}{{\mathbf c}}
+    \newcommand{\boldd}{{\mathbf d}}
+    \newcommand{\bolde}{{\mathbf e}}
+    \newcommand{\boldi}{{\mathbf i}}
+    \newcommand{\boldj}{{\mathbf j}}
+    \newcommand{\boldk}{{\mathbf k}}
+    \newcommand{\boldn}{{\mathbf n}}
+    \newcommand{\boldp}{{\mathbf p}}
+    \newcommand{\boldq}{{\mathbf q}}
+    \newcommand{\boldr}{{\mathbf r}}
+    \newcommand{\bolds}{{\mathbf s}}
+    \newcommand{\boldt}{{\mathbf t}}
+    \newcommand{\boldu}{{\mathbf u}}
+    \newcommand{\boldv}{{\mathbf v}}
+    \newcommand{\boldw}{{\mathbf w}}
+    \newcommand{\boldx}{{\mathbf x}}
+    \newcommand{\boldy}{{\mathbf y}}
+    \newcommand{\boldz}{{\mathbf z}}
+    \newcommand{\boldzero}{{\mathbf 0}}
+    \newcommand{\boldmod}{\boldsymbol{ \bmod }}
+    \newcommand{\boldT}{{\mathbf T}}
+    \newcommand{\boldN}{{\mathbf N}}
+    \newcommand{\boldB}{{\mathbf B}}
+    \newcommand{\boldF}{{\mathbf F}}
+    \newcommand{\boldS}{{\mathbf S}}
+    \newcommand{\boldG}{{\mathbf G}}
+    \newcommand{\boldK}{{\mathbf K}}
+    \newcommand{\boldL}{{\mathbf L}}
+    \DeclareMathOperator{\lcm}{lcm}
+    \DeclareMathOperator{\Span}{span}
+    \DeclareMathOperator{\tr}{tr}
+    \DeclareMathOperator{\NS}{null}
+    \DeclareMathOperator{\RS}{row}
+    \DeclareMathOperator{\CS}{col}
+    \DeclareMathOperator{\im}{im}
+    \DeclareMathOperator{\range}{range}
+    \DeclareMathOperator{\rank}{rank}
+    \DeclareMathOperator{\nullity}{nullity}
+    \DeclareMathOperator{\sign}{sign}
+    \DeclareMathOperator{\Fix}{Fix}
+    \DeclareMathOperator{\Aff}{Aff}
+    \DeclareMathOperator{\Frac}{Frac}
+    \DeclareMathOperator{\Ann}{Ann}
+    \DeclareMathOperator{\Tor}{Tor}
+    \DeclareMathOperator{\id}{id}
+    \DeclareMathOperator{\mdeg}{mdeg}
+    \DeclareMathOperator{\Lt}{Lt}
+    \DeclareMathOperator{\Lc}{Lc}
+    \DeclareMathOperator{\disc}{disc}
+    \DeclareMathOperator{\Frob}{Frob}
+    \DeclareMathOperator{\adj}{adj}
+    \DeclareMathOperator{\curl}{curl}
+    \DeclareMathOperator{\grad}{grad}
+    \DeclareMathOperator{\diver}{div}
+    \DeclareMathOperator{\flux}{flux}
+    \def\Gal{\operatorname{Gal}}
+    \def\ord{\operatorname{ord}}
+    \def\ML{\operatorname{M}}
+    \def\GL{\operatorname{GL}}
+    \def\PGL{\operatorname{PGL}}
+    \def\SL{\operatorname{SL}}
+    \def\PSL{\operatorname{PSL}}
+    \def\GSp{\operatorname{GSp}}
+    \def\PGSp{\operatorname{PGSp}}
+    \def\Sp{\operatorname{Sp}}
+    \def\PSp{\operatorname{PSp}}
+    \def\Aut{\operatorname{Aut}}
+    \def\Inn{\operatorname{Inn}}
+    \def\Hom{\operatorname{Hom}}
+    \def\End{\operatorname{End}}
+    \def\ch{\operatorname{char}}
+    \def\Zp{\Z/p\Z}
+    \def\Zm{\Z/m\Z}
+    \def\Zn{\Z/n\Z}
+    \def\Fp{\F_p}
+    \newcommand{\surjects}{\twoheadrightarrow}
+    \newcommand{\injects}{\hookrightarrow}
+    \newcommand{\bijects}{\leftrightarrow}
+    \newcommand{\isomto}{\overset{\sim}{\rightarrow}}
+    \newcommand{\floor}[1]{\lfloor#1\rfloor}
+    \newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
+    \newcommand{\mclass}[2][m]{[#2]_{#1}}
+    \newcommand{\val}[2][]{\left\lvert #2\right\rvert_{#1}}
+    \newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
+    \newcommand{\valuation}[2][]{\left\lvert #2\right\rvert_{#1}}
+    \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+    \newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+    \newcommand{\anmonic}{x^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+    \newcommand{\bmpoly}{b_mx^m+b_{m-1}x^{m-1}\cdots +b_1x+b_0}
+    \newcommand{\bnpoly}{b_nx^n+b_{n-1}x^{n-1}\cdots +b_1x+b_0}
+    \newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+    \newcommand{\normalin}{\trianglelefteq}
+    \newcommand{\angvec}[1]{\langle #1\rangle}
+    \newcommand{\varpoly}[2]{#1_{#2}x^{#2}+#1_{#2-1}x^{#2-1}\cdots +#1_1x+#1_0}
+    \newcommand{\varpower}[1][a]{#1_0+#1_1x+#1_1x^2+\cdots}
+    \newcommand{\limasto}[2][x]{\lim_{#1\rightarrow #2}}
+    \def\ntoinfty{\lim_{n\rightarrow\infty}}
+    \def\xtoinfty{\lim_{x\rightarrow\infty}}
+    \def\ii{\item}
+    \def\bb{\begin{enumerate}}
+    \def\ee{\end{enumerate}}
+    \def\ds{\displaystyle}
+    \def\p{\partial}
+    \newcommand{\abcdmatrix}[4]{\begin{bmatrix}#1\amp #2\\ #3\amp #4 \end{bmatrix}
+    }
+    \newenvironment{amatrix}[1][ccc|c]{\left[\begin{array}{#1}}{\end{array}\right]}
+    \newenvironment{linsys}[2][m]{
+    \begin{array}[#1]{@{}*{#2}{rc}r@{}}
+    }{
+    \end{array}}
+    \newcommand{\eqsys}{\begin{array}{rcrcrcr}
+    a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp b_1\\
+    a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp b_2\\
+    \amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp  \\
+    a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp b_m
+    \end{array}
+    }
+    \newcommand{\numeqsys}{\begin{array}{rrcrcrcr}
+    e_1:\amp  a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp b_1\\
+    e_2: \amp a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp b_2\\
+    \amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp  \\
+    e_m: \amp a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp b_m
+    \end{array}
+    }
+    \newcommand{\homsys}{\begin{array}{rcrcrcr}
+    a_{11}x_{1}\amp +\amp a_{12}x_{2}\amp +\cdots+\amp  a_{1n}x_{n}\amp =\amp 0\\
+    a_{21}x_{1}\amp +\amp a_{22}x_{2}\amp +\cdots+\amp a_{2n}x_{n}\amp =\amp 0\\
+    \amp \vdots\amp   \amp \vdots \amp  \amp \vdots \amp \\
+    a_{m1}x_{1}\amp +\amp a_{m2}x_{2}\amp +\cdots +\amp a_{mn}x_{n}\amp =\amp 0
+    \end{array}
+    }
+    \newcommand{\vareqsys}[4]{
+    \begin{array}{ccccccc}
+    #3_{11}x_{1}\amp +\amp #3_{12}x_{2}\amp +\cdots+\amp  #3_{1#2}x_{#2}\amp =\amp #4_1\\
+    #3_{21}x_{1}\amp +\amp #3_{22}x_{2}\amp +\cdots+\amp #3_{2#2}x_{#2}\amp =\amp #4_2\\
+    \vdots \amp \amp \vdots \amp  \amp \vdots \amp =\amp  \\
+    #3_{#1 1}x_{1}\amp +\amp #3_{#1 2}x_{2}\amp +\cdots +\amp #3_{#1 #2}x_{#2}\amp =\amp #4_{#1}
+    \end{array}
+    }
+    \newcommand{\genmatrix}[1][a]{
+    \begin{bmatrix}
+    #1_{11} \amp  #1_{12} \amp  \cdots \amp  #1_{1n} \\
+    #1_{21} \amp  #1_{22} \amp  \cdots \amp  #1_{2n} \\
+    \vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \\
+    #1_{m1} \amp  #1_{m2} \amp  \cdots \amp  #1_{mn}
+    \end{bmatrix}
+    }
+    \newcommand{\varmatrix}[3]{
+    \begin{bmatrix}
+    #3_{11} \amp  #3_{12} \amp  \cdots \amp  #3_{1#2} \\
+    #3_{21} \amp  #3_{22} \amp  \cdots \amp  #3_{2#2} \\
+    \vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \\
+    #3_{#1 1} \amp  #3_{#1 2} \amp  \cdots \amp  #3_{#1 #2}
+    \end{bmatrix}
+    }
+    \newcommand{\augmatrix}{
+    \begin{amatrix}[cccc|c]
+    a_{11} \amp  a_{12} \amp  \cdots \amp  a_{1n} \amp b_{1}\\
+    a_{21} \amp  a_{22} \amp  \cdots \amp  a_{2n} \amp b_{2}\\
+    \vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \amp \vdots\\
+    a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
+    \end{amatrix}
+    }
+    \newcommand{\varaugmatrix}[4]{
+    \begin{amatrix}[cccc|c]
+    #3_{11} \amp  #3_{12} \amp  \cdots \amp  #3_{1#2} \amp #4_{1}\\
+    #3_{21} \amp  #3_{22} \amp  \cdots \amp  #3_{2#2} \amp #4_{2}\\
+    \vdots  \amp  \vdots  \amp  \ddots \amp  \vdots  \amp \vdots\\
+    #3_{#1 1} \amp  #3_{#1 2} \amp  \cdots \amp  #3_{#1 #2}\amp #4_{#1}
+    \end{amatrix}
+    }
+    \newcommand{\spaceforemptycolumn}{\makebox[\wd\boxofmathplus]{\ }}
+
+    \newcommand{\generalmatrix}[3]{
+    \left(
+    \begin{array}{cccc}
+    #1_{1,1}  \amp #1_{1,2}  \amp \ldots  \amp #1_{1,#2}  \\
+    #1_{2,1}  \amp #1_{2,2}  \amp \ldots  \amp #1_{2,#2}  \\
+    \amp \vdots                         \\
+    #1_{#3,1} \amp #1_{#3,2} \amp \ldots  \amp #1_{#3,#2}
+    \end{array}
+    \right)  }
+    \newcommand{\colvec}[2][c]{\begin{amatrix}[#1] #2 \end{amatrix}}
+    \DeclareMathOperator{\size}{size}
+    \DeclareMathOperator{\adjoint}{adj}
+    \DeclareMathOperator{\sgn}{sgn}
+    \newcommand{\restrictionmap}[2]{{#1}\mathpunct\upharpoonright\hbox{}_{#2}}
+    \renewcommand{\emptyset}{\varnothing}
+
+    \newcommand{\proj}[2]{\mbox{proj}_{#2}({#1}) }
+    \renewcommand{\Re}{\operatorname{Re}}
+     \renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="root-1-2-2.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="root-1-2-2-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="c_matrices.html" class="internal"><span class="codenumber">0</span> <span class="title">Matrik, Aritmatika Matrik, dan Aljabar Matrik</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_matrix.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Aritmatika Matrik</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_attributes" class="internal"><span class="codenumber">0.1.1</span> <span class="title">Dasar dasar Matrik</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_arithmetic" class="internal"><span class="codenumber">0.1.2</span> <span class="title">Penjumlahan, Pengurangan, dan Perkalian Skalar</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#ss_matrix_mult" class="internal"><span class="codenumber">0.1.3</span> <span class="title">Perkalian Matrik</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_matrix.html#s_matrix-6" class="internal"><span class="codenumber">0.1.4</span> <span class="title">Transpose Matriks</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-vectors-lin-combs.html" class="internal"><span class="codenumber">0.2</span> <span class="title">Vectors and linear combinations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-3" class="internal"><span class="codenumber">0.2.1</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-4" class="internal"><span class="codenumber">0.2.2</span> <span class="title">Linear combinations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vectors-lin-combs.html#sec-vectors-lin-combs-5" class="internal"><span class="codenumber">0.2.3</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chap4.html" class="internal"><span class="codenumber">1</span> <span class="title">Eigenvalues and eigenvectors</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section4-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">An introduction to eigenvalues and eigenvectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#section4-1-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">A few examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#subsec-eigen-use" class="internal"><span class="codenumber">1.1.2</span> <span class="title">The usefulness of eigenvalues and eigenvectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-1.html#section4-1-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="section4-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Finding eigenvalues and eigenvectors</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-2.html#section4-2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">The characteristic polynomial</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-2.html#section4-2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Finding eigenvectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-2.html#section4-2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">The characteristic polynomial and the dimension of eigenspaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-2.html#section4-2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Using Sage to find eigenvalues and eigenvectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-2.html#section4-2-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Summary</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section4-2.html#section4-2-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="section4-2"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Finding eigenvalues and eigenvectors</span>
+</h2>
+<section class="introduction" id="section4-2-2"><div class="para" id="section4-2-2-1">The last section introduced eigenvalues and eigenvectors, presented the underlying geometric intuition behind their definition, and demonstrated their use in understanding the long-term behavior of certain systems.  We will now develop a more algebraic understanding of eigenvalues and eigenvectors.  In particular, we will find an algebraic method for determining the eigenvalues and eigenvectors of a square matrix.</div>
+<details id="section4-2-2-2" class="exploration project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span>
+</h3></summary><article class="exploration project-like knowl__content"><div class="para logical" id="section4-2-2-2-1-1">
+<div class="para">Let’s begin by reviewing some important ideas that we have seen previously.</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-2-2-1-1-1">
+<li id="section4-2-2-2-1-1-1-1"><div class="para" id="section4-2-2-2-1-1-1-1-1">Suppose that <span class="process-math">\(A\)</span> is a square matrix and that the nonzero vector <span class="process-math">\(\xvec\)</span> is a solution to the homogeneous equation <span class="process-math">\(A\xvec = \zerovec\text{.}\)</span>  What can we conclude about the invertibility of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+<li id="section4-2-2-2-1-1-1-2"><div class="para" id="section4-2-2-2-1-1-1-2-1">How does the determinant <span class="process-math">\(\det(A)\)</span> tell us if there is a nonzero solution to the homogeneous equation <span class="process-math">\(A\xvec = \zerovec\text{?}\)</span>
+</div></li>
+<li id="section4-2-2-2-1-1-1-3"><div class="para logical" id="section4-2-2-2-1-1-1-3-1">
+<div class="para">Suppose that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \left[\begin{array}{rrr}
+3 \amp -1 \amp 1 \\
+0 \amp 2 \amp 4 \\
+1 \amp 1 \amp 3 \\
+\end{array}\right]\text{.}
+\end{equation*}
+</div>
+<div class="para">Find the determinant <span class="process-math">\(\det(A)\text{.}\)</span>  What does this tell us about the solution space to the homogeneous equation <span class="process-math">\(A\xvec
+= \zerovec\text{?}\)</span>
+</div>
+</div></li>
+<li id="section4-2-2-2-1-1-1-4"><div class="para" id="section4-2-2-2-1-1-1-4-1">Find a basis for <span class="process-math">\(\nul(A)\text{.}\)</span>
+</div></li>
+<li id="section4-2-2-2-1-1-1-5"><div class="para" id="section4-2-2-2-1-1-1-5-1">What is the relationship between the rank of a matrix and the dimension of its null space?</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="section4-2-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-2-2-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-2-2-2-1-1">
+<li id="section4-2-2-2-2-1-1-1"><div class="para" id="section4-2-2-2-2-1-1-1-1">The matrix cannot have a pivot position in every column so it is not invertible.</div></li>
+<li id="section4-2-2-2-2-1-1-2"><div class="para" id="section4-2-2-2-2-1-1-2-1">If there is a nonzero solution to the homogeneous equation <span class="process-math">\(A\xvec=\zerovec\text{,}\)</span> then <span class="process-math">\(A\)</span> is not invertible so <span class="process-math">\(\det(A) = 0\text{.}\)</span>
+</div></li>
+<li id="section4-2-2-2-2-1-1-3"><div class="para" id="section4-2-2-2-2-1-1-3-1">We find that <span class="process-math">\(\det(A) = 0\)</span> so there is a nonzero solution to the homogeneous equation.</div></li>
+<li id="section4-2-2-2-2-1-1-4"><div class="para logical" id="section4-2-2-2-2-1-1-4-1">
+<div class="para">The reduced row echelon form of <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\begin{array}{rrr}
+1 \amp 0 \amp 1 \\
+0 \amp 1 \amp 2 \\
+0 \amp 0 \amp 0 \\
+\end{array}\right]
+\end{equation*}
+</div>
+<div class="para">so the solution space to the homogeneous equation may be described parametrically as <span class="process-math">\(x=x_3\threevec{-1}{-2}{1}\text{.}\)</span>  A basis for <span class="process-math">\(\nul(A)\)</span> is therefore <span class="process-math">\(\threevec{-1}{-2}{1}\text{.}\)</span>
+</div>
+</div></li>
+<li id="section4-2-2-2-2-1-1-5"><div class="para" id="section4-2-2-2-2-1-1-5-1">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix, then <span class="process-math">\(\dim~\nul(A) = n-\rank(A)\text{.}\)</span>
+</div></li>
+</ol></div></div></details></div></article></details></section><section class="subsection" id="section4-2-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">The characteristic polynomial</span>
+</h3>
+<div class="para logical" id="section4-2-3-2">
+<div class="para">We will first see that the eigenvalues of a square matrix appear as the roots of a particular polynomial.  To begin, notice that we originally defined an eigenvector as a nonzero vector <span class="process-math">\(\vvec\)</span> that satisfies the equation <span class="process-math">\(A\vvec =
+\lambda\vvec\text{.}\)</span>  We will rewrite this as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+A\vvec \amp {}={} \lambda\vvec \\
+A\vvec - \lambda\vvec \amp {}={} \zerovec \\
+A\vvec - \lambda I\vvec \amp {}={} \zerovec \\
+(A-\lambda I)\vvec \amp {}={} \zerovec\text{.} \\
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">In other words, an eigenvector <span class="process-math">\(\vvec\)</span> is a solution of the homogeneous equation <span class="process-math">\((A-\lambda I)\vvec=\zerovec\text{.}\)</span>  This puts us in the familiar territory explored in the next activity.</div>
+</div>
+<details id="section4-2-3-3" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">11</span><span class="period">.</span>
+</h4></summary><article class="activity project-like knowl__content"><div class="para logical" id="section4-2-3-3-1-1">
+<div class="para">The eigenvalues of a square matrix are defined by the condition that there be a nonzero solution to the homogeneous equation <span class="process-math">\((A-\lambda I)\vvec=\zerovec\text{.}\)</span>
+</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-3-3-1-1-2">
+<li id="section4-2-3-3-1-1-2-1"><div class="para" id="section4-2-3-3-1-1-2-1-1">If there is a nonzero solution to the homogeneous equation <span class="process-math">\((A-\lambda I)\vvec = \zerovec\text{,}\)</span> what can we conclude about the invertibility of the matrix <span class="process-math">\(A-\lambda
+I\text{?}\)</span>
+</div></li>
+<li id="section4-2-3-3-1-1-2-2"><div class="para" id="section4-2-3-3-1-1-2-2-1">If there is a nonzero solution to the homogeneous equation <span class="process-math">\((A-\lambda I)\vvec = \zerovec\text{,}\)</span> what can we conclude about the determinant <span class="process-math">\(\det(A-\lambda I)\text{?}\)</span>
+</div></li>
+<li id="section4-2-3-3-1-1-2-3"><div class="para logical" id="section4-2-3-3-1-1-2-3-1">
+<div class="para">Let’s consider the matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \left[\begin{array}{rr}
+1 \amp 2 \\
+2 \amp 1 \\
+\end{array}\right]
+\end{equation*}
+</div>
+<div class="para">from which we construct</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A-\lambda I =
+\left[\begin{array}{rr}
+1 \amp 2 \\
+2 \amp 1 \\
+\end{array}\right]
+- \lambda 
+\left[\begin{array}{rr}
+1 \amp 0 \\
+0 \amp 1 \\
+\end{array}\right]
+=
+\left[\begin{array}{rr}
+1-\lambda \amp 2 \\
+2 \amp 1-\lambda \\
+\end{array}\right]\text{.}
+\end{equation*}
+</div>
+<div class="para">Find the determinant <span class="process-math">\(\det(A-\lambda I)\text{.}\)</span>  What kind of equation do you obtain when we set this determinant to zero to obtain <span class="process-math">\(\det(A-\lambda I) = 0\text{?}\)</span>
+</div>
+</div></li>
+<li id="section4-2-3-3-1-1-2-4"><div class="para" id="section4-2-3-3-1-1-2-4-1">Use the determinant you found in the previous part to find the eigenvalues <span class="process-math">\(\lambda\)</span> by solving the equation <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>  We considered this matrix in <a href="section4-1.html#activity-eigen-geom" class="xref" data-knowl="./knowl/xref/activity-eigen-geom.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8">Activity 8</a> so we should find the same eigenvalues for <span class="process-math">\(A\)</span> that we found by reasoning geometrically there.</div></li>
+<li id="section4-2-3-3-1-1-2-5"><div class="para" id="section4-2-3-3-1-1-2-5-1">Consider the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+2 \amp 1 \\
+0 \amp 2 \\
+\end{array}\right]\)</span> and find its eigenvalues by solving the equation <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>
+</div></li>
+<li id="section4-2-3-3-1-1-2-6"><div class="para" id="section4-2-3-3-1-1-2-6-1">Consider the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+0 \amp -1 \\
+1 \amp 0 \\
+\end{array}\right]\)</span> and find its eigenvalues by solving the equation <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>
+</div></li>
+<li id="section4-2-3-3-1-1-2-7"><div class="para" id="section4-2-3-3-1-1-2-7-1">Find the eigenvalues of the triangular matrix <span class="process-math">\(\left[\begin{array}{rrr}
+3 \amp -1 \amp 4 \\
+0 \amp -2 \amp 3 \\
+0 \amp 0 \amp 1 \\
+\end{array}\right]
+\text{.}\)</span>  What is generally true about the eigenvalues of a triangular matrix?</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="section4-2-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-3-3-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-3-3-2-1-1">
+<li id="section4-2-3-3-2-1-1-1"><div class="para" id="section4-2-3-3-2-1-1-1-1">The matrix <span class="process-math">\(A-\lambda I\)</span> cannot be invertible.</div></li>
+<li id="section4-2-3-3-2-1-1-2"><div class="para" id="section4-2-3-3-2-1-1-2-1">It must be the case that <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>
+</div></li>
+<li id="section4-2-3-3-2-1-1-3"><div class="para" id="section4-2-3-3-2-1-1-3-1">We find that <span class="process-math">\(\det(A-\lambda I) = \lambda^2 -
+2\lambda - 3 = 0\text{.}\)</span>
+</div></li>
+<li id="section4-2-3-3-2-1-1-4"><div class="para" id="section4-2-3-3-2-1-1-4-1">
+<span class="process-math">\(\lambda^2 - 2\lambda - 3= (\lambda-3)(\lambda+1) =
+0\)</span> so we find eigenvalues <span class="process-math">\(\lambda = 3\)</span> and <span class="process-math">\(\lambda = -1\text{.}\)</span>
+</div></li>
+<li id="section4-2-3-3-2-1-1-5"><div class="para" id="section4-2-3-3-2-1-1-5-1">For this matrix, we have <span class="process-math">\(\det(A-\lambda I) =
+(\lambda-2)^2=0\)</span> so there is one eigenvalue, <span class="process-math">\(\lambda = 2\text{.}\)</span>
+</div></li>
+<li id="section4-2-3-3-2-1-1-6"><div class="para" id="section4-2-3-3-2-1-1-6-1">
+<span class="process-math">\(\det(A-\lambda I) = \lambda^2 + 1 = 0\)</span> so there are complex eigenvalues, <span class="process-math">\(\lambda = i\)</span> and <span class="process-math">\(\lambda = -i\text{.}\)</span>
+</div></li>
+<li id="section4-2-3-3-2-1-1-7"><div class="para" id="section4-2-3-3-2-1-1-7-1">Because the determinant of a triangular matrix equals the product of its diagonal entries, The eigenvalues are equal to the entries on the diagonal.</div></li>
+</ol></div></div></details></div></article></details><div class="para logical" id="section4-2-3-4">
+<div class="para">This activity demonstrates a technique that enables us to find the eigenvalues of a square matrix <span class="process-math">\(A\text{.}\)</span>  Since an eigenvalue <span class="process-math">\(\lambda\)</span> is a scalar for which the equation <span class="process-math">\((A-\lambda
+I)\vvec = \zerovec\)</span> has a nonzero solution, it must be the case that <span class="process-math">\(A-\lambda I\)</span> is not invertible.  Therefore, its determinant is zero.  This gives us the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A-\lambda I) = 0
+\end{equation*}
+</div>
+<div class="para">whose solutions are the eigenvalues of <span class="process-math">\(A\text{.}\)</span>  This equation is called the <em class="emphasis">characteristic equation</em> of <span class="process-math">\(A\text{.}\)</span> </div>
+</div>
+<article class="example example-like" id="example-eigenvalues-poly"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-eigenvalues-poly-1">
+<div class="para">If we write the characteristic equation for the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+-4 \amp 4 \\
+-12 \amp 10 \\
+\end{array}\right]
+\text{,}\)</span> we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\det(A-\lambda I) \amp {}={} 0 \\
+\\
+\det \left[\begin{array}{rr}
+-4 - \lambda \amp 4 \\
+-12 \amp 10 - \lambda \\
+\end{array}\right] \amp {}={} 0 \\
+\\
+(-4-\lambda)(10-\lambda) + 48 \amp {}={}  0 \\
+\lambda^2-6\lambda + 8 {}={} 0 \\
+(\lambda-4)(\lambda-2) {}={} 0\text{.} \\
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">This shows us that the eigenvalues are <span class="process-math">\(\lambda = 4\)</span> and <span class="process-math">\(\lambda=2\text{.}\)</span>
+</div>
+</div></article><div class="para" id="section4-2-3-6"> In general, the expression <span class="process-math">\(\det(A-\lambda I)\)</span> is a polynomial in <span class="process-math">\(\lambda\text{,}\)</span> which is called the <em class="emphasis">characteristic polynomial</em> of <span class="process-math">\(A\text{.}\)</span>  If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix, the degree of the characteristic polynomial is <span class="process-math">\(n\text{.}\)</span>  For instance, if <span class="process-math">\(A\)</span> is a <span class="process-math">\(2\times2\)</span> matrix, then <span class="process-math">\(\det(A-\lambda I)\)</span> is a quadratic polynomial; if <span class="process-math">\(A\)</span> is a <span class="process-math">\(3\times3\)</span> matrix, then <span class="process-math">\(\det(A-\lambda I)\)</span> is a cubic polynomial.</div>
+<div class="para" id="section4-2-3-7">The matrix in <a href="section4-2.html#example-eigenvalues-poly" class="xref" data-knowl="./knowl/xref/example-eigenvalues-poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.2.1">Example 1.2.1</a> has a characteristic polynomial with two real and distinct roots. This will not always be the case, as demonstrated in the next two examples.</div>
+<article class="example example-like" id="section4-2-3-8"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="section4-2-3-8-1">
+<div class="para">Consider the matrix <span class="process-math">\(A=\begin{bmatrix}
+5 \amp -1\\
+4 \amp 1 \\
+\end{bmatrix}
+\text{,}\)</span> whose characteristic equation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda^2 - 6\lambda + 9 = (\lambda-3)^2 = 0.
+\end{equation*}
+</div>
+<div class="para">In this case, the characteristic polynomial has one real root, which means that this matrix has a single real eigenvalue, <span class="process-math">\(\lambda = 3\text{.}\)</span>
+</div>
+</div></article><article class="example example-like" id="section4-2-3-9"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="section4-2-3-9-1">
+<div class="para">To find the eigenvalues of a triangular matrix, we remember that the determinant of a triangular matrix is the product of the entries on the diagonal.  For instance, the following triangular matrix has the characteristic equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\det\left(
+\left[\begin{array}{rrr}
+4 \amp 2 \amp 3 \\
+0 \amp -2 \amp -1 \\
+0 \amp 0 \amp 3 \\
+\end{array}\right]
+-\lambda I\right) \amp {}={}
+\det
+\left[\begin{array}{rrr}
+4-\lambda \amp 2 \amp 3 \\
+0 \amp -2-\lambda \amp -1 \\
+0 \amp 0 \amp 3-\lambda \\
+\end{array}\right] \\
+\\
+\amp {}={}(4-\lambda)(-2-\lambda)(3-\lambda) = 0\text{,}
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">showing that the eigenvalues are the diagonal entries <span class="process-math">\(\lambda =
+4,-2,3\text{.}\)</span>
+</div>
+</div></article></section><section class="subsection" id="section4-2-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="space"> </span><span class="title">Finding eigenvectors</span>
+</h3>
+<div class="para" id="section4-2-4-2">Now that we can find the eigenvalues of a square matrix <span class="process-math">\(A\)</span> by solving the characteristic equation <span class="process-math">\(\det(A-\lambda
+I) = 0\text{,}\)</span> we will turn to the question of finding the eigenvectors associated to an eigenvalue <span class="process-math">\(\lambda\text{.}\)</span> The key, as before, is to note that an eigenvector is a nonzero solution to the homogeneous equation <span class="process-math">\((A-\lambda I)\vvec =
+\zerovec\text{.}\)</span>  In other words, the eigenvectors associated to an eigenvalue <span class="process-math">\(\lambda\)</span> form the null space <span class="process-math">\(\nul(A-\lambda
+I)\text{.}\)</span>
+</div>
+<div class="para logical" id="section4-2-4-3">
+<div class="para">This shows that the eigenvectors associated to an eigenvalue form a subspace of <span class="process-math">\(\real^n\text{.}\)</span>  We will denote the subspace of eigenvectors of a matrix <span class="process-math">\(A\)</span> associated to the eigenvalue <span class="process-math">\(\lambda\)</span> by <span class="process-math">\(E_\lambda\)</span> and note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E_\lambda = \nul(A-\lambda I)\text{.}
+\end{equation*}
+</div>
+<div class="para">We say that <span class="process-math">\(E_\lambda\)</span> is the <em class="emphasis">eigenspace</em> of <span class="process-math">\(A\)</span> associated to the eigenvalue <span class="process-math">\(\lambda\text{.}\)</span> </div>
+</div>
+<details id="section4-2-4-4" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">12</span><span class="period">.</span>
+</h4></summary><article class="activity project-like knowl__content"><div class="para logical" id="section4-2-4-4-1-1">
+<div class="para">In this activity, we will find the eigenvectors of a matrix as the null space of the matrix <span class="process-math">\(A-\lambda I\text{.}\)</span>
+</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-4-4-1-1-2">
+<li id="section4-2-4-4-1-1-2-1"><div class="para" id="section4-2-4-4-1-1-2-1-1">Let’s begin with the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+1 \amp 2 \\
+2 \amp 1 \\
+\end{array}\right]
+\text{.}\)</span>  We have seen that <span class="process-math">\(\lambda = 3\)</span> is an eigenvalue. Form the matrix <span class="process-math">\(A-3I\)</span> and find a basis for the eigenspace <span class="process-math">\(E_3 = \nul(A-3I)\text{.}\)</span> What is the dimension of this eigenspace? For each of the basis vectors <span class="process-math">\(\vvec\text{,}\)</span> verify that <span class="process-math">\(A\vvec = 3\vvec\text{.}\)</span>
+</div></li>
+<li id="section4-2-4-4-1-1-2-2"><div class="para" id="section4-2-4-4-1-1-2-2-1">We also saw that <span class="process-math">\(\lambda = -1\)</span> is an eigenvalue.  Form the matrix <span class="process-math">\(A-(-1)I\)</span> and find a basis for the eigenspace <span class="process-math">\(E_{-1}\text{.}\)</span>  What is the dimension of this eigenspace? For each of the basis vectors <span class="process-math">\(\vvec\text{,}\)</span> verify that <span class="process-math">\(A\vvec = -\vvec\text{.}\)</span>
+</div></li>
+<li id="section4-2-4-4-1-1-2-3"><div class="para" id="section4-2-4-4-1-1-2-3-1">Is it possible to form a basis of <span class="process-math">\(\real^2\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+<li id="section4-2-4-4-1-1-2-4"><div class="para" id="section4-2-4-4-1-1-2-4-1">Now consider the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+3 \amp 0 \\
+0 \amp 3 \\
+\end{array}\right]
+\text{.}\)</span>  Write the characteristic equation for <span class="process-math">\(A\)</span> and use it to find the eigenvalues of <span class="process-math">\(A\text{.}\)</span>  For each eigenvalue, find a basis for its eigenspace <span class="process-math">\(E_\lambda\text{.}\)</span>  Is it possible to form a basis of <span class="process-math">\(\real^2\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+<li id="section4-2-4-4-1-1-2-5"><div class="para" id="section4-2-4-4-1-1-2-5-1">Next, consider the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+2 \amp 1 \\
+0 \amp 2 \\
+\end{array}\right]
+\text{.}\)</span>  Write the characteristic equation for <span class="process-math">\(A\)</span> and use it to find the eigenvalues of <span class="process-math">\(A\text{.}\)</span>  For each eigenvalue, find a basis for its eigenspace <span class="process-math">\(E_\lambda\text{.}\)</span>  Is it possible to form a basis of <span class="process-math">\(\real^2\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+<li id="section4-2-4-4-1-1-2-6"><div class="para" id="section4-2-4-4-1-1-2-6-1">Finally, find the eigenvalues and eigenvectors of the diagonal matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+4 \amp 0 \\
+0 \amp -1 \\
+\end{array}\right]
+\text{.}\)</span>  Explain your result by considering the geometric effect of the matrix transformation defined by <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="section4-2-4-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-4-4-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-4-4-2-1-1">
+<li id="section4-2-4-4-2-1-1-1"><div class="para logical" id="section4-2-4-4-2-1-1-1-1">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A - 3I =
+\mattwo{-2}{2}{2}{-2}
+\sim
+\mattwo{1}{-1}{0}{0}\text{.}
+\end{equation*}
+</div>
+<div class="para">The null space <span class="process-math">\(\nul(A-3I)\)</span> is one-dimensional with basis <span class="process-math">\(\twovec{1}{1}\text{.}\)</span>
+</div>
+</div></li>
+<li id="section4-2-4-4-2-1-1-2"><div class="para logical" id="section4-2-4-4-2-1-1-2-1">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A - (-1)I =
+\mattwo{2}{2}{2}{2}
+\sim
+\mattwo{1}{1}{0}{0}\text{.}
+\end{equation*}
+</div>
+<div class="para">The null space <span class="process-math">\(\nul(A+I)\)</span> is one-dimensional with basis <span class="process-math">\(\twovec{-1}{1}\text{.}\)</span>
+</div>
+</div></li>
+<li id="section4-2-4-4-2-1-1-3"><div class="para" id="section4-2-4-4-2-1-1-3-1">We can form a basis for <span class="process-math">\(\real^2\)</span> consisting of eigenvectors of <span class="process-math">\(A\)</span> by taking <span class="process-math">\(\left\{\twovec{1}{1},
+\twovec{-1}{1}\right\}\text{.}\)</span>
+</div></li>
+<li id="section4-2-4-4-2-1-1-4"><div class="para" id="section4-2-4-4-2-1-1-4-1">The characteristic equation is <span class="process-math">\((3-\lambda)^2 =
+0\text{,}\)</span> which means that there is a single eigenvalue <span class="process-math">\(\lambda=3\text{.}\)</span>  This eigenspace is two-dimensional with basis <span class="process-math">\(\left\{\twovec{1}{0},\twovec{0}{1}\right\}\text{.}\)</span>  In this case, we can form a basis for <span class="process-math">\(\real^2\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="section4-2-4-4-2-1-1-5"><div class="para" id="section4-2-4-4-2-1-1-5-1">The characteristic equation is <span class="process-math">\((2-\lambda)^2 =
+0\)</span> so there is again a single eigenvalue <span class="process-math">\(\lambda=2\text{.}\)</span>  In this case, the eigenspace is one-dimensional with basis vector <span class="process-math">\(\twovec{1}{0}\text{.}\)</span>  It is not possible to form a basis for <span class="process-math">\(\real^2\)</span> consisting of eigenvectors.</div></li>
+<li id="section4-2-4-4-2-1-1-6"><div class="para" id="section4-2-4-4-2-1-1-6-1">We have eigenvectors <span class="process-math">\(\twovec10\)</span> with associated eigenvector <span class="process-math">\(\lambda=4\)</span> and <span class="process-math">\(\twovec01\)</span> with associated eigenvector <span class="process-math">\(\lambda=-1\text{.}\)</span>
+</div></li>
+</ol></div></div></details></div></article></details><div class="para" id="section4-2-4-5">Once we find an eigenvalue of a matrix <span class="process-math">\(A\text{,}\)</span> describing the associated eigenspace <span class="process-math">\(E_\lambda\)</span> amounts to the familiar task of describing the null space <span class="process-math">\(\nul(A-\lambda I)\text{.}\)</span>
+</div>
+<article class="example example-like" id="section4-2-4-6"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h4>
+<div class="para" id="section4-2-4-6-1">Revisiting the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+-4 \amp 4 \\
+-12 \amp 10 \\
+\end{array}\right]\)</span> from <a href="section4-2.html#example-eigenvalues-poly" class="xref" data-knowl="./knowl/xref/example-eigenvalues-poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.2.1">Example 1.2.1</a>, we recall that we found eigenvalues <span class="process-math">\(\lambda = 4\)</span> and <span class="process-math">\(\lambda =
+2\text{.}\)</span>
+</div>
+<div class="para logical" id="section4-2-4-6-2">
+<div class="para">Considering the eigenvalue <span class="process-math">\(\lambda = 4\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A -4I =
+\begin{bmatrix}
+-8 \amp 4 \\
+-12 \amp 6 \\
+\end{bmatrix}
+\sim
+\begin{bmatrix}
+1 \amp -1/2 \\
+0 \amp 0 \\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">Since the eigenvectors <span class="process-math">\(\vvec = \twovec{v_1}{v_2}\)</span> are the solutions of the equation <span class="process-math">\((A-4I)\vvec=\zerovec\text{,}\)</span> we see that they are determined by the single equation <span class="process-math">\(v_1-\frac12 v_2 = 0\)</span> or <span class="process-math">\(v_1 =
+\frac12v_2\text{.}\)</span>  Therefore the eigenvectors in <span class="process-math">\(E_4\)</span> have the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vvec=\twovec{v_1}{v_2} = \ctwovec{\frac12 v_2}{v_2} =
+v_2\ctwovec{1/2}{1}.
+\end{equation*}
+</div>
+<div class="para">In other words, <span class="process-math">\(E_4\)</span> is a one-dimensional subspace of <span class="process-math">\(\real^2\)</span> with basis vector <span class="process-math">\(\ctwovec{1/2}{1}\)</span> or basis vector <span class="process-math">\(\twovec12\text{.}\)</span> In the same way, we find that a basis for the eigenspace <span class="process-math">\(E_2\)</span> is <span class="process-math">\(\twovec23\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="section4-2-4-6-3">
+<div class="para">We note that, for this matrix, it is possible to construct a basis of <span class="process-math">\(\real^2\)</span> consisting of eigenvectors, namely,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bcal = \left\{\twovec12, \twovec23\right\}.
+\end{equation*}
+</div>
+</div></article><article class="example example-like" id="section4-2-4-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="section4-2-4-7-1">
+<div class="para">Consider the matrix <span class="process-math">\(A=\begin{bmatrix}
+1 \amp 1 \\
+-1 \amp 3 \\
+\end{bmatrix}\)</span> whose characteristic equation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A-\lambda I) = \lambda^2 - 4\lambda + 4 = (\lambda-2)^2
+=0.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="section4-2-4-7-2">
+<div class="para">There is a single eigenvalue <span class="process-math">\(\lambda= 2\text{,}\)</span> and we find that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A - 2\lambda = \begin{bmatrix}
+-1 \amp 1 \\
+-1 \amp 1 \\
+\end{bmatrix}
+\sim
+\begin{bmatrix}
+1 \amp -1 \\
+0 \amp 0 \\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">Therefore, the eigenspace <span class="process-math">\(E_2 = \nul(A-2I)\)</span> is one-dimensional with a basis vector <span class="process-math">\(\twovec11\text{.}\)</span>
+</div>
+</div></article><article class="example example-like" id="section4-2-4-8"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="section4-2-4-8-1">
+<div class="para">If <span class="process-math">\(A=\begin{bmatrix}
+-1 \amp 0 \\
+0 \amp -1 \\
+\end{bmatrix}
+\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A - \lambda I) = (\lambda+1)^2 = 0,
+\end{equation*}
+</div>
+<div class="para">which implies that there is a single eigenvalue <span class="process-math">\(\lambda=-1\text{.}\)</span>  We find that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A-(-1)I = \begin{bmatrix}
+0 \amp 0 \\
+0 \amp 0 \\
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">which says that every two-dimensional vector <span class="process-math">\(\vvec\)</span> satisfies <span class="process-math">\((A-(-1)I)\vvec = \zerovec\text{.}\)</span>  Therefore, every vector is an eigenvector and so <span class="process-math">\(E_{-1} =
+\real^2\text{.}\)</span>  This eigenspace is two-dimensional.</div>
+</div>
+<div class="para" id="section4-2-4-8-2">We can see this in another way.  The matrix transformation defined by <span class="process-math">\(A\)</span> rotates vectors by <span class="process-math">\(180^\circ\text{,}\)</span> which says that <span class="process-math">\(A\xvec = -\xvec\)</span> for every vector <span class="process-math">\(\xvec\text{.}\)</span>  In other words, every two-dimensional vector is an eigenvector with associated eigenvalue <span class="process-math">\(\lambda=-1\text{.}\)</span>
+</div></article><div class="para" id="section4-2-4-9">These last two examples illustrate two types of behavior when there is a single eigenvalue.  In one case, we are able to construct a basis of <span class="process-math">\(\real^2\)</span> using eigenvectors;  in the other, we are not.  We will explore this behavior more in the next subsection.</div>
+<article class="assemblage assemblage-like" id="section4-2-4-10"><h4 class="heading"><span class="title">A check on our work.</span></h4>
+<div class="para" id="section4-2-4-10-2">When finding eigenvalues and their associated eigenvectors in this way, we first find eigenvalues <span class="process-math">\(\lambda\)</span> by solving the characteristic equation.  If <span class="process-math">\(\lambda\)</span> is a solution to the characteristic equation, then <span class="process-math">\(A-\lambda I\)</span> is not invertible and, consequently, <span class="process-math">\(A-\lambda I\)</span> must contain a row without a pivot position.</div>
+<div class="para" id="section4-2-4-10-3">This serves as a check on our work.  If we row reduce <span class="process-math">\(A-\lambda I\)</span> and find the identity matrix, then we have made an error either in solving the characteristic equation or in finding <span class="process-math">\(\nul(A-\lambda I)\text{.}\)</span>
+</div></article></section><section class="subsection" id="section4-2-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="space"> </span><span class="title">The characteristic polynomial and the dimension of eigenspaces</span>
+</h3>
+<div class="para" id="section4-2-5-2">Given a square <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> we saw in the previous section the value of being able to express any vector in <span class="process-math">\(\real^n\)</span> as a linear combination of eigenvectors of <span class="process-math">\(A\text{.}\)</span>  For this reason, <a href="section4-1.html#question-eigen-basis" class="xref" data-knowl="./knowl/xref/question-eigen-basis.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 1.1.8">Question 1.1.8</a> asks when we can construct a basis of <span class="process-math">\(\real^n\)</span> consisting of eigenvectors.  We will explore this question more fully now.</div>
+<div class="para logical" id="section4-2-5-3">
+<div class="para">As we saw above, the eigenvalues of <span class="process-math">\(A\)</span> are the solutions of the characteristic equation <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>  The examples we have considered demonstrate some different types of behavior. For instance, we have seen the characteristic equations</div>
+<ul class="disc" id="section4-2-5-3-3">
+<li id="section4-2-5-3-3-1"><div class="para" id="section4-2-5-3-3-1-1">
+<span class="process-math">\((4-\lambda)(-2-\lambda)(3-\lambda) = 0\text{,}\)</span> which has real and distinct roots,</div></li>
+<li id="section4-2-5-3-3-2"><div class="para" id="section4-2-5-3-3-2-1">
+<span class="process-math">\((2-\lambda)^2 = 0\text{,}\)</span> which has repeated roots, and</div></li>
+<li id="section4-2-5-3-3-3"><div class="para" id="section4-2-5-3-3-3-1">
+<span class="process-math">\(\lambda^2 +1 = (i-\lambda)(-i-\lambda) = 0\text{,}\)</span> which has complex roots.</div></li>
+</ul>
+</div>
+<div class="para logical" id="section4-2-5-4">
+<div class="para">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix, then the characteristic polynomial is a degree <span class="process-math">\(n\)</span> polynomial, and this means that it has <span class="process-math">\(n\)</span> roots.  Therefore, the characteristic equation can be written as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A-\lambda I) = (\lambda_1 -
+\lambda)(\lambda_2-\lambda)\ldots(\lambda_n-\lambda) = 0
+\end{equation*}
+</div>
+<div class="para">giving eigenvalues <span class="process-math">\(\lambda_1,
+\lambda_2,\ldots,\lambda_n\text{.}\)</span>  As we have seen, some of the eigenvalues may be complex.  Moreover, some of the eigenvalues may appear in this list more than once. However, we can always write the characteristic equation in the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\lambda_1-\lambda)^{m_1}
+(\lambda_2-\lambda)^{m_2}
+\ldots
+(\lambda_p-\lambda)^{m_p}
+= 0.
+\end{equation*}
+</div>
+<div class="para">The number of times that <span class="process-math">\(\lambda_j - \lambda\)</span> appears as a factor in the characteristic polynomial, is called the <em class="emphasis">multiplicity</em> of the eigenvalue <span class="process-math">\(\lambda_j\text{.}\)</span> </div>
+</div>
+<article class="example example-like" id="section4-2-5-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h4>
+<div class="para" id="section4-2-5-5-1-1">We have seen that the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+1 \amp 1 \\
+-1 \amp 3 \\
+\end{array}\right]\)</span> has the characteristic equation <span class="process-math">\((2-\lambda)^2 =
+0\text{.}\)</span>  This matrix has a single eigenvalue <span class="process-math">\(\lambda = 2\text{,}\)</span> which has multiplicity <span class="process-math">\(2\text{.}\)</span>
+</div></article><article class="example example-like" id="section4-2-5-6"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="section4-2-5-6-1-1">
+<div class="para">If a matrix has the characteristic equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(4-\lambda)^2(-5-\lambda)(1-\lambda)^7(3-\lambda)^2 = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">then that matrix has four eigenvalues:  <span class="process-math">\(\lambda=4\)</span> having multiplicity 2; <span class="process-math">\(\lambda=-5\)</span> having multiplicity 1; <span class="process-math">\(\lambda=1\)</span> having multiplicity 7; and <span class="process-math">\(\lambda=3\)</span> having multiplicity 2.  The degree of the characteristic polynomial is the sum of the multiplicities <span class="process-math">\(2+1+7+2 =
+12\)</span> so this matrix must be a <span class="process-math">\(12\times12\)</span> matrix.</div>
+</div></article><div class="para" id="section4-2-5-7">The multiplicities of the eigenvalues are important because they influence the dimension of the eigenspaces.  We know that the dimension of an eigenspace must be at least one; the following proposition also tells us the dimension of an eigenspace can be no larger than the multiplicity of its associated eigenvalue.</div>
+<article class="proposition theorem-like" id="prop-eigen-basis"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="prop-eigen-basis-1-1">
+<div class="para">If <span class="process-math">\(\lambda\)</span> is a real eigenvalue of the matrix <span class="process-math">\(A\)</span> with multiplicity <span class="process-math">\(m\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 \leq \dim~E_\lambda \leq m\text{.}
+\end{equation*}
+</div>
+</div></article><article class="example example-like" id="section4-2-5-9"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
+</h4>
+<div class="para" id="section4-2-5-9-1-1">The diagonal matrix <span class="process-math">\(\left[\begin{array}{rr}
+-1 \amp 0 \\
+0 \amp -1 \\
+\end{array}\right]\)</span> has the characteristic equation <span class="process-math">\((-1-\lambda)^2 =
+0\text{.}\)</span>  There is a single eigenvalue <span class="process-math">\(\lambda = -1\)</span> having multiplicity <span class="process-math">\(m = 2\text{,}\)</span> and we saw earlier that <span class="process-math">\(\dim E_{-1} = 2 \leq m = 2\text{.}\)</span>
+</div></article><article class="example example-like" id="section4-2-5-10"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span>
+</h4>
+<div class="para" id="section4-2-5-10-1-1">The matrix <span class="process-math">\(\left[\begin{array}{rr}
+1 \amp 1 \\
+-1 \amp 3 \\
+\end{array}\right]\)</span> has the characteristic equation <span class="process-math">\((2-\lambda)^2 =
+0\text{.}\)</span>  This tells us that there is a single eigenvalue <span class="process-math">\(\lambda =
+2\)</span> having multiplicity <span class="process-math">\(m = 2\text{.}\)</span>  In contrast with the previous example, we have <span class="process-math">\(\dim~ E_2 = 1 \leq m = 2\text{.}\)</span>
+</div></article><article class="example example-like" id="section4-2-5-11"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="section4-2-5-11-1-1">
+<div class="para">We saw earlier that the matrix <span class="process-math">\(\left[\begin{array}{rrr}
+4 \amp 2 \amp 3 \\
+0 \amp -2 \amp -1 \\
+0 \amp 0 \amp 3 \\
+\end{array}\right]\)</span> has the characteristic equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(4-\lambda)(-2-\lambda)(3-\lambda)=0\text{.}
+\end{equation*}
+</div>
+<div class="para">There are three eigenvalues <span class="process-math">\(\lambda=3,-2,1\)</span> each having multiplicity <span class="process-math">\(1\text{.}\)</span>  By the proposition, we are guaranteed that the dimension of each eigenspace is <span class="process-math">\(1\text{;}\)</span>  that is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dim E_3 = \dim E_{-2} = \dim E_1 = 1\text{.}
+\end{equation*}
+</div>
+<div class="para">It turns out that this is enough to guarantee that there is a basis of <span class="process-math">\(\real^3\)</span> consisting of eigenvectors.</div>
+</div></article><article class="example example-like" id="section4-2-5-12"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.13</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="section4-2-5-12-1-1">
+<div class="para">If a <span class="process-math">\(12\times12\)</span> matrix has the characteristic equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(4-\lambda)^2(-5-\lambda)(1-\lambda)^7(3-\lambda)^2 = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">we know there are four eigenvalues <span class="process-math">\(\lambda=4,-5,1,3\text{.}\)</span> Without more information, all we can say about the dimensions of the eigenspaces is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1 \leq \dim E_4 \amp {}\leq{} 2 \\
+1 \leq \dim E_{-5} \amp {}\leq{} 1 \\
+1 \leq \dim E_1 \amp {}\leq{} 7 \\
+1 \leq \dim E_3 \amp {}\leq{} 2\text{.} \\
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">We can guarantee that <span class="process-math">\(\dim E_{-5} = 1\text{,}\)</span> but we cannot be more specific about the dimensions of the other eigenspaces.</div>
+</div></article><div class="para logical" id="section4-2-5-13">
+<div class="para">Fortunately, if we have an <span class="process-math">\(n\times n\)</span> matrix, it frequently happens that the characteristic equation has the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\lambda_1-\lambda)
+(\lambda_2-\lambda)
+\ldots
+(\lambda_n-\lambda) = 0
+\end{equation*}
+</div>
+<div class="para">where there are <span class="process-math">\(n\)</span> distinct real eigenvalues, each of which has multiplicity <span class="process-math">\(1\text{.}\)</span>  In this case, the dimension of each of the eigenspaces <span class="process-math">\(\dim E_{\lambda_j} = 1\text{.}\)</span>  With a little work, it can be seen that choosing a basis vector <span class="process-math">\(\vvec_j\)</span> for each of the eigenspaces produces a basis for <span class="process-math">\(\real^n\text{.}\)</span>  We therefore have the following proposition.</div>
+</div>
+<article class="proposition theorem-like" id="section4-2-5-14"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.14</span><span class="period">.</span>
+</h4>
+<div class="para" id="section4-2-5-14-1-1">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix having <span class="process-math">\(n\)</span> distinct real eigenvalues, then there is a basis of <span class="process-math">\(\real^n\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></article><div class="para" id="section4-2-5-15">This proposition provides one answer to our <a href="section4-1.html#question-eigen-basis" class="xref" data-knowl="./knowl/xref/question-eigen-basis.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 1.1.8">Question 1.1.8</a>.  The next activity explores this question further.</div>
+<details id="section4-2-5-16" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">13</span><span class="period">.</span>
+</h4></summary><article class="activity project-like knowl__content"><div class="para logical" id="section4-2-5-16-1-1"><ol class="lower-alpha ol-marker-1" id="section4-2-5-16-1-1-1">
+<li id="section4-2-5-16-1-1-1-1"><div class="para" id="section4-2-5-16-1-1-1-1-1">Identify the eigenvalues, and their multiplicities, of an <span class="process-math">\(n\times n\)</span> matrix whose characteristic polynomial is <span class="process-math">\((2-\lambda)^3(-3-\lambda)^{10}(5-\lambda)\text{.}\)</span>  What can you conclude about the dimensions of the eigenspaces?  What is the shape of the matrix?  Do you have enough information to guarantee that there is a basis of <span class="process-math">\(\real^n\)</span> consisting of eigenvectors?</div></li>
+<li id="section4-2-5-16-1-1-1-2"><div class="para" id="section4-2-5-16-1-1-1-2-1">Find the eigenvalues of <span class="process-math">\(\left[\begin{array}{rr}
+0 \amp -1 \\
+4 \amp -4 \\
+\end{array}\right]\)</span> and state their multiplicities.  Can you find a basis of <span class="process-math">\(\real^2\)</span> consisting of eigenvectors of this matrix?</div></li>
+<li id="section4-2-5-16-1-1-1-3"><div class="para logical" id="section4-2-5-16-1-1-1-3-1">
+<div class="para">Consider the matrix <span class="process-math">\(A =
+\left[\begin{array}{rrr}
+-1 \amp 0 \amp 2 \\
+-2 \amp -2 \amp -4 \\
+0 \amp 0 \amp -2 \\
+\end{array}\right]\)</span> whose characteristic equation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(-2-\lambda)^2(-1-\lambda) = 0\text{.}
+\end{equation*}
+</div>
+<ol class="decimal ol-marker-2" id="section4-2-5-16-1-1-1-3-1-3">
+<li id="section4-2-5-16-1-1-1-3-1-3-1"><div class="para" id="section4-2-5-16-1-1-1-3-1-3-1-1">Identify the eigenvalues and their multiplicities.</div></li>
+<li id="section4-2-5-16-1-1-1-3-1-3-2"><div class="para" id="section4-2-5-16-1-1-1-3-1-3-2-1">For each eigenvalue <span class="process-math">\(\lambda\text{,}\)</span> find a basis of the eigenspace <span class="process-math">\(E_\lambda\)</span> and state its dimension.</div></li>
+<li id="section4-2-5-16-1-1-1-3-1-3-3"><div class="para" id="section4-2-5-16-1-1-1-3-1-3-3-1">Is there a basis of <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+</ol>
+</div></li>
+<li id="section4-2-5-16-1-1-1-4"><div class="para logical" id="section4-2-5-16-1-1-1-4-1">
+<div class="para">Now consider the matrix <span class="process-math">\(A =
+\left[\begin{array}{rrr}
+-5 \amp -2 \amp -6 \\
+-2 \amp -2 \amp -4 \\
+2 \amp 1 \amp 2 \\
+\end{array}\right]\)</span> whose characteristic equation is also</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(-2-\lambda)^2(-1-\lambda) = 0\text{.}
+\end{equation*}
+</div>
+<ol class="decimal ol-marker-2" id="section4-2-5-16-1-1-1-4-1-3">
+<li id="section4-2-5-16-1-1-1-4-1-3-1"><div class="para" id="section4-2-5-16-1-1-1-4-1-3-1-1">Identify the eigenvalues and their multiplicities.</div></li>
+<li id="section4-2-5-16-1-1-1-4-1-3-2"><div class="para" id="section4-2-5-16-1-1-1-4-1-3-2-1">For each eigenvalue <span class="process-math">\(\lambda\text{,}\)</span> find a basis of the eigenspace <span class="process-math">\(E_\lambda\)</span> and state its dimension.</div></li>
+<li id="section4-2-5-16-1-1-1-4-1-3-3"><div class="para" id="section4-2-5-16-1-1-1-4-1-3-3-1">Is there a basis of <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+</ol>
+</div></li>
+<li id="section4-2-5-16-1-1-1-5"><div class="para logical" id="section4-2-5-16-1-1-1-5-1">
+<div class="para">Consider the matrix <span class="process-math">\(A = 
+\left[\begin{array}{rrr}
+-5 \amp -2 \amp -6 \\
+4 \amp 1 \amp 8 \\
+2 \amp 1 \amp 2 \\
+\end{array}\right]\)</span> whose characteristic equation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(-2-\lambda)(1-\lambda)(-1-\lambda) = 0\text{.}
+\end{equation*}
+</div>
+<ol class="decimal ol-marker-2" id="section4-2-5-16-1-1-1-5-1-3">
+<li id="section4-2-5-16-1-1-1-5-1-3-1"><div class="para" id="section4-2-5-16-1-1-1-5-1-3-1-1">Identify the eigenvalues and their multiplicities.</div></li>
+<li id="section4-2-5-16-1-1-1-5-1-3-2"><div class="para" id="section4-2-5-16-1-1-1-5-1-3-2-1">For each eigenvalue <span class="process-math">\(\lambda\text{,}\)</span> find a basis of the eigenspace <span class="process-math">\(E_\lambda\)</span> and state its dimension.</div></li>
+<li id="section4-2-5-16-1-1-1-5-1-3-3"><div class="para" id="section4-2-5-16-1-1-1-5-1-3-3-1">Is there a basis of <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+</ol>
+</div></li>
+</ol></div>
+<div class="solutions"><details id="section4-2-5-16-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-5-16-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-5-16-2-1-1">
+<li id="section4-2-5-16-2-1-1-1">
+<div class="para logical" id="section4-2-5-16-2-1-1-1-1">
+<div class="para">There are three eigenvalues, <span class="process-math">\(\lambda=2\)</span> has multiplicity <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(\lambda=-3\)</span> has multiplicity <span class="process-math">\(10\text{,}\)</span> and <span class="process-math">\(\lambda=5\)</span> has multiplicity <span class="process-math">\(1\text{.}\)</span> We know that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1 \leq \dim E_2 \amp {}\leq{} 3 \\
+1 \leq \dim E_{-3} \amp {}\leq{} 10 \\
+1 \leq \dim E_5 \amp {}\leq{} 1\text{.} \\
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">We can guarantee that <span class="process-math">\(\dim E_{5} = 1\text{,}\)</span> but we can say nothing further about the other two eigenspaces.</div>
+</div>
+<div class="para" id="section4-2-5-16-2-1-1-1-2">The dimension of the matrix is <span class="process-math">\(14\times14\)</span> since the degree of the characteristic polynomial is <span class="process-math">\(14\text{.}\)</span>  We cannot guarantee that we can form a basis for <span class="process-math">\(\real^{14}\)</span> consisting of eigenvectors, however.</div>
+</li>
+<li id="section4-2-5-16-2-1-1-2"><div class="para" id="section4-2-5-16-2-1-1-2-1">There is one eigenvalue <span class="process-math">\(\lambda=-2\)</span> having multiplicity two.  Because the eigenspace <span class="process-math">\(E_{-2}\)</span> is one-dimensional, however, we cannot find a basis for <span class="process-math">\(\real^2\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="section4-2-5-16-2-1-1-3"><div class="para logical" id="section4-2-5-16-2-1-1-3-1">
+<div class="para">For the <span class="process-math">\(3\times3\)</span> matrix <span class="process-math">\(A\text{,}\)</span>
+</div>
+<ol class="decimal ol-marker-2" id="section4-2-5-16-2-1-1-3-1-3">
+<li id="section4-2-5-16-2-1-1-3-1-3-1"><div class="para" id="section4-2-5-16-2-1-1-3-1-3-1-1">We have eigenvalues <span class="process-math">\(\lambda=-2\)</span> with multiplicity <span class="process-math">\(2\)</span> and <span class="process-math">\(\lambda=-1\)</span> with multiplicity <span class="process-math">\(1\text{.}\)</span>
+</div></li>
+<li id="section4-2-5-16-2-1-1-3-1-3-2"><div class="para" id="section4-2-5-16-2-1-1-3-1-3-2-1">The eigenspace <span class="process-math">\(E_{-2}\)</span> is two-dimensional with basis <span class="process-math">\(\left\{\threevec{-2}{0}{1},\threevec010\right\}\text{.}\)</span> The eigenspace <span class="process-math">\(E_{-1}\)</span> is one-dimensional with basis vector <span class="process-math">\(\threevec{-1}20\text{.}\)</span>
+</div></li>
+<li id="section4-2-5-16-2-1-1-3-1-3-3"><div class="para" id="section4-2-5-16-2-1-1-3-1-3-3-1">We are able to form a basis for <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+</ol>
+</div></li>
+<li id="section4-2-5-16-2-1-1-4"><div class="para logical" id="section4-2-5-16-2-1-1-4-1">
+<div class="para">For the <span class="process-math">\(3\times3\)</span> matrix <span class="process-math">\(A\text{,}\)</span>
+</div>
+<ol class="decimal ol-marker-2" id="section4-2-5-16-2-1-1-4-1-3">
+<li id="section4-2-5-16-2-1-1-4-1-3-1"><div class="para" id="section4-2-5-16-2-1-1-4-1-3-1-1">We have eigenvalues <span class="process-math">\(\lambda=-2\)</span> with multiplicity <span class="process-math">\(2\)</span> and <span class="process-math">\(\lambda=-1\)</span> with multiplicity <span class="process-math">\(1\text{.}\)</span>
+</div></li>
+<li id="section4-2-5-16-2-1-1-4-1-3-2"><div class="para" id="section4-2-5-16-2-1-1-4-1-3-2-1">The eigenspace <span class="process-math">\(E_{-2}\)</span> is one-dimensional with basis vector <span class="process-math">\(\threevec{-2}01\text{.}\)</span>  The eigenspace <span class="process-math">\(E_{-1}\)</span> is also one-dimensional with basis vector <span class="process-math">\(\threevec{-1}{2}{0}\text{.}\)</span>
+</div></li>
+<li id="section4-2-5-16-2-1-1-4-1-3-3"><div class="para" id="section4-2-5-16-2-1-1-4-1-3-3-1">It is not possible to form a basis for <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+</ol>
+</div></li>
+<li id="section4-2-5-16-2-1-1-5"><div class="para logical" id="section4-2-5-16-2-1-1-5-1">
+<div class="para">For this matrix,</div>
+<ol class="decimal ol-marker-2" id="section4-2-5-16-2-1-1-5-1-1">
+<li id="section4-2-5-16-2-1-1-5-1-1-1"><div class="para" id="section4-2-5-16-2-1-1-5-1-1-1-1">There are three eigenvalues <span class="process-math">\(\lambda=-2\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> and <span class="process-math">\(1\text{,}\)</span> each having multiplicity <span class="process-math">\(1\text{.}\)</span>
+</div></li>
+<li id="section4-2-5-16-2-1-1-5-1-1-2"><div class="para" id="section4-2-5-16-2-1-1-5-1-1-2-1">A basis vector for the eigenspace <span class="process-math">\(E_{-2}\)</span> is <span class="process-math">\(\threevec{-2}01\text{.}\)</span> A basis vector for the eigenspace <span class="process-math">\(E_{-1}\)</span> is <span class="process-math">\(\threevec{1}{-2}0\text{.}\)</span> A basis vector for the eigenspace <span class="process-math">\(E_{1}\)</span> is <span class="process-math">\(\threevec{-2}{3}{1}\text{.}\)</span>
+</div></li>
+<li id="section4-2-5-16-2-1-1-5-1-1-3"><div class="para" id="section4-2-5-16-2-1-1-5-1-1-3-1">We can form a basis for <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+</ol>
+</div></li>
+</ol></div></div></details></div></article></details></section><section class="subsection" id="section4-2-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="space"> </span><span class="title">Using Sage to find eigenvalues and eigenvectors</span>
+</h3>
+<div class="para" id="section4-2-6-2">We can use Sage to find the characteristic polynomial, eigenvalues, and eigenvectors of a matrix.  As we will see, however, some care is required when dealing with matrices whose entries include decimals.</div>
+<details id="section4-2-6-3" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">14</span><span class="period">.</span>
+</h4></summary><article class="activity project-like knowl__content"><div class="para logical" id="section4-2-6-3-1-1">
+<div class="para">We will use Sage to find the eigenvalues and eigenvectors of a matrix.  Let’s begin with the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+-3 \amp 1 \\
+0 \amp -3 \\
+\end{array}\right]
+\text{.}\)</span>
+</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-6-3-1-1-2">
+<li id="section4-2-6-3-1-1-2-1">
+<div class="para" id="section4-2-6-3-1-1-2-1-1">We can find the characteristic polynomial of <span class="process-math">\(A\)</span> by writing <code class="code-inline tex2jax_ignore">A.charpoly('lambda')</code>.  Notice that we have to give Sage a variable in which to write the polynomial;  here, we use <code class="code-inline tex2jax_ignore">lambda</code> though <code class="code-inline tex2jax_ignore">x</code> works just as well.</div>
+<div id="section4-2-6-3-1-1-2-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = matrix(2,2,[-3,1,0,-3])
+A.charpoly('lambda')
+</script></div>
+<div class="para" id="section4-2-6-3-1-1-2-1-3">The factored form of the characteristic polynomial may be more useful since it will tell us the eigenvalues and their multiplicities.  The factored characteristic polynomial is found with <code class="code-inline tex2jax_ignore">A.fcp('lambda')</code>.</div>
+<div id="section4-2-6-3-1-1-2-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = matrix(2,2,[-3,1,0,-3])
+A.fcp('lambda')
+</script></div>
+</li>
+<li id="section4-2-6-3-1-1-2-2">
+<div class="para" id="section4-2-6-3-1-1-2-2-1">If we only want the eigenvalues, we can use <code class="code-inline tex2jax_ignore">A.eigenvalues()</code>.</div>
+<div id="section4-2-6-3-1-1-2-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = matrix(2,2,[-3,1,0,-3])
+A.eigenvalues()
+</script></div>
+<div class="para" id="section4-2-6-3-1-1-2-2-3">Notice that the multiplicity of an eigenvalue is the number of times it is repeated in the list of eigenvalues.</div>
+</li>
+<li id="section4-2-6-3-1-1-2-3">
+<div class="para" id="section4-2-6-3-1-1-2-3-1">Finally, we can find eigenvectors by <code class="code-inline tex2jax_ignore">A.eigenvectors_right()</code>.  (We are looking for <em class="emphasis">right</em> eigenvalues since the vector <span class="process-math">\(\vvec\)</span> appears to the right of <span class="process-math">\(A\)</span> in the definition <span class="process-math">\(A\vvec=\lambda \vvec\text{.}\)</span>)</div>
+<div id="section4-2-6-3-1-1-2-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = matrix(2,2,[-3,1,0,-3])
+A.eigenvectors_right()
+</script></div>
+<div class="para" id="section4-2-6-3-1-1-2-3-3">At first glance, the result of this command can be a little confusing to interpret.  What we see is a list with one entry for each eigenvalue.  For each eigenvalue, there is a triple consisting of (i) the eigenvalue <span class="process-math">\(\lambda\text{,}\)</span> (ii) a basis for <span class="process-math">\(E_\lambda\text{,}\)</span> and (iii) the multiplicity of <span class="process-math">\(\lambda\text{.}\)</span>
+</div>
+</li>
+<li id="section4-2-6-3-1-1-2-4"><div class="para logical" id="section4-2-6-3-1-1-2-4-1">
+<div class="para">When working with decimal entries, which are called <em class="emphasis">floating point numbers</em> in computer science, we must remember that computers perform only approximate arithmetic. This is a problem when we wish to find the eigenvectors of such a matrix.  To illustrate, consider the matrix <span class="process-math">\(A=\left[\begin{array}{rr}
+0.4 \amp 0.3 \\
+0.6 \amp 0.7 \\
+\end{array}\right]
+\text{.}\)</span>
+</div>
+<ol class="decimal ol-marker-2" id="section4-2-6-3-1-1-2-4-1-3">
+<li id="section4-2-6-3-1-1-2-4-1-3-1"><div class="para" id="section4-2-6-3-1-1-2-4-1-3-1-1">Without using Sage, find the eigenvalues of this matrix.</div></li>
+<li id="section4-2-6-3-1-1-2-4-1-3-2"><div class="para" id="section4-2-6-3-1-1-2-4-1-3-2-1">What do you find for the reduced row echelon form of <span class="process-math">\(A-I\text{?}\)</span>
+</div></li>
+<li id="section4-2-6-3-1-1-2-4-1-3-3">
+<div class="para" id="section4-2-6-3-1-1-2-4-1-3-3-1">Let’s now use Sage to determine the reduced row echelon form of <span class="process-math">\(A-I\text{:}\)</span>
+</div>
+<div id="section4-2-6-3-1-1-2-4-1-3-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = matrix(2,2,[0.4,0.3,0.6,0.7])
+(A-identity_matrix(2)).rref()
+</script></div>
+<div class="para" id="section4-2-6-3-1-1-2-4-1-3-3-3">What result does Sage report for the reduced row echelon form?  Why is this result not correct?</div>
+</li>
+<li id="section4-2-6-3-1-1-2-4-1-3-4">
+<div class="para" id="section4-2-6-3-1-1-2-4-1-3-4-1">Because the arithmetic Sage performs with floating point entries is only approximate, we are not able to find the eigenspace <span class="process-math">\(E_1\text{.}\)</span>  In this next chapter, we will learn how to address this issue.  In the meantime, we can get around this problem by writing the entries in the matrix as rational numbers:</div>
+<div id="section4-2-6-3-1-1-2-4-1-3-4-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = matrix(2,2,[4/10,3/10,6/10,7/10])
+A.eigenvectors_right()
+</script></div>
+</li>
+</ol>
+</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="section4-2-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-6-3-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-6-3-2-1-1">
+<li id="section4-2-6-3-2-1-1-1"><div class="para" id="section4-2-6-3-2-1-1-1-1">The <code class="code-inline tex2jax_ignore">fcp</code> command will return the factored characteristic polynomial <code class="code-inline tex2jax_ignore">lambda^2 - 2*lambda - 3</code>.</div></li>
+<li id="section4-2-6-3-2-1-1-2"><div class="para" id="section4-2-6-3-2-1-1-2-1">The <code class="code-inline tex2jax_ignore">eigenvalues</code> command returns a list of eigenvalues <code class="code-inline tex2jax_ignore">[-3, -3]</code>.</div></li>
+<li id="section4-2-6-3-2-1-1-3"><div class="para" id="section4-2-6-3-2-1-1-3-1">The <code class="code-inline tex2jax_ignore">eigenvectors_right</code> command returns <code class="code-inline tex2jax_ignore">[(-3, [(1, 0)], 2)]</code>.</div></li>
+<li id="section4-2-6-3-2-1-1-4"><div class="para logical" id="section4-2-6-3-2-1-1-4-1">
+<div class="para">If we begin with the matrix <span class="process-math">\(A\text{,}\)</span> we find</div>
+<ol class="decimal ol-marker-2" id="section4-2-6-3-2-1-1-4-1-2">
+<li id="section4-2-6-3-2-1-1-4-1-2-1"><div class="para" id="section4-2-6-3-2-1-1-4-1-2-1-1">The eigenvalues are <span class="process-math">\(\lambda=1\)</span> and <span class="process-math">\(\lambda=0.1\text{.}\)</span>
+</div></li>
+<li id="section4-2-6-3-2-1-1-4-1-2-2"><div class="para" id="section4-2-6-3-2-1-1-4-1-2-2-1">The reduced row echelon form is <span class="process-math">\(\mattwo{-2}{1}{0}{0}\text{,}\)</span> which shows that <span class="process-math">\(A-I\)</span> is not invertible, as expected.</div></li>
+<li id="section4-2-6-3-2-1-1-4-1-2-3"><div class="para" id="section4-2-6-3-2-1-1-4-1-2-3-1">Sage returns <span class="process-math">\(\mattwo{1}{0}{0}{1}\text{,}\)</span> which is not correct because <span class="process-math">\(A-I\)</span> cannot be invertible if <span class="process-math">\(\lambda=1\)</span> is an eigenvalue of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="section4-2-6-3-2-1-1-4-1-2-4"><div class="para" id="section4-2-6-3-2-1-1-4-1-2-4-1">Here we find the correct eigenvalues, <span class="process-math">\(\lambda=1\)</span> with basis vector <span class="process-math">\(\twovec{1}{2}\)</span> for <span class="process-math">\(E_1\)</span> and <span class="process-math">\(\lambda=0.1\)</span> with basis vector <span class="process-math">\(\twovec{1}{-1}\)</span> for <span class="process-math">\(E_{0.1}\text{.}\)</span>
+</div></li>
+</ol>
+</div></li>
+</ol></div></div></details></div></article></details></section><section class="subsection" id="section4-2-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="space"> </span><span class="title">Summary</span>
+</h3>
+<div class="para logical" id="section4-2-7-2">
+<div class="para">In this section, we developed a technique for finding the eigenvalues and eigenvectors of an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\text{.}\)</span>
+</div>
+<ul class="disc" id="section4-2-7-2-3">
+<li id="section4-2-7-2-3-1"><div class="para" id="section4-2-7-2-3-1-1">The expression <span class="process-math">\(\det(A-\lambda I)\)</span> is a degree <span class="process-math">\(n\)</span> polynomial, known as the characteristic polynomial of <span class="process-math">\(A\text{.}\)</span>  The eigenvalues of <span class="process-math">\(A\)</span> are the roots of the characteristic polynomial found by solving the characteristic equation <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>
+</div></li>
+<li id="section4-2-7-2-3-2"><div class="para" id="section4-2-7-2-3-2-1">The set of eigenvectors associated to the eigenvalue <span class="process-math">\(\lambda\)</span> forms a subspace of <span class="process-math">\(\real^n\text{,}\)</span> the eigenspace <span class="process-math">\(E_\lambda = 
+\nul(A-\lambda I)\text{.}\)</span>
+</div></li>
+<li id="section4-2-7-2-3-3"><div class="para logical" id="section4-2-7-2-3-3-1">
+<div class="para">If the factor <span class="process-math">\((\lambda_j - \lambda)\)</span> appears <span class="process-math">\(m_j\)</span> times in the characteristic polynomial, we say that the eigenvalue <span class="process-math">\(\lambda_j\)</span> has multiplicity <span class="process-math">\(m_j\)</span> and note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 \leq \dim E_{\lambda_j} \leq m_j\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="section4-2-7-2-3-4"><div class="para" id="section4-2-7-2-3-4-1">If each of the eigenvalues is real and has multiplicity <span class="process-math">\(1\text{,}\)</span> then we can form a basis of <span class="process-math">\(\real^n\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="section4-2-7-2-3-5"><div class="para" id="section4-2-7-2-3-5-1">We can use Sage to find the eigenvalues and eigenvalues of matrices.  However, we need to be careful working with floating point numbers since floating point arithmetic is only an approximation.</div></li>
+</ul>
+</div></section><section class="exercises" id="section4-2-8"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="section4-2-8-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para logical" id="section4-2-8-1-1-1">
+<div class="para">For each of the following matrices, find its characteristic polynomial, its eigenvalues, and the multiplicity of each eigenvalue.</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-8-1-1-1-1">
+<li id="section4-2-8-1-1-1-1-1"><div class="para" id="section4-2-8-1-1-1-1-1-1"><span class="process-math">\(A=\left[\begin{array}{rr}
+4 \amp -1 \\
+4 \amp 0 \\
+\end{array}\right]
+\text{.}\)</span></div></li>
+<li id="section4-2-8-1-1-1-1-2"><div class="para" id="section4-2-8-1-1-1-1-2-1"><span class="process-math">\(A=\left[\begin{array}{rrr}
+3 \amp -1 \amp 3 \\
+0 \amp 4 \amp 0 \\
+0 \amp 0 \amp -6
+\end{array}\right]
+\text{.}\)</span></div></li>
+<li id="section4-2-8-1-1-1-1-3"><div class="para" id="section4-2-8-1-1-1-1-3-1"><span class="process-math">\(A = \left[\begin{array}{rr}
+-2 \amp 0 \\
+0 \amp -2 \\
+\end{array}\right]
+\text{.}\)</span></div></li>
+<li id="section4-2-8-1-1-1-1-4"><div class="para" id="section4-2-8-1-1-1-1-4-1"><span class="process-math">\(A=\left[\begin{array}{rr}
+-1 \amp 2 \\
+2 \amp 2 \\
+\end{array}\right]
+\text{.}\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="section4-2-8-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="section4-2-8-1-3-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-1-3-1-1">
+<li id="section4-2-8-1-3-1-1-1"><div class="para" id="section4-2-8-1-3-1-1-1-1">
+<span class="process-math">\((2-\lambda)^2\text{.}\)</span>  There is a single eigenvalue <span class="process-math">\(\lambda=2\)</span> having multiplicity <span class="process-math">\(2\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-1-3-1-1-2"><div class="para" id="section4-2-8-1-3-1-1-2-1">
+<span class="process-math">\((3-\lambda)(4-\lambda)(-6-\lambda)\text{.}\)</span>  There are three eigenvalues <span class="process-math">\(\lambda=3, 4, -6\text{,}\)</span> each of multiplicity <span class="process-math">\(1\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-1-3-1-1-3"><div class="para" id="section4-2-8-1-3-1-1-3-1">
+<span class="process-math">\((-2-\lambda)^2\text{.}\)</span>  There is one eigenvalue <span class="process-math">\(\lambda=-2\)</span> having multiplicity <span class="process-math">\(2\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-1-3-1-1-4"><div class="para" id="section4-2-8-1-3-1-1-4-1">
+<span class="process-math">\((3-\lambda)(-2-\lambda)\text{.}\)</span>  There are two eigenvalues <span class="process-math">\(\lambda=3\)</span> and <span class="process-math">\(\lambda=-2\text{,}\)</span> each having multiplicity <span class="process-math">\(1\text{.}\)</span>
+</div></li>
+</ol></div></div></details><details id="section4-2-8-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-8-1-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-1-2-1-1">
+<li id="section4-2-8-1-2-1-1-1"><div class="para" id="section4-2-8-1-2-1-1-1-1">The characteristic polynomial is <span class="process-math">\(\det(A-\lambda I)
+= (2-\lambda)^2\text{.}\)</span>  There is a single eigenvalue <span class="process-math">\(\lambda=2\)</span> having multiplicity <span class="process-math">\(2\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-1-2-1-1-2"><div class="para" id="section4-2-8-1-2-1-1-2-1">The characteristic polynomial is <span class="process-math">\(\det(A-\lambda I)
+= (3-\lambda)(4-\lambda)(-6-\lambda)\text{.}\)</span>  There are three eigenvalues <span class="process-math">\(\lambda=3, 4, -6\text{,}\)</span> each of multiplicity <span class="process-math">\(1\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-1-2-1-1-3"><div class="para" id="section4-2-8-1-2-1-1-3-1">The characteristic polynomial is <span class="process-math">\(\det(A-\lambda I)
+= (-2-\lambda)^2\text{,}\)</span> showing that there is one eigenvalue <span class="process-math">\(\lambda=-2\)</span> having multiplicity <span class="process-math">\(2\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-1-2-1-1-4"><div class="para" id="section4-2-8-1-2-1-1-4-1">The characteristic polynomial is <span class="process-math">\(\det(A-\lambda I)
+= (3-\lambda)(-2-\lambda)\text{.}\)</span>  There are two eigenvalues <span class="process-math">\(\lambda=3\)</span> and <span class="process-math">\(\lambda=-2\text{,}\)</span> each having multiplicity <span class="process-math">\(1\text{.}\)</span>
+</div></li>
+</ol></div></div></details>
+</div></article><article class="exercise exercise-like" id="section4-2-8-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="section4-2-8-2-1-1">Given an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> an important question, <a href="section4-1.html#question-eigen-basis" class="xref" data-knowl="./knowl/xref/question-eigen-basis.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 1.1.8">Question 1.1.8</a>, asks whether we can find a basis of <span class="process-math">\(\real^n\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>  For each of the matrices in the previous exercise, find a basis of <span class="process-math">\(\real^n\)</span> consisting of eigenvectors or state why such a basis does not exist.</div>
+<div class="solutions">
+<details id="section4-2-8-2-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="section4-2-8-2-3-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-2-3-1-1">
+<li id="section4-2-8-2-3-1-1-1"><div class="para" id="section4-2-8-2-3-1-1-1-1">It is not possible.</div></li>
+<li id="section4-2-8-2-3-1-1-2"><div class="para" id="section4-2-8-2-3-1-1-2-1"><span class="process-math">\(\left\{
+\threevec100, \threevec{-1}{1}0, \threevec10{-3}
+\right\}
+\text{.}\)</span></div></li>
+<li id="section4-2-8-2-3-1-1-3"><div class="para" id="section4-2-8-2-3-1-1-3-1"><span class="process-math">\(\displaystyle \left\{\twovec10,
+\twovec01\right\}\)</span></div></li>
+<li id="section4-2-8-2-3-1-1-4"><div class="para" id="section4-2-8-2-3-1-1-4-1"><span class="process-math">\(\displaystyle \left\{\twovec12,\twovec{-2}1\right\}\)</span></div></li>
+</ol></div></div></details><details id="section4-2-8-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-8-2-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-2-2-1-1">
+<li id="section4-2-8-2-2-1-1-1"><div class="para" id="section4-2-8-2-2-1-1-1-1">There is a single eigenvalue <span class="process-math">\(\lambda=2\)</span> and <span class="process-math">\(\dim E_2=1\)</span> so it is not possible to find a basis for <span class="process-math">\(\real^2\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-2-2-1-1-2"><div class="para logical" id="section4-2-8-2-2-1-1-2-1">
+<div class="para">The three eigenvalues each have multiplicity one so we know that their eigenspaces are one-dimensional.  We find a basis vector for <span class="process-math">\(E_3\)</span> is <span class="process-math">\(\threevec100\text{,}\)</span> for <span class="process-math">\(E_4\)</span> is <span class="process-math">\(\threevec{-1}10\text{,}\)</span> and for <span class="process-math">\(E_{-6}\)</span> is <span class="process-math">\(\threevec10{-3}\text{.}\)</span>  A basis for <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(A\)</span> is therefore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left\{
+\threevec100, \threevec{-1}{1}0, \threevec10{-3}
+\right\}\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="section4-2-8-2-2-1-1-3"><div class="para" id="section4-2-8-2-2-1-1-3-1">Since <span class="process-math">\(A-(-2)I\)</span> is the zero matrix, every vector is an eigenvector of <span class="process-math">\(A\text{.}\)</span>  This means that <span class="process-math">\(\left\{\twovec10, \twovec01\right\}\)</span> is a basis of <span class="process-math">\(\real^2\)</span> consisting of eigenvectors.</div></li>
+<li id="section4-2-8-2-2-1-1-4"><div class="para" id="section4-2-8-2-2-1-1-4-1">The multiplicity of each eigenvalue is one so there will be a basis of <span class="process-math">\(\real^2\)</span> consisting of eigenvectors. In particular, a basis vector for <span class="process-math">\(E_3\)</span> is <span class="process-math">\(\twovec12\)</span> and a basis vector for <span class="process-math">\(E_{-2}\)</span> is <span class="process-math">\(\twovec{-2}1\text{.}\)</span>  This means that <span class="process-math">\(\left\{\twovec12,\twovec{-2}1\right\}\)</span> is a basis for <span class="process-math">\(\real^2\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+</ol></div></div></details>
+</div></article><article class="exercise exercise-like" id="section4-2-8-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para logical" id="section4-2-8-3-1-1">
+<div class="para">Determine whether the following statements are true or false and provide a justification for your response.</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-8-3-1-1-1">
+<li id="section4-2-8-3-1-1-1-1"><div class="para" id="section4-2-8-3-1-1-1-1-1">The eigenvalues of a matrix <span class="process-math">\(A\)</span> are the entries on the diagonal of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-3-1-1-1-2"><div class="para" id="section4-2-8-3-1-1-1-2-1">If <span class="process-math">\(\lambda\)</span> is an eigenvalue of multiplicity <span class="process-math">\(1\text{,}\)</span> then <span class="process-math">\(E_\lambda\)</span> is one-dimensional.</div></li>
+<li id="section4-2-8-3-1-1-1-3"><div class="para" id="section4-2-8-3-1-1-1-3-1">If a matrix <span class="process-math">\(A\)</span> is invertible, then <span class="process-math">\(\lambda=0\)</span> cannot be an eigenvalue.</div></li>
+<li id="section4-2-8-3-1-1-1-4"><div class="para" id="section4-2-8-3-1-1-1-4-1">If <span class="process-math">\(A\)</span> is a <span class="process-math">\(13\times 13\)</span> matrix, the characteristic polynomial has degree less than <span class="process-math">\(13\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-3-1-1-1-5"><div class="para" id="section4-2-8-3-1-1-1-5-1">The eigenspace <span class="process-math">\(E_\lambda\)</span> of <span class="process-math">\(A\)</span> is the same as the null space <span class="process-math">\(\nul(A-\lambda I)\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="section4-2-8-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="section4-2-8-3-3-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-3-3-1-1">
+<li id="section4-2-8-3-3-1-1-1"><div class="para" id="section4-2-8-3-3-1-1-1-1">False</div></li>
+<li id="section4-2-8-3-3-1-1-2"><div class="para" id="section4-2-8-3-3-1-1-2-1">True</div></li>
+<li id="section4-2-8-3-3-1-1-3"><div class="para" id="section4-2-8-3-3-1-1-3-1">True</div></li>
+<li id="section4-2-8-3-3-1-1-4"><div class="para" id="section4-2-8-3-3-1-1-4-1">False</div></li>
+<li id="section4-2-8-3-3-1-1-5"><div class="para" id="section4-2-8-3-3-1-1-5-1">True</div></li>
+</ol></div></div></details><details id="section4-2-8-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-8-3-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-3-2-1-1">
+<li id="section4-2-8-3-2-1-1-1"><div class="para" id="section4-2-8-3-2-1-1-1-1">False.  This is true for a diagonal matrix, but it is not generally true as we see by considering the matrix <span class="process-math">\(\mattwo{1}{2}{2}{1}\)</span> whose eigenvalues are <span class="process-math">\(\lambda =
+3\)</span> and <span class="process-math">\(\lambda=-1\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-3-2-1-1-2"><div class="para" id="section4-2-8-3-2-1-1-2-1">True.  If <span class="process-math">\(m\)</span> is the multiplicity, we have <span class="process-math">\(1\leq\dim E_\lambda \leq m=1\)</span> so we must have <span class="process-math">\(\dim
+E_\lambda = 1\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-3-2-1-1-3"><div class="para" id="section4-2-8-3-2-1-1-3-1">True.  If <span class="process-math">\(\lambda=0\)</span> is an eigenvalue, then an associated eigenvector <span class="process-math">\(\vvec\)</span> is a nonzero solution to the homogeneous equation <span class="process-math">\(A\xvec=\zerovec\text{.}\)</span>  This would say that <span class="process-math">\(A\)</span> is not invertible.</div></li>
+<li id="section4-2-8-3-2-1-1-4"><div class="para" id="section4-2-8-3-2-1-1-4-1">False.  The degree of the characteristic polynomial equals the number of rows and columns of the square matrix.</div></li>
+<li id="section4-2-8-3-2-1-1-5"><div class="para" id="section4-2-8-3-2-1-1-5-1">True.  An eigenvector <span class="process-math">\(\vvec\)</span> associated to the eigenvalue <span class="process-math">\(\lambda\)</span> satisfies <span class="process-math">\((A-\lambda
+I)\vvec=\zerovec\text{.}\)</span>  This is the same equation that characterizes the null space <span class="process-math">\(\nul(A-\lambda I)\text{.}\)</span>
+</div></li>
+</ol></div></div></details>
+</div></article><article class="exercise exercise-like" id="section4-2-8-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="section4-2-8-4-1-1">
+<div class="para">Provide a justification for your response to the following questions.</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-8-4-1-1-1">
+<li id="section4-2-8-4-1-1-1-1"><div class="para" id="section4-2-8-4-1-1-1-1-1">Suppose that <span class="process-math">\(A\)</span> is a <span class="process-math">\(3\times 3\)</span> matrix having eigenvalues <span class="process-math">\(\lambda = -3,3,-5\text{.}\)</span>  What are the eigenvalues of <span class="process-math">\(2A\text{?}\)</span>
+</div></li>
+<li id="section4-2-8-4-1-1-1-2"><div class="para" id="section4-2-8-4-1-1-1-2-1">Suppose that <span class="process-math">\(D\)</span> is a diagonal <span class="process-math">\(3\times 3\)</span> matrix.  Why can you guarantee that there is a basis of <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(D\text{?}\)</span>
+</div></li>
+<li id="section4-2-8-4-1-1-1-3"><div class="para" id="section4-2-8-4-1-1-1-3-1">If <span class="process-math">\(A\)</span> is a <span class="process-math">\(3\times 3\)</span> matrix whose eigenvalues are <span class="process-math">\(\lambda = -1,3,5\text{,}\)</span> can you guarantee that there is a basis of <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+<li id="section4-2-8-4-1-1-1-4"><div class="para logical" id="section4-2-8-4-1-1-1-4-1">
+<div class="para">Suppose that the characteristic polynomial of a matrix <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A-\lambda I) = -\lambda^3 + 4\lambda\text{.}
+\end{equation*}
+</div>
+<div class="para">What are the eigenvalues of <span class="process-math">\(A\text{?}\)</span>  Is <span class="process-math">\(A\)</span> invertible?  Is there a basis of <span class="process-math">\(\real^n\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{?}\)</span>
+</div>
+</div></li>
+<li id="section4-2-8-4-1-1-1-5"><div class="para logical" id="section4-2-8-4-1-1-1-5-1">
+<div class="para">If the characteristic polynomial of <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A-\lambda I) = (4 -\lambda)(-2-\lambda)(1-\lambda)\text{,}
+\end{equation*}
+</div>
+<div class="para">what is the characteristic polynomial of <span class="process-math">\(A^2\text{?}\)</span> what is the characteristic polynomial of <span class="process-math">\(A^{-1}\text{?}\)</span>
+</div>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="section4-2-8-4-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="section4-2-8-4-3-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-4-3-1-1">
+<li id="section4-2-8-4-3-1-1-1"><div class="para" id="section4-2-8-4-3-1-1-1-1"><span class="process-math">\(\lambda=-6,6,-10\text{.}\)</span></div></li>
+<li id="section4-2-8-4-3-1-1-2"><div class="para" id="section4-2-8-4-3-1-1-2-1">The standard basis vectors <span class="process-math">\(\evec_j\)</span> are eigenvectors associated to the diagonal entries.</div></li>
+<li id="section4-2-8-4-3-1-1-3"><div class="para" id="section4-2-8-4-3-1-1-3-1">Yes.</div></li>
+<li id="section4-2-8-4-3-1-1-4"><div class="para" id="section4-2-8-4-3-1-1-4-1">
+<span class="process-math">\(\lambda=0,2,-2\text{.}\)</span>  The matrix <span class="process-math">\(A\)</span> is not invertible, but there is a basis for <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-4-3-1-1-5"><div class="para" id="section4-2-8-4-3-1-1-5-1"><span class="process-math">\(\det(A^2-\lambda I) =
+(16-\lambda)(4-\lambda)(1-\lambda)\text{.}\)</span></div></li>
+</ol></div></div></details><details id="section4-2-8-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-8-4-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-4-2-1-1">
+<li id="section4-2-8-4-2-1-1-1"><div class="para" id="section4-2-8-4-2-1-1-1-1">If <span class="process-math">\(A\vvec=\lambda\vvec\text{,}\)</span> then <span class="process-math">\(2A\vvec =
+2\lambda\vvec\text{.}\)</span>  This says that the eigenvalues of <span class="process-math">\(2A\)</span> are <span class="process-math">\(\lambda=-6,6,-10\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-4-2-1-1-2"><div class="para" id="section4-2-8-4-2-1-1-2-1">The standard basis vectors <span class="process-math">\(\evec_j\)</span> are eigenvectors associated to the diagonal entries.</div></li>
+<li id="section4-2-8-4-2-1-1-3"><div class="para" id="section4-2-8-4-2-1-1-3-1">Yes.  Since there are three distinct eigenvalues, the multiplicity of each eigenvalue must be one.  Therefore, the dimension of each eigenspace is one.  If we choose a basis vector for each of the eigenspaces, we will obtain a basis for <span class="process-math">\(\real^3\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-4-2-1-1-4"><div class="para" id="section4-2-8-4-2-1-1-4-1">The eigenvalues are determined by <span class="process-math">\(\det(A-\lambda I)
+= -\lambda^3+4\lambda = -\lambda(2-\lambda)(-2-\lambda)\text{,}\)</span> which shows that the eigenvalues are <span class="process-math">\(\lambda=0,2,-2\text{.}\)</span> This shows that <span class="process-math">\(A\)</span> is not invertible since <span class="process-math">\(\lambda=0\)</span> is an eigenvalue.  There is, however, a basis for <span class="process-math">\(\real^3\)</span> consisting of eigenvectors of <span class="process-math">\(A\)</span> since the three eigenvalues are distinct.</div></li>
+<li id="section4-2-8-4-2-1-1-5"><div class="para" id="section4-2-8-4-2-1-1-5-1">If <span class="process-math">\(\lambda\)</span> is an eigenvalue of <span class="process-math">\(A\text{,}\)</span> then <span class="process-math">\(\lambda^2\)</span> is an eigenvalue of <span class="process-math">\(A^2\text{.}\)</span>  Therefore, the characteristic polynomial of <span class="process-math">\(A^2\)</span> is <span class="process-math">\(\det(A^2-\lambda I) =
+(16-\lambda)(4-\lambda)(1-\lambda)\text{.}\)</span>
+</div></li>
+</ol></div></div></details>
+</div></article><article class="exercise exercise-like" id="section4-2-8-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="section4-2-8-5-1-1">
+<div class="para">For each of the following matrices, use Sage to determine its eigenvalues, their multiplicities, and a basis for each eigenspace.  For which matrices is it possible to construct a basis for <span class="process-math">\(\real^3\)</span> consisting of eigenvectors? <div id="section4-2-8-5-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
+</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-8-5-1-1-3">
+<li id="section4-2-8-5-1-1-3-1"><div class="para" id="section4-2-8-5-1-1-3-1-1"> <span class="process-math">\(\displaystyle A = \left[\begin{array}{rrr}
+-4 \amp 12 \amp -6 \\
+4 \amp -5 \amp 4 \\
+11 \amp -20 \amp 13 \\
+\end{array}\right]\)</span>
+</div></li>
+<li id="section4-2-8-5-1-1-3-2"><div class="para" id="section4-2-8-5-1-1-3-2-1"> <span class="process-math">\(\displaystyle A = \left[\begin{array}{rrr}
+1 \amp -3 \amp 1 \\
+-4 \amp 8 \amp -5 \\
+-8 \amp 17 \amp -10 \\
+\end{array}\right]\)</span>
+</div></li>
+<li id="section4-2-8-5-1-1-3-3"><div class="para" id="section4-2-8-5-1-1-3-3-1"><span class="process-math">\(\displaystyle A = \left[\begin{array}{rrr}
+3 \amp -8 \amp 4 \\
+-2 \amp 3 \amp -2 \\
+-6 \amp 12 \amp -7 \\
+\end{array}\right]\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="section4-2-8-5-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="section4-2-8-5-3-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-5-3-1-1">
+<li id="section4-2-8-5-3-1-1-1"><div class="para logical" id="section4-2-8-5-3-1-1-1-1">
+<div class="para">A basis of eigenvectors is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left\{\threevec012, \threevec10{-1},
+\threevec{-2}{1}{3}\right\}\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="section4-2-8-5-3-1-1-2"><div class="para" id="section4-2-8-5-3-1-1-2-1">It is not possible to find a basis of eigenvectors.</div></li>
+<li id="section4-2-8-5-3-1-1-3"><div class="para logical" id="section4-2-8-5-3-1-1-3-1">
+<div class="para">A basis of eigenvectors is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left\{\threevec{-2}32, \threevec10{-1},
+\threevec012\right\}\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div></div></details><details id="section4-2-8-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-8-5-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-5-2-1-1">
+<li id="section4-2-8-5-2-1-1-1"><div class="para logical" id="section4-2-8-5-2-1-1-1-1">
+<div class="para">Sage tells us there are three distinct eigenvalues <span class="process-math">\(\lambda=3,2,-1\text{,}\)</span> each having multiplicity one.  A basis of eigenvectors is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left\{\threevec012, \threevec10{-1},
+\threevec{-2}{1}{3}\right\}\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="section4-2-8-5-2-1-1-2"><div class="para" id="section4-2-8-5-2-1-1-2-1">It is not possible to find a basis of eigenvectors because the eigenvalue <span class="process-math">\(\lambda=-1\)</span> has multiplicity two but its eigenspace is one-dimensional.</div></li>
+<li id="section4-2-8-5-2-1-1-3"><div class="para logical" id="section4-2-8-5-2-1-1-3-1">
+<div class="para">It is possible to find a basis for <span class="process-math">\(\real^3\)</span> consisting of eignevectors because one eigenvalue <span class="process-math">\(\lambda=1\)</span> has multiplicity one while the other <span class="process-math">\(\lambda=-1\)</span> has multiplicity two and a two-dimensional eigenspace.  A basis is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left\{\threevec{-2}32, \threevec10{-1},
+\threevec012\right\}\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div></div></details>
+</div></article><article class="exercise exercise-like" id="section4-2-8-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para logical" id="section4-2-8-6-1-1">
+<div class="para">There is a relationship between the determinant of a matrix and the product of its eigenvalues.</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-8-6-1-1-1">
+<li id="section4-2-8-6-1-1-1-1"><div class="para" id="section4-2-8-6-1-1-1-1-1">We have seen that the eigenvalues of the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+1 \amp 2 \\
+2 \amp 1 \\
+\end{array}\right]\)</span> are <span class="process-math">\(\lambda = 3,-1\text{.}\)</span>  What is <span class="process-math">\(\det A\text{?}\)</span>  What is the product of the eigenvalues of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+<li id="section4-2-8-6-1-1-1-2"><div class="para" id="section4-2-8-6-1-1-1-2-1">Consider the triangular matrix <span class="process-math">\(A = \left[\begin{array}{rrr}
+2 \amp 0 \amp 0 \\
+-1 \amp -3 \amp 0 \\
+3 \amp 1 \amp -2 \\
+\end{array}\right]
+\text{.}\)</span>  What are the eigenvalues of <span class="process-math">\(A\text{?}\)</span>  What is <span class="process-math">\(\det
+A\text{?}\)</span>  What is the product of the eigenvalues of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+<li id="section4-2-8-6-1-1-1-3"><div class="para" id="section4-2-8-6-1-1-1-3-1">Based on these examples, what do you think is the relationship between the determinant of a matrix and the product of its eigenvalues?</div></li>
+<li id="section4-2-8-6-1-1-1-4"><div class="para logical" id="section4-2-8-6-1-1-1-4-1">
+<div class="para">Suppose the characteristic polynomial is written as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A-\lambda I) = (\lambda_1-\lambda)(\lambda_2-\lambda)
+\ldots (\lambda_n-\lambda)\text{.}
+\end{equation*}
+</div>
+<div class="para">By substituting <span class="process-math">\(\lambda = 0\)</span> into this equation, explain why the determinant of a matrix equals the product of its eigenvalues.</div>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="section4-2-8-6-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="section4-2-8-6-3-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-6-3-1-1">
+<li id="section4-2-8-6-3-1-1-1"><div class="para" id="section4-2-8-6-3-1-1-1-1">Both equal <span class="process-math">\(-3\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-6-3-1-1-2"><div class="para" id="section4-2-8-6-3-1-1-2-1">Both equal <span class="process-math">\(12\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-6-3-1-1-3"><div class="para" id="section4-2-8-6-3-1-1-3-1">
+<span class="process-math">\(\det A\)</span> equals the product of the eigenvalues.</div></li>
+<li id="section4-2-8-6-3-1-1-4"><div class="para" id="section4-2-8-6-3-1-1-4-1">We see that <span class="process-math">\(\det A =
+\lambda_1\lambda_2\ldots\lambda_n\text{.}\)</span>
+</div></li>
+</ol></div></div></details><details id="section4-2-8-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-8-6-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-6-2-1-1">
+<li id="section4-2-8-6-2-1-1-1"><div class="para" id="section4-2-8-6-2-1-1-1-1">We have <span class="process-math">\(\det A = -3\text{,}\)</span> and the product of the eigenvalues is <span class="process-math">\(-3\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-6-2-1-1-2"><div class="para" id="section4-2-8-6-2-1-1-2-1">We have <span class="process-math">\(\det A = 12\text{,}\)</span> and the product of the eigenvalues is <span class="process-math">\(12\)</span>
+</div></li>
+<li id="section4-2-8-6-2-1-1-3"><div class="para" id="section4-2-8-6-2-1-1-3-1">We suspect that <span class="process-math">\(\det A\)</span> equals the product of the eigenvalues.</div></li>
+<li id="section4-2-8-6-2-1-1-4"><div class="para logical" id="section4-2-8-6-2-1-1-4-1">
+<div class="para">Setting <span class="process-math">\(\lambda=0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\det(A-0I) \amp {}={} 
+(\lambda_1-0)(\lambda_2-0)\ldots(\lambda_m-0) \\
+\det A \amp {}={}\lambda_1\lambda_2\ldots\lambda_n\text{.}
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Notice that we mean the product of the eigenvalues, including their multiplicities.</div>
+</div></li>
+</ol></div></div></details>
+</div></article><article class="exercise exercise-like" id="section4-2-8-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para logical" id="section4-2-8-7-1-1">
+<div class="para">Consider the matrix <span class="process-math">\(A=\left[\begin{array}{rr}
+0.5 \amp 0.6 \\
+-0.3 \amp 1.4 \\
+\end{array}\right]
+\text{.}\)</span>
+</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-8-7-1-1-2">
+<li id="section4-2-8-7-1-1-2-1"><div class="para" id="section4-2-8-7-1-1-2-1-1">Find the eigenvalues of <span class="process-math">\(A\)</span> and a basis for their associated eigenspaces.</div></li>
+<li id="section4-2-8-7-1-1-2-2"><div class="para" id="section4-2-8-7-1-1-2-2-1">Suppose that <span class="process-math">\(\xvec_0=\twovec{11}{6}\text{.}\)</span>  Express <span class="process-math">\(\xvec_0\)</span> as a linear combination of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-7-1-1-2-3"><div class="para logical" id="section4-2-8-7-1-1-2-3-1">
+<div class="para">Define the vectors</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\xvec_1 \amp {}={} A\xvec_0 \\
+\xvec_2 \amp {}={} A\xvec_1 = A^2\xvec_0 \\
+\xvec_3 \amp {}={} A\xvec_2 = A^3\xvec_0 \\
+\vdots \amp {}={} \vdots
+\end{aligned}\text{.}
+\end{equation*}
+</div>
+<div class="para">Write <span class="process-math">\(\xvec_1\text{,}\)</span> <span class="process-math">\(\xvec_2\text{,}\)</span> and <span class="process-math">\(\xvec_3\)</span> as a linear combination of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div>
+</div></li>
+<li id="section4-2-8-7-1-1-2-4"><div class="para" id="section4-2-8-7-1-1-2-4-1">What happens to <span class="process-math">\(\xvec_k\)</span> as <span class="process-math">\(k\)</span> grows larger and larger?</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="section4-2-8-7-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="section4-2-8-7-3-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-7-3-1-1">
+<li id="section4-2-8-7-3-1-1-1"><div class="para" id="section4-2-8-7-3-1-1-1-1">
+<span class="process-math">\(\lambda_1=1.1\)</span> with associated eigenvector <span class="process-math">\(\vvec_1=\twovec11\)</span> and <span class="process-math">\(\lambda_2=0.8\)</span> with associated eigenvector <span class="process-math">\(\vvec_2=\twovec21\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-7-3-1-1-2"><div class="para" id="section4-2-8-7-3-1-1-2-1"><span class="process-math">\(\xvec_0=\vvec_1+5\vvec_2\text{.}\)</span></div></li>
+<li id="section4-2-8-7-3-1-1-3"><div class="para logical" id="section4-2-8-7-3-1-1-3-1">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\xvec_1 \amp {}={} 1.1\vvec_1+0.8\cdot5\vvec_2 \\
+\xvec_2 \amp {}={} 1.1^2\vvec_1+0.8^2\cdot5\vvec_2 \\
+\xvec_3 \amp {}={} 1.1^3\vvec_1+0.8^3\cdot5\vvec_2 \\
+\end{aligned}\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="section4-2-8-7-3-1-1-4"><div class="para" id="section4-2-8-7-3-1-1-4-1"><span class="process-math">\(\xvec_k \approx \twovec{1.1^k}{1.1^k}\text{.}\)</span></div></li>
+</ol></div></div></details><details id="section4-2-8-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-8-7-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-7-2-1-1">
+<li id="section4-2-8-7-2-1-1-1"><div class="para" id="section4-2-8-7-2-1-1-1-1">We find the eigenvalues <span class="process-math">\(\lambda_1=1.1\)</span> with associated eigenvector <span class="process-math">\(\vvec_1=\twovec11\)</span> and <span class="process-math">\(\lambda_2=0.8\)</span> with associated eigenvector <span class="process-math">\(\vvec_2=\twovec21\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-7-2-1-1-2"><div class="para" id="section4-2-8-7-2-1-1-2-1">After constructing an augmented matrix, we find that <span class="process-math">\(\xvec_0=\vvec_1+5\vvec_2
+\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-7-2-1-1-3"><div class="para logical" id="section4-2-8-7-2-1-1-3-1">
+<div class="para">Since <span class="process-math">\(A(c_1\vvec_1+c_2\vvec_2) = 1.1c_1\vvec_1 +
+0.8c_2\vvec_2\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\xvec_1 \amp {}={} 1.1\vvec_1+0.8\cdot5\vvec_2 \\
+\xvec_2 \amp {}={} 1.1^2\vvec_1+0.8^2\cdot5\vvec_2 \\
+\xvec_3 \amp {}={} 1.1^3\vvec_1+0.8^3\cdot5\vvec_2 \\
+\end{aligned}\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="section4-2-8-7-2-1-1-4"><div class="para" id="section4-2-8-7-2-1-1-4-1">We have <span class="process-math">\(\xvec_k =
+1.1^k\vvec_1+0.8^k\cdot5\vvec_2\text{.}\)</span>  As <span class="process-math">\(k\)</span> grows larger, <span class="process-math">\(0.8^k\)</span> becomes less significant.  Eventually, <span class="process-math">\(\xvec_k \approx 1.1^k\vvec_1= \twovec{1.1^k}{1.1^k}\text{.}\)</span>
+</div></li>
+</ol></div></div></details>
+</div></article><article class="exercise exercise-like" id="section4-2-8-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para logical" id="section4-2-8-8-1-1">
+<div class="para">Consider the matrix <span class="process-math">\(A=\left[\begin{array}{rr}
+0.4 \amp 0.3 \\
+0.6 \amp 0.7 \\
+\end{array}\right]\)</span>
+</div>
+<ol class="lower-alpha ol-marker-1" id="section4-2-8-8-1-1-2">
+<li id="section4-2-8-8-1-1-2-1"><div class="para" id="section4-2-8-8-1-1-2-1-1">Find the eigenvalues of <span class="process-math">\(A\)</span> and a basis for their associated eigenspaces.</div></li>
+<li id="section4-2-8-8-1-1-2-2"><div class="para" id="section4-2-8-8-1-1-2-2-1">Suppose that <span class="process-math">\(\xvec_0=\twovec{0}{1}\text{.}\)</span>  Express <span class="process-math">\(\xvec_0\)</span> as a linear combination of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-8-1-1-2-3"><div class="para logical" id="section4-2-8-8-1-1-2-3-1">
+<div class="para">Define the vectors</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\xvec_1 \amp {}={} A\xvec_0 \\
+\xvec_2 \amp {}={} A\xvec_1 = A^2\xvec_0 \\
+\xvec_3 \amp {}={} A\xvec_2 = A^3\xvec_0 \\
+\vdots \amp {}={} \vdots
+\end{aligned}\text{.}
+\end{equation*}
+</div>
+<div class="para">Write <span class="process-math">\(\xvec_1\text{,}\)</span> <span class="process-math">\(\xvec_2\text{,}\)</span> and <span class="process-math">\(\xvec_3\)</span> as a linear combination of eigenvectors of <span class="process-math">\(A\text{.}\)</span>
+</div>
+</div></li>
+<li id="section4-2-8-8-1-1-2-4"><div class="para" id="section4-2-8-8-1-1-2-4-1">What happens to <span class="process-math">\(\xvec_k\)</span> as <span class="process-math">\(k\)</span> grows larger and larger?</div></li>
+</ol>
+</div>
+<div class="solutions">
+<details id="section4-2-8-8-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="section4-2-8-8-3-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-8-3-1-1">
+<li id="section4-2-8-8-3-1-1-1"><div class="para" id="section4-2-8-8-3-1-1-1-1">
+<span class="process-math">\(\lambda_1=1\)</span> with associated eigenvector <span class="process-math">\(\vvec_1=\twovec12\)</span> and <span class="process-math">\(\lambda_2=0.1\)</span> with associated eigenvector <span class="process-math">\(\vvec_2=\twovec{-1}{1}\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-8-3-1-1-2"><div class="para" id="section4-2-8-8-3-1-1-2-1"><span class="process-math">\(\xvec_0=\frac13\vvec_1+\frac13\vvec_2\text{.}\)</span></div></li>
+<li id="section4-2-8-8-3-1-1-3"><div class="para logical" id="section4-2-8-8-3-1-1-3-1">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\xvec_1 \amp {}={} \frac13\vvec_1+0.1\frac13\vvec_2 \\
+\xvec_2 \amp {}={} \frac13\vvec_1+0.1^2\frac13\vvec_2 \\
+\xvec_3 \amp {}={} \frac13\vvec_1+0.1^3\frac13\vvec_2 \\
+\end{aligned}\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="section4-2-8-8-3-1-1-4"><div class="para" id="section4-2-8-8-3-1-1-4-1"><span class="process-math">\(\xvec_k \approx 
+\twovec{\frac13}{\frac23}\text{.}\)</span></div></li>
+</ol></div></div></details><details id="section4-2-8-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-8-8-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-8-8-2-1-1">
+<li id="section4-2-8-8-2-1-1-1"><div class="para" id="section4-2-8-8-2-1-1-1-1">We have eigenvalues <span class="process-math">\(\lambda_1=1\)</span> with associated eigenvector <span class="process-math">\(\vvec_1=\twovec12\)</span> and <span class="process-math">\(\lambda_2=0.1\)</span> with associated eigenvector <span class="process-math">\(\vvec_2=\twovec{-1}{1}\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-8-2-1-1-2"><div class="para" id="section4-2-8-8-2-1-1-2-1">After constructing an augmented matrix, we find <span class="process-math">\(\xvec_0=\frac13\vvec_1+\frac13\vvec_2\text{.}\)</span>
+</div></li>
+<li id="section4-2-8-8-2-1-1-3"><div class="para logical" id="section4-2-8-8-2-1-1-3-1">
+<div class="para">Since <span class="process-math">\(A(c_1\vvec_1+c_2\vvec_2) = c_1\vvec_1 +
+0.1c_2\vvec_2\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\xvec_1 \amp {}={} \frac13\vvec_1+0.1\frac13\vvec_2 \\
+\xvec_2 \amp {}={} \frac13\vvec_1+0.1^2\frac13\vvec_2 \\
+\xvec_3 \amp {}={} \frac13\vvec_1+0.1^3\frac13\vvec_2. \\
+\end{aligned}
+\end{equation*}
+</div>
+</div></li>
+<li id="section4-2-8-8-2-1-1-4"><div class="para" id="section4-2-8-8-2-1-1-4-1">We have <span class="process-math">\(\xvec_k =
+\frac13\vvec_1+0.1^k\frac13\vvec_2\text{.}\)</span>  As <span class="process-math">\(k\)</span> grows larger, <span class="process-math">\(0.1^k\)</span> becomes less significant.  Eventually, <span class="process-math">\(\xvec_k \approx \frac13\vvec_1=
+\twovec{\frac13}{\frac23}\text{.}\)</span>
+</div></li>
+</ol></div></div></details>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section4-1.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:xlink="http://www.w3.org/1999/xlink" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
