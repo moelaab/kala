@@ -489,7 +489,7 @@ Notation
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section4-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Finding eigenvalues and eigenvectors</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-2.html#section4-2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">The characteristic polynomial</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-2.html#section4-2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Polinomial Karakteristik</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-2.html#section4-2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Finding eigenvectors</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-2.html#section4-2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">The characteristic polynomial and the dimension of eigenspaces</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section4-2.html#section4-2-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Using Sage to find eigenvalues and eigenvectors</span></a></div></li>
@@ -503,18 +503,18 @@ Notation
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="section4-2"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Finding eigenvalues and eigenvectors</span>
 </h2>
-<section class="introduction" id="section4-2-2"><div class="para" id="section4-2-2-1">The last section introduced eigenvalues and eigenvectors, presented the underlying geometric intuition behind their definition, and demonstrated their use in understanding the long-term behavior of certain systems.  We will now develop a more algebraic understanding of eigenvalues and eigenvectors.  In particular, we will find an algebraic method for determining the eigenvalues and eigenvectors of a square matrix.</div>
+<section class="introduction" id="section4-2-2"><div class="para" id="section4-2-2-1">Bagian terakhir memperkenalkan nilai eigen dan vektor eigen, menyajikan intuisi geometris yang mendasari definisi mereka, dan menunjukkan penggunaannya dalam memahami perilaku jangka panjang dari sistem tertentu. Sekarang kita akan mengembangkan pemahaman aljabar tentang nilai eigen dan vektor eigen. Secara khusus, kita akan menemukan metode aljabar untuk menentukan nilai eigen dan vektor eigen dari matriks persegi.</div>
 <details id="section4-2-2-2" class="exploration project-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span>
 </h3></summary><article class="exploration project-like knowl__content"><div class="para logical" id="section4-2-2-2-1-1">
-<div class="para">Let’s begin by reviewing some important ideas that we have seen previously.</div>
+<div class="para">Mari kita mulai dengan meninjau beberapa ide penting yang telah kita lihat sebelumnya.</div>
 <ol class="lower-alpha ol-marker-1" id="section4-2-2-2-1-1-1">
-<li id="section4-2-2-2-1-1-1-1"><div class="para" id="section4-2-2-2-1-1-1-1-1">Suppose that <span class="process-math">\(A\)</span> is a square matrix and that the nonzero vector <span class="process-math">\(\xvec\)</span> is a solution to the homogeneous equation <span class="process-math">\(A\xvec = \zerovec\text{.}\)</span>  What can we conclude about the invertibility of <span class="process-math">\(A\text{?}\)</span>
+<li id="section4-2-2-2-1-1-1-1"><div class="para" id="section4-2-2-2-1-1-1-1-1">Misalkan <span class="process-math">\(A\)</span> adalah matriks persegi dan vektor tak nol <span class="process-math">\(\xvec\)</span> adalah solusi dari persamaan homogen <span class="process-math">\(A\xvec = \zerovec\text{.}\)</span> Apa yang dapat kita simpulkan tentang kemampuan invers matriks <span class="process-math">\(A\text{?}\)</span>
 </div></li>
-<li id="section4-2-2-2-1-1-1-2"><div class="para" id="section4-2-2-2-1-1-1-2-1">How does the determinant <span class="process-math">\(\det(A)\)</span> tell us if there is a nonzero solution to the homogeneous equation <span class="process-math">\(A\xvec = \zerovec\text{?}\)</span>
+<li id="section4-2-2-2-1-1-1-2"><div class="para" id="section4-2-2-2-1-1-1-2-1">Bagaimana determinan <span class="process-math">\(\det(A)\)</span> memberi tahu kita apakah ada solusi tak nol untuk persamaan homogen <span class="process-math">\(A\xvec = \zerovec\text{?}\)</span>
 </div></li>
 <li id="section4-2-2-2-1-1-1-3"><div class="para logical" id="section4-2-2-2-1-1-1-3-1">
-<div class="para">Suppose that</div>
+<div class="para">Misalkan</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A = \left[\begin{array}{rrr}
@@ -524,22 +524,22 @@ A = \left[\begin{array}{rrr}
 \end{array}\right]\text{.}
 \end{equation*}
 </div>
-<div class="para">Find the determinant <span class="process-math">\(\det(A)\text{.}\)</span>  What does this tell us about the solution space to the homogeneous equation <span class="process-math">\(A\xvec
+<div class="para">Tentukan determinan <span class="process-math">\(\det(A)\text{.}\)</span> Apa yang diberitahukan tentang ruang solusi persamaan homogen <span class="process-math">\(A\xvec
 = \zerovec\text{?}\)</span>
 </div>
 </div></li>
-<li id="section4-2-2-2-1-1-1-4"><div class="para" id="section4-2-2-2-1-1-1-4-1">Find a basis for <span class="process-math">\(\nul(A)\text{.}\)</span>
+<li id="section4-2-2-2-1-1-1-4"><div class="para" id="section4-2-2-2-1-1-1-4-1">Temukan basis untuk <span class="process-math">\(\nul(A)\text{.}\)</span>
 </div></li>
-<li id="section4-2-2-2-1-1-1-5"><div class="para" id="section4-2-2-2-1-1-1-5-1">What is the relationship between the rank of a matrix and the dimension of its null space?</div></li>
+<li id="section4-2-2-2-1-1-1-5"><div class="para" id="section4-2-2-2-1-1-1-5-1">Apa hubungan antara rank matriks dan dimensi dari null space-nya?</div></li>
 </ol>
 </div>
 <div class="solutions"><details id="section4-2-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-2-2-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-2-2-2-1-1">
-<li id="section4-2-2-2-2-1-1-1"><div class="para" id="section4-2-2-2-2-1-1-1-1">The matrix cannot have a pivot position in every column so it is not invertible.</div></li>
-<li id="section4-2-2-2-2-1-1-2"><div class="para" id="section4-2-2-2-2-1-1-2-1">If there is a nonzero solution to the homogeneous equation <span class="process-math">\(A\xvec=\zerovec\text{,}\)</span> then <span class="process-math">\(A\)</span> is not invertible so <span class="process-math">\(\det(A) = 0\text{.}\)</span>
+<li id="section4-2-2-2-2-1-1-1"><div class="para" id="section4-2-2-2-2-1-1-1-1">Matriks tidak dapat memiliki posisi pivot di setiap kolom sehingga tidak dapat diinverskan.</div></li>
+<li id="section4-2-2-2-2-1-1-2"><div class="para" id="section4-2-2-2-2-1-1-2-1">Jika ada solusi tak nol untuk persamaan homogen <span class="process-math">\(A\xvec=\zerovec\text{,}\)</span> maka <span class="process-math">\(A\)</span> tidak dapat diinverskan sehingga <span class="process-math">\(\det(A) = 0\text{.}\)</span>
 </div></li>
-<li id="section4-2-2-2-2-1-1-3"><div class="para" id="section4-2-2-2-2-1-1-3-1">We find that <span class="process-math">\(\det(A) = 0\)</span> so there is a nonzero solution to the homogeneous equation.</div></li>
+<li id="section4-2-2-2-2-1-1-3"><div class="para" id="section4-2-2-2-2-1-1-3-1">Kita menemukan bahwa <span class="process-math">\(\det(A) = 0\)</span> sehingga ada solusi tak nol untuk persamaan homogen.</div></li>
 <li id="section4-2-2-2-2-1-1-4"><div class="para logical" id="section4-2-2-2-2-1-1-4-1">
-<div class="para">The reduced row echelon form of <span class="process-math">\(A\)</span> is</div>
+<div class="para">Bentuk eselon baris tereduksi dari <span class="process-math">\(A\)</span> adalah</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \left[\begin{array}{rrr}
@@ -549,17 +549,16 @@ A = \left[\begin{array}{rrr}
 \end{array}\right]
 \end{equation*}
 </div>
-<div class="para">so the solution space to the homogeneous equation may be described parametrically as <span class="process-math">\(x=x_3\threevec{-1}{-2}{1}\text{.}\)</span>  A basis for <span class="process-math">\(\nul(A)\)</span> is therefore <span class="process-math">\(\threevec{-1}{-2}{1}\text{.}\)</span>
+<div class="para">sehingga ruang solusi persamaan homogen dapat dijelaskan secara parametrik sebagai <span class="process-math">\(x=x_3\threevec{-1}{-2}{1}\text{.}\)</span> Basis untuk <span class="process-math">\(\nul(A)\)</span> adalah <span class="process-math">\(\threevec{-1}{-2}{1}\text{.}\)</span>
 </div>
 </div></li>
-<li id="section4-2-2-2-2-1-1-5"><div class="para" id="section4-2-2-2-2-1-1-5-1">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix, then <span class="process-math">\(\dim~\nul(A) = n-\rank(A)\text{.}\)</span>
+<li id="section4-2-2-2-2-1-1-5"><div class="para" id="section4-2-2-2-2-1-1-5-1">Jika <span class="process-math">\(A\)</span> adalah matriks <span class="process-math">\(n\times n\text{,}\)</span> maka <span class="process-math">\(\dim~\nul(A) = n-\rank(A)\text{.}\)</span>
 </div></li>
 </ol></div></div></details></div></article></details></section><section class="subsection" id="section4-2-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">The characteristic polynomial</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">Polinomial Karakteristik</span>
 </h3>
 <div class="para logical" id="section4-2-3-2">
-<div class="para">We will first see that the eigenvalues of a square matrix appear as the roots of a particular polynomial.  To begin, notice that we originally defined an eigenvector as a nonzero vector <span class="process-math">\(\vvec\)</span> that satisfies the equation <span class="process-math">\(A\vvec =
-\lambda\vvec\text{.}\)</span>  We will rewrite this as</div>
+<div class="para">Kita akan melihat bahwa nilai eigen dari matriks persegi muncul sebagai akar dari polinomial tertentu. Untuk memulai, perhatikan bahwa kita awalnya mendefinisikan vektor eigen sebagai vektor tak nol <span class="process-math">\(\vvec\)</span> yang memenuhi persamaan <span class="process-math">\(A\vvec = \lambda\vvec\text{.}\)</span> Kita akan menulis ulang ini sebagai</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
@@ -570,21 +569,20 @@ A\vvec - \lambda I\vvec \amp {}={} \zerovec \\
 \end{aligned}
 \end{equation*}
 </div>
-<div class="para">In other words, an eigenvector <span class="process-math">\(\vvec\)</span> is a solution of the homogeneous equation <span class="process-math">\((A-\lambda I)\vvec=\zerovec\text{.}\)</span>  This puts us in the familiar territory explored in the next activity.</div>
+<div class="para">Dengan kata lain, vektor eigen <span class="process-math">\(\vvec\)</span> adalah solusi dari persamaan homogen <span class="process-math">\((A-\lambda I)\vvec=\zerovec\text{.}\)</span> Ini membawa kita ke wilayah yang sudah dikenal seperti yang dijelajahi dalam aktivitas berikut.</div>
 </div>
 <details id="section4-2-3-3" class="activity project-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span>
 </h4></summary><article class="activity project-like knowl__content"><div class="para logical" id="section4-2-3-3-1-1">
-<div class="para">The eigenvalues of a square matrix are defined by the condition that there be a nonzero solution to the homogeneous equation <span class="process-math">\((A-\lambda I)\vvec=\zerovec\text{.}\)</span>
+<div class="para">Nilai eigen dari matriks persegi didefinisikan dengan syarat bahwa ada solusi tak nol untuk persamaan homogen <span class="process-math">\((A-\lambda I)\vvec=\zerovec\text{.}\)</span>
 </div>
 <ol class="lower-alpha ol-marker-1" id="section4-2-3-3-1-1-2">
-<li id="section4-2-3-3-1-1-2-1"><div class="para" id="section4-2-3-3-1-1-2-1-1">If there is a nonzero solution to the homogeneous equation <span class="process-math">\((A-\lambda I)\vvec = \zerovec\text{,}\)</span> what can we conclude about the invertibility of the matrix <span class="process-math">\(A-\lambda
-I\text{?}\)</span>
+<li id="section4-2-3-3-1-1-2-1"><div class="para" id="section4-2-3-3-1-1-2-1-1">Jika ada solusi tak nol untuk persamaan homogen <span class="process-math">\((A-\lambda I)\vvec = \zerovec\text{,}\)</span> apa yang dapat kita simpulkan tentang kemampuan invers matriks <span class="process-math">\(A-\lambda I\text{?}\)</span>
 </div></li>
-<li id="section4-2-3-3-1-1-2-2"><div class="para" id="section4-2-3-3-1-1-2-2-1">If there is a nonzero solution to the homogeneous equation <span class="process-math">\((A-\lambda I)\vvec = \zerovec\text{,}\)</span> what can we conclude about the determinant <span class="process-math">\(\det(A-\lambda I)\text{?}\)</span>
+<li id="section4-2-3-3-1-1-2-2"><div class="para" id="section4-2-3-3-1-1-2-2-1">Jika ada solusi tak nol untuk persamaan homogen <span class="process-math">\((A-\lambda I)\vvec = \zerovec\text{,}\)</span> apa yang dapat kita simpulkan tentang determinan <span class="process-math">\(\det(A-\lambda I)\text{?}\)</span>
 </div></li>
 <li id="section4-2-3-3-1-1-2-3"><div class="para logical" id="section4-2-3-3-1-1-2-3-1">
-<div class="para">Let’s consider the matrix</div>
+<div class="para">Mari kita pertimbangkan matriks</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A = \left[\begin{array}{rr}
@@ -593,7 +591,7 @@ A = \left[\begin{array}{rr}
 \end{array}\right]
 \end{equation*}
 </div>
-<div class="para">from which we construct</div>
+<div class="para">dari mana kita konstruksi</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A-\lambda I =
@@ -613,65 +611,64 @@ A-\lambda I =
 \end{array}\right]\text{.}
 \end{equation*}
 </div>
-<div class="para">Find the determinant <span class="process-math">\(\det(A-\lambda I)\text{.}\)</span>  What kind of equation do you obtain when we set this determinant to zero to obtain <span class="process-math">\(\det(A-\lambda I) = 0\text{?}\)</span>
+<div class="para">Tentukan determinan <span class="process-math">\(\det(A-\lambda I)\text{.}\)</span> Jenis persamaan apa yang Anda peroleh ketika kita menetapkan determinan ini menjadi nol untuk mendapatkan <span class="process-math">\(\det(A-\lambda I) = 0\text{?}\)</span>
 </div>
 </div></li>
-<li id="section4-2-3-3-1-1-2-4"><div class="para" id="section4-2-3-3-1-1-2-4-1">Use the determinant you found in the previous part to find the eigenvalues <span class="process-math">\(\lambda\)</span> by solving the equation <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>  We considered this matrix in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "activity-eigen-geom" missing or not unique]</code> so we should find the same eigenvalues for <span class="process-math">\(A\)</span> that we found by reasoning geometrically there.</div></li>
-<li id="section4-2-3-3-1-1-2-5"><div class="para" id="section4-2-3-3-1-1-2-5-1">Consider the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+<li id="section4-2-3-3-1-1-2-4"><div class="para" id="section4-2-3-3-1-1-2-4-1">Gunakan determinan yang Anda temukan di bagian sebelumnya untuk menemukan nilai eigen <span class="process-math">\(\lambda\)</span> dengan menyelesaikan persamaan <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span> Kami mempertimbangkan matriks ini di <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "activity-eigen-geom" missing or not unique]</code> jadi kami harus menemukan nilai eigen yang sama untuk <span class="process-math">\(A\)</span> yang kami temukan dengan penalaran geometris di sana.</div></li>
+<li id="section4-2-3-3-1-1-2-5"><div class="para" id="section4-2-3-3-1-1-2-5-1">Pertimbangkan matriks <span class="process-math">\(A = \left[\begin{array}{rr}
 2 \amp 1 \\
 0 \amp 2 \\
-\end{array}\right]\)</span> and find its eigenvalues by solving the equation <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>
+\end{array}\right]\)</span> dan temukan nilai eigennya dengan menyelesaikan persamaan <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>
 </div></li>
-<li id="section4-2-3-3-1-1-2-6"><div class="para" id="section4-2-3-3-1-1-2-6-1">Consider the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+<li id="section4-2-3-3-1-1-2-6"><div class="para" id="section4-2-3-3-1-1-2-6-1">Pertimbangkan matriks <span class="process-math">\(A = \left[\begin{array}{rr}
 0 \amp -1 \\
 1 \amp 0 \\
-\end{array}\right]\)</span> and find its eigenvalues by solving the equation <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>
+\end{array}\right]\)</span> dan temukan nilai eigennya dengan menyelesaikan persamaan <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>
 </div></li>
-<li id="section4-2-3-3-1-1-2-7"><div class="para" id="section4-2-3-3-1-1-2-7-1">Find the eigenvalues of the triangular matrix <span class="process-math">\(\left[\begin{array}{rrr}
+<li id="section4-2-3-3-1-1-2-7"><div class="para" id="section4-2-3-3-1-1-2-7-1">Temukan nilai eigen dari matriks segitiga <span class="process-math">\(\left[\begin{array}{rrr}
 3 \amp -1 \amp 4 \\
 0 \amp -2 \amp 3 \\
 0 \amp 0 \amp 1 \\
 \end{array}\right]
-\text{.}\)</span>  What is generally true about the eigenvalues of a triangular matrix?</div></li>
+\text{.}\)</span> Apa yang secara umum benar tentang nilai eigen dari matriks segitiga?</div></li>
 </ol>
 </div>
 <div class="solutions"><details id="section4-2-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="section4-2-3-3-2-1"><ol class="lower-alpha ol-marker-1" id="section4-2-3-3-2-1-1">
-<li id="section4-2-3-3-2-1-1-1"><div class="para" id="section4-2-3-3-2-1-1-1-1">The matrix <span class="process-math">\(A-\lambda I\)</span> cannot be invertible.</div></li>
-<li id="section4-2-3-3-2-1-1-2"><div class="para" id="section4-2-3-3-2-1-1-2-1">It must be the case that <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>
+<li id="section4-2-3-3-2-1-1-1"><div class="para" id="section4-2-3-3-2-1-1-1-1">Matriks <span class="process-math">\(A-\lambda I\)</span> tidak dapat diinverskan.</div></li>
+<li id="section4-2-3-3-2-1-1-2"><div class="para" id="section4-2-3-3-2-1-1-2-1">Haruslah demikian bahwa <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span>
 </div></li>
-<li id="section4-2-3-3-2-1-1-3"><div class="para" id="section4-2-3-3-2-1-1-3-1">We find that <span class="process-math">\(\det(A-\lambda I) = \lambda^2 -
+<li id="section4-2-3-3-2-1-1-3"><div class="para" id="section4-2-3-3-2-1-1-3-1">Kita menemukan bahwa <span class="process-math">\(\det(A-\lambda I) = \lambda^2 -
 2\lambda - 3 = 0\text{.}\)</span>
 </div></li>
 <li id="section4-2-3-3-2-1-1-4"><div class="para" id="section4-2-3-3-2-1-1-4-1">
 <span class="process-math">\(\lambda^2 - 2\lambda - 3= (\lambda-3)(\lambda+1) =
-0\)</span> so we find eigenvalues <span class="process-math">\(\lambda = 3\)</span> and <span class="process-math">\(\lambda = -1\text{.}\)</span>
+0\)</span> sehingga kita menemukan nilai eigen <span class="process-math">\(\lambda = 3\)</span> dan <span class="process-math">\(\lambda = -1\text{.}\)</span>
 </div></li>
-<li id="section4-2-3-3-2-1-1-5"><div class="para" id="section4-2-3-3-2-1-1-5-1">For this matrix, we have <span class="process-math">\(\det(A-\lambda I) =
-(\lambda-2)^2=0\)</span> so there is one eigenvalue, <span class="process-math">\(\lambda = 2\text{.}\)</span>
+<li id="section4-2-3-3-2-1-1-5"><div class="para" id="section4-2-3-3-2-1-1-5-1">Untuk matriks ini, kita memiliki <span class="process-math">\(\det(A-\lambda I) =
+(\lambda-2)^2=0\)</span> sehingga ada satu nilai eigen, <span class="process-math">\(\lambda = 2\text{.}\)</span>
 </div></li>
 <li id="section4-2-3-3-2-1-1-6"><div class="para" id="section4-2-3-3-2-1-1-6-1">
-<span class="process-math">\(\det(A-\lambda I) = \lambda^2 + 1 = 0\)</span> so there are complex eigenvalues, <span class="process-math">\(\lambda = i\)</span> and <span class="process-math">\(\lambda = -i\text{.}\)</span>
+<span class="process-math">\(\det(A-\lambda I) = \lambda^2 + 1 = 0\)</span> sehingga ada nilai eigen kompleks, <span class="process-math">\(\lambda = i\)</span> dan <span class="process-math">\(\lambda = -i\text{.}\)</span>
 </div></li>
-<li id="section4-2-3-3-2-1-1-7"><div class="para" id="section4-2-3-3-2-1-1-7-1">Because the determinant of a triangular matrix equals the product of its diagonal entries, The eigenvalues are equal to the entries on the diagonal.</div></li>
+<li id="section4-2-3-3-2-1-1-7"><div class="para" id="section4-2-3-3-2-1-1-7-1">Karena determinan matriks segitiga sama dengan produk dari entri diagonalnya, nilai eigen sama dengan entri pada diagonal.</div></li>
 </ol></div></div></details></div></article></details><div class="para logical" id="section4-2-3-4">
-<div class="para">This activity demonstrates a technique that enables us to find the eigenvalues of a square matrix <span class="process-math">\(A\text{.}\)</span>  Since an eigenvalue <span class="process-math">\(\lambda\)</span> is a scalar for which the equation <span class="process-math">\((A-\lambda
-I)\vvec = \zerovec\)</span> has a nonzero solution, it must be the case that <span class="process-math">\(A-\lambda I\)</span> is not invertible.  Therefore, its determinant is zero.  This gives us the equation</div>
+<div class="para">Aktivitas ini menunjukkan teknik yang memungkinkan kita menemukan nilai eigen dari matriks persegi <span class="process-math">\(A\text{.}\)</span> Karena nilai eigen <span class="process-math">\(\lambda\)</span> adalah skalar untuk mana persamaan <span class="process-math">\((A-\lambda I)\vvec = \zerovec\)</span> memiliki solusi tak nol, maka haruslah <span class="process-math">\(A-\lambda I\)</span> tidak dapat diinverskan. Oleh karena itu, determinannya adalah nol. Ini memberi kita persamaan</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \det(A-\lambda I) = 0
 \end{equation*}
 </div>
-<div class="para">whose solutions are the eigenvalues of <span class="process-math">\(A\text{.}\)</span>  This equation is called the <em class="emphasis">characteristic equation</em> of <span class="process-math">\(A\text{.}\)</span> </div>
+<div class="para">yang solusinya adalah nilai eigen dari <span class="process-math">\(A\text{.}\)</span> Persamaan ini disebut <em class="emphasis">persamaan karakteristik</em> dari <span class="process-math">\(A\text{.}\)</span> </div>
 </div>
 <article class="example example-like" id="example-eigenvalues-poly"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="example-eigenvalues-poly-1">
-<div class="para">If we write the characteristic equation for the matrix <span class="process-math">\(A = \left[\begin{array}{rr}
+<div class="para">Jika kita menulis persamaan karakteristik untuk matriks <span class="process-math">\(A = \left[\begin{array}{rr}
 -4 \amp 4 \\
 -12 \amp 10 \\
 \end{array}\right]
-\text{,}\)</span> we see that</div>
+\text{,}\)</span> kita melihat bahwa</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
@@ -688,31 +685,31 @@ I)\vvec = \zerovec\)</span> has a nonzero solution, it must be the case that <sp
 \end{aligned}
 \end{equation*}
 </div>
-<div class="para">This shows us that the eigenvalues are <span class="process-math">\(\lambda = 4\)</span> and <span class="process-math">\(\lambda=2\text{.}\)</span>
+<div class="para">Ini menunjukkan kepada kita bahwa nilai eigen adalah <span class="process-math">\(\lambda = 4\)</span> dan <span class="process-math">\(\lambda=2\text{.}\)</span>
 </div>
-</div></article><div class="para" id="section4-2-3-6"> In general, the expression <span class="process-math">\(\det(A-\lambda I)\)</span> is a polynomial in <span class="process-math">\(\lambda\text{,}\)</span> which is called the <em class="emphasis">characteristic polynomial</em> of <span class="process-math">\(A\text{.}\)</span>  If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix, the degree of the characteristic polynomial is <span class="process-math">\(n\text{.}\)</span>  For instance, if <span class="process-math">\(A\)</span> is a <span class="process-math">\(2\times2\)</span> matrix, then <span class="process-math">\(\det(A-\lambda I)\)</span> is a quadratic polynomial; if <span class="process-math">\(A\)</span> is a <span class="process-math">\(3\times3\)</span> matrix, then <span class="process-math">\(\det(A-\lambda I)\)</span> is a cubic polynomial.</div>
-<div class="para" id="section4-2-3-7">The matrix in <a href="section4-2.html#example-eigenvalues-poly" class="xref" data-knowl="./knowl/xref/example-eigenvalues-poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.2.1">Example 1.2.1</a> has a characteristic polynomial with two real and distinct roots. This will not always be the case, as demonstrated in the next two examples.</div>
+</div></article><div class="para" id="section4-2-3-6"> Secara umum, ekspresi <span class="process-math">\(\det(A-\lambda I)\)</span> adalah polinomial dalam <span class="process-math">\(\lambda\text{,}\)</span> yang disebut <em class="emphasis">polinomial karakteristik</em> dari <span class="process-math">\(A\text{.}\)</span> Jika <span class="process-math">\(A\)</span> adalah matriks <span class="process-math">\(n\times n\text{,}\)</span> derajat polinomial karakteristik adalah <span class="process-math">\(n\text{.}\)</span> Sebagai contoh, jika <span class="process-math">\(A\)</span> adalah matriks <span class="process-math">\(2\times2\text{,}\)</span> maka <span class="process-math">\(\det(A-\lambda I)\)</span> adalah polinomial kuadrat; jika <span class="process-math">\(A\)</span> adalah matriks <span class="process-math">\(3\times3\text{,}\)</span> maka <span class="process-math">\(\det(A-\lambda I)\)</span> adalah polinomial kubik.</div>
+<div class="para" id="section4-2-3-7">Matriks dalam <a href="section4-2.html#example-eigenvalues-poly" class="xref" data-knowl="./knowl/xref/example-eigenvalues-poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.2.1">Example 1.2.1</a> memiliki polinomial karakteristik dengan dua akar real dan berbeda. Ini tidak selalu terjadi, seperti yang ditunjukkan dalam dua contoh berikut.</div>
 <article class="example example-like" id="section4-2-3-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="section4-2-3-8-1">
-<div class="para">Consider the matrix <span class="process-math">\(A=\begin{bmatrix}
+<div class="para">Pertimbangkan matriks <span class="process-math">\(A=\begin{bmatrix}
 5 \amp -1\\
 4 \amp 1 \\
 \end{bmatrix}
-\text{,}\)</span> whose characteristic equation is</div>
+\text{,}\)</span> yang persamaan karakteristiknya adalah</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \lambda^2 - 6\lambda + 9 = (\lambda-3)^2 = 0.
 \end{equation*}
 </div>
-<div class="para">In this case, the characteristic polynomial has one real root, which means that this matrix has a single real eigenvalue, <span class="process-math">\(\lambda = 3\text{.}\)</span>
+<div class="para">Dalam hal ini, polinomial karakteristik memiliki satu akar real, yang berarti bahwa matriks ini memiliki satu nilai eigen real, <span class="process-math">\(\lambda = 3\text{.}\)</span>
 </div>
 </div></article><article class="example example-like" id="section4-2-3-9"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="section4-2-3-9-1">
-<div class="para">To find the eigenvalues of a triangular matrix, we remember that the determinant of a triangular matrix is the product of the entries on the diagonal.  For instance, the following triangular matrix has the characteristic equation</div>
+<div class="para">Untuk menemukan nilai eigen dari matriks segitiga, kita mengingat bahwa determinan matriks segitiga adalah produk dari entri pada diagonal. Sebagai contoh, matriks segitiga berikut memiliki persamaan karakteristik</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
@@ -734,8 +731,7 @@ I)\vvec = \zerovec\)</span> has a nonzero solution, it must be the case that <sp
 \end{aligned}
 \end{equation*}
 </div>
-<div class="para">showing that the eigenvalues are the diagonal entries <span class="process-math">\(\lambda =
-4,-2,3\text{.}\)</span>
+<div class="para">yang menunjukkan bahwa nilai eigen adalah entri diagonal <span class="process-math">\(\lambda = 4,-2,3\text{.}\)</span>
 </div>
 </div></article></section><section class="subsection" id="section4-2-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="space"> </span><span class="title">Finding eigenvectors</span>
